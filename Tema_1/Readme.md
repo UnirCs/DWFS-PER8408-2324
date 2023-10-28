@@ -1,9 +1,20 @@
 Tema 1: Introducción al Front-End. HTML y CSS
+=============================================
 
-Para este tema se proponen 2 ejercicios:
-- **Desarrollo de un CV Online con HTML y CSS**: Este ejercicio consiste en crear la versión onlince de un CV (puede ser tuyo o inventado) haciendo uso únicamente de HTML y CSS. No se utilizará aquí ninguna otra librería. HTML y CSS puro.
+El objetivo de estos ejercicios es introducirnos en los lenguajes HTML y CSS.
 
-- **Desarrollo de una ventana de selección de butacas para un cine**: Utilizando la librería Twitter Bootstrap, en este ejercicio hay que desarrollar la ventana de selección de butacas de un cine. No es necesario que sea dinámica. Simplemente se pide la estructura HTML y código CSS. Nada de JavaScript por el momento.
+## Ejercicio 1: [**Desarrollo de un CV Online con HTML y CSS**](https://github.com/UnirCs/DWFS-PER8408-2324/tree/master/Tema_1/00_Resources/CV)
+
+Este ejercicio consiste en crear la versión onlince de un CV (puede ser tuyo o inventado) haciendo uso únicamente de HTML y CSS. No se utilizará aquí ninguna otra librería. HTML y CSS puro.
+
+## Ejercicio 2: [**Desarrollo de una ventana de selección de butacas para un cine**](https://github.com/UnirCs/DWFS-PER8408-2324/tree/master/Tema_1/00_Resources/Cinema)
+
+Utilizando la librería Twitter Bootstrap, en este ejercicio hay que desarrollar la ventana de selección de butacas de un cine. No es necesario que sea dinámica. Simplemente se pide la estructura HTML y código CSS. Nada de JavaScript por el momento.
+
+
+## Entrega
+
+Crea una carpeta con tu nombre y apellidos dentro de ``Tema_1``. Deberás incluir dos carpetas llamadas ``cinema`` y ``cv``. Dentro de las carpetas deberá haber dos ficheros. ``index.html`` con el código html y ``styles.css`` con el código CSS.
 
 En ambos casos se incluyen ejemplos a seguir para realizar los ejercicios. Si lo deseas puedes optar por realizar diseños totalmente originales y no seguir los ejemplos.
 

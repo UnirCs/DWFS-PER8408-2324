@@ -28,4 +28,6 @@ Puedes tomar inspiración de diseños de salas de cine en línea, pero el objeti
 
 Aquí tienes un ejemplo de cómo podría ser el diseño (no es necesario que sea exactamente igual):
 
+<img src="https://github.com/UnirCs/DWFS-PER8408-2324/blob/master/Tema_1/00_Resources/Cinema/SeatSelection.png?raw=true">
+
 

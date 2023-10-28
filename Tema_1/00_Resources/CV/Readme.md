@@ -32,3 +32,5 @@ El objetivo de este ejercicio es crear una página web que represente un CV de u
 
 ## 3. Ejemplo
 Aquí tienes un ejemplo de cómo podría ser el diseño (no es necesario que sea exactamente igual):
+
+<img src="https://github.com/UnirCs/DWFS-PER8408-2324/blob/master/Tema_1/00_Resources/CV/CV%20CR.png?raw=true">
