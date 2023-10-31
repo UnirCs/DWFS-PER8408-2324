@@ -1,0 +1,152 @@
+body {
+	background: lightgray;
+}
+
+.seat-container {
+	background-color: #333;
+	padding: 20px;
+	border-radius: 10px;
+	margin: 0 auto 1.2rem auto;
+	max-width: 650px;
+	position: relative;
+	overflow: hidden;
+	position: relative;
+}
+
+.seat-labels .seat:hover {
+	transform: none;
+	background-color: initial;
+	cursor: pointer;
+}
+
+.seat {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	background-color: #ccc;
+	border: 1px solid #333;
+	display: inline-block;
+	cursor: pointer;
+	transition: transform 0.2s, background-color 0.3s;
+	border-radius: 25%;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.seat--special {
+	background-color: #ff6666;
+}
+
+.seat--vip {
+	background-color: #007BFF;
+}
+
+.seat--occupied {
+	background-color: #737476;
+	cursor: not-allowed;
+}
+
+.seat.seat--vip {
+	display: flex;
+	flex-direction: column;
+}
+
+.seat .seat-label-special {
+	position: absolute;
+	font-size: 7px;
+	bottom: -1px;
+}
+
+.seat:hover {
+	transform: scale(1.5);
+}
+
+.seat:not(.seat--vip):not(.seat--occupied) {
+	color: #5a5a5a;
+}
+
+.seat:not(.seat--vip):hover {
+	background-color: #b4a1a1;
+}
+
+.seat.seat--occupied:hover {
+	transform: scale(1);
+	background-color: #737476;
+}
+
+.seat.seat--vip:hover {
+	background-color: #2115a1;
+}
+
+.seat-row {
+	text-align: center;
+}
+
+.seat-row-indicator {
+	color: white;
+	display: flex;
+	justify-content: center;
+}
+
+.seat-label {
+	font-size: 12px;
+}
+
+.screen {
+	background-color: #666;
+	height: 20px;
+	width: 90%;
+	margin: 5rem auto 20px auto;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #fff;
+	color: white;
+	padding: 1rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.exit {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	background-color: #444;
+	padding: 5px 10px;
+	border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.exit--left {
+	left: 0;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+.exit--right {
+	right: 0;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+.exit-arrow {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	transform: rotate(45deg);
+}
+
+.exit--left .exit-arrow {
+	border-bottom: 2px solid white;
+	border-left: 2px solid white;
+}
+
+.exit--right .exit-arrow {
+	border-top: 2px solid white;
+	border-right: 2px solid white;
+}
