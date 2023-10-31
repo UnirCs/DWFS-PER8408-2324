@@ -1,0 +1,110 @@
+body{
+    margin: 5%;
+    font-family: "Bodoni MT";
+    font-size: 28px;
+    background-image: url("./resources/whitebrick.webp");
+
+}
+
+.informationHeader{
+    font-style: italic;
+    font-weight: bolder;
+}
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+    align-items: center;
+}
+ul, ol{
+list-style: none;
+}
+#photo-img{
+    padding: 2%;
+    margin: 4%;
+    border: 30px solid transparent;
+    border-width: 5px !important;
+    border-radius: 30px !important;
+    border-color: aqua !important;
+    opacity: 50%;
+    transition: 2s opacity;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+#photo-img:hover{
+    border-width: 10px !important;
+    opacity: 100%;
+    transition: opacity 2s;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#name, .studies{
+    opacity: 50%;
+    transition: 2s opacity;
+    position: relative;
+    text-align: center;
+}
+
+#name:hover, .studies:hover{
+
+    opacity: 100%;
+    transition: opacity 2s;
+    position: relative;
+    text-align: center;
+}
+#uca-img {
+    width: 40%;
+    border-radius: 6px;
+}
+
+.header{
+    font-size: 20px;
+    font-style: italic;
+    font-weight:  bolder;}
+
+.centered-list{
+    position: relative;
+    text-align: center;
+    align-items: center;
+}
+
+
+#personalInformationPage,#academicInformationPage, #otherLinksPage{
+    position: relative;
+    text-align: center;
+    align-items: center;
+}
+
+#personalInformationPage, #academicInformationPage, #otherLinksPage{
+    transition: opacity 2s;
+
+    opacity: 40%;
+}
+
+#personalInformationPage:hover, #academicInformationPage:hover, #otherLinksPage:hover{
+    transition: opacity 2s;
+
+    opacity: 100%;
+}
+.github{
+    width: 10%;
+}
+.linkedIn{
+    width: 5%;
+}
+
+
