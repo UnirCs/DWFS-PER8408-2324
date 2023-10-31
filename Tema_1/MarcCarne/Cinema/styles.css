@@ -1,0 +1,17 @@
+.container {
+
+}
+
+.seat-btn {
+  width: 30px;
+  height: 30px;
+}
+
+.col {
+  width: 40px;
+  height: 40px;
+}
+
+.seat-row {
+  width: 400px;
+}
