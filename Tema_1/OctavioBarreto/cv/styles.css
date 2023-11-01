@@ -31,8 +31,6 @@ body {
 }
 
 .banner__info {
-    border: 2px solid #ababab;
-    border-bottom: 6px solid #9a9c9d;
     display: grid;
     line-height: 1.5rem;
     border-radius: 35px;
@@ -43,9 +41,7 @@ body {
 }
 
 .banner__info>h4 {
-    color: cadetblue;
     font-weight: bold;
-    font-family: cursive;
 }
 
 .content {
