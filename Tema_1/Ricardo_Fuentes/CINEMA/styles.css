@@ -1,0 +1,48 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: auto;
+}
+.div__body {
+    border: 5px outset #8e6666;
+    background-color: #0093fd;
+    text-align: center;
+}
+
+.div__pantalla {
+    background: #1e1f22;
+    border: 5px lightgray;
+    height: 400px;
+}
+
+.div__footer {
+    background-color: #0093fd;
+    border: 5px lightgray;
+    height: 150px;
+    text-align: center;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 20px 20px;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 1.4s;
+    cursor: pointer;
+}
+
+table, th, td {
+    background-color: #8d6565;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
