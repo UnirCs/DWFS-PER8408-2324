@@ -1,0 +1,40 @@
+body {
+    width: 1024px;
+    font-family: Calibri, sans-serif;
+    margin: 70px;
+}
+
+.header {
+    margin: 70px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+img {
+    height: 280px;
+    padding-left: 100px;
+    vertical-align: middle;
+}
+
+.header__content {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.header__content-highlight {
+    color: #007bff;
+}
+
+h1 {
+    font-weight: bold;
+    background-color: #007BFF;
+    padding: 15px;
+    color: white;
+}
+
+td {
+    display: flex;
+    padding: 20px;
+}
