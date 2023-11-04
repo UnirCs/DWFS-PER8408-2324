@@ -23,18 +23,46 @@ img {
     margin-right: 0;
 }
 
-.header__content-highlight {
-    color: #007bff;
+.header__content--highlight {
+    color: #418AB3;
 }
 
 h1 {
-    font-weight: bold;
-    background-color: #007BFF;
+    background-color: #418AB3;
     padding: 15px;
     color: white;
 }
 
-td {
-    display: flex;
-    padding: 20px;
+table {
+    border-collapse: collapse;
 }
+
+td {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.content__header {
+    font-weight: lighter;
+    color: #418AB3;
+    padding: 30px;
+}
+
+.content__info {
+    border-bottom: 1px #418AB3 solid;
+    line-height: 2;
+    color: #595959;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.academic__info--title {
+    color: black;
+    font-weight: bold;
+}
+
+.academic__info--highlight {
+    font-weight: bold;
+}
+
