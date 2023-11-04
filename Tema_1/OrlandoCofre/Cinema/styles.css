@@ -2,6 +2,7 @@ body{
     background-color:black;
     color: white;
     text-align: center;
+    font-family: Arial;
 }
 
 header{
@@ -33,13 +34,16 @@ footer{
     margin: 10px;
 }
 
+#content-main{
+    display: block;
+}
+
 table{
     margin-left: auto;
     margin-right: auto;
 }
 
-
-td {
+td{
     width: 40px;
     height: 40px;
     border: 1px solid yellow;
@@ -47,12 +51,16 @@ td {
 
 .seleccionado {
     background-color: yellow;
-
 }
 
-th{
+th, .titulo {
     color: yellow;
-    font-family: Arial;
     font-size: 1em;
     padding: 0.5em;
+}
+
+button{
+    background-color: yellow;
+    color:black;
+    margin: 1rem;
 }
