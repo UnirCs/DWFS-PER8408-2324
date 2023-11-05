@@ -1,0 +1,16 @@
+.body-text {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente */
+}
+.h1-text {
+    font-family: "Berlin Sans FB", serif;
+    text-align: center;
+}
+.center-text {
+    text-align: center;
+}
+.right-text {
+    text-align: right;
+}
+.img-container {
+    text-align: center;
+}

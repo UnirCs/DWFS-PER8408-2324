@@ -1,0 +1,83 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 800px;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 40px auto 0;
+}
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.header h1 {
+  font-size: 36px;
+  color: #333;
+}
+.contact-info {
+  margin-bottom: 30px;
+}
+.contact-info p {
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: justify;
+}
+.section {
+  margin-bottom: 30px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.skills {
+  margin-bottom: 30px;
+}
+.skills h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+.skills ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.projects {
+  margin-bottom: 30px;
+  text-align: justify;
+}
+.projects h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.projects ul {
+  list-style: none;
+  padding: 0;
+}
+.projects ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.imagen {
+  width: 200px;
+  height: auto;
+  margin: 5px;
+}
