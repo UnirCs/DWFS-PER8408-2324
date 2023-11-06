@@ -1,0 +1,92 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	outline: 0;
+	list-style: none;
+}
+
+html,
+body {
+	font-family: Georgia, Times, serif;
+	background-color: #f5f5ed;
+}
+
+.container {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+}
+
+.data {
+	background-color: #fff;
+	margin: 10px 10px;
+	text-align: center;
+	border-radius: 25px 25px 25px 25px;
+	border: 2px solid #434344;
+	width: 30%;
+}
+
+.data__photo {
+	margin-top: 100px;
+}
+
+.imgRedonda {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid #dbe4ed;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	border-radius: 150px;
+}
+
+.data > .data__info {
+	text-align: center;
+	margin-top: 25px;
+	font-size: 15px;
+}
+
+.info__profession {
+	margin-top: 10px;
+}
+
+.info__email {
+	margin-top: 10px;
+}
+
+.data_link {
+	margin-top: 30px;
+	justify-content: center;
+}
+
+.data_link > a {
+	margin: auto;
+	justify-content: center;
+}
+
+.github {
+	width: 80px;
+	height: 60px;
+	margin: auto;
+}
+
+.linkedIn {
+	width: 50px;
+	height: 60px;
+	margin: auto;
+}
+
+.abouts {
+	background-color: #fff;
+	margin: 10px 10px;
+	border-radius: 25px 25px 25px 25px;
+	border: 2px solid #434344;
+	width: 30%;
+}
+
+.abouts__about {
+	margin: 30px 30px 30px 30px;
+}
