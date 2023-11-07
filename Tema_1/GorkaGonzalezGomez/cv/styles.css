@@ -1,0 +1,103 @@
+body {
+    width: 1024px;
+    font-family: Calibri, sans-serif;
+    margin: 70px;
+}
+
+.header {
+    margin-left: 70px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+img {
+    height: 180px;
+    padding-left: 50px;
+    vertical-align: middle;
+}
+
+.header__content {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+    line-height: 180%;
+}
+
+.header__content--highlight {
+    color: #418AB3;
+}
+
+h1 {
+    background-color: #418AB3;
+    font-weight: 540;
+    padding: 15px;
+    color: white;
+    font-size: 28px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    display: inline-block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__header {
+    font-weight: lighter;
+    color: #418AB3;
+    padding: 30px;
+}
+
+.content__header--singleLine {
+    font-weight: lighter;
+    color: #418AB3;
+    padding: 10px 30px;
+}
+
+.content__info {
+    border-bottom: 1px #418AB3 solid;
+    line-height: 2;
+    color: #595959;
+}
+
+.content__info--languages {
+    border-bottom: 0;
+    line-height: 2;
+}
+
+.academic__info--title,
+.languages__info,
+.experience__description--title{
+    color: black;
+    font-weight: bold;
+}
+
+.academic__info--highlight {
+    font-weight: bold;
+}
+
+.objetivo__info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.experience__date {
+    font-weight: normal;
+    width: 122px;
+}
+
+.experience__description {
+    padding-left: 30px;
+}
+
+
+
