@@ -1,0 +1,225 @@
+body{
+    margin: 0;
+}
+
+#banner-design{
+    background-color: #0098cd;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+}
+
+.titulo {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.subTitulo {
+    font-size: calc(0.5rem + 1.5vw);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.item {
+    color: #00749a;
+    font-weight: 600;
+}
+
+.item > span {
+    color: #000000;
+    font-weight: 400;
+}
+
+.subItem {
+    color: #00749a;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+#info-pelicula{
+    border: 1px solid #0098cd;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#titulo-item{
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 10px;
+    background-color: #028ab7;
+}
+
+.poster-pelicula{
+    height: 350px;
+    width: 284px !important;
+}
+
+#ubicacion{
+    border: 1px solid #0098cd;
+    border-radius: 10px;
+}
+
+#sillas{
+    border: 1px solid #0098cd;
+    border-radius: 10px;
+}
+
+.scroll-x{
+    width: 100%; /* Establece el ancho deseado del contenedor */
+    white-space: nowrap; /* Evita saltos de línea en el contenido */
+    overflow-x: scroll; /* Agrega una barra de desplazamiento horizontal */
+}
+
+#matriz-sillas{
+    width: 839px;
+}
+
+#pantalla-design{
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #464646;
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.silla-disponible-info{
+    height: 30px;
+    width: 30px;
+}
+.silla-ocupadas-info{
+    height: 30px;
+    width: 30px;
+}
+
+.silla-seleccionada-info{
+    height: 30px;
+    width: 30px;
+}
+
+.silla-disponible{
+    height: 45px;
+    width: 45px;
+    transition: opacity 0.3s;
+}
+
+.silla-disponible:hover{
+    content: url('img/SillasGris.svg');
+}
+
+.silla-ocupadas{
+    height: 45px;
+    width: 45px;
+}
+
+.silla-seleccionada{
+    height: 45px;
+    width: 45px;
+}
+
+.contenedor-td{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.contenedor-td-indice{
+    width: 10px;
+    margin-right: 15px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.numero-silla{
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cantidad-asientos{
+    border: 1px solid #dbdbdb;
+    background: whitesmoke;
+    border-radius: 20px;
+    height: 35px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#btn-confirmar{
+    border: 1px solid #dbdbdb;
+    color: #fff;
+    font-weight: 500;
+    background: #04475f;
+    border-radius: 20px;
+    height: 40px;
+    width: 186px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#btn-confirmar:hover{
+    background: #05698d;
+}
+
+footer{
+    border-top: 10px solid #0098cd;
+    background-color: #464646;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer div label{
+    color: #fff;
+    font-weight: 600;
+    margin: 5px;
+}
+
+@media (min-width: 1200px)
+{
+
+.titulo {
+    font-size: 3.5rem;
+}
+
+.subTitulo {
+    font-size: 1.8rem;
+}
+
+}
+
+@media (max-width: 765px)
+{
+    #ubicacion{
+        margin-top: 20px;
+    }
+
+    .silla-disponible{
+        margin-top: 10px;
+    }
+    
+    .silla-ocupadas{
+        margin-top: 10px;
+    }
+    
+    .silla-seleccionada{
+        margin-top: 10px;
+    }
+
+    .numero-silla{
+        top: 50%;
+    }
+}
