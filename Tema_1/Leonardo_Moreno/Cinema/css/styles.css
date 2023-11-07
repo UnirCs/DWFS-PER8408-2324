@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.screen {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.seating {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #19b158;
+    border: 1px solid #666;
+    cursor: pointer;
+}
+
+.seat.selected {
+    background-color: #f00;
+}
+
+.seat.reserved {
+    background-color: #274724;
+    
+}
+
+#selected-seats {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 10px; 
+    text-align: center; 
+    margin-top: 20px;
+}
+
+.boton-style {
+    background-color: #3498db; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+.boton-style:hover {
+    background-color: #2980b9; 
+}
