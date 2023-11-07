@@ -1,0 +1,574 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+
+}
+body, html {
+    height: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: calc(100% - 40px);
+    height: auto;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#santi {
+    position: absolute;
+    width: 206.208px;
+    height: 322.761px;
+    left: 98.953px;
+    top: 95.828px;
+    overflow: visible;
+}
+.TITLE {
+    position: absolute;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: right;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgba(16,59,136,1);
+}
+#PERSONAL_DETAILS {
+    left: 114.892px;
+    top: 62.954px;
+    width: 9%;
+}
+#ADDITIONAL_QUALIFICATIONS {
+    left: 135.812px;
+    top: 1247.407px;
+    width: 7%;
+}
+#PROFESSIONAL_EXPERIENCE {
+    left: 152.747px;
+    top: 739.357px;
+    width: 6%;
+}
+#SCHOOL_AND__VOCATIONAL_EDUCATI {
+    left: 68.072px;
+    top: 424.565px;
+    width: 190px;
+}
+#Date_of_Birth {
+    left: 325.085px;
+    top: 129.697px;
+    width: 91px;
+}
+#Nationality {
+    left: 325.085px;
+    top: 171.537px;
+    width: 77px;
+}
+#Kevin_Santiago_Rey_Rodriguez {
+    left: 325.085px;
+    top: 51px;
+    width: 362px;
+    font-size: 25px;
+}
+#Icon_material-location-on {
+    fill: rgba(169,170,187,1);
+}
+.Icon_material-location-on {
+    overflow: visible;
+    position: absolute;
+    width: 24.313px;
+    height: 31.606px;
+    left: 326.231px;
+    top: 211.244px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Icon_map-volume-control-teleph {
+    fill: rgba(169,170,187,1);
+}
+.Icon_map-volume-control-teleph {
+    overflow: visible;
+    position: absolute;
+    width: 26.523px;
+    height: 37.346px;
+    left: 328.22px;
+    top: 252.577px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Icon_ionic-md-mail {
+    fill: rgba(169,170,187,1);
+}
+.Icon_ionic-md-mail {
+    overflow: visible;
+    position: absolute;
+    width: 27.407px;
+    height: 21.534px;
+    left: 326.231px;
+    top: 311.805px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Icon_awesome-github {
+    fill: rgba(0,0,0,1);
+}
+.Icon_awesome-github {
+    overflow: visible;
+    position: absolute;
+    width: 27.849px;
+    height: 27.153px;
+    left: 328.22px;
+    top: 357.871px;
+    transform: matrix(1,0,0,1,0,0);
+}
+.date {
+    position: absolute;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: right;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgba(16,59,136,1);
+}
+#October_2018_-_December__2021 {
+    left: 803.276px;
+    top: 508.244px;
+    width: 175px;
+    font-size: 12px;
+}
+
+#Januar_2022_-_November__2023 {
+    left: 805.242px;
+    top: 812.078px;
+    width: 168px;
+
+}
+#Juni_2017_-_September_2018 {
+    left: 822.177px;
+    top: 658.668px;
+    width: 154px;
+    font-size: 12px;
+}
+.Subtitle {
+    position: absolute;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: rgba(16,59,136,1);
+}
+
+#Computer_Science_Students {
+    left: 325.085px;
+    top: 482.344px;
+    width: 203px;
+}
+
+#Backend_Developer {
+    left: 325.085px;
+    top: 786.178px;
+    width: 141px;
+}
+#Languages_Students {
+    left: 325.085px;
+    top: 631.771px;
+    width: 149px;
+}
+#Development_of_custom_software {
+    left: 340.028px;
+    top: 534.145px;
+    width: 431px;
+}
+
+.ph {
+    position: absolute;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgba(69,70,84,1);
+}
+
+#Development_and_implementation {
+    left: 340.028px;
+    top: 836.982px;
+    width: 360px;
+}
+#Successfully_passed_the_course {
+    left: 340.028px;
+    top: 683.571px;
+    width: 255px;
+
+}
+
+
+
+#Knowledge_in_machine_learning_ {
+    left: 339.032px;
+    top: 562.037px;
+    width: 264px;
+}
+#Development_and_implementation_bi {
+    left: 339.032px;
+    top: 863.879px;
+    width: 348px;
+}
+#Knowledge_in_HCI-related_devel {
+    left: 339.032px;
+    top: 588.935px;
+    width: 433px;
+}
+#Ensuring_software_quality_thro {
+    left: 339.032px;
+    top: 910.699px;
+    width: 396px;
+}
+#Bremen_Universitt_Bremen_Germa {
+    left: 325.085px;
+    top: 507.248px;
+    width: 206px;
+}
+
+.Subtitle2 {
+    position: absolute;
+    overflow: visible;
+    font-size: 14px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    color: rgba(172,173,181,1);
+}
+
+#Governikus_GmbH__Co_KG {
+    left: 325.085px;
+    top: 811.081px;
+    width: 179px;
+}
+#Casa_Institute_Sprachschule_Br {
+    left: 325.085px;
+    top: 655.679px;
+    width: 297px;
+}
+.line {
+    overflow: visible;
+    position: absolute;
+    fill: transparent;
+    stroke: rgba(16,59,136,1);
+    stroke-width: 5px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+    width: 690.708px;
+    height: 5px;
+    transform: matrix(1,0,0,1,0,0);
+    left: 317.611px;
+}
+
+.Linie_1 {
+    top: 449.512px;
+}
+
+.Linie_2 {
+    top: 749.664px;
+}
+#XX0X19XX {
+    left: 439.645px;
+    top: 133.697px;
+    width: 85px;
+}
+#XXXXXXX {
+    left: 439.645px;
+    top: 177px;
+    width: 69px;
+}
+#XXXXX_Xxxxxxx_ {
+    left: 439.645px;
+    top: 219.368px;
+    width: 108px;
+}
+#n_1XX_2XXX2XX3__ {
+    left: 439.645px;
+    top: 267.185px;
+    width: 111px;
+}
+#XXXXXgmailcom_ {
+    left: 439.645px;
+    top: 319.998px;
+    width: 124px;
+}
+#httpsgithubcomksreyr {
+    left: 439.645px;
+    top: 369.807px;
+    width: 159px;
+}
+
+#Native_languages {
+    left: 139.796px;
+    top: 1299.209px;
+    position: absolute;
+    overflow: visible;
+    width: 124px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(16,59,136,1);
+}
+#Additional_languages {
+    left: 110.907px;
+    top: 1345.032px;
+    position: absolute;
+    overflow: visible;
+    width: 149px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(16,59,136,1);
+}
+#Spanish {
+    left: 317.116px;
+    top: 1299.209px;
+}
+#Rechteck_18 {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rechteck_18 {
+    position: absolute;
+    overflow: visible;
+    width: 193.258px;
+    height: 41.84px;
+    left: 416.733px;
+    top: 1337.063px;
+}
+#Rechteck_19 {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rechteck_19 {
+    position: absolute;
+    overflow: visible;
+    width: 193.258px;
+    height: 41.84px;
+    left: 611.984px;
+    top: 1337.063px;
+}
+#Rechteck_20 {
+    fill: rgba(255,255,255,1);
+    stroke: rgba(112,112,112,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rechteck_20 {
+    position: absolute;
+    overflow: visible;
+    width: 195.25px;
+    height: 41.84px;
+    left: 805.242px;
+    top: 1337.063px;
+}
+
+.Linie_6 {
+    top: 1269.519px;
+}
+#Comprehension {
+    left: 465.546px;
+    top: 1349.018px;
+    position: absolute;
+    overflow: visible;
+    width: 86px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgba(16,59,136,1);
+}
+#Speaking {
+    left: 675.739px;
+    top: 1349.018px;
+    position: absolute;
+    overflow: visible;
+    width: 51px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgba(16,59,136,1);
+}
+#Writing {
+    left: 879.955px;
+    top: 1349.018px;
+    position: absolute;
+    overflow: visible;
+    width: 39px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgba(16,59,136,1);
+}
+#October_2018_-_October__2021 {
+    left: 811.219px;
+    top: 968.478px;
+    width: 163px;
+}
+#Juni_2017_-_September_2018_b {
+    left: 822.177px;
+    top: 1116.908px;
+    width: 154px;
+}
+#Softwareentwickler-Werkstudent {
+    left: 317.085px;
+    top: 942.577px;
+    width: 233px;
+}
+#Internship_in_sound_engineerin {
+    left: 315.085px;
+    top: 1093px;
+    width: 419px;
+}
+#Development_of_web_application {
+    left: 340.028px;
+    top: 994.378px;
+    width: 404px;
+}
+#The_recording_assistant_for_au {
+    left: 335.028px;
+    top: 1144.8px;
+    width: 257px;
+}
+
+#Deployment_and_management_of_p {
+    left: 339.032px;
+    top: 1021.274px;
+    width: 397px;
+}
+#Programming_and_updating_the_w {
+    left: 339.032px;
+    top: 1172.694px;
+    width: 216px;
+}
+#Development_and_implementation_cl {
+    left: 339.032px;
+    top: 1049.169px;
+    width: 427px;
+}
+#Bremer_Institut_fr_Produktion_ {
+    left: 325.085px;
+    top: 966.485px;
+    width: 265px;
+}
+#Diffusion_Magazine__Boutique_P {
+    left: 325.085px;
+    top: 1116.908px;
+    width: 281px;
+}
+#n__co {
+    top: 1194.609px;
+}
+#Writing_specialized_articles_f {
+    left: 339.032px;
+    top: 1200.587px;
+    width: 434px;
+}
+#Rechteck_16 {
+    fill: rgba(219,219,219,1);
+}
+.Rechteck_16 {
+    position: absolute;
+    overflow: visible;
+    width: 583.759px;
+    height: 26.896px;
+    left: 416.733px;
+    top: 1430.703px;
+}
+#Rechteck_17 {
+    fill: rgba(219,219,219,1);
+}
+.Rechteck_17 {
+    position: absolute;
+    overflow: visible;
+    width: 583.759px;
+    height: 27.893px;
+    left: 416.733px;
+    top: 1378.902px;
+}
+#German {
+    left: 317.116px;
+    top: 1378.902px;
+    width: 58px;
+}
+
+#TestDaf {
+    left: 685.701px;
+    top: 1408.788px;
+    width: 24px;
+    font-size: 8px;
+}
+#English {
+    left: 323.093px;
+    top: 1428.711px;
+}
+#C1 {
+    left: 504.397px;
+    top: 1382.888px;
+}
+#B2 {
+    left: 504.397px;
+    top: 1433.691px;
+}
+#C1_cx {
+    left: 697.655px;
+    top: 1382.888px;
+}
+#B2_cy {
+    left: 699.647px;
+    top: 1433.691px;
+}
+#C1_cz {
+    left: 892.906px;
+    top: 1382.888px;
+}
+#B2_c {
+    left: 892.906px;
+    top: 1433.691px;
+}

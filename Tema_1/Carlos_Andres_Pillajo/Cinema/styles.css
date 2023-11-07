@@ -1,0 +1,100 @@
+.title {
+    margin: 10px;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(26, 25, 25);
+    border-radius: 10px;
+}
+
+.screen {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(26, 25, 25);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.butacas{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: x-large;
+    color: yellow;
+    /*background-color: rgb(26, 25, 25);
+    border-radius: 10px;*/
+}
+
+.reserva {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    /*background-color: rgb(26, 25, 25); 
+    border-radius: 10px; */
+    color: yellow;
+    margin: 10px;
+    height: 120px;
+}
+
+.form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#asientos {
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 5px;
+}
+
+#boton {
+    background-color: yellow;
+    font-weight: bolder;
+}
+
+td {
+    border: 8px solid rgb(26, 25, 25) !important;
+    width: 40px;
+    height: 40px;
+    background-color: yellow;    
+}
+
+.available {
+    background-color: black;
+}
+
+body {
+    background-color: black !important;
+}
+
+.footer {
+    margin: 10px;
+    background-color: rgb(26, 25, 25);
+    border-radius: 10px;
+    color: white;
+}
+
+p {
+    text-align: center;
+}
+
+.contenedor {
+    margin: 10px;
+    background-color: rgb(26, 25, 25);
+    border-radius: 10px;
+}
+
+td:hover {
+    background-color: yellow;
+}
