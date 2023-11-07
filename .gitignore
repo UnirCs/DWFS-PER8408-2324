@@ -42,6 +42,10 @@ nb-configuration.xml
 
 # Maven build tools.
 target
+/target
+**/target
+/target/
+**/target/
 
 # Sprint Tools 
 *.sts4-cache
