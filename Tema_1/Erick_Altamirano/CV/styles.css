@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+}
+.container {
+    width: 100%;
+    height: auto;
+}
+
+.container_section_photo{
+    background-color: #666666;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+}
+div h1{
+    color: white;
+    font-size: x-large;
+    font-family: Arial;
+    font-weight: bold;
+}
+.container_section_photo > p{
+    color: white;
+}
+div > img{
+    width: 150px;
+}
+
+div > h2 {
+    font-family: Arial;
+    color: #007BFF;
+    font-size: large;
+    margin: 0;
+}
+.container_information{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container_section_contacto table {
+    display: flex;
+    justify-content: center;
+}
+
+div > h3{
+    font-family: Arial;
+    font-size: small;
+}
+table{
+    border-spacing: 20px;
+}
+
+tr > td{
+
+    text-align: center;
+}
+
+td > img {
+    width: 20px;
+}
+li{
+    font-family: Arial;
+    font-size: small;
+}
+
+p{
+    font-family: Arial;
+    font-size: small;
+}

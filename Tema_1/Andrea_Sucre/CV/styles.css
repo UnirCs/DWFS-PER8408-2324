@@ -1,0 +1,109 @@
+section {
+    padding: 15px 15px 0 15px;
+}
+
+#personal-information {
+    background: #3498db;
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    line-height: 30px;
+    padding-bottom: 15px;
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+
+    .contact {
+        flex-basis: 50%;
+        border-right: 3px solid #ffffff;
+        margin-right: 10px;
+        @media (max-width: 600px) {
+            border: 0;
+            flex-basis: 100%;
+        }
+    }
+    .contact__linkedin {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        & a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+    }
+
+    .profession {
+        flex-basis: 30%;
+        @media (max-width: 600px) {
+            flex-basis: 100%;
+        }
+    }
+
+    .contact__name, .profession__title {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .photo {
+        flex-basis: 20%;
+        text-align: end;
+        & img {
+            width: 120px;
+            height: 160px;
+            @media (max-width: 600px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.section-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.section-content {
+    border-left: 3px solid #3498db;
+    & ul {
+        list-style: none;
+        padding-inline-start: 0;
+        columns: 2;
+        --webkit-column: 2;
+        --moz-column: 2;
+        @media (max-width: 600px) {
+            columns: 1;
+            --webkit-column: 1;
+            --moz-column: 1;
+        }
+    }
+}
+
+#languages, #skills {
+    .section-content {
+        border: 0;
+    }
+}
+.experience {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+}
+.experience--active {
+    color: #3498db;
+    font-weight: bold;
+}
+.experience__timeline {
+    flex-basis: 20%;
+    margin-left: 10px;
+}
+.experience__description {
+    flex-basis: 80%;
+    @media (max-width: 600px) {
+        margin-left: 10px;
+    }
+}
