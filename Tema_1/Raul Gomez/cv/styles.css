@@ -1,0 +1,37 @@
+header {
+    background-color: rgba(13,110,253, 1);
+    border-radius: 0.375rem;
+    color: #fff;
+    padding: 3rem;
+    text-align: center;
+}
+
+.contenedor, header {
+    font-family: sans-serif;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+img {
+    width: 180px;
+    border-radius: 0.375rem;
+}
+
+.card {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.175);
+    border-radius: 4px;
+}
+
+.contenido {
+    padding: 1rem 1rem;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin-left: 0;
+}
