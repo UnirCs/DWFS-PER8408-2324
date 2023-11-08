@@ -1,0 +1,62 @@
+
+.seat{
+    font-size: 3rem;
+}
+
+.text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.seat-letter{
+    font-size: 3rem;
+    border-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.selection-screen{
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    border: 20px;
+    border-color: black;
+}
+
+.seat-selection{
+    font-size: 3rem; 
+    background-color: blue;
+}
+
+.icon-yellow{
+    color: rgb(245, 230, 83);
+}
+
+.text-legend{
+    margin-top: 12px;
+    font-size: 2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.screen{
+    background-color: rgb(46, 49, 49);
+    width: 650px;
+    height: 50px;
+    border-radius: 15px;
+    margin-left: 20px;
+}
+
+.screen-text{
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-right: 200px !important;
+ }
