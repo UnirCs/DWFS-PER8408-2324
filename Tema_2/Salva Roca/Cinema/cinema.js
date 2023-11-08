@@ -23,37 +23,21 @@ function setup() {
 
 // Función para sugerir butacas, tomando como argumento el número de asientos a reservar
 function suggest(seatMap, nSeats) {
-    const selectedSeats = new Set(); // Inicializamos el set que contendré los asientos sugeridos
+    const selectedSeats = new Set(); // Inicializamos el set que contendrá los asientos sugeridos
 
     if (nSeats <= seatMap[0].length) {
-        let row = seatMap.length - 1; // Comenzamos desde la última fila
-
-        while (row >= 0) {
-            let consecutiveSeats = 0; // Inicializamos contador de asientos consecutivos
-            let startSeatIndex = -1; // Inicializamos indicador de asientos consecutivos
-
-            for (let i = 0; i < seatMap[0].length; i++) {
-                if (!seatMap[row][i].estado) {
-                    if (consecutiveSeats === 0) {
-                        startSeatIndex = i; // Marcamos el inicio de los asientos consecutivos
-                    }
-                    consecutiveSeats++;
-
-                    if (consecutiveSeats === nSeats) {
-                        // Si se encuentran tantos asientos consecutivos como se han solicitado, los añadimos al set
-                        for (let j = startSeatIndex; j <= i; j++) {
-                            selectedSeats.add(seatMap[row][j].id);
-                        }
-                        return selectedSeats;
-                    }
+        for (let i = seatMap.length - 1; i >= 0 && selectedSeats.size < nSeats; i--) {
+            for (let j = 0; j < seatMap[i].length && selectedSeats.size < nSeats; j++) {
+                if (!seatMap[i][j].estado) {
+                    selectedSeats.add(seatMap[i][j].id); // Añadimos asiento disponible al set
                 } else {
-                    consecutiveSeats = 0; // Si no se encuentran, reiniciamos el contador de asientos consecutivos
+                    selectedSeats.clear(); // Vaciamos el set si un asiento no está disponible (no consecutivos)
                 }
             }
-
-            row--; // Si no se encuentran asientos suficientes, pasamos una fila adelante
+            if (selectedSeats.size < nSeats) selectedSeats.clear(); // Vaciamos el set al saltar de fila
         }
     }
+
     return selectedSeats;
 }
 
@@ -112,4 +96,4 @@ butacas[1][9].estado = true;
 // Fila 1: numAsientos = 10 (dejamos la fila vacía)
 
 // Mostrar asientos sugeridos (se puede comprobar la función modificando numAsientos)
-console.log(suggest(butacas, 4));
+console.log(suggest(butacas, 8));
