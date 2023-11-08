@@ -22,25 +22,39 @@ function setup() {
 }
 
 // Función para sugerir butacas, tomando como argumento el número de asientos a reservar
-function suggest(butacas, numAsientos) {
-    let selAsientos = [];
-    if (numAsientos <= butacas.length) {
-        for (let i = butacas.length - 1; i >= 0; i-- && selAsientos.length < numAsientos) {
-            for (let j = 0; j <= butacas[i].length - 1; j++) {
-                if (butacas[i][j].estado === false && selAsientos.length < numAsientos) {
-                    selAsientos.push(butacas[i][j].id);
-                } else if (selAsientos.length === numAsientos) {
-                    break;
-                } else if (butacas[i].length - j > numAsientos){
-                    selAsientos = [];
+function suggest(seatMap, nSeats) {
+    const selectedSeats = new Set(); // Inicializamos el set que contendré los asientos sugeridos
+
+    if (nSeats <= seatMap[0].length) {
+        let row = seatMap.length - 1; // Comenzamos desde la última fila
+
+        while (row >= 0) {
+            let consecutiveSeats = 0; // Inicializamos contador de asientos consecutivos
+            let startSeatIndex = -1; // Inicializamos indicador de asientos consecutivos
+
+            for (let i = 0; i < seatMap[0].length; i++) {
+                if (!seatMap[row][i].estado) {
+                    if (consecutiveSeats === 0) {
+                        startSeatIndex = i; // Marcamos el inicio de los asientos consecutivos
+                    }
+                    consecutiveSeats++;
+
+                    if (consecutiveSeats === nSeats) {
+                        // Si se encuentran tantos asientos consecutivos como se han solicitado, los añadimos al set
+                        for (let j = startSeatIndex; j <= i; j++) {
+                            selectedSeats.add(seatMap[row][j].id);
+                        }
+                        return selectedSeats;
+                    }
                 } else {
-                    selAsientos = [];
-                    break;
+                    consecutiveSeats = 0; // Si no se encuentran, reiniciamos el contador de asientos consecutivos
                 }
             }
+
+            row--; // Si no se encuentran asientos suficientes, pasamos una fila adelante
         }
     }
-    return selAsientos;
+    return selectedSeats;
 }
 
 // Inicializar la matriz
