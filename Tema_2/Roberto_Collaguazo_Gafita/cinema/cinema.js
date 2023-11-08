@@ -16,14 +16,14 @@ function setup() {
         let numeroAleatorio = Math.random() * (6 - 4) + 4;
         for (let j = 0; j < N; j++) {
             // Nuevo asiento
-            if(j%parseInt(numeroAleatorio)===0){
-                visualizar += ("O "+idContador+"\t");
+            if (j % parseInt(numeroAleatorio) === 0) {
+                visualizar += ("O " + idContador + "\t");
                 fila.push({
                     id: idContador++,
                     estado: true // Estado inicial ocupado
                 });
-            }else{
-                visualizar += ("L "+idContador+"\t");
+            } else {
+                visualizar += ("L " + idContador + "\t");
                 fila.push({
                     id: idContador++,
                     estado: false // Estado inicial libre
@@ -41,35 +41,40 @@ function setup() {
 // Inicializar la matriz
 let butacas = setup();
 
-function suggest(asientos){
+function suggest(asientos) {
     let arrayAsientos = [];
     let asientosSeguidos = 0;
     let validadorSet = false;
-    if(asientos>0 && asientos<=butacas.length){ //Comprueba que no se ingresen asientos mayores a los existentes en la fila
-        for(let i=butacas.length-1; i>=0; i--){
-            for(let j=butacas[0].length-1; j>=0; j--) {
-                if(butacas[i][j].estado===false){
+    let continuarBusquedaFilas = true;
+    let continuarBusquedaAsientos = true;
+
+    if (asientos > 0 && asientos <= butacas.length) { //Comprueba que no se ingresen asientos mayores a los existentes en la fila
+        for (let i = butacas.length - 1; i >= 0 && continuarBusquedaFilas; i--) {
+            for (let j = butacas[0].length - 1; j >= 0 && continuarBusquedaAsientos; j--) {
+                if (butacas[i][j].estado === false) {
                     arrayAsientos.push(butacas[i][j].id) //Llena los asientos seguidos que encuentre
                     asientosSeguidos++;
-                    if(asientos === asientosSeguidos){
+                    if (asientos === asientosSeguidos) {
                         validadorSet = true;
-                        break;
+                        continuarBusquedaAsientos = false;
                     }
-                }else{
+                } else {
                     asientosSeguidos = 0;
-                    arrayAsientos = []; //Se vacía los asientos debido a que no hubo asientos seguidos
+                    arrayAsientos = []; //Se vacía los asientos debido a que no hubo la cantidad de asientos seguidos libres requeridos
                 }
             }
-            if(validadorSet){
-                break;
+            if (validadorSet) {
+                continuarBusquedaFilas = false;
+            } else {
+                arrayAsientos = []; //Se vacía los asientos debido a que no hubo la cantidad de asientos seguidos libres requeridos
             }
-            arrayAsientos = []; //Se vacía los asientos debido a que no hubo asientos seguidos
+
         }
     }
 
     //Llenando asientos en Set
-    if(validadorSet){
-        for(let i=0; i<arrayAsientos.length; i++){
+    if (validadorSet) {
+        for (let i = 0; i < arrayAsientos.length; i++) {
             asientosEscogidos.add(arrayAsientos[i]);
         }
     }
