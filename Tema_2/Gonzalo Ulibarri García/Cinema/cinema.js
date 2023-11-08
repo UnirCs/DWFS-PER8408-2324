@@ -33,11 +33,15 @@ const init_cinema = ()=>
 
 const exsistSeats = (nSeats, cinema)=>
 {
-    for(let row= nRows-1; row>=0 ; row--)
+    let count
+    let seatsNotFound = true
+    let tempPurchase
+
+    for(let row= nRows-1 ; row>=0 && seatsNotFound ; row--)
     {
-        let count = 0
-        let tempPurchase = new Set([]);
-        for(let seat=nRows-1; seat>=0 ; seat--)
+        tempPurchase = new Set([]);
+        count = 0
+        for(let seat=nRows-1 ; seat>=0 && seatsNotFound; seat--)
         {
             if(cinema[row][seat].state === false){
                 count++
@@ -49,22 +53,22 @@ const exsistSeats = (nSeats, cinema)=>
 
             if(count===nSeats)
             {
-                return tempPurchase
+                seatsNotFound = false
             }
         }
 
     }
-    return []
+    return tempPurchase
 
 }
 
 
  let suggest = (nSeats, cinema)=>
  {
-    if( nSeats > nRows)
-        return []
-
-    return exsistSeats(nSeats, cinema)
+    if( nSeats > nRows){
+        return new Set([])
+    }else
+        return exsistSeats(nSeats, cinema)
  }
 
 
