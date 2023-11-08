@@ -12,7 +12,7 @@ Con este ejercicio vamos a aprender a tratar con los píxeles de las imágenes u
 
 Continuamos con el ejercicio de la selección de butacas de un cine. En este caso vamos a usar JavaScript para hacer una pre-selección de los asientos que un usuario puede elegir.
 
-** No se aceptan soluciones que violen las invariantes de un bucle **
+**No se aceptan soluciones que violen las invariantes de un bucle**
 
 ## Entrega
 
