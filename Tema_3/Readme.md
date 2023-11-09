@@ -1,4 +1,4 @@
-Tema 2: JavaScript Avanzado
+Tema 3: JavaScript Avanzado
 =============================================
 
 El objetivo de estos ejercicios es seguir trabajando con JavaScript haciendo uso de API Fetch, promesas, callbacks, etc.
