@@ -1,0 +1,128 @@
+/* https://colorhunt.co/palette/164863427d9d9bbec8ddf2fd */
+body {
+  background-color: #164863;
+  margin: 0px;
+  padding: 0px;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  background-color: #ddf2fd;
+  margin: 0px;
+  padding: 1rem;
+  border-bottom: #164863 solid 1px;
+}
+
+.presentation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.personal_title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: start;
+  margin: 0px;
+  padding: 0px;
+  color: #164863;
+}
+
+.personal_subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: start;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 0.5rem;
+  color: #427d9d;
+}
+
+.presentation img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 2px solid #164863;
+}
+
+.personal_contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.presentation div > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.presentation div > svg {
+  width: 1rem;
+  height: 1rem;
+  fill: #164863;
+}
+
+.personal_contact div > p,
+a {
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-align: start;
+  padding: 0px;
+  color: #427d9d;
+  text-decoration: none;
+}
+
+.resume p {
+  color: #164863;
+  font-size: 0.8rem;
+  text-align: justify;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.content {
+  margin: 0px;
+  padding: 1rem;
+  background-color: white;
+}
+
+.details h2 {
+  color: #164863;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0px;
+  margin-top: 1rem;
+}
+
+.item_title h3 {
+  color: #164863;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.details p {
+  color: #164863;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.item_description p {
+  color: #164863;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.divider {
+  border-bottom: #164863 solid 1px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
