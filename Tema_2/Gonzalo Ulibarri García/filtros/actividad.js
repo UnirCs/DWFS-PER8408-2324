@@ -8,6 +8,24 @@ let handler = new ImageHandler(path);
 /**
  * Ejemplo de construccion de una imagen
  */
+var R = 0
+var G = 1
+var B = 2
+
+
+function transposeMatrix(Nx, Ny, matrix){
+    let transposed = [];
+    for (let i = 0; i < Ny; i++) {
+        transposed[i] = [];
+        for (let j = 0; j < Nx; j++) {
+            transposed[i][j] = matrix[j][i]; // Puedes cambiar este valor por el que desees
+        }
+    }
+    return transposed
+}
+
+
+
 function ejemplo() {
 
     let outputPath = 'output/ejemplo.jpg';
@@ -42,7 +60,15 @@ function redConverter() {
     let outputPath = 'output/tucan_red.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    for(let i =0 ; i<pixels.length ; i++)
+    {
+        for(let j =0 ; j<pixels[i].length ; j++)
+        {
+            pixels[i][j][G] = 0
+            pixels[i][j][B] = 0
+        }
+    }
+
 
     handler.savePixels(pixels, outputPath);
 }
@@ -56,7 +82,14 @@ function greenConverter() {
     let outputPath = 'output/tucan_green.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    for(let i =0 ; i<pixels.length ; i++)
+    {
+        for(let j =0 ; j<pixels[i].length ; j++)
+        {
+            pixels[i][j][R] = 0
+            pixels[i][j][B] = 0
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -70,7 +103,14 @@ function blueConverter() {
     let outputPath = 'output/tucan_blue.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    for(let i =0 ; i<pixels.length ; i++)
+    {
+        for(let j =0 ; j<pixels[i].length ; j++)
+        {
+            pixels[i][j][G] = 0
+            pixels[i][j][R] = 0
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -88,7 +128,17 @@ function greyConverter() {
     let outputPath = 'output/tucan_grey.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    for(let i =0 ; i<pixels.length ; i++)
+    {
+        for(let j =0 ; j<pixels[i].length ; j++)
+        {
+            let media = (pixels[i][j][R]+pixels[i][j][G]+pixels[i][j][B])/3
+            pixels[i][j][R] = media
+            pixels[i][j][G] = media
+            pixels[i][j][B] = media
+
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -104,7 +154,19 @@ function blackAndWhiteConverter() {
     let outputPath = 'output/tucan_black_and_white.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    for(let i =0 ; i<pixels.length ; i++)
+    {
+        for(let j =0 ; j<pixels[i].length ; j++)
+        {
+            let bn;
+            (pixels[i][j][R]+pixels[i][j][G]+pixels[i][j][B])/3 < 128 ? bn=0 : bn=255
+
+            pixels[i][j][R] = bn
+            pixels[i][j][G] = bn
+            pixels[i][j][B] = bn
+
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -118,10 +180,22 @@ function blackAndWhiteConverter() {
 function scaleDown() {
     let outputPath = 'output/tucan_scale_down.jpg';
     let pixels = handler.getPixels();
+    console.log(pixels)
 
-    //Aqui tu codigo
+    let newImage = [];
+    for(let i =0 ; i<pixels.length ; i=i+2)
+    {
+        let newRow = [];
+        for(let j =0 ; j<pixels[i].length ; j=j+2)
+        {
+            newRow.push(pixels[i][j])
+        }
+        newImage.push(newRow)
+    }
 
-    handler.savePixels(pixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
+    //console.log(newImage)
+
+    handler.savePixels(newImage, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
 }
 
 /**
@@ -133,8 +207,17 @@ function dimBrightness(dimFactor) {
     let outputPath = 'output/tucan_dimed.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    for(let i =0 ; i<pixels.length ; i++)
+    {
+        for(let j =0 ; j<pixels[i].length ; j++)
+        {
 
+            pixels[i][j][R] = pixels[i][j][R]/dimFactor
+            pixels[i][j][G] = pixels[i][j][G]/dimFactor
+            pixels[i][j][B] = pixels[i][j][B]/dimFactor
+
+        }
+    }
     handler.savePixels(pixels, outputPath);
 }
 
@@ -148,9 +231,15 @@ function dimBrightness(dimFactor) {
 function invertColors() {
     let outputPath = 'output/tucan_inverse.jpg';
     let pixels = handler.getPixels();
+    for(let i =0 ; i<pixels.length ; i++)
+    {
+        for(let j =0 ; j<pixels[i].length ; j++) {
 
-    //Aqui tu codigo
-
+            pixels[i][j][R] = (255 - pixels[i][j][R]) % 255
+            pixels[i][j][G] = (255 - pixels[i][j][G]) % 255
+            pixels[i][j][B] = (255 - pixels[i][j][B]) % 255
+        }
+    }
     handler.savePixels(pixels, outputPath);
 }
 
@@ -170,7 +259,22 @@ function merge(alphaFirst, alphaSecond) {
 
     let pixels = [];
 
-    //Aqui tu codigo
+    for(let i =0 ; i<catPixels.length ; i++)
+    {
+        let fusionRow = []
+        for(let j =0 ; j<catPixels[i].length ; j++) {
+
+            let fusionR = (catPixels[i][j][R]*alphaSecond+dogPixels[i][j][R]*alphaFirst) % 255
+            let fusionG = (catPixels[i][j][G]*alphaSecond+dogPixels[i][j][G]*alphaFirst) % 255
+            let fusionB = (catPixels[i][j][B]*alphaSecond+dogPixels[i][j][B]*alphaFirst) % 255
+
+            let fusionPixel = [fusionR,fusionG,fusionB]
+            fusionRow.push(fusionPixel)
+        }
+        pixels.push(fusionRow)
+    }
+
+    console.log()
 
     dogHandler.savePixels(pixels, outputPath);
 }
@@ -194,7 +298,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 0;
+let optionN = 1;
 
 switch (optionN) {
     case 1: redConverter(); break;
