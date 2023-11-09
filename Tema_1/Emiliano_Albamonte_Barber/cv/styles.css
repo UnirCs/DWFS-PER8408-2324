@@ -1,0 +1,44 @@
+body {
+    background: #ffffe3;
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+.cv-container {
+    border-block-style:double;
+    border-width: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+section > h5{
+    margin-top: -3px;
+    margin-left: 2.5rem;
+}
+section h3{
+    margin-left: 2rem;
+}
+section p,ul{
+    margin-left: 3rem;
+}
+.cv-container_user {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.cv-container_experiencia, .cv-container_educacion , .cv-container_idiomas{
+    border-top-style: ridge;
+}
+
+div[class='cv-container_user'] > img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 70%;
+    margin-right: 10px;
+}
+

@@ -1,0 +1,43 @@
+body {
+    background-color: #5e5e5e !important;
+}
+
+h1{
+    text-align:center;
+
+}
+.row{
+    justify-content: space-around;
+}
+.col {
+    margin-bottom: 10px;
+}
+.row > *{
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba( 112.520718,44.062154,249.437846, 0.15);
+    border: 1px solid rgba( 112.520718,44.062154,249.437846, 0.3);
+}
+.row > div.col:not(.seat-occupied):hover {
+    font-size: 150%;
+    cursor: pointer;
+}
+form{
+    margin-top: 2rem;
+    justify-content: center;
+}
+.seat-vip{
+    background-color: goldenrod;
+}
+.seat-occupied{
+    background-color: rgba(255, 0, 0, 0.5);
+}
+#pantalla {
+    width: 60rem;
+    height: 20rem;
+    margin: 50px auto;
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+}
