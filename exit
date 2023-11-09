@@ -1,0 +1,594 @@
+[33mcommit 339550a1daebd45b58d1bd84e5a09ef179907702[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Jesus PM - UNIR <jesus.perezmelero@unir.net>
+Date:   Thu Nov 9 21:45:22 2023 +0100
+
+    T2 Restored
+
+[33mcommit d9bc50a877e2fcb8ece1aa8c470225c9c0860cad[m
+Author: Jesus PM - UNIR <jesus.perezmelero@unir.net>
+Date:   Thu Nov 9 21:40:09 2023 +0100
+
+    T3
+
+[33mcommit b650fb9d231b4b19a5d95a094dcb2e58848a410e[m
+Author: Jesus PM - UNIR <jesus.perezmelero@unir.net>
+Date:   Thu Nov 9 21:39:43 2023 +0100
+
+    T3
+
+[33mcommit 69f0e8d47ae36dd4302b8308976ce429345c9920[m
+Author: Jesus PM - UNIR <jesus.perezmelero@unir.net>
+Date:   Thu Nov 9 21:38:26 2023 +0100
+
+    T3
+
+[33mcommit 0d7db986c7daab45d02542664e767026ec28fcbd[m
+Author: Frem! <47427538+EMIsDev@users.noreply.github.com>
+Date:   Thu Nov 9 16:11:58 2023 +0100
+
+    Ejercicio CV (#45)
+    
+    * Ejercicio CV
+    
+    * Ejercicio Cine
+    
+    * Agregado del input y extras de color.
+
+[33mcommit 2e9036b65b27b41db3b3995fe71d06c77b1c56ef[m
+Author: Christian <32473863+crisedumax@users.noreply.github.com>
+Date:   Thu Nov 9 10:09:49 2023 -0500
+
+    Actividad1_CV_Cinema_ChristianReyesA (#46)
+    
+    * Actividad1_CV_Cinema_ChristianReyesA
+    
+    * Revert "Actividad1_CV_Cinema_ChristianReyesA"
+    
+    This reverts commit 364830b350028f66ffddec5d4b0f16e366fa159c.
+    
+    * Actividad1_CV_Cinema_ChristianReyesA
+
+[33mcommit f1ba18736adf99203598e4c07de54ebc839eb145[m
+Author: Roberto Collaguazo <150202269+Racollaguazo95@users.noreply.github.com>
+Date:   Wed Nov 8 16:18:21 2023 -0500
+
+    Ejercicios Tema 2 (#42)
+    
+    * Ejercicios Tema 1
+    
+    * Delete Tema_1/Roberto_Collaguazo_Gafita directory
+    
+    * Ejercicios Tema 1
+    
+    * Ejercicios Tema 2
+    
+    * Cambios Tema_2/cinema
+    
+    Se crearon 2 nuevas variables que permiten finalizar los bucles sin necesidad de usar break:
+    
+    let continuarBusquedaFilas = true;
+    let continuarBusquedaAsientos = true;
+
+[33mcommit 3210f8528daf7285de1c559c5a44763bc10f4bc9[m
+Author: UNIR - Software Engineering <115072043+UnirCs@users.noreply.github.com>
+Date:   Wed Nov 8 22:08:16 2023 +0100
+
+    Update Readme.md
+
+[33mcommit 89058b3c7e79a9d25540465b03dc45b5816587be[m
+Author: UNIR - Software Engineering <115072043+UnirCs@users.noreply.github.com>
+Date:   Wed Nov 8 22:07:42 2023 +0100
+
+    Update Readme.md
+
+[33mcommit bef3097a229c11f4a98ab23cc30ddf162c1d018a[m
+Author: UNIR - Software Engineering <115072043+UnirCs@users.noreply.github.com>
+Date:   Wed Nov 8 22:07:26 2023 +0100
+
+    Update Readme.md
+
+[33mcommit 0158e1d5c323da93138d34af5978548ac61be9d6[m
+Author: GonzaloUli <43575107+gonzalouli@users.noreply.github.com>
+Date:   Wed Nov 8 21:57:13 2023 +0100
+
+    Añado cambios pedidos (#44)
+    
+    * Ejercicio 1 y 2.
+    
+    * Ejercicio 1 y 2 arreglos
+    
+    * Ejercicio 1 y 2 arreglos de package.json y package-lock.json
+    
+    * Añadidos cambios y scripts de cinema
+    
+    * Añadidos cambios. Ejercicio 1 y 2 completados.
+    
+    * Añadidos cambios en recursos. Ejercicio 1 y 2 completados.
+    
+    * Delete Tema_2/Gonzalo Ulibarri García/Cinema/resources directory
+    
+    * Delete Tema_2/Gonzalo Ulibarri García/Cinema/styles.css
+    
+    * Delete Tema_2/Gonzalo Ulibarri García/Cinema/index.html
+    
+    * Delete Tema_2/Gonzalo Ulibarri García/filtros/ImageHandler.js
+    
+    * Delete Tema_2/Gonzalo Ulibarri García/filtros/output directory
+    
+    * Delete Tema_2/Gonzalo Ulibarri García/filtros/input directory
+    
+    * Añadidos cambios en cinema. Ejercicio 1 y 2 completados.
+
+[33mcommit 7b78e233a93b8cc2321b4ac933ffb15052702707[m
+Author: Salva Roca <49022665+SalvaRoca@users.noreply.github.com>
+Date:   Wed Nov 8 21:52:30 2023 +0100
+
+    Entrega actividades opcionales Tema 2 (#38)
+    
+    * Añadidos index.html y styles.css para la entrega de la actividad opcional del Tema 1.
+    
+    * Modificación menor en index.html
+    
+    * Actividad opcional Tema 1 completa.
+    
+    * Actividad opcional Tema 1 completa.
+    
+    * Archivos movidos a carpeta Tema_1/Salva Roca
+    
+    * Actividad de filtros terminada
+    
+    * Función suggest() completa en cinema.js
+    
+    * Lógica de función suggest() en cinema.js modificada para evitar el uso de break y mantener invariante de bucles.
+    
+    * Función suggest() en cinema.js modificada
+
+[33mcommit 3cb98b50eae74205864fda10f38eed5818d61b8e[m
+Author: MariaCiffu <149708823+MariaCiffu@users.noreply.github.com>
+Date:   Wed Nov 8 17:52:56 2023 +0100
+
+    Ejercicios tema 1 (#43)
+
+[33mcommit 025baaf00c11d781c772a5dd2f198509111e0a0b[m
+Author: Alejandro Rodriguez <89213798+alejo-RB@users.noreply.github.com>
+Date:   Wed Nov 8 11:43:47 2023 -0500
+
+    Cinema terminado (#40)
+    
+    * Creación de espacio de trabajo
+    
+    * CV terminado
+    
+    * Cinema
+
+[33mcommit a911eca5b8fc596e5a98b62fbd3bd3d07b577b46[m
+Author: Roberto Collaguazo <150202269+Racollaguazo95@users.noreply.github.com>
+Date:   Wed Nov 8 03:31:20 2023 -0500
+
+    Ejercicios Tema 1 (#37)
+    
+    * Ejercicios Tema 1
+    
+    * Delete Tema_1/Roberto_Collaguazo_Gafita directory
+    
+    * Ejercicios Tema 1
+
+[33mcommit 8d15375a858907f231deda2e330e6e1b2c7baf52[m
+Author: AlanJuker <75257308+AlanJuker@users.noreply.github.com>
+Date:   Wed Nov 8 03:29:49 2023 -0500
+
+    Ejercicios Tema 1 (#29)
+    
+    * Ejercicios Tema 1
+    
+    * unused inline style removed
+
+[33mcommit a9a0129554e098adeb2e4f9afad084c4652c1f63[m
+Author: gorkagg10 <88397775+gorkagg10@users.noreply.github.com>
+Date:   Wed Nov 8 00:41:40 2023 +0100
+
+    Ejercicios Tema 1 Gorka González (#35)
+    
+    * Early work
+    
+    * Scaffolding of content finished
+    
+    * Ejercicios Tema 1 acabados
+
+[33mcommit a02b9b3f2c3238095ae422f71d23b352c6bdbbe1[m
+Author: jcanta2001 <149610605+jcanta2001@users.noreply.github.com>
+Date:   Wed Nov 8 00:39:30 2023 +0100
+
+    Ejercicios Tema 1 Javier Cantalapiedra (#33)
+    
+    * ej1
+    
+    * cinema finished
+    
+    ---------
+    
+    Co-authored-by: jcantalapiedra <jcantalapiedragruposantander@gmail.com>
+
+[33mcommit f5db1b39988dc857969da05c42b5f7dd19c50bb5[m
+Author: jars2094 <149429018+jars2094@users.noreply.github.com>
+Date:   Tue Nov 7 18:38:30 2023 -0500
+
+    Actividad 1 - Cinema-UNIR (#32)
+    
+    * Add files via upload
+    
+    * Delete Folder Julian_Rojas
+    
+    * Subida Actividad de Cinema-UNIR
+    
+    ---------
+    
+    Co-authored-by: JR-Desarrollo <jrdesarrollo.2494@gmail.com>
+
+[33mcommit 5b3bb7a9fe8534f047d5c8f268f00cce40d5f6f3[m
+Author: IsaacCahuenas228 <150048449+IsaacCahuenas228@users.noreply.github.com>
+Date:   Tue Nov 7 18:37:29 2023 -0500
+
+    Add Tarea 1 (#31)
+    
+    Co-authored-by: isaac.cahuenas <isaac.cahuenas@UIO-SER-ICH>
+
+[33mcommit 0445ac7d017b25e53186ea08a31ee05341f0057d[m
+Author: Rbio340 <68264738+Rbio340@users.noreply.github.com>
+Date:   Tue Nov 7 18:36:31 2023 -0500
+
+    Ejercicios Semana 1 (#30)
+    
+    * Ejercicios semana 1
+    
+    * Revert "Ejercicios semana 1"
+    
+    This reverts commit b0599f2a38c254a3dc44a35982c72562a44a3916.
+    
+    * Ejercicios Semana 1
+
+[33mcommit ab975a9be935fb9a9d5e964293faf3c1adac77b2[m
+Author: Raul <38400638+rago8@users.noreply.github.com>
+Date:   Tue Nov 7 18:34:14 2023 -0500
+
+    Ejercicio CV (#28)
+    
+    * Ejercicio CV
+    
+    * Ejercicio cinema
+
+[33mcommit c799a28e082f4b5129f672f4dda56ed2a417ad5e[m
+Author: kelvinfrancis <41239603+kelvinfrancis@users.noreply.github.com>
+Date:   Tue Nov 7 19:33:22 2023 -0400
+
+    Patch 1 (#27)
+    
+    * Create index.html
+    
+    * Add files via upload
+
+[33mcommit d3c5460c171abdbfb8d886aae3a00aa1cf6a4be1[m
+Author: AlbertoPerea1994 <52804126+AlbertoPerea@users.noreply.github.com>
+Date:   Tue Nov 7 18:32:08 2023 -0500
+
+    Tema1 Creación de archivos. (#26)
+    
+    * Prueba Archivo Alberto
+    
+    * Creacion de Carpetas Alberto
+    
+    * CV Alberto tarea 1
+    
+    ---------
+    
+    Co-authored-by: alberto.perea <alberto.perea@msp.gob.ec>
+
+[33mcommit 744cb2cbf3374fce2da3eb68756a795be222aecf[m
+Author: brunadallmann <149469422+brunadallmann@users.noreply.github.com>
+Date:   Wed Nov 8 00:30:28 2023 +0100
+
+    Ejercicio Tema 1 Bruna (#25)
+
+[33mcommit fda588ab2b08ec1c63cc9ccef993fc2151f5825b[m
+Author: UNIR - Software Engineering <115072043+UnirCs@users.noreply.github.com>
+Date:   Mon Nov 6 21:27:13 2023 +0100
+
+    Update Readme.md
+
+[33mcommit 140ada1ef892ac8feef69bb03536ce7f6442607c[m
+Author: UNIR - Software Engineering <115072043+UnirCs@users.noreply.github.com>
+Date:   Mon Nov 6 21:26:40 2023 +0100
+
+    Update Readme.md
+
+[33mcommit dcde3dcb1191dc67703cc5223f9628ee208e36dc[m
+Author: Carlos Andrés Pillajo <135406593+carlosandres90@users.noreply.github.com>
+Date:   Mon Nov 6 15:23:37 2023 -0500
+
+    Entrega actividades (#24)
+
+[33mcommit 95310859b581357e9937227cf410edcf3aa0a2a1[m
+Author: Alicia Rodríguez Rodríguez <149436989+aliciar-rro@users.noreply.github.com>
+Date:   Mon Nov 6 21:21:54 2023 +0100
+
+    Tema 1 - Actividades (#23)
+
+[33mcommit dc9aa37b56efb5b16151a1c741780c8b5030a48d[m
+Author: Richar Cangui <69091719+RicharC293@users.noreply.github.com>
+Date:   Mon Nov 6 12:41:26 2023 -0500
+
+    add: unir examples richar cangui (#22)
+
+[33mcommit e55279282e92dd90a7eabde393226bdfec3f1ab3[m
+Author: Jesus PM - UNIR <jesus.perezmelero@unir.net>
+Date:   Mon Nov 6 18:26:44 2023 +0100
+
+    T2
+
+[33mcommit 512a670c3b757a96aec53fb3d9f5c1b4c0db9a03[m
+Author: Jesus PM - UNIR <jesus.perezmelero@unir.net>
+Date:   Mon Nov 6 18:26:12 2023 +0100
+
+    T2
+
+[33mcommit 6888801de11f0a9dc144a504b27aa5458797fdab[m
+Author: Alejandro Rodriguez <89213798+alejo-RB@users.noreply.github.com>
+Date:   Sun Nov 5 18:54:02 2023 -0500
+
+    Creación de espacio de trabajo (#8)
+    
+    * Creación de espacio de trabajo
+    
+    * CV terminado
+
+[33mcommit 9f0aae66fc2e1f2e92c392bd30c7cf346f0f4dc0[m
+Author: JavierBelmonteRomero <149935140+JavierBelmonteRomero@users.noreply.github.com>
+Date:   Mon Nov 6 00:53:19 2023 +0100
+
+    UNIR-Cinema Javier Belmonte (#21)
+
+[33mcommit 8c69a9b2c20e85b3e716489110f71d052937b9e0[m
+Author: erwingcandelario <149553678+erwingcandelario@users.noreply.github.com>
+Date:   Sun Nov 5 18:52:17 2023 -0500
+
+    Creación de los poyecto Cv y Cinema (#20)
+    
+    Co-authored-by: Erwing Candelario <ingeniero_79@hotmail.com>
+
+[33mcommit 8828977bcbd279b46b1fff66c346b5401134dd4f[m
+Author: Erick Altamirano <79813692+erickaltamirano07@users.noreply.github.com>
+Date:   Sun Nov 5 13:37:07 2023 -0500
+
+    Ejercicio de CV y Cinema (#16)
+
+[33mcommit 153f399bac2880e5d1375013703a4ced0e2403ea[m
+Author: Jorge Alonso <jialonsoe@correo.udistrital.edu.co>
+Date:   Sun Nov 5 13:36:11 2023 -0500
+
+    Jorge Alonso | Ejercicios tema 1 (#19)
+    
+    * Add design for cv
+    
+    * Add design for cinema
+
+[33mcommit 11a042926fecb82d4a4c39058d0813bd796bde1b[m
+Author: Jesus PM - UNIR <jesus.perezmelero@unir.net>
+Date:   Sun Nov 5 19:33:53 2023 +0100
+
+    T2
+
+[33mcommit 8e7682f4e44745d45721874ffe6fd1f034bf7d52[m
+Author: Jesus PM - UNIR <jesus.perezmelero@unir.net>
+Date:   Sun Nov 5 18:38:08 2023 +0100
+
+    T2
+
+[33mcommit 173b4bca9db279813df7c6351eddaf385845cb1c[m
+Author: Jesus PM - UNIR <jesus.perezmelero@unir.net>
+Date:   Sun Nov 5 18:35:58 2023 +0100
+
+    T2
+
+[33mcommit 66a4ae539981da18594b6bced14576561316c8ec[m
+Author: Julian David Avellaneda <juldave.gal@hotmail.com>
+Date:   Sat Nov 4 19:39:57 2023 +0100
+
+    Ejercicios Tema 1 (#18)
+    
+    * Initial version
+    
+    * Add cv content and style
+    
+    * Refactor and change contect to spanish
+    
+    * Add styles to cinema
+    
+    ---------
+    
+    Co-authored-by: jdavellanedag <jdavellaendag@gmail.com>
+
+[33mcommit c098281a726e6664e60f7848db96055466254a7e[m
+Author: luciarp10 <61731287+luciarp10@users.noreply.github.com>
+Date:   Sat Nov 4 19:05:56 2023 +0100
+
+    Actividades Tema 1 (CV y reserva de butacas) (#17)
+
+[33mcommit 32d0ca8b1908f92ff8548a6b3937f645242191e4[m
+Author: rialfuve81 <73752966+rialfuve81@users.noreply.github.com>
+Date:   Sat Nov 4 13:04:50 2023 -0500
+
+    Se hace commit a los dosn primeros ejercicios. CV y Cinema (#15)
+
+[33mcommit fba41ab867d3b2177b326d732bbcdc8578e32cad[m
+Author: marccarneherrera <149427548+marccarneherrera@users.noreply.github.com>
+Date:   Sat Nov 4 19:04:23 2023 +0100
+
+    Ejercicios Tema1 Marc Carné (#14)
+    
+    * Propuesta ejercicio CV
+    
+    * Inicio de ejercicio de Cinema
+    
+    * Ajuste ejercicio 1 y propuesta ejercicio 2
+    
+    * Añadir script bootstrap a ejercicio 2
+    
+    * Ajustes en el ejercicio 2 para mostrar correo y cambiar fondo
+    
+    * Añadir márgenes a carousel
+    
+    ---------
+    
+    Co-authored-by: Marc Carne <mcarne@innova.local>
+
+[33mcommit 156c8e9e0f92cd911c3d34b9d67f34e9fa6640b3[m
+Author: leomorecco <136263941+leomorecco@users.noreply.github.com>
+Date:   Sat Nov 4 13:03:41 2023 -0500
+
+    actividad 1 (#13)
+    
+    * Actividad_1 Leonardo Moreno
+    
+    Actividad_1
+    
+    * Update styles.css
+
+[33mcommit 049b1ff881dd624f8961b301ffb10011619ca642[m
+Author: Guillermo Marcos García <guillermo.marcosgarcia@gmail.com>
+Date:   Sat Nov 4 19:02:40 2023 +0100
+
+    Ejercicios voluntarios tema 1 (#10)
+    
+    * cv exercise
+    
+    * exercise cinema
+
+[33mcommit fca716140104e8e838eb29180b8bfb4e72176c5a[m
+Author: AndreaSucreG <andresucre88@gmail.com>
+Date:   Thu Nov 2 13:29:43 2023 +0100
+
+    Actividad tema 1 (#9)
+    
+    * CV activity
+    
+    * Cinema activity
+
+[33mcommit 7058b863c2d7a19f3bee297dea7f061b90035250[m
+Author: UNIR - Software Engineering <115072043+UnirCs@users.noreply.github.com>
+Date:   Wed Nov 1 20:49:40 2023 +0100
+
+    Update .gitignore
+
+[33mcommit 9bb7cfcc210d17c87cc2d3b78fb54d7521842b4d[m
+Author: octaviobarre92 <93686674+octaviobarre92@users.noreply.github.com>
+Date:   Wed Nov 1 14:48:51 2023 -0500
+
+    Actualizacion de actividad no obligatoria FrontEnd-Octavio Barreto (#7)
+    
+    * Creacion de carpetas
+    
+    * Actualizacion carpeta cv
+    
+    * Actualizacion carpeta cinema
+    
+    ---------
+    
+    Co-authored-by: PlayDigitalConsulting <obarreto@playdigitalconsulting.com>
+
+[33mcommit 2c18ecac72f9b6527d242a96bc23875a6202b42a[m
+Author: jesussanchezalvarez3 <149472449+jesussanchezalvarez3@users.noreply.github.com>
+Date:   Wed Nov 1 20:47:06 2023 +0100
+
+    Tema-1 (#6)
+
+[33mcommit a20125162b6d579894721dfdd40be2177d7245e0[m
+Author: Santiago Rey <ksreyr@gmail.com>
+Date:   Tue Oct 31 18:30:24 2023 +0100
+
+    Tema01: add CV and Cinema Lading Page (#5)
+    
+    * feat: add CV in html and css
+    
+    feat: add CV in html and css
+    
+    feat: add CV in html and css
+    
+    feat: add CV in html and css
+    
+    * feat: add cinema ladin with bootstrap
+    
+    * fix: add form and details at cinema lading page
+
+[33mcommit df1508401f45e9904150c0a425f4ccb8546c67ec[m
+Author: Salva Roca <49022665+SalvaRoca@users.noreply.github.com>
+Date:   Tue Oct 31 16:32:12 2023 +0100
+
+    Entrega actividades opcionales Tema 1 (#3)
+    
+    * Añadidos index.html y styles.css para la entrega de la actividad opcional del Tema 1.
+    
+    * Modificación menor en index.html
+    
+    * Actividad opcional Tema 1 completa.
+    
+    * Actividad opcional Tema 1 completa.
+    
+    * Archivos movidos a carpeta Tema_1/Salva Roca
+
+[33mcommit fbce495d135771aab242f19fcee6d0b89fdd1478[m
+Author: GonzaloUli <43575107+gonzalouli@users.noreply.github.com>
+Date:   Tue Oct 31 16:21:52 2023 +0100
+
+    Ejercicios 1 y 2. (#4)
+    
+    * Ejercicio 1 y 2.
+    
+    * Ejercicio 1 y 2 arreglos
+    
+    * Ejercicio 1 y 2 arreglos de package.json y package-lock.json
+
+[33mcommit 453de2a0d4e08a8be82cfb6de5454f62f17905fc[m
+Merge: e1124c2 9ed7c08
+Author: UNIR - Software Engineering <115072043+UnirCs@users.noreply.github.com>
+Date:   Tue Oct 31 16:16:27 2023 +0100
+
+    Merge pull request #2 from DcoyUnir/master
+    
+    Tema 1 - Daniel Coy
+
+[33mcommit 9ed7c0883093ab8ad83f3b586e2373318540c7f1[m
+Author: Daniel Coy <danielfelipe113@gmail.com>
+Date:   Tue Oct 31 14:45:53 2023 +0000
+
+    feat(E1): add index.html and styles.css for CV - Tio Lucas
+    feat(E2): add index.html and styles.css for Movielandia seat selection page
+
+[33mcommit e1124c23380233e3560c0f286aa6491a9e59db40[m
+Author: Jesus PM - UNIR <jesus.perezmelero@unir.net>
+Date:   Mon Oct 30 01:24:10 2023 +0100
+
+    T1
+
+[33mcommit a66f443bef0280f2659851a33eac40cb23dc36a5[m
+Author: Jesus PM - UNIR <jesus.perezmelero@unir.net>
+Date:   Sat Oct 28 20:32:41 2023 +0200
+
+    T1
+
+[33mcommit f7807003f745e3b4a82ef5c949d86c4c6d83508a[m
+Author: Jesus PM - UNIR <jesus.perezmelero@unir.net>
+Date:   Sat Oct 28 20:23:48 2023 +0200
+
+    T1
+
+[33mcommit 1e2db267ae6c10d976a901177520e984d02afa0f[m
+Author: Jesus PM - UNIR <jesus.perezmelero@unir.net>
+Date:   Sun Oct 8 00:52:18 2023 +0200
+
+    Setting up repository
+
+[33mcommit c9bc30cb7b70b698f79583172402e1711160a793[m
+Author: UNIR - Software Engineering <115072043+UnirCs@users.noreply.github.com>
+Date:   Sun Oct 8 00:23:27 2023 +0200
+
+    Initial commit
