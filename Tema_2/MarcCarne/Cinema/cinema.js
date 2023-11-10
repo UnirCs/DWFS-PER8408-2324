@@ -12,7 +12,7 @@ class Seat {
   isAvailable() {
     return !this.status;
   }
-  
+
   getId() {
     return this.id;
   }
@@ -67,12 +67,8 @@ function suggest(numAsientos = 0, seatsArray) {
     return suggestedSeats;
   } else {
     // Busqueda desde la última fila
-    for (let fila = numFilas - 1; fila >= 0; fila--) {
+    for (let fila = numFilas - 1; fila >= 0 && suggestedSeats.size == 0; fila--) {
       suggestedSeats = findSeatsInFila(numAsientos, seatsArray[fila]);
-      if (suggestedSeats.size > 0) {
-        // Hay asientos disponibles
-        break;
-      }
     }
   }
   return suggestedSeats;
