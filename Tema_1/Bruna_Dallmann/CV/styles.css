@@ -1,0 +1,53 @@
+body {
+    font-family: 'Calibri', sans-serif;
+    margin: 20px;
+    padding: 0;
+    border: 2px solid #ccc;
+}
+
+.cv {
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 28px;
+    margin: 20px 0;
+    color: darkcyan;
+}
+
+.section {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.section-title {
+    color: darkcyan;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.experience {
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li:before {
+    content: '•';
+    color: darkcyan;
+    display: inline-block;
+    width: 1em;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
