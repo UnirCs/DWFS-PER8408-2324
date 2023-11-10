@@ -49,7 +49,7 @@ function redConverter() {
 
 /**
  * Esta función debe transformar una imagen en escala de verdes.
- * 
+ *
  * Una forma de conseguirlo es simplemente poner los canales R y B a 0 para cada pixel.
  */
 function greenConverter() {
