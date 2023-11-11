@@ -24,5 +24,71 @@ function setup() {
 // Inicializar la matriz
 let butacas = setup();
 
+var obj = {
+    id : 0,
+    estado:false,
+}
+
+// Funcion que devuelve los asientos vacíos en forma de obj
+function suggest(num_butacas){
+    let asientos = new Set()
+
+    // butacas[9][5].estado = true
+    // butacas[9][6].estado = true
+    // butacas[9][7].estado = true
+    // butacas[9][8].estado = true
+    // butacas[9][3].estado = true
+    // butacas[9][4].estado = true
+    // butacas[9][0].estado = true
+
+    // butacas[8][5].estado = true
+    // butacas[8][6].estado = true
+    // butacas[8][7].estado = true
+    // butacas[8][8].estado = true
+    // butacas[8][9].estado = true
+    // butacas[8][4].estado = true
+    // butacas[8][0].estado = true
+
+    // butacas[7][5].estado = true
+    // butacas[7][6].estado = true
+    
+    if(num_butacas > N){
+        return new Set()
+    }else{
+        let pivot = num_butacas
+        let fila = 0
+
+        for(let i = N - 1; i>=0;i--){
+            if(pivot === 0){
+                break
+            }else{
+                pivot = num_butacas 
+                asientos = new Set()
+            }
+            for(let j = N - 1; j>=0;j--){
+                if(!butacas[i][j].estado){
+                        pivot = pivot - 1
+                        fila = i
+                        // Asigno al id el numero del asiento que sea
+                        asientos.add({
+                            id:j,
+                            estado:true
+                        })
+                }else{
+                    pivot = num_butacas
+                    asientos.clear()
+                }
+                if(pivot == 0)
+                    break
+            }
+        }
+        // console.log(fila)
+        // console.log(asientos)
+        return asientos
+
+    }
+
+}
+
 // Imprimir la matriz
-console.log(butacas);
+suggest(2)
