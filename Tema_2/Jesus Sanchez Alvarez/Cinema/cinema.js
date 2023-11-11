@@ -61,7 +61,6 @@ function suggest(num_butacas){
         for(let i = N - 1; i>=0 && pivot > 0;i--){
             pivot = num_butacas 
             asientos.clear()
-            
             for(let j = N - 1; j>=0 && pivot > 0;j--){
                 if(!butacas[i][j].estado){
                         pivot = pivot - 1
