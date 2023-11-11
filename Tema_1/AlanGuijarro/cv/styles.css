@@ -1,0 +1,50 @@
+.portrait {
+    border-radius: 20px;
+}
+
+.section {
+    padding: 40px 40px 40px 40px;
+    text-align: left;
+    background-color: rgba(48, 56, 69, 255) !important;
+    border-radius: 20px;
+    margin: 20px 500px 20px 500px
+}
+
+.header{
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+    text-align: left;
+    font-size: 40px;
+}
+
+.category-title {
+    display: inline-flex;
+    margin-right: 10px;
+}
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.date {
+    text-align: left !important;
+    margin: 0;
+    border-bottom: 1px solid rgb(156, 156, 156);
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+
+p{
+    margin: 0;
+}
+
+.place{
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
+}

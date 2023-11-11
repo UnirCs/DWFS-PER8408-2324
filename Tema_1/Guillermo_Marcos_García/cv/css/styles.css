@@ -1,0 +1,47 @@
+.header{
+    padding-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+    font-family: "Comic Sans MS", serif;
+}
+
+.header-item{
+    margin:3px;
+}
+
+#profile-image{
+    width: 10%;
+    height: 10%;
+    border-radius: 15%;
+}
+
+.list-elem-header{
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+.list-elem{
+    font-weight: normal;
+    padding-top: 4px;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+body *:hover{
+    background-color: antiquewhite;
+}
+
+body > *{
+    border-style: dashed;
+    border-radius: 2%;
+    margin-top: 1%;
+}
+
+h1{
+    color: deepskyblue;
+}

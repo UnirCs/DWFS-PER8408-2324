@@ -1,0 +1,35 @@
+header {
+    background-color: #4d50e6;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    border: #4d50e6 3px solid;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.img-cv {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.section-header {
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+.section-info {
+    font-size: 15px;
+    padding-left: 30px;
+    font-weight: lighter;
+}
+
