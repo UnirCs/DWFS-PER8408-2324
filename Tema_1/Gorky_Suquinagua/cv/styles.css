@@ -1,0 +1,107 @@
+/* * {
+    border: 1px solid black;
+} */
+
+#content {
+    padding: 20px;
+    font-family: sans-serif;
+    display: inline-flex;
+}
+
+#left-side {
+    width: 70%;
+    background-color: whitesmoke;
+    padding: 30px;
+}
+
+#right-side {
+    padding: 20px;
+    width: 30%;
+    background-color: #B3B3BD;
+}
+
+.cv_profile_title {
+    font-weight: normal;
+    color: #5978A9;
+}
+
+.cv-subtitle {
+    font-weight: bold;
+    color: #0E3663;
+}
+
+#cv_profile .cv_profile_title {
+    font-size: 2.5em;
+}
+
+#cv_profile .cv_profile_subtitle {
+    font-size: 1.6em;
+}
+
+#profile-photo {
+    text-align: center;
+}
+
+#profile-photo > img {
+    clip-path: circle();
+    width: 58%;
+}
+
+#contacts {
+    padding: 50px;
+}
+
+.contacts-row {
+    text-align: start;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contacts-row > label {
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+}
+
+#skills {
+    padding: 50px;
+}
+
+#languages {
+    padding: 50px;
+}
+
+.section_title {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.section_title > span {
+    margin-right: 22px;
+}
+
+.section_title > label {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.section_desc > .desc_header {
+    color: #0E3663;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.section_desc > .desc_value {
+    color: #c0c0c0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.section_desc > .section_date {
+    font-size: 0.9em;
+    color: #a7a7a7;
+    text-transform: uppercase;
+}
