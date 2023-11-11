@@ -58,14 +58,11 @@ function suggest(num_butacas){
         let pivot = num_butacas
         let fila = 0
 
-        for(let i = N - 1; i>=0;i--){
-            if(pivot === 0){
-                break
-            }else{
-                pivot = num_butacas 
-                asientos = new Set()
-            }
-            for(let j = N - 1; j>=0;j--){
+        for(let i = N - 1; i>=0 && pivot > 0;i--){
+            pivot = num_butacas 
+            asientos.clear()
+            
+            for(let j = N - 1; j>=0 && pivot > 0;j--){
                 if(!butacas[i][j].estado){
                         pivot = pivot - 1
                         fila = i
@@ -75,12 +72,11 @@ function suggest(num_butacas){
                     pivot = num_butacas
                     asientos.clear()
                 }
-                if(pivot == 0)
-                    break
+                
             }
         }
-        // console.log(fila)
-        // console.log(asientos)
+        console.log(fila)
+        console.log(asientos)
         return asientos
 
     }
@@ -88,4 +84,4 @@ function suggest(num_butacas){
 }
 
 // Imprimir la matriz
-suggest(2)
+suggest(5)
