@@ -70,10 +70,7 @@ function suggest(num_butacas){
                         pivot = pivot - 1
                         fila = i
                         // Asigno al id el numero del asiento que sea
-                        asientos.add({
-                            id:j,
-                            estado:true
-                        })
+                        asientos.add(butacas[i][j].id)
                 }else{
                     pivot = num_butacas
                     asientos.clear()
