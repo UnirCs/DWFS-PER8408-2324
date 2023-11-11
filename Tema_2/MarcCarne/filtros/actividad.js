@@ -1,7 +1,7 @@
-const ImageHandler = require('./ImageHandler.js')
+const ImageHandler = require('../../00_Resources/filtros/ImageHandler.js')
 
 
-let path = 'input/tucan.jpg';
+let path = '../../00_Resources/filtros/input/tucan.jpg';
 let handler = new ImageHandler(path);
 
 
@@ -42,7 +42,15 @@ function redConverter() {
     let outputPath = 'output/tucan_red.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    // Iterar con el bucle for
+    for (let col = 0; col < pixels.length; col++) {
+        for (let row = 0; row < pixels[col].length; row++) {
+            // Componente verde
+            pixels[col][row][1] = 0;
+            // Componente azul
+            pixels[col][row][2] = 0;
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -56,7 +64,13 @@ function greenConverter() {
     let outputPath = 'output/tucan_green.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    // Iterar con forEach
+    pixels.forEach((col) => col.forEach((row) => {
+        // Componente roja
+        row[0] = 0;
+        // Componente azul
+        row[2] = 0;
+    }))
 
     handler.savePixels(pixels, outputPath);
 }
@@ -70,7 +84,12 @@ function blueConverter() {
     let outputPath = 'output/tucan_blue.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    pixels.forEach((col) => col.forEach((row) => {
+        // Componente roja
+        row[0] = 0;
+        // Componente verde
+        row[1] = 0;
+    }))
 
     handler.savePixels(pixels, outputPath);
 }
@@ -88,7 +107,14 @@ function greyConverter() {
     let outputPath = 'output/tucan_grey.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    for (let col = 0; col < pixels.length; col++){
+        for (let row = 0; row < pixels[col].length; row++) {
+            let meanValue = (pixels[col][row][0] + pixels[col][row][0] + pixels[col][row][0]) / 3;
+            pixels[col][row][0] = meanValue;
+            pixels[col][row][1] = meanValue;
+            pixels[col][row][2] = meanValue;
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -104,7 +130,15 @@ function blackAndWhiteConverter() {
     let outputPath = 'output/tucan_black_and_white.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    pixels.forEach((col) => col.forEach((row) => {
+        let meanValue = (row[0] + row[1] + row[2]) / 3;
+        // Calcular el nuevo valor del píxel
+        let newValue = meanValue < 128 ? 0 : 255;
+        // Asignar valores
+        row[0] = newValue;
+        row[1] = newValue;
+        row[2] = newValue;
+    }))
 
     handler.savePixels(pixels, outputPath);
 }
@@ -118,10 +152,17 @@ function blackAndWhiteConverter() {
 function scaleDown() {
     let outputPath = 'output/tucan_scale_down.jpg';
     let pixels = handler.getPixels();
+    let newPixels = [];
 
-    //Aqui tu codigo
+    for (let col = 0; col < pixels.length; col += 2) {
+        let newRow = [];
+        for (let row = 0; row < pixels[col].length; row += 2) {
+            newRow.push(pixels[col][row]);
+        }
+        newPixels.push(newRow);
+    }
 
-    handler.savePixels(pixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
+    handler.savePixels(newPixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
 }
 
 /**
@@ -133,7 +174,11 @@ function dimBrightness(dimFactor) {
     let outputPath = 'output/tucan_dimed.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    pixels.forEach((col) => col.forEach((row) => {
+        row[0] /= dimFactor;
+        row[1] /= dimFactor;
+        row[2] /= dimFactor;
+    }))
 
     handler.savePixels(pixels, outputPath);
 }
@@ -149,7 +194,11 @@ function invertColors() {
     let outputPath = 'output/tucan_inverse.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    pixels.forEach((col) => col.forEach((row) => {
+        row[0] = 255 - row[0];
+        row[1] = 255 - row[1];
+        row[2] = 255 - row[2];
+    }))
 
     handler.savePixels(pixels, outputPath);
 }
@@ -161,8 +210,8 @@ function invertColors() {
  * @param alphaSecond - Factor de fusion para la segunda imagen
  */
 function merge(alphaFirst, alphaSecond) {
-    let catHandler = new ImageHandler('input/cat.jpg');
-    let dogHandler = new ImageHandler('input/dog.jpg');
+    let catHandler = new ImageHandler('../../00_Resources/filtros/input/cat.jpg');
+    let dogHandler = new ImageHandler('../../00_Resources/filtros/input/dog.jpg');
     let outputPath = 'output/merged.jpg';
 
     let catPixels = catHandler.getPixels();
@@ -170,7 +219,17 @@ function merge(alphaFirst, alphaSecond) {
 
     let pixels = [];
 
-    //Aqui tu codigo
+    for (let col = 0; col < catPixels.length; col++) {
+        let newCol = [];
+        for (let row = 0; row < catPixels[col].length; row++) {
+            let newPix = [];
+            for (let ch = 0; ch < catPixels[col][row].length; ch++) {
+                newPix.push(dogPixels[col][row][ch] * alphaFirst + catPixels[col][row][ch] * alphaSecond)
+            }
+            newCol.push(newPix);
+        }
+        pixels.push(newCol);
+    }
 
     dogHandler.savePixels(pixels, outputPath);
 }
@@ -194,7 +253,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 0;
+let optionN = 9;
 
 switch (optionN) {
     case 1: redConverter(); break;

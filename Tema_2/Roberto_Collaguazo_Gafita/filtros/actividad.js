@@ -1,4 +1,4 @@
-const ImageHandler = require('./ImageHandler.js')
+const ImageHandler = require('./ImageHandler.js');
 
 
 let path = 'input/tucan.jpg';
@@ -38,12 +38,16 @@ function ejemplo() {
  *
  * Una forma de conseguirlo es simplemente poner los canales G y B a 0 para cada pixel.
  */
+
 function redConverter() {
     let outputPath = 'output/tucan_red.jpg';
     let pixels = handler.getPixels();
-
-    //Aqui tu codigo
-
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            pixels[i][j][[1]] = 0;
+            pixels[i][j][[2]] = 0;
+        }
+    }
     handler.savePixels(pixels, outputPath);
 }
 
@@ -55,8 +59,12 @@ function redConverter() {
 function greenConverter() {
     let outputPath = 'output/tucan_green.jpg';
     let pixels = handler.getPixels();
-
-    //Aqui tu codigo
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            pixels[i][j][[0]] = 0;
+            pixels[i][j][[2]] = 0;
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -70,7 +78,12 @@ function blueConverter() {
     let outputPath = 'output/tucan_blue.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            pixels[i][j][[0]] = 0;
+            pixels[i][j][[1]] = 0;
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -88,7 +101,14 @@ function greyConverter() {
     let outputPath = 'output/tucan_grey.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            let media = (pixels[i][j][[0]] + pixels[i][j][[1]] + pixels[i][j][[2]]) / 3;
+            pixels[i][j][[0]] = media;
+            pixels[i][j][[1]] = media;
+            pixels[i][j][[2]] = media;
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -104,7 +124,21 @@ function blackAndWhiteConverter() {
     let outputPath = 'output/tucan_black_and_white.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            let media = (pixels[i][j][[0]] + pixels[i][j][[1]] + pixels[i][j][[2]]) / 3;
+            if (media < 128) {
+                pixels[i][j][[0]] = 0;
+                pixels[i][j][[1]] = 0;
+                pixels[i][j][[2]] = 0;
+            } else {
+                pixels[i][j][[0]] = 255;
+                pixels[i][j][[1]] = 255;
+                pixels[i][j][[2]] = 255;
+            }
+
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -118,10 +152,20 @@ function blackAndWhiteConverter() {
 function scaleDown() {
     let outputPath = 'output/tucan_scale_down.jpg';
     let pixels = handler.getPixels();
+    const nuevaImagen = [];
 
-    //Aqui tu codigo
+    for (let i = 0; i < pixels.length; i++) {
+        if (i % 2 === 0) {
+            nuevaImagen.push([]);
+            for (let j = 0; j < pixels[i].length; j++) {
+                if (j % 2 === 0) {
+                    nuevaImagen[nuevaImagen.length - 1].push(pixels[i][j]);
+                }
+            }
+        }
+    }
 
-    handler.savePixels(pixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
+    handler.savePixels(nuevaImagen, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
 }
 
 /**
@@ -133,7 +177,13 @@ function dimBrightness(dimFactor) {
     let outputPath = 'output/tucan_dimed.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            pixels[i][j][[0]] = pixels[i][j][[0]] / dimFactor;
+            pixels[i][j][[1]] = pixels[i][j][[1]] / dimFactor;
+            pixels[i][j][[2]] = pixels[i][j][[2]] / dimFactor;
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -149,7 +199,13 @@ function invertColors() {
     let outputPath = 'output/tucan_inverse.jpg';
     let pixels = handler.getPixels();
 
-    //Aqui tu codigo
+    for (let i = 0; i < pixels.length; i++) {
+        for (let j = 0; j < pixels[i].length; j++) {
+            pixels[i][j][[0]] = 255 - pixels[i][j][[0]];
+            pixels[i][j][[1]] = 255 - pixels[i][j][[1]];
+            pixels[i][j][[2]] = 255 - pixels[i][j][[2]];
+        }
+    }
 
     handler.savePixels(pixels, outputPath);
 }
@@ -170,7 +226,17 @@ function merge(alphaFirst, alphaSecond) {
 
     let pixels = [];
 
-    //Aqui tu codigo
+    for (let i = 0; i < catPixels.length; i++) {
+        pixels.push([]);
+        for (let j = 0; j < catPixels[i].length; j++) {
+            let canalPixel = [];
+            canalPixel.push([]);
+            canalPixel[canalPixel.length-1].push((catPixels[i][j][[0]] * alphaFirst) + (dogPixels[i][j][[0]] * alphaSecond));
+            canalPixel[canalPixel.length-1].push((catPixels[i][j][[1]] * alphaFirst) + (dogPixels[i][j][[1]] * alphaSecond));
+            canalPixel[canalPixel.length-1].push((catPixels[i][j][[2]] * alphaFirst) + (dogPixels[i][j][[2]] * alphaSecond));
+            pixels[pixels.length-1].push(canalPixel[canalPixel.length-1]);
+        }
+    }
 
     dogHandler.savePixels(pixels, outputPath);
 }
@@ -194,17 +260,36 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 0;
+let optionN = 1;
 
 switch (optionN) {
-    case 1: redConverter(); break;
-    case 2: greenConverter(); break;
-    case 3: blueConverter(); break;
-    case 4: greyConverter(); break;
-    case 5: blackAndWhiteConverter(); break;
-    case 6: scaleDown(); break;
-    case 7: dimBrightness(2); break;
-    case 8: invertColors(); break;
-    case 9: merge(0.3, 0.7); break;
-    default: ejemplo();
+    case 1:
+        redConverter();
+        break;
+    case 2:
+        greenConverter();
+        break;
+    case 3:
+        blueConverter();
+        break;
+    case 4:
+        greyConverter();
+        break;
+    case 5:
+        blackAndWhiteConverter();
+        break;
+    case 6:
+        scaleDown();
+        break;
+    case 7:
+        dimBrightness(2);
+        break;
+    case 8:
+        invertColors();
+        break;
+    case 9:
+        merge(0.3, 0.7);
+        break;
+    default:
+        ejemplo();
 }

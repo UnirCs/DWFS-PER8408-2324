@@ -13,6 +13,8 @@ El objetivo de este ejercicio es trabajar con matrices en JavaScript para crear 
     - Si en ninguna fila hay suficientes asientos disponibles **juntos**, la función debe devolver un set vacío.
     - Se comenzará a buscar asientos **juntos** en la **fila más lejana** a la pantalla, por lo que si varias filas pudiesen albergar el número de asientos solicitado, se elegiría siempre la más lejana a la pantalla. El resultado debe ser un Set con los ids de los asientos pre-seleccionados.
 
+**IMPORTANTE: No se aceptan soluciones que violen las invariantes de un bucle**
+
 ## 3. Código de apoyo
 
 Si lo consideras necesario, puedes utilizar el siguiente código como punto de partida para tu solución. En él se crea la matriz de asientos con la especificación indicada. Queda lista para ser tratada.
