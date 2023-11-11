@@ -10,8 +10,10 @@ El objetivo de este ejercicio es trabajar con matrices en JavaScript para crear 
 1. En el tema anterior diseñamos una sala de cine. Se incluía una matriz de asientos (cuadrada, mismo número de filas y columnas). En código JavaScript, utilizaremos una matriz para representar los asientos. Serán objetos y tendrán dos atributos. El ``id``, que será un entero, y el ``estado``, que será un booleano (``true`` si está ocupada y ``false`` si está libre). Se pide desarrollar en JavaScript la función ``suggest`` que recibe como argumento el número de asientos que se desea reservar.
 
     - Si el número de asientos solicitados excede el tamaño máximo de la fila, la función debe devolver un set vacío.
-    - Si en ninguna fila hay suficientes asientos disponibles, la función debe devolver un set vacío.
-    - Se comenzará a buscar asientos en la **fila más lejana** a la pantalla, por lo que si varias filas pudiesen albergar el número de asientos solicitado, se elegiría siempre la más lejana a la pantalla. El resultado debe ser un Set con los ids de los asientos pre-seleccionados.
+    - Si en ninguna fila hay suficientes asientos disponibles **juntos**, la función debe devolver un set vacío.
+    - Se comenzará a buscar asientos **juntos** en la **fila más lejana** a la pantalla, por lo que si varias filas pudiesen albergar el número de asientos solicitado, se elegiría siempre la más lejana a la pantalla. El resultado debe ser un Set con los ids de los asientos pre-seleccionados.
+
+**IMPORTANTE: No se aceptan soluciones que violen las invariantes de un bucle**
 
 ## 3. Código de apoyo
 
