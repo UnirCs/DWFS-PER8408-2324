@@ -21,7 +21,7 @@ function setup() {
             }
             fila.push({
                 id: idContador++,
-                estado: estado // Estado inicial libre
+                estado: estado // Estado inicial aleatorio
             });
         }
         butacas.push(fila);
@@ -31,30 +31,26 @@ function setup() {
 
 function suggest(butacas, n) {
     let butacasReservadas = []; 
-    counter = 0;
-    for (i = butacas.length - 1; i >= 0; i--) {
-        for (j = 0; j < butacas[i].length; j++) {
-            //Cuando empieza una fila nueva se resetea la cuenta a 0 para que todos estén en la misma fila
-            if (j == 0)
-            {
-                butacasReservadas = [];
-                counter = 0;
-            }
+    let i = butacas.length - 1; // Empieza a buscar desde la última fila
+    let j = 0; // Empieza a buscar desde la primera butaca de la fila
+    while(i >= 0 && butacasReservadas.length < n) {
+        //Cuando empieza una fila nueva se resetea la cuenta a 0 para que todos estén en la misma fila
+        butacasReservadas = [];
+        while (j < butacas[i].length && butacasReservadas.length < n) {
             //Si el asiento está vacío, se añade a la lista de butacas reservadas y se suma 1 al contador (si ya hay n butacas reservadas, se devuelve la lista)
             if (butacas[i][j].estado == false) {
                 butacasReservadas.push(butacas[i][j].id);
-                counter++;
-                if(counter == n) {
-                    return butacasReservadas;
-                }
             }
-            //Si la butaca está ocupada, se resetea la lista de butacas reservadas y el contador
+            //Si la butaca está ocupada, se resetea la lista de butacas reservadas
             else {
                 butacasReservadas = [];
-                counter = 0;
             }
+            j++;
         }
+        i--;
+        j = 0;
     }
+    return butacasReservadas;
 }
 
 // Inicializar la matriz
