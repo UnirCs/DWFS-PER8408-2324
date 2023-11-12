@@ -1,0 +1,125 @@
+body{
+    width: 100vw;
+    margin: 0;
+    height: 100vh;
+
+}
+
+.header{
+    grid-area: header;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+.content {
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.container{
+    height: 100%;
+
+    display: grid;
+    grid-auto-rows: auto auto 1fr;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+h1{
+    font-size: large;
+}
+.pantalla{
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.pantalla > div{
+    background-color: #444444;
+    width: 65%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    color: white;
+}
+
+.asientos{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    display: grid;
+    grid-template-columns: repeat(14 , 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+div > img {
+    width: 30px;
+    place-self: center;
+    transform: rotate(180deg);
+}
+img:hover{
+    filter: opacity(50%);
+}
+.asientos > label{
+    place-self: end;
+    align-self: center;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    background-color: #444444;
+}
+form > input{
+    width: 20%;
+    margin-left: 40%;
+    margin-left: 40%;
+}
+
+form{
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1vh;
+}
+
+
+form > label, input, button{
+    font-size: medium;
+    margin-top: 5px;
+}
+form > button{
+    background-color: #444444;
+    border: 2px solid white ;
+    color: white;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+form > label{
+    color: white;
+}
+
+.footer{
+    background: #3498db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer > h3{
+    margin: 5px;
+    font-size: small;
+    color: white;
+    font-weight: bold;
+}

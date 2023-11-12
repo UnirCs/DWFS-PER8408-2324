@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #313c4e;
+    color:white;
+}
+.imgProfile{
+    height: 200px;
+    width: 150px;
+}
+.container{
+    border:solid 1px black;
+    font-size: 25px;
+}
+.container:hover{
+    background-color: #313c4e;
+    color:white;
+}
+.title{
+    color:#0F59E3;
+    font-size: 30px;
+    font-style: italic;
+}
