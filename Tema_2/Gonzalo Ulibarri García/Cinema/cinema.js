@@ -1,5 +1,5 @@
 
- const nRows = 6;
+ const nRows = 10;
 const init_cinema = ()=>
 {
     let cinema = []
