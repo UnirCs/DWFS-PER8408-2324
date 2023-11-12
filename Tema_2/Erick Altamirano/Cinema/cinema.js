@@ -23,41 +23,57 @@ function setup() {
 // Inicializar la matriz
 let butacas = setup();
 
+butacas[0][4].estado=true;
+butacas[1][4].estado=true;
+butacas[2][4].estado=true;
+butacas[3][4].estado=true;
+butacas[4][4].estado=true;
+butacas[5][4].estado=true;
+butacas[6][4].estado=true;
+butacas[7][4].estado=true;
+butacas[8][4].estado=true;
+butacas[9][4].estado=true;
+
+butacas[6][5].estado=true;
+butacas[7][7].estado=true;
+butacas[8][8].estado=true;
+butacas[9][3].estado=true;
+
+
 // Imprimir la matriz
 console.log(butacas);
 
-suggest(10);
+suggest(3);
 function suggest(nAsientos){
-    if(nAsientos>butacas.length){
-        butacas = [];
-        return butacas;
+    if(nAsientos>butacas[0].length){
+        console.log("No se encontro "+nAsientos+" juntos ");
     }else{
-        let suma=0;
-        let posicionAsiento=[];
-        let fila= 0;
-        for(let y = N-1;y>=0; y--){
-            for (let x= 0 ; x<N; x++){
-                if(butacas[y][x].estado===false && suma < nAsientos){
-                    posicionAsiento.push(x);
+        let suma;
+        let posicionAsiento;
+        for(let x=butacas.length-1; x>=0; x--){
+            posicionAsiento=[];
+            suma=0;
+            for(let y=butacas[0].length-1; y >= 0; y--){
+                if(butacas[x][y].estado===false && suma<nAsientos){
                     suma++;
-                    fila=y;
-                    if(x===N-1 && suma< nAsientos){
-                        posicionAsiento=[];
-                        suma=0;
-                    }
-                }else if(butacas[y][x].estado===true && suma < nAsientos){
+                    posicionAsiento.push(butacas[x][y].id);
+                }else if(butacas[x][y].estado===true && suma<nAsientos){
+                    suma=0;
+                    posicionAsiento=[];
+                }else if(suma===nAsientos){
+                    y=-1
+                    x=-1;
+                }else {
                     posicionAsiento=[];
                     suma=0;
-                }else if(suma===nAsientos){
-                    x=N;
-                    y=-1;
                 }
+
             }
         }
-        for(let x=0; posicionAsiento.length>x; x++){
-            butacas[fila][x].estado=true;
+        if(nAsientos!==posicionAsiento.length){
+            posicionAsiento=[];
         }
-        console.log(butacas);
+        console.log(posicionAsiento);
     }
 }
 
