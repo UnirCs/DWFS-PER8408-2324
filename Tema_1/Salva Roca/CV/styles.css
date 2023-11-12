@@ -1,0 +1,49 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.div__section--header {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: darkgray;
+    text-align: center;
+    background: darkslateblue;
+    padding: 15px;
+    margin: 10px;
+}
+
+img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: darkgray;
+    max-height: 500px;
+    max-width: 300px;
+}
+
+h1 {
+    font-size: 30px;
+    color:white;
+}
+
+h2 {
+    font-size: 25px;
+    color:white;
+}
+
+.div__section {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: darkgray;
+    padding: 15px;
+    margin: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    color:darkslateblue;
+}
+
+p {
+    line-height: 20px;
+}
+
+li {
+    line-height: 20px;
+    margin:30px 0;
+}

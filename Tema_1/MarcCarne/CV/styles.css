@@ -1,0 +1,49 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+h1.doc-title {
+  text-align: center;
+}
+
+h2.sect-title {
+  color: #236BF1;
+  font-weight: bold;
+}
+
+li.studies__study, li.careers__career {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.skills__description {
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.head-sect {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  background-color: #0F59E3;
+  color: white;
+  border-radius: 10px;
+}
+
+.cat-sect {
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-style: outset;
+}
+
+img {
+  width: 280px;
+  height: 340px;
+  border-radius: 10px;
+}
