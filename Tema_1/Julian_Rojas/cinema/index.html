@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala la página para que se adapte a dispositivos móviles -->
+        <title>UNIR-CINEMA</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Incluye Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <!-- Contenedor principal -->
+        <div class="container">
+            
+            <div class="row m-2">
+                <div class="col-md-12">
+                    <div id="banner-design" class="row d-flex text-center">
+                        <h1 class="titulo">UNIR - CINEMA</h1>
+                        <h4 class="subTitulo">C I N E  -  D E  -  C A L I D A D</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row m-0">
+                <div class="col-md-4">
+                    <div id="info-pelicula">
+                        <div class="row d-flex text-center justify-content-center">
+                            <label id="titulo-item">SALA 5</label>
+                            <img src="https://i0.wp.com/plexmx.info/wp-content/uploads/2023/08/F3LmhRDX0AYWjmV.jpg?ssl=1" class="poster-pelicula" alt="Poster publicitario THE MARVELS">
+                            <label class="item">Título en español: <span>The Marvels</span> </label>
+                            <label class="item">Estreno: <span>09-Nov-2023</span> </label>
+                            <label class="item">Acción, Aventura, Ciencia Ficción</label>
+                            <label class="subItem mt-1">RECOMENDADA PARA MAYORES DE 12 AÑOS - DUARACIÓN: 120 MIN</label>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-8">
+                    <div id="ubicacion">
+                        <div class="row d-flex text-center justify-content-center pb-2 pt-2">
+                            <label class="item">Bienvenido a UNIR-CINEMA, por favor reserva tus asientos:</label>                            
+                        </div>
+                        <div class="row d-flex text-center justify-content-center pb-2">
+                            <div class="col-md-3">
+                                <img class="silla-disponible-info" src="img/Sillas.svg" alt="Silla disponible"/>                                
+                                <label class="item"> <span> Sillas disponibles</span></label>                            
+                            </div>
+                            <div class="col-md-3">
+                                <img class="silla-ocupadas-info" src="img/SillasRoja.svg" alt="Silla ocupada"/>                                
+                                <label class="item"> <span> Sillas ocupadas</span></label>  
+                            </div>
+                            <div class="col-md-3">
+                                <img class="silla-seleccionada-info" src="img/SillasVerde.svg" alt="Silla seleccionada"/>                                
+                                <label class="item"> <span> Sillas seleccionadas</span></label>  
+                            </div>
+                            <div class="col-md-3">
+                                <img class="silla-seleccionada-info" src="img/SillasRuedas.svg" alt="Zona Silla de Ruedas"/>
+                                <label class="item"> <span> Sillas de ruedas</span></label>  
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div id="sillas" class="mt-2 mb-4">
+                        <div class="scroll-x">
+                            <table id="matriz-sillas" class="d-flex justify-content-center">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="d-flex justify-content-center mt-3 mb-4">
+                                        <td id="pantalla-design"><label>PANTALLA</label></td>
+                                    </tr>
+                                    <!--Fila A-->
+                                    <tr>
+                                        <td class="contenedor-td-indice"><label class="item">A</label></td>
+                                        <td class="contenedor-td"><label class="numero-silla">1</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">2</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">3</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">4</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">5</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">6</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">7</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">8</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">9</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">10</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">11</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">12</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">13</label><img class="silla-disponible" src="img/SillasRuedas.svg" alt="Zona Silla de Ruedas"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">14</label><img class="silla-disponible" src="img/SillasRuedas.svg" alt="Zona Silla de Ruedas"/></td>
+                                    </tr>
+                                    <!--Fila B-->
+                                    <tr>
+                                        <td class="contenedor-td-indice"><label class="item">B</label></td>
+                                        <td class="contenedor-td"><label class="numero-silla">1</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">2</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">3</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">4</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">5</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">6</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">7</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">8</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">9</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">10</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">11</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">12</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">13</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">14</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                    </tr>
+                                    <!--Fila C-->
+                                    <tr>
+                                        <td class="contenedor-td-indice"><label class="item">C</label></td>
+                                        <td class="contenedor-td"><label class="numero-silla">1</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">2</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">3</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">4</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">5</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">6</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">7</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">8</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">9</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">10</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">11</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">12</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">13</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">14</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                    </tr>
+                                    <!--Fila D-->
+                                    <tr>
+                                        <td class="contenedor-td-indice"><label class="item">D</label></td>
+                                        <td class="contenedor-td"><label class="numero-silla">1</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">2</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">3</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">4</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">5</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">6</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">7</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">8</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">9</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">10</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">11</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">12</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">13</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">14</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                    </tr>
+                                    <!--Fila E-->
+                                    <tr>
+                                        <td class="contenedor-td-indice"><label class="item">E</label></td>
+                                        <td class="contenedor-td"><label class="numero-silla">1</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">2</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">3</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">4</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">5</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">6</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">7</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">8</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">9</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">10</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">11</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">12</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">13</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">14</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                    </tr>
+                                    <!--Fila F-->
+                                    <tr>
+                                        <td class="contenedor-td-indice"><label class="item">F</label></td>
+                                        <td class="contenedor-td"><label class="numero-silla">1</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">2</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">3</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">4</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">5</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">6</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">7</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">8</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">9</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">10</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">11</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">12</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">13</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">14</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                    </tr>
+                                    <!--Fila G-->
+                                    <tr>
+                                        <td class="contenedor-td-indice"><label class="item">G</label></td>
+                                        <td class="contenedor-td"><label class="numero-silla">1</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">2</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">3</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">4</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">5</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">6</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">7</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">8</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">9</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">10</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">11</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">12</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">13</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">14</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                    </tr>
+                                    <!--Fila H-->
+                                    <tr>
+                                        <td class="contenedor-td-indice"><label class="item">H</label></td>
+                                        <td class="contenedor-td"><label class="numero-silla">1</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">2</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">3</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">4</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">5</label><img class="silla-seleccionada" src="img/SillasVerde.svg" alt="Silla seleccionada"/> </td>
+                                        <td class="contenedor-td"><label class="numero-silla">6</label><img class="silla-seleccionada" src="img/SillasVerde.svg" alt="Silla seleccionada"/> </td>
+                                        <td class="contenedor-td"><label class="numero-silla">7</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">8</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">9</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">10</label><img class="silla-disponible" src="img/Sillas.svg" alt="Silla disponible"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">11</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">12</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">13</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                        <td class="contenedor-td"><label class="numero-silla">14</label><img class="silla-ocupadas" src="img/SillasRoja.svg" alt="Silla ocupada"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row d-flex text-center justify-content-center">
+                            <div class="col-md-5">
+                                <label class="item mt-4">Indica cuántos asientos quieres reservar:</label>
+                                <input type="number" id="cantidad-asientos" name="cantidad-asientos" value="2" placeholder="Cantidad" readonly>
+                                <button id="btn-confirmar">Confirmar Reserva</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Incluye Bootstrap JavaScript y jQuery (opcional) -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    </body>
+    <footer >
+        <div class="row">
+            <label>UNIR - CINEMA (C I N E  -  D E  -  C A L I D A D)</label>
+            <label>Calle 4 Avenida de la Paz, 137. Logroño</label>
+            <label>Teléfono: 941209743</label>
+            <label>Email: cinefullstack@unircinema.com</label>
+        </div>
+    </footer>
+</html>
