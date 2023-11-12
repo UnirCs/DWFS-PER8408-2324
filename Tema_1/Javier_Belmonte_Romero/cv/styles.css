@@ -1,0 +1,24 @@
+
+* {
+    font-size: small;
+}
+
+.table {
+    margin-left: 15px;
+}
+
+.text-name {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.text-title {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.text-subtitle {
+    font-weight: bold;
+}
+
+
