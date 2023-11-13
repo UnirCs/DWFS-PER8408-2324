@@ -76,20 +76,6 @@ function suggest(numAsientos) {
     return new Set()
 }
 
-function suggest2(numAsientos) {
-    for (let i = N - 1; i >= 0; i--) { // buscamos desde la fila más alejada
-        console.log('fila ' + i)
-        for (let j = 0; j < N; j++) { // buscamos desde izquierda a derecha
-            const butacasLibres = butacas[i].reduce((sum, value) => sum + value.estado, 0)
-            if (butacasLibres < numAsientos) { // no hay suficientes asientos en la fila buscamos en otra
-                break
-            }
-            const butacasJuntas = butacas[i].reduce((sum, value) => sum + value.estado, 0)
-        }
-    }
-    return true
-}
-
 // Inicializar la matriz
 let butacas = setup();
 const numAsientos = 3;
