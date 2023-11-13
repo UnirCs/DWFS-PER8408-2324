@@ -1,0 +1,62 @@
+ul.firstClass {
+    list-style-type: circle;
+}
+
+ul.secondClass {
+    list-style-type: square;
+}
+
+li.formacion{
+    margin-bottom: 20px;
+}
+
+li.idiomas{
+    margin-bottom: 10px;
+}
+
+h1.titles {
+    font-size: 18px;
+}
+
+#contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#principal {
+    width: 20%;
+}
+#secundario {
+    width: 80%;
+}
+
+#headerName {
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+
+img {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-left: 20px;
+}
+
+hr{
+    margin-bottom: 20px;
+}
+
+li.informatica{
+    margin-bottom: 15px;
+}
+
+li.funciones {
+    margin-bottom: 10px;
+}
+
+li.experiencia {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,64 @@
+.subtitle {
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    border-bottom: 2px solid darkcyan;
+    text-align: center;
+    background-color: darkcyan;
+    border-radius: 10px;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan;
+    border-radius: 10px;
+}
+
+#nombre {
+    font-size: xx-large;
+    color: white;
+}
+
+#profesion {
+    color: white;
+    text-align: center;
+    font-size: larger;
+}
+
+#picture {
+    border: 2px solid darkcyan;
+    border-radius: 30px;
+}
+
+.item__subtitle__school {
+    font-weight: bold;
+}
+
+.item__subtitle__skills {
+    font-weight: bold;
+}
+
+th {
+    text-align: left;
+    width: 300px;
+}
+
+.tableexperience__subtitle__professional {
+    border-collapse: collapse;
+}
+
+.experience__subtitle__professional {
+    border-bottom: 1px solid grey !important;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact > table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
