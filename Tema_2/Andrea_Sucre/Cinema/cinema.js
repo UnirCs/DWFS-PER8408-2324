@@ -9,7 +9,7 @@ function setup() {
         for (let j = 0; j < numberOfColumns; j++) {
             row.push({
                 id: counter++,
-                booked: counter > false
+                booked: false
             });
         }
         seats.push(row);
@@ -22,29 +22,17 @@ function suggest(numberOfSeats, seatsArray) {
         return selectedSeats;
     }
     for(let rowNumber = numberOfRows; rowNumber > 0; rowNumber--) {
-        if (selectedSeats.size === numberOfSeats) {
-            return selectedSeats;
-        }
-
         let row = seatsArray[rowNumber-1];
-        let minColumnIdLimitThatMustBeAvailable = rowNumber*numberOfColumns - numberOfColumns + 1 + numberOfSeats;
-        selectedSeats = new Set();
-
         for(let columnNumber = 0; columnNumber < numberOfColumns; columnNumber++) {
-            if (selectedSeats.size === numberOfSeats) {
-                return selectedSeats;
-            }
+            if (selectedSeats.size < numberOfSeats) {
+                let currentColumnId = rowNumber*numberOfColumns - columnNumber;
+                let currentColumn = row.filter(column => column.id === currentColumnId)[0];
 
-            let currentColumnId = rowNumber*numberOfColumns - columnNumber;
-            let currentColumn = row.filter(column => column.id === currentColumnId)[0];
-
-            if (currentColumn.booked === true) {
-                selectedSeats = new Set();
-                if (minColumnIdLimitThatMustBeAvailable > currentColumnId) {
-                    columnNumber = numberOfColumns + 2
+                if (currentColumn.booked === true) {
+                    selectedSeats.clear();
+                } else {
+                    selectedSeats.add(currentColumn.id);
                 }
-            } else {
-                selectedSeats.add(currentColumn.id);
             }
         }
     }
@@ -52,6 +40,7 @@ function suggest(numberOfSeats, seatsArray) {
 }
 
 let seats = setup();
-let suggestedSeats = suggest(2, seats);
+let suggestedSeats = suggest(12, seats);
 
+console.log('seats', seats);
 console.log('suggestedSeats', suggestedSeats);

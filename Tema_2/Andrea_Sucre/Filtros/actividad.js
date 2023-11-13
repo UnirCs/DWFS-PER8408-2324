@@ -155,17 +155,16 @@ function scaleDown() {
     let newPixels = [];
 
     for (let rowCounter = 0; rowCounter < pixels.length; rowCounter++) {
-        if (rowCounter % 2 !== 0) {
-            continue;
-        }
-        let row = [];
-        for (let columnCounter = 0; columnCounter < pixels[rowCounter].length; columnCounter++) {
-            if (columnCounter % 2 !== 0) {
-                continue;
+        if (rowCounter % 2 === 0) {
+            let row = [];
+            for (let columnCounter = 0; columnCounter < pixels[rowCounter].length; columnCounter++) {
+                if (columnCounter % 2 !== 0) {
+                    continue;
+                }
+                row.push(pixels[rowCounter][columnCounter]);
             }
-            row.push(pixels[rowCounter][columnCounter]);
+            newPixels.push(row);
         }
-        newPixels.push(row);
     }
 
     handler.savePixels(newPixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
@@ -256,7 +255,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 0;
+let optionN = 6;
 
 switch (optionN) {
     case 1:
