@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Definir el tamaño de la matriz de butacas
 const N = 10; // Número de filas y columnas
 
@@ -53,3 +54,5 @@ let asientosOcupados = suggest(butacas,6)
 
 // Imprimir la matriz
 console.log(asientosOcupados);
+=======
+>>>>>>> parent of 963c12b (Cinema y Flistros)
