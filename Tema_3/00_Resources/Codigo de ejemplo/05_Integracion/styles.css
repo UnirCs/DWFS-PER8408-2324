@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+#polygons {
+    display: flex; /* Crea un contenedor flexible */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    justify-content: space-around; /* Distribuye los elementos de forma equitativa */
+    padding: 20px;
+}
+
+.polygon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    flex-basis: calc(50% - 20px); /* 50% - 20px de margen */
+}
+
+.polygon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    background-color: #0056b3;
+}
+
+/* Polígonos individuales (triángulo, cuadrado, etc.) */
+.triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.square {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.pentagon {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.hexagon {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.heptagon {
+    clip-path: polygon(50% 0%, 90% 20%, 100% 75%, 60% 100%, 40% 100%, 0% 75%, 10% 20%);
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003d82;
+}
