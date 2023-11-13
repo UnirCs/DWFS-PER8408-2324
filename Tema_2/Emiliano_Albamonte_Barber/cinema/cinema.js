@@ -31,7 +31,7 @@ function findConsecutiveCombinations(fila, numAsientos) {
         const currentCombination = [fila[i].id];
         let isSequential = true;
 
-        for (let j = 1; j < numAsientos; j++) {
+        for (let j = 1; (j < numAsientos) && isSequential; j++) {
             const currentId = fila[i + j].id;
             const previousId = fila[i + j - 1].id;
 
@@ -39,7 +39,6 @@ function findConsecutiveCombinations(fila, numAsientos) {
                 currentCombination.push(currentId);
             } else {
                 isSequential = false;
-                break;
             }
         }
 
