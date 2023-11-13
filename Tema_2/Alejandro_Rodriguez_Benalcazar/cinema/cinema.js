@@ -38,7 +38,7 @@ function suggest(butacas, Nasientos){
                     operator=false;
                 }
             }
-            if (operator===true){
+            if (operator){
                 butacasOcupadas = [];
             }
         }
@@ -99,7 +99,7 @@ butacas[2][9].estado = true;
 // Fila 2: numAsientos = 9
 butacas[1][9].estado = true;
 
-
+//En la Fila 1 están todos los asientos disponibles
 
 let asientosOcupados = suggest(butacas,2)
 
