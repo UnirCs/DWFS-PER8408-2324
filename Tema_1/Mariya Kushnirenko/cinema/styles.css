@@ -1,0 +1,74 @@
+h1,h3{
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: center;
+}
+
+body {
+    margin: auto;
+    background-color: black;
+    padding: 20px;
+    color: #33475b;
+    font-family: 'Avenir', sans-serif;
+}
+
+.container-title {
+    padding-top: 2%;
+    background-color: slategray;
+    height: 100px;
+    place-items: center;
+}
+
+.container-screen {
+    margin-top: 50px;
+    border-top: 10px;
+    padding-top: 7%;
+    background-color: darkgray;
+    height: 200px;
+    place-items: center;
+}
+.seats-table{
+    padding-top: 2%;
+    padding-left: 15%;
+    margin: 50px;
+}
+
+.seat{
+    background-color: slategray;
+    height: 40px;
+    width: 40px;
+    border: 5px black;
+    border-radius: 10%;
+    margin: 5px;
+    padding: 10px;
+}
+
+.seat:hover{
+    background-color: lightpink;
+}
+
+.myForm{
+    text-align: center;
+    color: whitesmoke;
+}
+
+input[type="number"]{
+    text-align: center;
+    margin-top: 5px;
+    height: 50px;
+    width: 120px;
+}
+
+button[type="submit"]{
+    height: 30px;
+    width: 100px;
+    background-color: lightpink;
+    margin-top: 5px;
+}
+
+.footer-item{
+    margin-top: 50px;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: center;
+}
