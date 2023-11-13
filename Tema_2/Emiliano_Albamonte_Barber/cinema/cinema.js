@@ -61,22 +61,25 @@ function findConsecutiveCombinations(fila, numAsientos) {
 function suggest(numAsientos) {
     const butacasLibres = butacas
         .filter(row => row.some(seat => seat.estado)) // Nos quedamos con fila que tenga al menos una butaca libre
-        .map(row => row.filter(seat => seat.estado)); // Filtramos solo para tener las butacas libres
+        .map(row => row.filter(seat => seat.estado)) // Filtramos solo para tener las butacas libres
+        .filter(row => row.filter(seat => seat.estado).length >= numAsientos); // Filtrar filas con al menos numAsientos butacas libres
+    let consecutiveIdCombinations = [] // se guardan todas las combinaciones de sillas y a futuro se pueden recomendar otras filas
+
     for (let i = butacasLibres.length - 1; i >= 0; i--) { // buscamos desde la fila más alejada
-        console.log('fila ' + i)
-        if (butacasLibres[i].length < numAsientos) { // no hay suficientes asientos en la fila buscamos en otra
-            break
+        const result = findConsecutiveCombinations(butacasLibres[i], numAsientos)
+        if(result.length !== 0){
+            //console.log('fila ' + i +' Combinación '+result) con esto se ve las combinaciones por sillas
+            consecutiveIdCombinations.push(result);
         }
-        const consecutiveIdCombinations = findConsecutiveCombinations(butacasLibres[i], numAsientos);
-        if (consecutiveIdCombinations.length !== 0) {
-            return new Set(consecutiveIdCombinations)
-        }
+    }
+    if (consecutiveIdCombinations.length !== 0) {
+        return new Set(consecutiveIdCombinations[0])
     }
     return new Set()
 }
 
 // Inicializar la matriz
 let butacas = setup();
-const numAsientos = 3;
+const numAsientos = 2;
 
 console.log(suggest(numAsientos));
