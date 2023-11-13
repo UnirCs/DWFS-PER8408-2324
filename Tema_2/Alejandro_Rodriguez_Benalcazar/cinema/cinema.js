@@ -31,16 +31,16 @@ function suggest(butacas, Nasientos){
         for (let i = N-1; i>=0; i--){
             for (let j = N-1; j>=0; j--){
                 if(butacas[i][j].estado===false){
-                    count++;
-                    butacas[i][j].estado=true
+                    //count++;
                     butacasOcupadas.push(butacas[i][j])
-                }else {
-                    count = 0;
+                }else{
+                    butacasOcupadas = [];
                 }
                 if (butacasOcupadas.length>=Nasientos) {
                     return butacasOcupadas;
                 }
             }
+            butacasOcupadas = [];
         }
 
     }
@@ -48,7 +48,59 @@ function suggest(butacas, Nasientos){
 
 // Inicializar la matriz
 let butacas = setup();
-let asientosOcupados = suggest(butacas,6)
+// Test: marcamos diferente disponibilidad de asientos juntos por filas
+//Tomé como apoyo las pruebas de Salva Roca (Me pareció muy buena) pero desarrollé una función distinta
+
+// Fila 10: numAsientos = 1
+butacas[9][0].estado = true;
+butacas[9][1].estado = true;
+butacas[9][3].estado = true;
+butacas[9][5].estado = true;
+butacas[9][7].estado = true;
+butacas[9][9].estado = true;
+
+// Fila 9: numAsientos = 2
+butacas[8][0].estado = true;
+butacas[8][3].estado = true;
+butacas[8][6].estado = true;
+butacas[8][9].estado = true;
+
+// Fila 8: numAsientos = 3
+butacas[7][0].estado = true;
+butacas[7][4].estado = true;
+butacas[7][8].estado = true;
+
+// Fila 7: numAsientos = 4
+butacas[6][0].estado = true;
+butacas[6][3].estado = true;
+butacas[6][4].estado = true;
+butacas[6][9].estado = true;
+
+// Fila 6: numAsientos = 5
+butacas[5][0].estado = true;
+butacas[5][3].estado = true;
+butacas[5][9].estado = true;
+
+// Fila 5: numAsientos = 6
+butacas[4][0].estado = true;
+butacas[4][2].estado = true;
+butacas[4][9].estado = true;
+
+// Fila 4: numAsientos = 7
+butacas[3][0].estado = true;
+butacas[3][8].estado = true;
+butacas[3][9].estado = true;
+
+// Fila 3: numAsientos = 8
+butacas[2][0].estado = true;
+butacas[2][9].estado = true;
+
+// Fila 2: numAsientos = 9
+butacas[1][9].estado = true;
+
+
+
+let asientosOcupados = suggest(butacas,2)
 
 
 // Imprimir la matriz
