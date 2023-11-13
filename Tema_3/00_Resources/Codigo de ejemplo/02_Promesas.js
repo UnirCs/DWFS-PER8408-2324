@@ -18,7 +18,7 @@ let numero = 0;
 let promesa1 = new Promise(function (resolve, reject) {
 
     setTimeout(function () {
-        if (numero % 2 == 0) {
+        if (numero % 2 === 0) {
             resolve("Promesa terminada. Numero par");
         } else {
             reject("Promesa terminada. Numero impar");

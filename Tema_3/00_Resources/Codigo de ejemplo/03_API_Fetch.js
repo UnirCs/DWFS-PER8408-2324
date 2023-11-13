@@ -8,7 +8,7 @@
  */
 
 let setOfFacts = new Set();
-let url = "https://catfact.ninja/fact"
+let url = "https://catfact.ninja/fact";
 
 for (let i = 0; i < 10; i++) {
     fetch(url)
