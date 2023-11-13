@@ -33,54 +33,39 @@ function suggest (numButacas) {
     }
     else
     {
-        for (let i= butacas.length-1; i >= 0 ; i--)
+        //Meter en la condicion de iteracion lo del break
+        for (let i= butacas.length-1; i >= 0 && !foundButacas; i--)
         {
-            let filaElegida = butacas.at(i);
-            //A partir de un numero de butacas no tiene sentido seguir mirando ya que no van a entrar
-            for (let j=0; j < butacas.length ; j++)
+            for (let j=0; j < butacas.length && !foundButacas; j++)
             {
-                //Si encontramos una butaca  libre
-                if (filaElegida.at(j).estado===false)
-                {
-                    asientos.push(filaElegida.at(j).id);
-                }
-                //Solo puede estar disponible u ocupada
-                else {
-                    asientos = [];
-                }
+                //Si encontramos una butaca  libre, meterla en la lista.
+                //Si no, vaciamos la lista que tengamos
+                butacas[i][j].estado===false ? asientos.push(butacas[i][j].id) : asientos = [];
 
-                //Si tras aumentar el counter, tenemos el numero suficiente, salimos de los bucles
+                //Si tenemos el numero deseado de butacas, marcamos para salir de los bucles
                 if (asientos.length===numButacas)
                 {
+                    foundButacas=true;
                     //Loop para marcar como cogidas las butacas
                     for (let k =asientos.length-1;k>=0; k--)
                     {
                         butacas[i][j-k].estado= true;
                     }
-
-
-
-                    break;
                 }
             }
-
-            //Primero comprobarmos si tras mirar la fila hayamos obtenido los asientos
-            if (asientos.length===numButacas)
-            {
-                foundButacas =true;
-                break;
-            }
-            //Si no los hemos obtenido, limpiamos la variable
-            else
+            //Limpiar la lista de asientos si se nos ha acabado la fila
+            if (!foundButacas)
             {
                 asientos = [];
             }
         }
+        //Mensaje para el caso en que no hayamos encontrado huecos suficientes
+        if (!foundButacas)
+        {
+            console.log("No se encontraron butacas que cubriesen esa peticion")
+        }
     }
-    if (!foundButacas)
-    {
-        console.log("No se encontraron butacas que cubriesen esa peticion")
-    }
+
     return asientos;
 }
 
@@ -117,7 +102,7 @@ console.log(cogidas);
 
 cogidas = suggest (1);
 console.log(cogidas);
-cogidas = suggest (2);
+cogidas = suggest (3);
 console.log(cogidas);
 
 cogidas = suggest (1);
@@ -126,10 +111,13 @@ cogidas = suggest (2);
 console.log(cogidas);
 
 
-
+//Fallo por no tener filas lo suficientemente grandes
 cogidas = suggest (70);
 console.log(cogidas);
 
+//Fallo porque no queden huecos en las filas
+cogidas = suggest (9);
+console.log(cogidas);
 
 
 
