@@ -110,3 +110,7 @@ body {
 .section__skills-list li {
     margin-top: 10px;
 }
+
+.section__description-point {
+    margin-left: 20px;
+}
