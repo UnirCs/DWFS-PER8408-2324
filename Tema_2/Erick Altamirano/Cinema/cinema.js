@@ -38,6 +38,7 @@ butacas[6][5].estado=true;
 butacas[7][7].estado=true;
 butacas[8][8].estado=true;
 butacas[9][3].estado=true;
+butacas[9][7].estado=true;
 
 
 // Imprimir la matriz
@@ -45,36 +46,29 @@ console.log(butacas);
 
 suggest(3);
 function suggest(nAsientos){
-    if(nAsientos>butacas[0].length){
-        console.log("No se encontro "+nAsientos+" juntos ");
-    }else{
-        let suma;
-        let posicionAsiento;
-        for(let x=butacas.length-1; x>=0; x--){
-            posicionAsiento=[];
-            suma=0;
-            for(let y=butacas[0].length-1; y >= 0; y--){
-                if(butacas[x][y].estado===false && suma<nAsientos){
-                    suma++;
-                    posicionAsiento.push(butacas[x][y].id);
-                }else if(butacas[x][y].estado===true && suma<nAsientos){
-                    suma=0;
-                    posicionAsiento=[];
-                }else if(suma===nAsientos){
-                    y=-1
-                    x=-1;
-                }else {
-                    posicionAsiento=[];
-                    suma=0;
+        let asientoSugerido;
+        let nAsientoEncontrado=false;
+        for(let x=butacas.length-1; x>=0 && !nAsientoEncontrado; x--) {
+            //Se vacia los asientos sugeridos al empezar una nueva fila
+            asientoSugerido = [];
+            for (let y = butacas.length - 1; y >= 0 && !nAsientoEncontrado; y--) {
+                //Se busca asientos disponibles
+                if (butacas[x][y].estado === false) {
+                    asientoSugerido.push(butacas[x][y].id);
+                } else {
+                    asientoSugerido = [];
                 }
-
+                //Si se ha encontrado los asientos sugeridos
+                if (nAsientos === asientoSugerido.length) {
+                    nAsientoEncontrado = true;
+                }
             }
         }
-        if(nAsientos!==posicionAsiento.length){
-            posicionAsiento=[];
+        //Si no se ha encontrado asientos sugeridos
+        if(nAsientoEncontrado===false){
+            asientoSugerido=[];
         }
-        console.log(posicionAsiento);
-    }
+        console.log(asientoSugerido);
 }
 
 
