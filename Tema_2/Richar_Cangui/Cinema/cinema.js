@@ -1,51 +1,50 @@
-const N = 10; // Número de filas y columnas
+const N = 10; // Number of rows and columns
 
-// Función para inicializar la matriz de butacas
+// Function to setup the matrix
 function setup() {
-  let idContador = 1; // Iniciar el contador de IDs en 1 (los humanos no empezamos a contar desde 0)
-  let butacas = [];
+  let idCounter = 1; 
+  let armchairs = [];
 
   for (let i = 0; i < N; i++) {
-    // Nueva fila
+    // New row
     let fila = [];
     for (let j = 0; j < N; j++) {
-      // Nuevo asiento
+      // New seat
       fila.push({
-        id: idContador++,
-        estado: Math.random() < 0.5, // Estado inicial libre
+        id: idCounter++,
+        estado: Math.random() < 0.5, 
       });
     }
-    butacas.push(fila);
+    armchairs.push(fila);
   }
-  return butacas;
+  return armchairs;
 }
 
-function suggest(numeroAsientos) {
+function suggest(numberSeats) {
   // check if there are enough seats
-  if (numeroAsientos > N) {
+  if (numberSeats > N) {
     return {};
   }
 
-  return butacas.map((fila, index) => {
-    return checkRow(numeroAsientos, butacas.length - index - 1);
+  return armchairs.map((_, index) => {
+    return checkRow(numberSeats, armchairs.length - index - 1);
   });
 }
 
-function checkRow(numeroAsientos, position) {
+function checkRow(numberSeats, position) {
   //Revisar si la ultima butaca tiene el numero de asientos disponibles juntos
-  let butacaFila = butacas[position];
+  let armchairRow = armchairs[position];
   let suggested = [];
-  butacaFila.forEach((butaca, index) => {
-    if (butaca.estado) {
-      // Si la butaca está libre
-      let asientosLibres = 1;
+  armchairRow.forEach((armchair, index) => {
+    if (armchair.estado) {
+      let freeSeats = 1;
       let j = index + 1;
-      while (j < butacaFila.length && butacaFila[j].estado) {
-        asientosLibres++;
+      while (j < armchairRow.length && armchairRow[j].estado) {
+        freeSeats++;
         j++;
       }
-      if (asientosLibres >= numeroAsientos) {
-        suggested.push(butaca.id);
+      if (freeSeats >= numberSeats) {
+        suggested.push(armchair.id);
       }
     }
   });
@@ -55,12 +54,12 @@ function checkRow(numeroAsientos, position) {
   }
 
   let firstSuggestion = suggested[0];
-  let indexOfSuggestions = butacaFila.findIndex(
-    (butaca) => butaca.id === firstSuggestion
+  let indexOfSuggestions = armchairRow.findIndex(
+    (armchair) => armchair.id === firstSuggestion
   );
   let suggestedSeats = [];
-  for (let i = 0; i < numeroAsientos; i++) {
-    suggestedSeats.push(butacaFila[indexOfSuggestions + i].id);
+  for (let i = 0; i < numberSeats; i++) {
+    suggestedSeats.push(armchairRow[indexOfSuggestions + i].id);
   }
   return {
     fila: position + 1,
@@ -69,15 +68,15 @@ function checkRow(numeroAsientos, position) {
 }
 
 // Inicializar la matriz
-let butacas = setup();
+let armchairs = setup();
 
 // let suggestedSeats;
 
 // Imprimir la matriz
-console.log(butacas);
+console.log(armchairs);
 
 // Función para reservar una butaca
-let available = suggest(7);
+let available = suggest(2);
 console.log("SUGERENCIA");
 const firstSuggestion = available.find(
   (element) => element?.suggest !== undefined && element?.suggest.length > 0
@@ -89,4 +88,4 @@ if (firstSuggestion === undefined) {
 console.log(`FILA: ${firstSuggestion.fila}`);
 console.log(`BUTACAS: ${firstSuggestion.suggest}`);
 console.log(`STATUS_FILA:`);
-console.log(butacas[firstSuggestion.fila - 1]);
+console.log(armchairs[firstSuggestion.fila - 1]);
