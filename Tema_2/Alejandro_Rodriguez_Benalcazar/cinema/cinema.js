@@ -23,7 +23,6 @@ function setup() {
 
 function suggest(butacas, Nasientos){
     let butacasOcupadas = [];
-    let butacasAsignadas =[]
     let operator = true;
     if (Nasientos>N) {
         return new Set([])
@@ -37,14 +36,15 @@ function suggest(butacas, Nasientos){
                 }
                 if (butacasOcupadas.length>=Nasientos) {
                     operator=false;
-                    butacasAsignadas = butacasOcupadas;
                 }
             }
+            if (operator){
                 butacasOcupadas = [];
+            }
         }
 
     }
-    return butacasAsignadas;
+    return butacasOcupadas;
 }
 
 // Inicializar la matriz
