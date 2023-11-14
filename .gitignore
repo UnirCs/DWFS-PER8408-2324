@@ -83,3 +83,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .vscode/launch.json
+
+# imports
+package-lock.json
+package.json
