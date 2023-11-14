@@ -48,6 +48,7 @@ const suggest = (numero) => {
             }
             
             if (asientosJuntos===numero){
+                console.log(asientos)
                 return asientos;
             }
 
@@ -61,9 +62,3 @@ const suggest = (numero) => {
 // Inicializar la matriz
 let matriz= setup();
 
-// Imprimir la matriz
-console.log(butacas[0][0]);
-
-let solucion = suggest(3);
-
-console.log(solucion)
