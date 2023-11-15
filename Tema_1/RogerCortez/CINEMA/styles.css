@@ -1,0 +1,40 @@
+.cuadrado {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    margin: 0.25rem;
+    background-color: #33ff4c;
+}
+html, body {
+    min-height: 100%;
+}
+.altura {
+    height: 150px;
+        }
+.altura_2 {
+    height: 300px;
+    align-content: center;
+            }
+.thumbnail:hover {
+    background-color: #ffe800;
+}
+.marco {
+    background-color: #33ff4c;
+    border: 2px solid #f51c1c;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    font-family: Georgia, Times, serif;
+}
+.nameFila {
+    display: compact;
+    width: 5rem;
+    height: 5rem;
+    margin: 0.5rem;
+}
+.form-controle  {
+    border-color: #f50000;
+    font-family: math;
+    width: 250px;
+    background-color: #65d5db;
+}
+
