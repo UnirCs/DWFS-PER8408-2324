@@ -26,8 +26,8 @@ let promesa1 = new Promise(function (resolve, reject) {
     }, 100);
 })
 
-let callbackResolve = (value) => console.log("OK " + value);
-let callbackReject = (value) => console.log("KO " + value);
+const callbackResolve = (value) => console.log("OK " + value);
+const callbackReject = (value) => console.log("KO " + value);
 
 promesa1.then(callbackResolve, callbackReject);
 console.log("haciendo cosas...");
