@@ -3,56 +3,56 @@ img {
     vertical-align:top;
     border-radius: 20px;
     border: 3px solid red;
-    transform: scale(0.8)
+    transform: scale(0.8);
 }
 
 * {
-    font-family:Calibri
+    font-family:Calibri;
 }
 
 h1 {
     font-size: 5em;
     line-height: 1px;
-    color: rgb(40,40,40)
+    color: rgb(40,40,40);
 }
 
 #lastName {
-    color: rgb(105,105,105)
+    color: rgb(105,105,105);
 }
 
 h2 {
     font-size: 2.5em;
-    line-height: 1px
+    line-height: 1px;
 }
 
 h3 {
     font-style: italic;
     font-weight: normal;
     color: rgb(128,128,128);
-    font-size: 1.5em
+    font-size: 1.5em;
 }
 
 h4 {
     font-size: 1.25em;
-    margin-left: 1em
+    margin-left: 1em;
 }
 
 p {
-    margin-left: 2em
+    margin-left: 2em;
 }
 
 .title1 {
     color: rgb(40,40,40);
-    font-weight: bold
+    font-weight: bold;
 }
 
 .title2 {
     color: rgb(105,105,105);
-    font-weight: bold
+    font-weight: bold;
 }
 
 #basic {
-    display:inline-block
+    display:inline-block;
 }
 
 .box {
@@ -64,5 +64,5 @@ p {
     margin: 5px;
     margin-left: 2em;
     margin-right: 2em;
-    width: 95%
+    width: 95%;
   }
