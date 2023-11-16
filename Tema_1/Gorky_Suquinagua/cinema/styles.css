@@ -1,0 +1,55 @@
+#head_container {
+    background-color: #343d46;
+}
+
+#footer_container {
+    background-color: #343d46;
+}
+
+#content_first_block {
+    background-color: #3e3636;
+    height: 200px;
+}
+
+#content_third_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content_third_block > #input_lots {
+    width: 100px;
+    height: 35px;
+    border-radius: 8%;
+}
+
+#grid-lots {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#grid-lots tr > .lot-label .label {
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+#grid-lots tr > td.lot .space {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e9d700;
+    background-color: transparent;
+    color: white;
+    margin: 4px;
+}
+
+#grid-lots tr > td.lot .space--selected {
+    width: 40px;
+    height: 40px;
+    background-color: grey;
+    margin: 4px;
+    font-weight: 500;
+}
+
+#grid-lots tr > td.lot .space:hover {
+    background-color: #e9d700;
+}

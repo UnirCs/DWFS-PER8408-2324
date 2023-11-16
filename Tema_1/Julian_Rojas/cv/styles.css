@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,h2,h3{
+    margin: 0px;
+}
+
+p{
+    text-align: justify;
+    font-size: 17px;
+    margin: 0px;
+    padding: 0px 10px;
+}
+
+ul{
+    margin: 0px;
+    list-style: none;
+}
+
+.white{
+    color: white;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    /* height: 100vh; */
+}
+
+.column-1{
+    width: 30%;
+    background: #1c3f74;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.column-2{
+    width: 70%;
+}
+
+.column-2 .row{
+    padding-left: 30px;
+}
+
+.foto-cv{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 34px;
+    border: 5px solid #ffffff;
+}
+
+.foto-cv img{
+    width: 100%;
+    height: auto;
+}
+
+#nombre-cv{
+    padding-top: 20px;
+    color: #ffffff;
+    font-size: 36px;
+}
+
+#profesion-cv{
+    padding-top: 12px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.linea{
+    width: 100%;
+    height: 3px;
+    background-color: #8ee4e7;
+    margin: 20px 0px;
+}
+
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+
+#contacto-cv{
+    color: white;
+    font-size: 18px;
+    text-align: start;
+}
