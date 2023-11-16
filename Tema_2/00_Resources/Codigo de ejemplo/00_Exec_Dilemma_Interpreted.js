@@ -1,4 +1,10 @@
 // ¿Es JavaScript un lenguaje interpretado?
 
 console.log("Hello Dilemma!");
-console.log("Hello Dilemma2!");
+console.log("Hello Dilemma!");
+console.log("Hello Dilemma");
+console.log("Hello Dilemma!");
+console.log("Hello Dilemma!");
+console.log("Hello Dilemma!");
+console.log("Hello Dilemma!");
+//console.log("Hello Dilemma!);
