@@ -22,12 +22,16 @@ function setup(){
 function suggest(numberSeats){
     let count;
     let availableSeats;
+    let i = N-1;
+    let j = 0;
+    let isAvailable = false;
     if(numberSeats > N) return [];
 
-    for (let i = N-1; i > 0; i--){
+    while (!isAvailable && i > 0){
         count = 0;
         availableSeats = [];
-        for(let j = 0; j < N; j++){
+        j=0;
+        while (!isAvailable && j < N){
             if(seats[i][j].available){
                 count++;
                 availableSeats.push(seats[i][j]);
@@ -37,11 +41,13 @@ function suggest(numberSeats){
             }
             if(count === numberSeats){
                 updateSeats(availableSeats)
-                return availableSeats;
+                isAvailable = true;
             }
+            j++;
         }
+        i--;
     }
-    return [];
+    return availableSeats;
 }
 
 function updateSeats(seatsToUpdate){
