@@ -1,0 +1,47 @@
+.title{
+    color:brown;
+    width: 50%;
+    margin-left: 330px;
+    }
+
+.titulos{
+    color: purple;
+    width: auto;
+    margin-left: 1px;
+    border: 4px solid brown;
+}
+
+.textos{  
+color: purple;
+    width: auto;
+    margin-left: 1px;
+    border: 4px solid brown;
+}
+
+.body{
+border: 10px solid purple;
+padding: 5px;
+width:auto;
+height: auto;
+text-align: justify;
+}
+
+.header__picture {
+    object-fit: cover;
+    position: relative;
+    margin: 20px;
+    text-align: center;
+}
+
+.header__picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+}
+
+
+
+
+
+
+
