@@ -27,7 +27,7 @@ function suggest(numberSeats){
     let isAvailable = false;
     if(numberSeats > N) return [];
 
-    while (!isAvailable && i > 0){
+    while (!isAvailable && i >= 0){
         count = 0;
         availableSeats = [];
         j=0;
@@ -52,7 +52,7 @@ function suggest(numberSeats){
 
 function updateSeats(seatsToUpdate){
     for(let i = 0; i < seatsToUpdate.length; i++){
-        for(let l = N-1; l > 0; l--){
+        for(let l = N-1; l >= 0; l--){
             for(let j = 0; j < N; j++){
                 if(seatsToUpdate[i].id === seats[l][j].id) seats[l][j].available = false;
             }
