@@ -1,0 +1,46 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+    margin: 5%;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0098cd;
+    border-style:ridge;
+    border-radius: 5vw 5vw 0 0;
+    padding-bottom: 5%;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0098cd;
+    border-color: white;
+    border-style: ridge;
+}
+
+.exp_laboral{
+    border-radius: 0 0 5vw 5vw;
+}
+
+img{
+    max-width: 30vw;
+    border-radius: 100%;
+    border-style: ridge;
+}
+
+h1,h3,p{
+   
+    color: beige;
+    text-align: center;
+}
+
+
+h2{
+    color: black;
+    text-align: center;
+}
