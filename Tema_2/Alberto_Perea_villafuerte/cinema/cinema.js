@@ -21,8 +21,52 @@ function setup() {
     return butacas;
 }
 
+
+function suggest (nasientos) {
+    let butacasReservadas = []; 
+    let foundButacas = false;
+
+    //Si el número de asientos solicitados excede el tamaño máximo de la fila, la función debe devolver un set vacío.
+    if(butacas.length < nasientos){ return [];}    
+        
+    for (let i= butacas.length-1; i >= 0 && !foundButacas; i--)
+    {
+        for (let j=0; j < butacas.length && !foundButacas; j++)
+        {
+            if(butacas[i][j].estado === false) {
+                butacasReservadas.push(butacas[i][j].id);
+            } else {
+                butacasReservadas = [];
+            }
+            if (butacasReservadas.length === nasientos)
+            {
+                foundButacas=true;                
+                for (let k =butacasReservadas.length-1;k>=0; k--)
+                {
+                    butacas[i][j-k].estado= true;
+                }
+            }
+        }
+        //Limpiar la lista de asientos si se nos ha acabado la fila
+        if (!foundButacas)
+        {
+            butacasReservadas = [];
+        }
+    }
+    return butacasReservadas;
+}
+
 // Inicializar la matriz
 let butacas = setup();
 
 // Imprimir la matriz
+console.log(butacas);
+console.log(suggest(3));
+console.log(suggest(2));
+console.log(suggest(4));
+console.log(suggest(5));
+console.log(suggest(3));
+console.log(suggest(3));
+console.log(suggest(5));//basio
+console.log(suggest(1));
 console.log(butacas);
