@@ -1,0 +1,105 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px;
+    margin: auto;
+}
+
+body {
+    background: #343434;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.div__section--header, footer {
+    background:dimgray;
+    border: 1px lightgray;
+    min-width: 500px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px;
+    padding: 10px;
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 40px;
+}
+
+.div__section--screen {
+    background:whitesmoke;
+    border: 1px lightgray;
+    height: 200px;
+    min-width: 500px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px;
+    padding: 10px;
+}
+
+.div__section--seats {
+    border: 1px lightgray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-width: 500px;
+    max-width: 750px;
+    margin: auto;
+    padding: 5px;
+}
+
+table {
+    border-spacing: 15px;
+}
+
+.td__row {
+    text-align: center;
+    font-size: 14px;
+}
+
+
+.td__aisle {
+    width: 45px;
+    height: 30px;
+}
+
+td > input {
+    border-radius:4px;
+    width: 30px;
+    height: 25px;
+}
+
+form > input[type=text] {
+    font-size:16px;
+    text-align: center;
+    width: 50px;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+form > input[type=submit] {
+    background: darkblue;
+    color: whitesmoke;
+    border: dodgerblue;
+    border-radius: 6px;
+    font-size: 16px;
+    padding:10px;
+    margin: 5px;
+}
+
+.td__btn--unavailable {
+    background-color: red;
+    border-color: red;
+}
+
+.td__btn--selected {
+    background-color: forestgreen;
+    border-color: forestgreen;
+}
+
+
+
+footer {
+    font-size: 18px;
+}
+
+p {
+    line-height: 30px;
+}
