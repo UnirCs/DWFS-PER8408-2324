@@ -19,3 +19,5 @@ Recuerda depurar en el navegador para facilitar tu proceso de desarrollo.
 ## 3. Ejemplo de resultado
 
 Puedes tomar como ejemplo el siguiente vídeo
+
+![](Demo.mp4)
