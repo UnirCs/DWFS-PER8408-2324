@@ -41,8 +41,12 @@ function suggest (nasientos) {
             if (butacasReservadas.length === nasientos)
             {
                 foundButacas=true;                
-                for (let k =butacasReservadas.length-1;k>=0; k--)
-                {
+                for (let k = butacasReservadas.length-1;k>=0; k--)
+                {   found = false;
+                    if (butacasReservadas.find((element) => element == butacas[i][j-k].id))
+                    found = true;
+                    
+                    if(found)
                     butacas[i][j-k].estado= true;
                 }
             }
@@ -67,6 +71,6 @@ console.log(suggest(4));
 console.log(suggest(5));
 console.log(suggest(3));
 console.log(suggest(3));
-console.log(suggest(5));//basio
+console.log(suggest(5));//vacio
 console.log(suggest(1));
 console.log(butacas);
