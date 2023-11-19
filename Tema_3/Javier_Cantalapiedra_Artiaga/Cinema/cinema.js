@@ -25,20 +25,22 @@ function setup(){
 
 const suggest = (numero) => {
 
+    let asientos = new Set();
+    let asientosJuntos = 0;
 
     if (numero > Ncols){
-        return new Set();
+        return asientos;
     }
 
-    for (let fila of butacas.toReversed()){
+    for (let i = butacas.length - 1; i >= 0 && asientosJuntos!==numero ;i--){
 
-        let asientosJuntos = 0;
-        let asientos = new Set();
+        asientosJuntos = 0;
+        asientos = new Set();
 
-        for (let butaca of fila){
+        for(let j = 0; j<butacas[i].length && asientosJuntos!==numero ;j++){
 
-            if(butaca.ocupado === false){
-                asientos.add(butaca);
+            if(butacas[i][j].ocupado === false){
+                asientos.add(butacas[i][j]);
                 asientosJuntos++;
             }
 
@@ -46,16 +48,11 @@ const suggest = (numero) => {
                 asientos = new Set();
                 asientosJuntos = 0;
             }
-            
-            if (asientosJuntos===numero){
-                console.log(asientos)
-                return asientos;
-            }
 
         }
     }
     
-    return new Set();
+    return asientos;
 }
 
 
