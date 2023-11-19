@@ -1,0 +1,131 @@
+body {
+  margin: 0px 0px 0px 0px;
+}
+/*Cabecera*/
+.cinema__header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  justify-content: center;
+}
+
+.cinema__asientos {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*Filas*/
+.asientos__f1,
+.asientos__f2,
+.asientos__f3,
+.asientos__f4,
+.asientos__f5 {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/*Fila 1*/
+.f1__asientos,
+.f2__asientos,
+.f3__asientos,
+.f4__asientos,
+.f5__asientos{
+  display: flex;
+  margin-bottom: 5px;
+}
+/*Fila 1 cl*/
+.f1__c1,    .f2__c1,    .f3__c1,    .f4__c1,    .f5__c1,   
+.f1__c2,    .f2__c2,    .f3__c2,    .f4__c2,    .f5__c2,
+.f1__c3,    .f2__c3,    .f3__c3,    .f4__c3,    .f5__c3,
+.f1__c4,    .f2__c4,    .f3__c4,    .f4__c4,    .f5__c4,
+.f1__c5,    .f2__c5,    .f3__c5,    .f4__c5,    .f5__c5,
+.f1__c6,    .f2__c6,    .f3__c6,    .f4__c6,    .f5__c6,
+.f1__c7,    .f2__c7,    .f3__c7,    .f4__c7,    .f5__c7,
+.f1__c8,    .f2__c8,    .f3__c8,    .f4__c8,    .f5__c8,
+.f1__c9,    .f2__c9,    .f3__c9,    .f4__c9,    .f5__c9,
+.f1__c10,   .f2__c10,   .f3__c10,    .f4__c10,  .f5__c10,
+.f1__c11,   .f2__c11,   .f3__c11,    .f4__c11,  .f5__c11,
+.f1__c12,   .f2__c12,   .f3__c12,    .f4__c12,  .f5__c12,
+.f1__c13,    .f2__c13,  .f3__c13,    .f4__c13,  .f5__c13 {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  background-color: none;
+  border: 3px solid yellow;
+  transition: background-color 0.5s;
+}
+
+.f1__c1 label,  .f2__c1 label,  .f3__c1 label,  .f4__c1 label,  .f5__c1 label,
+.f1__c2 label,  .f2__c2 label,  .f3__c2 label,  .f4__c2 label,  .f5__c2 label,
+.f1__c3 label,  .f2__c3 label,  .f3__c3 label,  .f4__c3 label,  .f5__c3 label,
+.f1__c4 label,  .f2__c4 label,  .f3__c4 label,  .f4__c4 label,  .f5__c4 label,
+.f1__c5 label,  .f2__c5 label,  .f3__c5 label,  .f4__c5 label,  .f5__c5 label,
+.f1__c6 label,  .f2__c6 label,  .f3__c6 label,  .f4__c6 label,  .f5__c6 label,
+.f1__c7 label,  .f2__c7 label,  .f3__c7 label,  .f4__c7 label,  .f5__c7 label,
+.f1__c8 label,  .f2__c8 label,  .f3__c8 label,  .f4__c8 label,  .f5__c8 label,
+.f1__c9 label,  .f2__c9 label,  .f3__c9 label,  .f4__c9 label,  .f5__c9 label,
+.f1__c10 label, .f2__c10 label, .f3__c10 label,  .f4__c10 label, .f5__c10 label,
+.f1__c11 label, .f2__c11 label, .f3__c11 label,  .f4__c11 label,    .f5__c11 label,
+.f1__c12 label, .f2__c12 label, .f3__c12 label,  .f4__c12 label,    .f5__c12 label,
+.f1__c13 label,  .f2__c13 label,  .f3__c13 label,  .f4__c13 label,  .f5__c13 label {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#miCheckbox:checked + .f1__c1,  #miCheckboxf2:checked + .f2__c1, #miCheckboxf3:checked + .f3__c1,  #miCheckboxf4:checked + .f4__c1, #miCheckboxf5:checked + .f5__c1, 
+#miCheckbox2:checked + .f1__c2, #miCheckbox2f2:checked + .f2__c2, #miCheckbox2f3:checked + .f3__c2, #miCheckbox2f4:checked + .f4__c2, #miCheckbox2f5:checked + .f5__c2, 
+#miCheckbox3:checked + .f1__c3, #miCheckbox3f2:checked + .f2__c3, #miCheckbox3f3:checked + .f3__c3, #miCheckbox3f4:checked + .f4__c3, #miCheckbox3f5:checked + .f5__c3,
+#miCheckbox4:checked + .f1__c4, #miCheckbox4f2:checked + .f2__c4, #miCheckbox4f3:checked + .f3__c4, #miCheckbox4f4:checked + .f4__c4, #miCheckbox4f5:checked + .f5__c4,
+#miCheckbox5:checked + .f1__c5, #miCheckbox5f2:checked + .f2__c5, #miCheckbox5f3:checked + .f3__c5, #miCheckbox5f4:checked + .f4__c5, #miCheckbox5f5:checked + .f5__c5,
+#miCheckbox6:checked + .f1__c6, #miCheckbox6f2:checked + .f2__c6, #miCheckbox6f3:checked + .f3__c6, #miCheckbox6f4:checked + .f4__c6, #miCheckbox6f5:checked + .f5__c6,
+#miCheckbox7:checked + .f1__c7, #miCheckbox7f2:checked + .f2__c7, #miCheckbox7f3:checked + .f3__c7, #miCheckbox7f4:checked + .f4__c7, #miCheckbox7f5:checked + .f5__c7,
+#miCheckbox8:checked + .f1__c8, #miCheckbox8f2:checked + .f2__c8, #miCheckbox8f3:checked + .f3__c8, #miCheckbox8f4:checked + .f4__c8, #miCheckbox8f5:checked + .f5__c8,
+#miCheckbox9:checked + .f1__c9, #miCheckbox9f2:checked + .f2__c9, #miCheckbox9f3:checked + .f3__c9, #miCheckbox9f4:checked + .f4__c9, #miCheckbox9f5:checked + .f5__c9,
+#miCheckbox10:checked + .f1__c10,   #miCheckbox10f2:checked + .f2__c10, #miCheckbox10f3:checked + .f3__c10, #miCheckbox10f4:checked + .f4__c10, #miCheckbox10f5:checked + .f5__c10,
+#miCheckbox11:checked + .f1__c11,   #miCheckbox11f2:checked + .f2__c11, #miCheckbox11f3:checked + .f3__c11, #miCheckbox11f4:checked + .f4__c11, #miCheckbox11f5:checked + .f5__c11,
+#miCheckbox12:checked + .f1__c12,   #miCheckbox12f2:checked + .f2__c12, #miCheckbox12f3:checked + .f3__c12, #miCheckbox12f4:checked + .f4__c12, #miCheckbox12f5:checked + .f5__c12,
+#miCheckbox13:checked + .f1__c13,    #miCheckbox13f2:checked + .f2__c13, #miCheckbox13f3:checked + .f3__c13, #miCheckbox13f4:checked + .f4__c13, #miCheckbox13f5:checked + .f5__c13  {
+  background-color: yellow;
+}
+
+#miCheckbox,  #miCheckboxf2, #miCheckboxf3, #miCheckboxf4, #miCheckboxf5,
+#miCheckbox2,   #miCheckbox2f2, #miCheckbox2f3, #miCheckbox2f4, #miCheckbox2f5, 
+#miCheckbox3,   #miCheckbox3f2, #miCheckbox3f3, #miCheckbox3f4, #miCheckbox3f5,
+#miCheckbox4,   #miCheckbox4f2, #miCheckbox4f3, #miCheckbox4f4, #miCheckbox4f5,
+#miCheckbox5,   #miCheckbox5f2, #miCheckbox5f3, #miCheckbox5f4, #miCheckbox5f5,
+#miCheckbox6,   #miCheckbox6f2, #miCheckbox6f3, #miCheckbox6f4, #miCheckbox6f5,
+#miCheckbox7,   #miCheckbox7f2, #miCheckbox7f3, #miCheckbox7f4, #miCheckbox7f5,
+#miCheckbox8,   #miCheckbox8f2, #miCheckbox8f3, #miCheckbox8f4, #miCheckbox8f5,
+#miCheckbox9,   #miCheckbox9f2, #miCheckbox9f3, #miCheckbox9f4, #miCheckbox9f5,
+#miCheckbox10,  #miCheckbox10f2, #miCheckbox10f3, #miCheckbox10f4, #miCheckbox10f5,
+#miCheckbox11,  #miCheckbox11f2, #miCheckbox11f3, #miCheckbox11f4, #miCheckbox11f5,
+#miCheckbox12,  #miCheckbox12f2, #miCheckbox12f3, #miCheckbox12f4, #miCheckbox12f5,
+#miCheckbox13,   #miCheckbox13f2, #miCheckbox13f3, #miCheckbox13f4, #miCheckbox13f5 {
+  display: none;
+}
+
+.reserva__formulario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.reserva__formulario input{
+    margin-bottom: 15px;
+}
+
+.footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
