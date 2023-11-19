@@ -1,0 +1,61 @@
+html{
+    font-family: tahoma;
+    color: white;
+}
+.Titulo1{
+    background: #e7a80a;
+    color: rgb(10, 9, 9);
+    display: flex;
+	justify-content: center;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 5px solid rgb(255, 255, 255);
+}
+.Titulo2{
+    display: flex;
+    justify-content: center;
+}
+body {
+    background-color: rgb(0, 2, 2);
+  }
+.Imagenes{
+    display: flex;
+    justify-content: center;
+}
+.Foto__Messi{
+	margin-left: 80px;
+    width: 300px;
+    height: 300px;
+    border: 5px solid rgb(255, 255, 255);
+}
+.Detalles_Messi--Biogra{
+    font-size:90%;
+    width: 1500px;
+    color: black;
+    background: rgba(185, 190, 190,1)
+}
+.Titulo__datos--Messi{
+    text-align: center;
+    color: rgb(13, 184, 184);
+}
+.Datos_Messi{
+    font-size:80%;
+    width: 500px;
+}
+td{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.Medalla__Oro{
+    color: #DAA520
+}
+.Medalla__Plata{
+    color: #C0C0C0
+}
+.Medalla__Bronce{
+    color: rgba(190, 139, 103, 0.911)
+}
