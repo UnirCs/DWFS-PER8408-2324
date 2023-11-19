@@ -1,0 +1,179 @@
+body {
+    background-color: lightgray;
+    padding-bottom: 50px; /* Para espacio del pie de página */
+}
+
+#screen {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    background-color: #444444;
+}
+
+.footer {
+    grid-area: footer;
+    padding: 0.5rem;
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+form {
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1vh;
+}
+
+form > label,
+form > input,
+form > button {
+    font-size: medium;
+    margin-top: 5px;
+}
+
+form > input {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form > button {
+    background-color: #444444;
+    border: 2px solid white;
+    color: white;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+form > label {
+    color: white;
+}
+
+.seat-container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto 1.2rem auto;
+    max-width: 650px;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+}
+
+.seat-labels .seat:hover {
+    transform: none;
+    background-color: initial;
+    cursor: pointer;
+}
+
+.seat {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: #ccc;
+    border: 1px solid #333;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    border-radius: 25%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seat.occupied {
+    background-color: #dc3545;
+    cursor: not-allowed;
+    /* Rojo para asientos ocupados */
+}
+
+.seat--occupied {
+    background-color: #dc3545;
+    cursor: not-allowed;
+}
+
+.seat--vip {
+    background-color: #007BFF;
+}
+
+.seat.seat--vip {
+    display: flex;
+    flex-direction: column;
+}
+
+.seat.selected {
+    background-color: #28a745;
+    /* Verde para asientos seleccionados */
+    border-color: #218838;
+    color: #fff;
+}
+
+.seat .seat-label-special {
+    position: absolute;
+    font-size: 7px;
+    bottom: -1px;
+}
+
+.seat:hover {
+    transform: scale(1.5);
+}
+
+.seat:not(.seat--vip):not(.seat--occupied) {
+    color: rgb(77, 154, 119);
+}
+
+.seat:not(.seat--vip):hover {
+    background-color: #97e08e;
+}
+
+.seat.seat--occupied:hover {
+    transform: scale(1);
+    background-color: #737476;
+}
+
+.seat.seat--vip:hover {
+    background-color: #2115a1;
+}
+
+.seat-row {
+    text-align: center;
+}
+
+.seat-row-indicator {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.seat-label {
+    font-size: 12px;
+}
+
+#reservation-form {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

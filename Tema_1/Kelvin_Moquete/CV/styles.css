@@ -1,0 +1,38 @@
+* {
+    font-family: sans-serif, Arial;
+}
+
+body{
+    background-color: #cbdcdf;
+}
+
+body header{
+    text-align: center;
+    padding-top: 5px;
+}
+
+body header h1{
+    color: #cbdcdf;
+    text-shadow: 3px 3px 3px black;
+}
+body header h2{
+    color: #cbdcdf;
+    text-shadow: 3px 3px 3px black;
+}
+
+section{
+    border: 1px solid grey;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: 3px 3px grey;
+    background-color: #aeced2;
+}
+
+section h2{
+    color: #aeced2;
+    text-shadow: 3px 3px 3px black;
+    display: inherit;
+}
+section p {
+    text-align: justify;
+}
