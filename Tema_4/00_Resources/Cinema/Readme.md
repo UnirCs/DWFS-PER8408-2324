@@ -18,7 +18,8 @@ Recuerda depurar en el navegador para facilitar tu proceso de desarrollo.
 
 ## 3. Ejemplo de resultado
 
-Puedes tomar como ejemplo el siguiente vídeo
+Puedes tomar como ejemplo el siguiente vídeo.
+
 Para el Look and feeld del formulario se ha usado [Materialize CSS](https://materializecss.com/). Es algo totalmente opcional, pero si no tienes experiencia en diseño es recomendable utilizar librerías como esta para agilizar el desarrollo y tener resultados profesionales.
 
 https://github.com/UnirCs/DWFS-PER8408-2324/assets/115072043/f5e55356-5953-4e89-b975-de8227b0e269
