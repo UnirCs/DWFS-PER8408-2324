@@ -1,4 +1,4 @@
-const ImageHandler = require("./ImageHandler.js");
+const ImageHandler = require("../../00_Resources/filtros/ImageHandler.js");
 
 let path = "input/tucan.jpg";
 let handler = new ImageHandler(path);
@@ -48,6 +48,12 @@ function redConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (const row of pixels) {
+    for (const pixel of row) {
+      pixel[1] = 0;
+      pixel[2] = 0;
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -62,6 +68,12 @@ function greenConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (let i = 0; i < pixels.length; i++) {
+    for (let j = 0; j < pixels[i].length; j++) {
+      pixels[i][j][0] = 0;
+      pixels[i][j][2] = 0;
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -76,6 +88,12 @@ function blueConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (let i = 0; i < pixels.length; i++) {
+    for (let j = 0; j < pixels[i].length; j++) {
+      pixels[i][j][0] = 0;
+      pixels[i][j][1] = 0;
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -94,6 +112,13 @@ function greyConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (const row of pixels) {
+    for (const pixel of row) {
+      const [r, g, b] = pixel;
+      const media = (r + g + b) / 3;
+      pixel[0] = pixel[1] = pixel[2] = media;
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -110,6 +135,14 @@ function blackAndWhiteConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (const row of pixels) {
+    for (const pixel of row) {
+      const [r, g, b] = pixel;
+      const media = (r + g + b) / 3;
+      let mediaValue = media < 128 ? 0 : 255;
+      pixel.fill(mediaValue);
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -125,9 +158,17 @@ function scaleDown() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  const pixelsModified = [];
+  for (const row of pixels) {
+    const nuevaFila = [];
+    for (const pixel of row) {
+      nuevaFila.push(pixel);
+    }
+    pixelsModified.push(nuevaFila);
+  }
 
   handler.savePixels(
-    pixels,
+    pixelsModified,
     outputPath,
     handler.getShape()[0] / 2,
     handler.getShape()[1] / 2,
@@ -144,6 +185,13 @@ function dimBrightness(dimFactor) {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (const i in pixels) {
+    for (const j in pixels[i]) {
+      pixels[i][j][0] /= dimFactor;
+      pixels[i][j][1] /= dimFactor;
+      pixels[i][j][2] /= dimFactor;
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -160,6 +208,13 @@ function invertColors() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (const i in pixels) {
+    for (const j in pixels[i]) {
+      pixels[i][j][0] = 255 - pixels[i][j][0];
+      pixels[i][j][1] = 255 - pixels[i][j][1];
+      pixels[i][j][2] = 255 - pixels[i][j][2];
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -181,6 +236,23 @@ function merge(alphaFirst, alphaSecond) {
   let pixels = [];
 
   //Aqui tu codigo
+  for (const posFila in catPixels) {
+    let fila = [];
+    for (const posCol in catPixels[posFila]) {
+      let pixel = [0, 0, 0];
+      pixel[0] =
+        catPixels[posFila][posCol][0] * alphaSecond +
+        dogPixels[posFila][posCol][0] * alphaFirst;
+      pixel[1] =
+        catPixels[posFila][posCol][1] * alphaSecond +
+        dogPixels[posFila][posCol][1] * alphaFirst;
+      pixel[2] =
+        catPixels[posFila][posCol][2] * alphaSecond +
+        dogPixels[posFila][posCol][2] * alphaFirst;
+      fila.push(pixel);
+    }
+    pixels.push(fila);
+  }
 
   dogHandler.savePixels(pixels, outputPath);
 }
