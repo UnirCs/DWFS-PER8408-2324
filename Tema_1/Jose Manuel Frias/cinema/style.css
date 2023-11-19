@@ -9,14 +9,18 @@ header{
     margin-bottom: 0.5%;
 }
 
-#screen {
+.blockcentral{
+    text-align: center;
+}
+
+.blockcentral__screen {
     background: #1e1f22;
     color: #dbdbdb;
     text-align: center;
     padding: 0.5%;
 }
 
-#asientos{
+.blockcentral__asientos{
     margin-top: 2%;
     display: flex;
     justify-content: center;
@@ -27,7 +31,7 @@ header{
     text-align: left;
 }
 
-#asientos__seats{
+.asientos__seats{
     width: 50%;
 }
 
@@ -45,7 +49,7 @@ header{
 }
 
 
-#seleccion{
+.blockcentral__seleccion{
     margin: 3%;
 }
 
