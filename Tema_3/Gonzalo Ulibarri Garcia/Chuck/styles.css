@@ -1,0 +1,21 @@
+
+.history{
+    margin:20px;
+    text-align: center;
+}
+
+#chuckimage{
+    display: block;
+    width: 70%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+#chuckychiste{
+    display: block;
+    width: 70%;
+    max-width: 500px;
+    height: auto;
+    margin: 10px auto;
+}
