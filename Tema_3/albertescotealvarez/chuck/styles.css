@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.main__container {
+    text-align: center;
+}
+
+.main__container button {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.main__container button:hover {
+    background-color: #2980b9;
+}
+
+.joke__content {
+    font-family: 'Arial', sans-serif;
+}
