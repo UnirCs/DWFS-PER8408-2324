@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <title>Chistes Chuck - Marc Carné</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel= "stylesheet" href="styles.css">
+</head>
+<body>
+<div id="main-container">
+    <div class="my-3">
+        <h1>Ejemplo de uso de promesas</h1>
+        <div class="d-flex flex-row mx-2 my-2 align-items-center">
+            <div class="align-items-center">
+                <button id="boton-chiste" class="btn btn-primary mx-1" onClick="siguienteChiste()">Dame un chiste!</button>
+            </div>
+            <div class="align-items-center">
+                <p id="chiste-descripcion" class="chiste-texto"></p>
+            </div>
+        </div>
+    </div>
+    <div class="my-3">
+        <h1>Ejemplo de uso de promesas con await</h1>
+        <div class="d-flex flex-row mx-2 my-2 align-items-center">
+            <div class="align-items-center">
+                <button id="boton-chiste-await" class="btn btn-primary mx-1" onClick="siguienteChisteSync()">Dame un chiste!</button>
+            </div>
+            <div class="align-items-center">
+                <p id="chiste-descripcion-await" class="chiste-texto"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // Función asíncrona para recuperar el chiste. El valor del texto se setea una vez completada la promesa
+    function siguienteChiste() {
+        let url = 'https://api.chucknorris.io/jokes/random'
+        fetch(url)
+            .then((response) => response.json())
+            .then((json) => {
+                    let chiste = json["value"];
+                    let textElement = document.getElementById("chiste-descripcion");
+                    textElement.textContent = chiste;
+                }
+            );
+    };
+    // Función síncrona para recuperar el chiste. El valor del texto se setea una vez completada la promesa
+    async function siguienteChisteSync() {
+        let url = 'https://api.chucknorris.io/jokes/random'
+        let chisteResponse = await fetch(url);
+        let json = await chisteResponse.json();
+        let chiste = json["value"];
+        let textElement = document.getElementById("chiste-descripcion-await");
+        textElement.textContent = chiste;
+    }
+</script>
+</body>
+</html>
