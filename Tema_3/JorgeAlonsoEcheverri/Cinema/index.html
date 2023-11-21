@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIR | Cinema</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+<section class="bg-primary">
+    <div class="container text-center justify-content-center text-white">
+        <div class="row">
+            <div class="col">
+                <img src="img/film_icon.png" alt="Film icon"/>
+            </div>
+            <div class="col">
+                <h1>
+                    UNIR |
+                    <small class="text-dark">Cinema</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="m-2">
+    <div id="screen" class="d-flex container bg-dark rounded-circle">
+        <div class="row justify-content-center align-items-center text-white text-center mx-auto">
+            <h1>Pantalla</h1>
+        </div>
+    </div>
+</section>
+<section id="seats" class="bg-dark">
+    <div class="container text-center mb-3 pt-4">
+        <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+            <input type="checkbox" class="btn-check" id="btn-check-o-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-o-outlined">Ocupado</label>
+            <input type="checkbox" class="btn-check" id="btn-check-l-outlined" autocomplete="off" disabled>
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-l-outlined">Libre</label>
+            <input type="checkbox" class="btn-check" id="btn-check-sel-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-sel-outlined">Seleccionada</label>
+        </div>
+        <div class="d-flex flex-row flex-wrap justify-content-center align-items-center text-white">
+            <h6 class="text-start">Fila 1</h6>
+            <input type="checkbox" class="btn-check" id="btn-check-A1-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-A1-outlined">A1</label>
+            <input type="checkbox" class="btn-check" id="btn-check-B1-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-B1-outlined">B1</label>
+            <input type="checkbox" class="btn-check" id="btn-check-C1-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-C1-outlined">C1</label>
+            <input type="checkbox" class="btn-check" id="btn-check-D1-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-D1-outlined">D1</label>
+            <input type="checkbox" class="btn-check" id="btn-check-E1-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-E1-outlined">E1</label>
+            <input type="checkbox" class="btn-check" id="btn-check-F1-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-F1-outlined">F1</label>
+            <input type="checkbox" class="btn-check" id="btn-check-G1-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-G1-outlined">G1</label>
+            <input type="checkbox" class="btn-check" id="btn-check-H1-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-H1-outlined">H1</label>
+            <input type="checkbox" class="btn-check" id="btn-check-I1-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-I1-outlined">I1</label>
+            <input type="checkbox" class="btn-check" id="btn-check-J1-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-J1-outlined">J1</label>
+            <h6 class="text-start">Fila 1</h6>
+        </div>
+        <div class="d-flex flex-row flex-wrap justify-content-center align-items-center text-white">
+            <h6 class="text-start">Fila 2</h6>
+            <input type="checkbox" class="btn-check" id="btn-check-A2-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-A2-outlined">A2</label>
+            <input type="checkbox" class="btn-check" id="btn-check-B2-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-B2-outlined">B2</label>
+            <input type="checkbox" class="btn-check" id="btn-check-C2-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-C2-outlined">C2</label>
+            <input type="checkbox" class="btn-check" id="btn-check-D2-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-D2-outlined">D2</label>
+            <input type="checkbox" class="btn-check" id="btn-check-E2-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-E2-outlined">E2</label>
+            <input type="checkbox" class="btn-check" id="btn-check-F2-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-F2-outlined">F2</label>
+            <input type="checkbox" class="btn-check" id="btn-check-G2-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-G2-outlined">G2</label>
+            <input type="checkbox" class="btn-check" id="btn-check-H2-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-H2-outlined">H2</label>
+            <input type="checkbox" class="btn-check" id="btn-check-I2-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-I2-outlined">I2</label>
+            <input type="checkbox" class="btn-check" id="btn-check-J2-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-J2-outlined">J2</label>
+            <h6 class="text-start">Fila 2</h6>
+        </div>
+        <div class="d-flex flex-row flex-wrap justify-content-center align-items-center text-white">
+            <h6 class="text-start">Fila 3</h6>
+            <input type="checkbox" class="btn-check" id="btn-check-A3-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-A3-outlined">A3</label>
+            <input type="checkbox" class="btn-check" id="btn-check-B3-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-B3-outlined">B3</label>
+            <input type="checkbox" class="btn-check" id="btn-check-C3-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-C3-outlined">C3</label>
+            <input type="checkbox" class="btn-check" id="btn-check-D3-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-D3-outlined">D3</label>
+            <input type="checkbox" class="btn-check" id="btn-check-E3-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-E3-outlined">E3</label>
+            <input type="checkbox" class="btn-check" id="btn-check-F3-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-F3-outlined">F3</label>
+            <input type="checkbox" class="btn-check" id="btn-check-G3-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-G3-outlined">G3</label>
+            <input type="checkbox" class="btn-check" id="btn-check-H3-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-H3-outlined">H3</label>
+            <input type="checkbox" class="btn-check" id="btn-check-I3-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-I3-outlined">I3</label>
+            <input type="checkbox" class="btn-check" id="btn-check-J3-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-J3-outlined">J3</label>
+            <h6 class="text-start">Fila 3</h6>
+        </div>
+        <div class="d-flex flex-row flex-wrap justify-content-center align-items-center text-white">
+            <h6 class="text-start">Fila 4</h6>
+            <input type="checkbox" class="btn-check" id="btn-check-A4-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-A4-outlined">A4</label>
+            <input type="checkbox" class="btn-check" id="btn-check-B4-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-B4-outlined">B4</label>
+            <input type="checkbox" class="btn-check" id="btn-check-C4-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-C4-outlined">C4</label>
+            <input type="checkbox" class="btn-check" id="btn-check-D4-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-D4-outlined">D4</label>
+            <input type="checkbox" class="btn-check" id="btn-check-E4-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-E4-outlined">E4</label>
+            <input type="checkbox" class="btn-check" id="btn-check-F4-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-F4-outlined">F4</label>
+            <input type="checkbox" class="btn-check" id="btn-check-G4-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-G4-outlined">G4</label>
+            <input type="checkbox" class="btn-check" id="btn-check-H4-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-H4-outlined">H4</label>
+            <input type="checkbox" class="btn-check" id="btn-check-I4-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-I4-outlined">I4</label>
+            <input type="checkbox" class="btn-check" id="btn-check-J4-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-J4-outlined">J4</label>
+            <h6 class="text-start">Fila 4</h6>
+        </div>
+        <div class="d-flex flex-row flex-wrap justify-content-center align-items-center text-white">
+            <h6 class="text-start">Fila 5</h6>
+            <input type="checkbox" class="btn-check" id="btn-check-A5-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-A5-outlined">A5</label>
+            <input type="checkbox" class="btn-check" id="btn-check-B5-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-B5-outlined">B5</label>
+            <input type="checkbox" class="btn-check" id="btn-check-C5-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-C5-outlined">C5</label>
+            <input type="checkbox" class="btn-check" id="btn-check-D5-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-D5-outlined">D5</label>
+            <input type="checkbox" class="btn-check" id="btn-check-E5-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-E5-outlined">E5</label>
+            <input type="checkbox" class="btn-check" id="btn-check-F5-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-F5-outlined">F5</label>
+            <input type="checkbox" class="btn-check" id="btn-check-G5-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-G5-outlined">G5</label>
+            <input type="checkbox" class="btn-check" id="btn-check-H5-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-H5-outlined">H5</label>
+            <input type="checkbox" class="btn-check" id="btn-check-I5-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-I5-outlined">I5</label>
+            <input type="checkbox" class="btn-check" id="btn-check-J5-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-J5-outlined">J5</label>
+            <h6 class="text-start">Fila 5</h6>
+        </div>
+        <div class="d-flex flex-row flex-wrap justify-content-center align-items-center text-white">
+            <h6 class="text-start">Fila 6</h6>
+            <input type="checkbox" class="btn-check" id="btn-check-A6-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-A6-outlined">A6</label>
+            <input type="checkbox" class="btn-check" id="btn-check-B6-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-B6-outlined">B6</label>
+            <input type="checkbox" class="btn-check" id="btn-check-C6-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-C6-outlined">C6</label>
+            <input type="checkbox" class="btn-check" id="btn-check-D6-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-D6-outlined">D6</label>
+            <input type="checkbox" class="btn-check" id="btn-check-E6-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-E6-outlined">E6</label>
+            <input type="checkbox" class="btn-check" id="btn-check-F6-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-F6-outlined">F6</label>
+            <input type="checkbox" class="btn-check" id="btn-check-G6-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-G6-outlined">G6</label>
+            <input type="checkbox" class="btn-check" id="btn-check-H6-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary m-2 btn-lg" for="btn-check-H6-outlined">H6</label>
+            <input type="checkbox" class="btn-check" id="btn-check-I6-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-I6-outlined">I6</label>
+            <input type="checkbox" class="btn-check" id="btn-check-J6-outlined" checked autocomplete="off" disabled>
+            <label class="btn btn-outline-secondary m-2 btn-lg" for="btn-check-J6-outlined">J6</label>
+            <h6 class="text-start">Fila 6</h6>
+        </div>
+    </div>
+    <div class="container text-center mx-auto pb-4">
+        <form class="row align-items-center justify-content-center">
+            <div class="col-auto text-white">
+                <span class="align-middle">¿Cuántos asientos quieres?</span>
+            </div>
+            <div class="col-auto">
+                <label for="seats-num" class="visually-hidden">Asientos</label>
+                <input type="number" class="form-control" id="seats-num" placeholder="Asientos" oninput="cinema.suggest(8)">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Confirmar reserva</button>
+            </div>
+        </form>
+    </div>
+</section>
+<footer class="text-center text-lg-start bg-light text-muted">
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center">
+                    <h6 class="text-uppercase fw-bold mb-4">UNIR Cinema</h6>
+                    <p><i class="bi bi-geo-alt-fill me-1"></i> Calle 28</p>
+                    <p><i class="bi bi-telephone-fill me-1"></i> 012 345 6789</p>
+                    <p><i class="bi bi-envelope me-1"></i> hola@unircinema.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center text-white p-4 bg-dark">
+        © 2023 Copyright:
+        <a class="text-reset fw-bold" href="">UNIR Cinema</a>
+    </div>
+</footer>
+
+<script src="cinema.js"></script>
+</body>
+</html>

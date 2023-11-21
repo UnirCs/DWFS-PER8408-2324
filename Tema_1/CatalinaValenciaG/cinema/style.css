@@ -1,0 +1,36 @@
+.container {
+    width: 900px;
+    height: 680px;
+    border-top-left-radius: 10px; /* Radio de borde superior izquierdo de 10 píxeles */
+    border-top-right-radius: 10px; /* Radio de borde superior derecho de 20 píxeles */
+    border-bottom-left-radius: 10px; /* Radio de borde inferior izquierdo de 30 píxeles */
+    border-bottom-right-radius: 10px; /* Radio de borde inferior derecho de 40 píxeles */
+    border: 2px solid #333; /* Añade un borde sólido de 2 píxeles con color #333 */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.title{
+    text-align: center;
+    margin-top: 50px; /* arriba derecha abajo izquierda */
+}
+
+#pantalla{
+    margin: 10px 200px 10px 200px; /* arriba derecha abajo izquierda */
+    background-color: #eee;
+    border: 5px solid #333; /* Añade un borde sólido de 2 píxeles con color #333 */
+    border-top-left-radius: 10px; /* Radio de borde superior izquierdo de 10 píxeles */
+    border-top-right-radius: 10px; /* Radio de borde superior derecho de 20 píxeles */
+    border-bottom-left-radius: 10px; /* Radio de borde inferior izquierdo de 30 píxeles */
+    border-bottom-right-radius: 10px; /* Radio de borde inferior derecho de 40 píxeles */
+}
+
+#sillas{
+    margin: 60px 90px 10px 250px; /* arriba derecha abajo izquierda */
+}
+
+#cantidadsillas {
+    width: auto;
+    margin: auto;
+    text-align: center;
+}
