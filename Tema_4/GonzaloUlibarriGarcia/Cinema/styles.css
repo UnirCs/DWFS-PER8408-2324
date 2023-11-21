@@ -27,7 +27,6 @@ body{
 
 .history{
     margin:20px;
-    color: white;
     text-align: center;
 }
 
@@ -35,4 +34,8 @@ body{
     color: white;
     text-align: center;
 
+}
+
+.bi{
+    font-size: 240%;
 }

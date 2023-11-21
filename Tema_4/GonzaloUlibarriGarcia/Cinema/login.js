@@ -131,13 +131,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
         {
             passInput.classList.remove("successBorder")
             confirmPassInput.classList.remove("successBorder")
+            passInput.classList.add("errorBorder")
+            confirmPassInput.classList.add("errorBorder")
             if(!samePassMsg){
+
                 let confirmerrorMessage = document.createElement("h5")
                 confirmerrorMessage.textContent = "Constraseñas distintas."
                 confirmerrorMessage.classList.add("error")
                 confirmerrorMessage.id = "errorSamePass"
                 fpasscontainer.appendChild(confirmerrorMessage)
-                fpasscontainer.insertBefore(confirmpass, confirmerrorMessage)
+                fpasscontainer.insertBefore(confirmPassInput, confirmerrorMessage)
 
                 samePassMsg=true
             }

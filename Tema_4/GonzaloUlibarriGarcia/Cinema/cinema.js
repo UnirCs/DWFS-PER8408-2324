@@ -80,3 +80,70 @@ const exsistSeats = (nSeats, cinema)=>
 
  ///seatsDecorator(purchase)
 
+
+ document.addEventListener("DOMContentLoaded",(event)=>
+ {
+    event.preventDefault()
+
+    let seatscontainer = document.getElementById("seatsContainer")
+
+     for(let i= nRows-1 ; i>=0  ; i--)
+     {
+         let row = document.createElement("div")
+         row.classList.add("row")
+         seatscontainer.appendChild(row)
+
+         for(let j= nRows-1 ; j>=0 ; j--)
+         {
+             let seat = document.createElement("div")
+             seat.classList.add("col-sm")
+             seat.id = String(i*nRows + j + 1)
+
+             let image = document.createElement("i")
+             image.classList.add("bi")
+
+             if(cinema[i][j].state === false)
+                 image.classList.add('bi-cart-fill')
+             else
+                 image.classList.add('bi-x-circle-fill')
+
+
+             row.appendChild(seat)
+             seat.appendChild(image)
+
+         }
+     }
+
+
+     let selectSeats = document.getElementById("seats")
+
+     selectSeats.addEventListener("input",(event)=>
+     {
+         event.preventDefault()
+         verifyAndRecomend()
+
+
+
+     })
+
+      function verifyAndRecomend() {
+           if( document.getElementById('seats').value > nRows || document.getElementById('seats').value<1){
+               document.getElementById('seats').value = '';
+               document.getElementById('aux-label').textContent = 'Error en la eleccion de asientos';
+               setTimeout(()=>{
+                   document.getElementById('aux-label').textContent = '';
+               },2000)
+           }else
+           {
+               const seatsRecomended = seatsDecorator(suggest(document.getElementById('seats').value, cinema));
+
+               document.getElementById('aux-label').textContent = seatsRecomended
+
+               return seatsRecomended
+           }
+       }
+
+
+
+
+ })
