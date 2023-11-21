@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="login.js"></script>
+
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">Inicio de sesión</h3>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Nombre y apellidos</label>
+                            <input type="text" class="form-control" id="nameAndSurname" placeholder="Ingresa tu nombre y apellidos">
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Nombre del usuario</label>
+                            <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario">
+                        </div>
+                        <div class="form-group" id="firstpass">
+                            <label for="password">Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+                        </div>
+                        <div class="form-group" id="confirmpass">
+                            <label for="password">Confirmar Contraseña</label>
+                            <input type="password" class="form-control" id="passwordConfirm" placeholder="Ingresa tu contraseña">
+                        </div>
+                        <div class="form-group" id="emailContainer">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" placeholder="Ingresa tu email">
+                        </div>
+                        <button type="submit" id="submitButton" class="btn btn-primary btn-block">Iniciar sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

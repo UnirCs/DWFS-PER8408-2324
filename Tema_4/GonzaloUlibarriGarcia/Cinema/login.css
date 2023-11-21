@@ -1,0 +1,44 @@
+/* Estilos personalizados */
+body {
+    background-color: #f4f4f4;
+}
+
+.card {
+    margin-top: 30px;
+    border: none;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.error{
+    text-align: center;
+    font-size: 17px;
+    color: red;
+}
+
+.successBorder{
+    border-color: green;
+    border-width: 3px;
+}
+
+.errorBorder{
+    border-color: red;
+    border-width: 3px;
+}
