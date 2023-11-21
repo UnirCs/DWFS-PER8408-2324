@@ -3,28 +3,38 @@
 const init_cinema = ()=>
 {
     let cinema = []
-    for(let i= nRows-1 ; i>=0  ; i--)
+    for(let i= 0 ; i<nRows  ; i++)
     {
         let column = []
 
-        for(let j= nRows-1 ; j>=0 ; j--)
+        for(let j= 0 ; j<nRows ; j++)
         {
-            //if(i>=0 && i<=4){ Descomentar para probar que se escogen las filas mas lejanas
-            let chair = {
-                id: i*nRows + j + 1,
-                state: false
-            }
+            if(i>=0 && i<=4){
+                //Descomentar para probar que se escogen las filas mas lejanas
+                let chair
+                if(j>3){
+                     chair = {
+                        id: i*nRows + j + 1,
+                        state: true
+                    }
+                }else{
+                     chair = {
+                        id: i*nRows + j + 1,
+                        state: false
+                    }
+                }
+
             column.push(chair)
 
-            //}
-            //else
-            //{
-            //    let chair = {
-            //        id: i*nRows + j + 1,
-            //        state: true
-            //    }
-            //    column.push(chair)
-            // }
+            }
+           else
+            {
+               let chair = {
+                   id: i*nRows + j + 1,
+                   state: true
+               }
+               column.push(chair)
+            }
         }
         cinema.push(column)
     }
@@ -36,14 +46,16 @@ const init_cinema = ()=>
 const exsistSeats = (nSeats, cinema)=>
 {
     let count=0
-    let seatsNotFound = true
     let tempPurchase
+    let found= false
 
-    for(let row= 0 ; row<nRows && count<nSeats ; row++)
+
+    for(let row= nRows-1 ; row>=0 && count<nSeats ; row--)
     {
         tempPurchase = new Set([]);
         count = 0
-        for(let seat=0 ; seat<nRows && count<nSeats; seat++)
+        tempPurchase.clear()
+        for(let seat=nRows-1 ; seat>=0 && count<nSeats; seat--)
         {
             if(cinema[row][seat].state === false){
                 ++count
@@ -54,7 +66,12 @@ const exsistSeats = (nSeats, cinema)=>
             }
 
         }
+
     }
+
+    if(nSeats > count){
+        tempPurchase.clear()
+     }
 
     return tempPurchase
 
@@ -74,26 +91,22 @@ const exsistSeats = (nSeats, cinema)=>
  ///let purchase = suggest(6, cinema)
 
  function seatsDecorator(purchase){
-     console.log("Your seats are : "+Array.from(purchase).join(', '))
-     return "Your seats are : "+Array.from(purchase).join(', ');
+     //console.log("Your seats are : "+Array.from(purchase).join(', '))
+     return "Tus asientos son : "+Array.from(purchase).join(', ');
  }
 
  ///seatsDecorator(purchase)
 
+ function createVisualCinema(){
+     let seatscontainer = document.getElementById("seatsContainer")
 
- document.addEventListener("DOMContentLoaded",(event)=>
- {
-    event.preventDefault()
-
-    let seatscontainer = document.getElementById("seatsContainer")
-
-     for(let i= nRows-1 ; i>=0  ; i--)
+     for(let i= 0 ; i<nRows  ; i++)
      {
          let row = document.createElement("div")
          row.classList.add("row")
          seatscontainer.appendChild(row)
 
-         for(let j= nRows-1 ; j>=0 ; j--)
+         for(let j= 0 ; j<nRows ; j++)
          {
              let seat = document.createElement("div")
              seat.classList.add("col-sm")
@@ -113,21 +126,44 @@ const exsistSeats = (nSeats, cinema)=>
 
          }
      }
+ }
+
+ document.addEventListener("DOMContentLoaded",(event)=>
+ {
+    event.preventDefault()
+
+     createVisualCinema()
 
 
      let selectSeats = document.getElementById("seats")
 
      selectSeats.addEventListener("input",(event)=>
      {
+         let seatscontainer = document.getElementById("seatsContainer")
+         while (seatscontainer.firstChild) {
+             seatscontainer.removeChild(seatscontainer.firstChild);
+         }
+         createVisualCinema()
          event.preventDefault()
-         verifyAndRecomend()
+         let listOfSeats = verifyAndRecomend(selectSeats.value)
+
+         listOfSeats.forEach((iSeat)=>
+         {
+             let selectedSeat = document.getElementById(iSeat).firstChild
+             selectedSeat.classList.remove("bi")
+             selectedSeat.classList.remove("bi-cart-fill")
+
+             selectedSeat.classList.add("bi")
+             selectedSeat.classList.add("bi-check-all")
+         }
+         )
 
 
 
      })
 
-      function verifyAndRecomend() {
-           if( document.getElementById('seats').value > nRows || document.getElementById('seats').value<1){
+      function verifyAndRecomend(value) {
+           if( value > nRows || value<1){
                document.getElementById('seats').value = '';
                document.getElementById('aux-label').textContent = 'Error en la eleccion de asientos';
                setTimeout(()=>{
@@ -135,9 +171,12 @@ const exsistSeats = (nSeats, cinema)=>
                },2000)
            }else
            {
-               const seatsRecomended = seatsDecorator(suggest(document.getElementById('seats').value, cinema));
-
-               document.getElementById('aux-label').textContent = seatsRecomended
+               let seatsRecomended = suggest(value, cinema);
+               console.log(seatsRecomended )
+                if(seatsRecomended.size)
+                    document.getElementById('aux-label').textContent = seatsDecorator(seatsRecomended)
+                else
+                    document.getElementById('aux-label').textContent = "No hay asientos suficientes"
 
                return seatsRecomended
            }
@@ -145,5 +184,31 @@ const exsistSeats = (nSeats, cinema)=>
 
 
 
+
+
+
+
+    let releaseSeats = document.getElementById("releaseSeats")
+     releaseSeats.addEventListener("click",(event)=>
+     {
+         let numberOfSeats = document.getElementById('seats').value
+         if(numberOfSeats !== "") {
+             let listOfSeats = verifyAndRecomend(Number(numberOfSeats))
+
+             listOfSeats.forEach((iSeat) => {
+                     let selectedSeat = document.getElementById(iSeat).firstChild
+                     selectedSeat.classList.remove("bi-check-all")
+                     selectedSeat.classList.add("bi-cart-fill")
+                     let aux_label = document.getElementById("aux-label")
+                     aux_label.textContent = ""
+
+
+                 }
+             )
+             let aux_label = document.getElementById("seats")
+             aux_label.value = ""
+         }
+
+     })
 
  })

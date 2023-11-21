@@ -28,17 +28,15 @@
         <div class="row">
             <div class="col-sm">
                 <div class="buttons">
-                    <h3>Asientos: </h3>
+                    <h3>Cantidad de asientos: </h3>
                     <label>
                         <input type="number" id="seats"  min="1" max="6" >
                     </label>
                     <button  class="btn btn-primary">Comprar</button>
-                    <button  class="btn btn-warning" onclick="((event)=>{
-                        document.getElementById('seats').value = '';
-                    })()">Liberar asientos</button>
+                    <button  class="btn btn-warning" id="releaseSeats">Liberar asientos</button>
                 </div>
             </div>
-            <div>
+            <div id="seatsLabel">
                 <div class="col-sm">
                     <div class="history">
                         <h3 id="aux-label"></h3>
@@ -52,7 +50,7 @@
             </div>
             <div class="col-sm">
                 <div class="history">
-                    <h3><i class="bi bi-ban"></i> Asiento ocupado</h3>
+                    <h3><i class="bi bi-x-circle-fill"></i> Asiento ocupado</h3>
                 </div>
             </div>
         </div>
@@ -75,7 +73,7 @@
         Teléfono: 669988556
     </div>
     <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.5);">
-        Email: unircinemaverite@unir.un
+        Email: gonzalo.ulibarri178@comunidadunir.net
     </div>
 </footer>
 </html>
