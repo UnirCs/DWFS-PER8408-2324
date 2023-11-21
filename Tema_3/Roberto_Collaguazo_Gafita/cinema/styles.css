@@ -1,0 +1,66 @@
+body {
+    margin: 10px;
+    border: 2px solid yellow;
+    font-family: "Cinzel", sans-serif;
+    background-color: black;
+}
+
+.jumbotron-centro {
+    text-align: center;
+    background-color: #335577;
+    margin: 10px;
+    color: white;
+    border-radius: 10px;
+
+}
+
+.imagen-slide{
+    height: 300px;
+    object-fit: cover;
+    transform: translateY(-200px);
+}
+
+.asiento {
+    width: 25px;
+    height: 25px;
+    border: 2px solid yellow;
+    margin: auto;
+}
+
+.asiento-pintado {
+    background-color: yellow;
+    width: 25px;
+    height: 25px;
+    border: 2px solid yellow;
+    margin: auto;
+}
+
+.asiento:hover {
+    transform: scale(1.1);
+    border-color: yellow;
+    box-shadow: 4px 4px 8px yellow;
+}
+
+.pantalla-cine{
+    height: 300px;
+    background-color: #333;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.titulo-seccion{
+    text-align: center;
+    color: yellow;
+}
+
+.reservacion{
+    margin: 10px;
+    background-color: black;
+    color: yellow;
+}
+
+.contactos{
+    margin: 10px;
+    background-color: #335577;
+    color: white;
+}
