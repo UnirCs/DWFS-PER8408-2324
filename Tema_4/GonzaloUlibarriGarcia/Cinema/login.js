@@ -204,4 +204,47 @@ document.addEventListener("DOMContentLoaded", ()=>{
             window.location.href = ".\\index.html"
         }
     })
+
+
+    let blackModeSwitch = document.getElementById("blackMode")
+
+    blackModeSwitch.addEventListener("change",(event)=>{
+        if(event.target.checked)
+        {
+            document.body.classList.add("darkBody")
+            document.querySelector(".card").classList.add("darkCard")
+            document.querySelectorAll('label').forEach((entry)=>
+            {
+                entry.classList.add("darkFont")
+            })
+            document.querySelectorAll('input').forEach((entry)=>
+            {
+                entry.classList.add("darkFont")
+            })
+            document.getElementById("submitButton").classList.remove("btn-primary")
+            document.getElementById("submitButton").classList.add("btn-dark")
+
+            document.getElementById("darkIcon").classList.remove('bi-brightness-high-fill')
+            document.getElementById("darkIcon").classList.add('bi-moon-stars-fill')
+
+
+        }else{
+            document.body.classList.remove("darkBody")
+            document.querySelector(".card").classList.remove("darkCard")
+
+            document.querySelectorAll('label').forEach((entry)=>
+            {
+                entry.classList.remove("darkFont")
+            })
+            document.querySelectorAll('input').forEach((entry)=>
+            {
+                entry.classList.remove("darkFont")
+            })
+            document.getElementById("submitButton").classList.remove("btn-dark")
+            document.getElementById("submitButton").classList.add("btn-primary")
+
+            document.getElementById("darkIcon").classList.remove('bi-moon-stars-fill')
+            document.getElementById("darkIcon").classList.add('bi-brightness-high-fill')
+        }
+    })
 })
