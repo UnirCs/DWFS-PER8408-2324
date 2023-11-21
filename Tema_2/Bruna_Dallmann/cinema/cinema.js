@@ -20,7 +20,7 @@ function setup() {
     }
 
     // Establecer algunos asientos como ocupados (true)
-    const asientosOcupados = [71, 72, 91, 92, 93, 85, 86, 43, 44, 34, 35, 1, 2, 3, 21, 22, 23, 24, 25, 99, 98, 77, 76, 55, 54, 63, 64, 65, 81, 82,9 , 10, 11, 12, 13, 20, 31, 32, 48, 49];
+    const asientosOcupados = [91,92,93,98,99,81,85,86,87,77,78,61,62,63,51,52,44,45,46,31,32,28,29,11,12,13,14,15,16,17,1,2,3];
     for (let i = 0; i < asientosOcupados.length; i++) {
         const numeroAsiento = asientosOcupados[i];
         const fila = Math.floor((numeroAsiento - 1) / N);
@@ -34,11 +34,12 @@ function setup() {
 //Nueva función para sugerir asientos para reservar
 function suggest(numAsientos) {
     const asientosSugeridos = [];
+    let asientosOk = "No"
 
     for (let fila = butacas.length - 1; fila >= 0; fila--) {
         let asientosContiguos = 0;
 
-        for (let columna = 0; columna < butacas[fila].length; columna++) {
+        for (let columna = 0; columna < butacas[fila].length && asientosOk == "No"; columna++) {
             if (!butacas[fila][columna].estado) {
                 // El asiento está libre
                 asientosContiguos++;
@@ -48,7 +49,7 @@ function suggest(numAsientos) {
                     for (let i = columna - numAsientos + 1; i <= columna; i++) {
                         asientosSugeridos.push(butacas[fila][i].id);
                     }
-                    return asientosSugeridos;
+                    asientosOk = "Yes"
                 }
             } else {
                 // Reiniciar el conteo si se encuentra un asiento ocupado
@@ -57,16 +58,13 @@ function suggest(numAsientos) {
         }
     }
 
-    // Si no encuentra suficientes asientos contiguos
-    return [];
+    return asientosSugeridos
 }
 
 // Inicializar la matriz
 let butacas = setup();
 
-// Imprimir la matriz
-console.log(butacas);
-
 //Sugerir asientos
-const asientosSugeridos = suggest(5);
-console.log(asientosSugeridos);
+let numAsientos = 6
+const asientosSugeridos = suggest(numAsientos);
+console.log("Asientos sugeridos: " + asientosSugeridos);
