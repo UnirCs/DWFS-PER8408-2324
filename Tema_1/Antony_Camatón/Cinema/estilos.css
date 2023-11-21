@@ -1,0 +1,70 @@
+*{
+    margin: 5px;
+    
+}
+
+
+.fondo{
+    background-color: black;
+}
+.encabezado{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: gray;
+}
+
+.pantalla{
+    background-color: brown;
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 120px;
+}
+
+
+.silla{
+    background-color: rgb(98, 69, 34);
+    width: 1em;
+    height: 5em;
+    
+}
+
+.silla_ocupada{
+    background-color: rgb(34, 98, 48);
+    width: 1em;
+    height: 5em;
+    
+}
+
+.container{
+    padding: 2em;
+    width: 100%;
+    
+}
+
+.fila{
+    color:antiquewhite;
+    white-space:nowrap;
+    font-size: 30px;
+    text-align: left;
+}
+
+.texto{
+    text-align: center;
+    color:yellow;
+    padding: 10px;
+}
+
+
+
+
+
+.texto_abajo{
+    color:aliceblue;
+}
+
+footer{
+    background-color: gray;
+    text-align: center;
+    padding: 20px;
+}
