@@ -109,9 +109,6 @@ function suggest (numButacas) {
         {
             alert('No se encontraron butacas que cubriesen esa peticion');
         }
-        else{
-            console.log('Los asientos elegidos son : '+ Array.from(asientos).join(', '));
-        }
     }
     return asientos;
 }
