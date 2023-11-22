@@ -1,0 +1,24 @@
+
+.container_wid{
+    max-width: 70%;
+}
+.container_client{
+    width: 99%;
+}
+
+.altura{
+    height: 300px;
+}
+
+.altura_2{
+    height: 30%;
+}
+
+.active{
+    background-color: black;
+}
+
+.reserved{
+    background-color: red;
+}
+
