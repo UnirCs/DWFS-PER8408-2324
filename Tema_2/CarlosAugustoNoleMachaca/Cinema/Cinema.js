@@ -31,14 +31,18 @@ let butacas = setup();
 //console.log(butacas.length);
 
 // Ocupando asientos
-const NRO_SEAT_RESERVED = 2;
+const NRO_SEAT_RESERVED = 7;
 testCase1(butacas);//nroSeatReserve = 7;
-testCase2(butacas)//nroSeatReserve = 3;
-testCase3(butacas)//nroSeatReserve = 2;
+//testCase2(butacas)//nroSeatReserve = 3;
+//testCase3(butacas)//nroSeatReserve = 2;
 
 let idSeatReserved = suggest(NRO_SEAT_RESERVED);
 console.log("idSeatReserved: " + idSeatReserved.size);
 idSeatReserved.forEach (function(value) {
+    /*
+    * 90 89 88 87 86 85 84
+    * 90 89 88
+    * */
     console.log(value);
 });
 
@@ -73,22 +77,18 @@ function suggest(nroSeatsReserve) {
 function validateNumberOfAvaibleRows(i, butacas, nroSeatsReserve){
     let band = 0;
     let result = false;
-    //for (let i = butacas.length; i >= 0; i--) {
-        for (let j = butacas[i].length - 1; j >= 0; j--) {
-            //console.log("i-" + i + "\tj-" + j);
-            if (butacas[i][j] !== undefined && butacas[i][j].estado === false
-                && band < nroSeatsReserve) {
-                band++;
-                if (band === nroSeatsReserve) {
-                    result = true;
-                    break;
-                }
-            } else {
-                band = 0;
+    for (let j = butacas[i].length - 1; j >= 0 && band < nroSeatsReserve; j--) {
+        //console.log("i-" + i + "\tj-" + j);
+        if (butacas[i][j] !== undefined && butacas[i][j].estado === false) {
+            band++;
+            if (band === nroSeatsReserve) {
+                result = true;
             }
-            console.log("band-" + band);
+        } else {
+            band = 0;
         }
-    //}
+        //console.log("band-" + band);
+    }
     return result;
 }
 
