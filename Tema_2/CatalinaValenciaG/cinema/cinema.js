@@ -41,13 +41,8 @@ function suggest (cantidadAsientos){
     } 
     //Si se logró la reserva de los asientos juntos entonces se imprime el Set con los ids.
     if (asientosReservados.size = cantidadAsientos){
-        console.log("Se reservaron los asientos Nros.")
-        asientosReservados.forEach(asiento => {
-            console.log(asiento);
-        });
-    
-        return asientosReservados;
-    } 
+        console.log("Se reservaron los asientos Nros. " + Array.from(asientosReservados))
+    }
 }
 
 function search(cantidadAsientos){
@@ -92,4 +87,4 @@ function search(cantidadAsientos){
     return  asientosReservados;
 }
 
-suggest(7);
+suggest(2);
