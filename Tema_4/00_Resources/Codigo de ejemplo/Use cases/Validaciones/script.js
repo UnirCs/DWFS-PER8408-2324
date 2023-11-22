@@ -15,7 +15,7 @@ const createErrorMessage = (id, message) => {
         let errorMessage = document.createElement('p');
         errorMessage.id = id + 'Error';
         errorMessage.textContent = message;
-        errorMessage.style.color = 'red';
+        errorMessage.classList.add('error');
         document.getElementById(id).insertAdjacentElement('afterend', errorMessage);
     }
 };
