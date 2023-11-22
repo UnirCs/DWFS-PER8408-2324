@@ -1,0 +1,88 @@
+body {
+  background-color: #212121;
+  padding: 3rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.screen {
+  height: 10px;
+  background-color: #fff;
+  border-radius: 10rem;
+  margin: 0 auto;
+}
+
+.theater {
+  margin: 5rem 1rem;
+}
+
+.theater_chairs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.theater_chairs p {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  padding: 0;
+  text-align: center;
+}
+
+.chair--available {
+  height: 1.5rem;
+  width: 2rem;
+  background-color: green;
+  border-radius: 10px;
+}
+
+.chair--available:hover {
+  cursor: pointer;
+  background-color: #00ff00;
+}
+
+.chair--available:active {
+  background-color: #82d382;
+}
+
+.chair--used {
+  height: 2rem;
+  width: 2rem;
+  background-color: red;
+  border-radius: 10px;
+}
+
+.chair--used:hover {
+  cursor: not-allowed;
+  background-color: #ff0000;
+}
+
+form label {
+  color: #fff;
+}
+
+form input {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background-color: #212121;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    color: #212121;
+    padding: 1rem 0;
+    background-color: #fff;
+}
+
+footer p {
+    margin: 10px;
+}

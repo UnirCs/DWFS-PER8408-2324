@@ -1,0 +1,21 @@
+
+
+body {
+    background: #051e3b
+}
+
+button {
+    background: whitesmoke;
+    color: black;
+    border-color: grey;
+}
+
+div {
+    display: flex;
+}
+
+label {
+    color: yellow;
+    vertical-align: middle;
+    padding-left: 10px;
+}
