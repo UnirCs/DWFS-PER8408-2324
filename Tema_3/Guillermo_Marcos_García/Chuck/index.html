@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Chuck Norris jokes</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <div class="header">
+        <a href="https://api.chucknorris.io/">
+            <img src="images/logo.png" alt="Foto">
+        </a>
+    </div>
+
+    <div class="item">
+        <button class="button" onclick="getJoke()"> Give me a joke</button>
+        <p class="text" id="textJoke" ></p>
+    </div>
+
+    <script>
+        class ChuckNorrisJoke {
+            constructor(value) {
+                this.value = value;
+            }
+        }
+
+        const url = "https://api.chucknorris.io/jokes/random";
+        let textItem = document.getElementById("textJoke");
+
+        const getJoke = () => {
+            fetch(url)
+                .then(response => {
+                    if(!response.ok) throw new Error("Error making the request, status: ${response.status}")
+                    return response.json();
+                })
+                .then(json => {
+                    const chuckNorrisJoke = new ChuckNorrisJoke(json.value);
+                    textItem.innerHTML =chuckNorrisJoke.value;
+                })
+        }
+    </script>
+</body>
