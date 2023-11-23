@@ -29,14 +29,20 @@ function suggest(n) {
                 if (butacas[i][j].estado === false) {
                     d.add(butacas[i][j].id);
                     j++;
-                    while (butacas[i].length > j && butacas[i][j].estado === false) {
+                    while (butacas[i].length > j && butacas[i][j].estado === false && d.size !== n) {
                         d.add(butacas[i][j].id);
-                        j++;
-                        if (d.size === n) {
-                            return d;
+                        if (d.size !== n) {
+                            j++;
                         }
                     }
-                    d.clear();
+                    if (d.size === n) {
+                        if (j < 9) {
+                            j += 9 - j;
+                        }
+                        if (i>= 1) {
+                            i -= i;
+                        }
+                    } else d.clear();
                 }
             }
         }
@@ -49,4 +55,4 @@ let butacas = setup();
 
 // Imprimir la matriz
 console.log(butacas);
-console.log(suggest(6));
+console.log(suggest(3));
