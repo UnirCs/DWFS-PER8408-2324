@@ -47,26 +47,22 @@ function suggest (cantidadAsientos){
 
 function search(cantidadAsientos){
     let asientosFaltantes = cantidadAsientos;
-    let asientoReservado = 0;
+    let idUltimoAsientoReservado = 0;
     const asientosReservados = new Set();
+
     //se elegiría siempre la más lejana a la pantalla
-    for (const fila of asientosCinema.reverse()) {
-        for (const asiento of fila.reverse()) {
+    for (let i = asientosCinema.length-1; i >= 0 && asientosFaltantes >0; i--) {
+        for (let j = asientosCinema[i].length-1; j >= 0 && asientosFaltantes >0;j--) {
             //Se valida que el asiento esté disponible para reservar
-            if (asiento.estado == false){
+            if (asientosCinema[i][j].estado == false){
                 asientosFaltantes = asientosFaltantes -1;
-                asientosReservados.add(asiento.id);
-                asientoReservado = asiento.id;
+                asientosReservados.add(asientosCinema[i][j].id);
+                idUltimoAsientoReservado = asientosCinema[i][j].id;
             }
             //Se valida que el asiento que se está reservando sea un asiento junto al anterior
-            if (asientoReservado+1 != asiento.id+1){
+            if (idUltimoAsientoReservado+1 != asientosCinema[i][j].id+1){
                 asientosFaltantes = cantidadAsientos;
                 asientosReservados.clear();
-            }
-            //Si en la fila se logran reservar los asientos se finaliza la búsqueda de asientos
-            if (asientosFaltantes == 0)
-            {
-                break;
             }
         }
         //Si en ninguna fila hay suficientes asientos disponibles juntos, la función debe devolver un set vacío.
@@ -77,14 +73,23 @@ function search(cantidadAsientos){
             asientosFaltantes = cantidadAsientos;
             asientosReservados.clear();
         }
-        //Si en la fila se logran reservar los asientos se finaliza la búsqueda de asientos
-        if (asientosFaltantes == 0)
-        {
-            break;
-        }
     }
 
     return  asientosReservados;
 }
-
-suggest(2);
+/*Escenarios de Pruebas
+La matriz va de 1 a 64 porque está de 8X8, de la siguiente manera:
+T = ocupado; F = disponible
+1(T)	2	3	4	5	6	7	8
+9	10	11	12(T)	13	14	15	16
+17	18	19	20(T)	21	22	23	24
+25(T)	26(T)	27(T)	28(T)	29	30	31	32
+33	34	35	36(T)	37	38	39	40
+41	42	43(T)	44	45	46	47	48
+49	50	51(T)	52	53	54	55	56
+57	58	59	60	61(T)	62(T)	63(T)	64(T)*/
+//suggest(4); //Se reservan los valores 60,59,58,57 porque están contiguos y son los últimos.
+//suggest(5); //Se reservan los valores 56,55,54,54,52 porque están contiguos y son los últimos. La última fila ya no tenía disponibles para 5
+//suggest(6); //Se reservan los valores 8,7,6,5,4,3 porque las filas anteriores no los tenían seguidos en la misma fila.
+//suggest(8); //set vacío porque no hay asientos disponibles contiguos en la misma fila
+suggest(6);
