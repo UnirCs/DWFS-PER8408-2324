@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chuck Norris Jokes</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<button id="consultaBoton">Dame un chiste!</button>
+<p id="chiste"></p>
+<script>
+    document.getElementById('consultaBoton').addEventListener('click', getChiste);
+    function getChiste() {
+        fetch('https://api.chucknorris.io/jokes/random')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('El servicio no esta Online');
+                }
+                return response.json();
+            })
+            .then(data => {
+                mostrarChiste(data.value);
+            })
+            .catch(error => {
+                console.error('Error consulta servicio de chistes:', error);
+            });
+    }
+    function mostrarChiste(respuestaChiste) {
+        const chiste = document.getElementById('chiste');
+        chiste.innerHTML = respuestaChiste;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.main {
+    background-color: #D9E4EC;
+}
+.screen {
+    background-color: #343A40;
+}
+.chair-selector {
+    background-color: #D4F1F4;
+}
+.chair-matrix{
+    width: 75%;
+    margin: auto;
+    display: block;
+}
+.header {
+    background-color: #189AB4;
+}
+.chair{
+    background-color: grey;
+    transition: background-color 0.2s;
+}
+.chair:hover{
+    background-color: greenyellow;
+}
+.chairs-input {
+    width: 20%;
+}
