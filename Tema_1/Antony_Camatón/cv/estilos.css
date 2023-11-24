@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+}
+
+.encabezado{ 
+    background-color: rgb(25, 206, 206);
+    margin: 10px;
+    border: 1px groove rgb(96, 95, 95);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px
+    
+    
+}
+
+
+.nombre{
+    font-size: 30px;
+}
+
+
+
+.foto{
+    width: 15%;
+    margin: 5px;
+    border-radius: 10px
+    
+    
+
+
+}
+
+.carrera{
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.secciones{
+    
+    margin: 10px;
+    padding: 10px;
+    border: 2px groove rgb(96, 95, 95);
+    border-radius: 5px
+
+}
+
+h3{
+    color: rgb(10, 118, 118);
+    padding: auto;
+}

@@ -1,0 +1,38 @@
+body{
+    margin: 5%;
+    font-family: "Bodoni MT";
+    font-size: 28px;
+    background-image: url("./resources/fondo.jpg");
+
+}
+
+
+#screen{
+    width: 40%;
+    margin: 10px;
+}
+.screendiv
+{
+    margin: auto;
+    text-align: center;
+}
+.buttons{
+    margin: auto;
+    text-align: center;
+}
+
+.footer{
+    margin-top: 7%;
+}
+
+.history{
+    margin:20px;
+    color: white;
+    text-align: center;
+}
+
+#aux-label{
+    color: white;
+    text-align: center;
+
+}
