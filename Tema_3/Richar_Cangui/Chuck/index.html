@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=100%, initial-scale=1.0" />
+    <title>Chuck</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Chuck Norris Jokes</h1>
+    <div class="joke-body">
+      <button id="button">Get Joke</button>
+      <p id="loading"></p>
+      <p id="joke"></p>
+    </div>
+
+    <script>
+      const joke = document.querySelector("#joke");
+      const button = document.querySelector("button");
+      const loading = document.querySelector("#loading");
+
+      button.addEventListener("click", async function () {
+        if (joke.innerHTML.length) {
+          getJoke();
+          return;
+        }
+        loading.innerHTML = "Loading...";
+        await getJoke();
+        loading.innerHTML = "";
+        loading.style.display = "none";
+      });
+
+      async function getJoke() {
+        await fetch("https://api.chucknorris.io/jokes/random")
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            console.log(data);
+            joke.innerHTML = data.value;
+          });
+      }
+    </script>
+  </body>
+</html>

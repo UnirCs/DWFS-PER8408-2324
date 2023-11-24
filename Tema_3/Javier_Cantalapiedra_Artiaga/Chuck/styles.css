@@ -1,0 +1,11 @@
+.card{
+    width: 18rem!important;
+    height:min-content!important;
+}
+.container{
+    height: 100vh;
+}
+
+.boton{
+    margin-bottom: 0.5rem;
+}
