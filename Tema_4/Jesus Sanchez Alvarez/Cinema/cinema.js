@@ -1,6 +1,13 @@
 // Definir el tamaño de la matriz de butacas
 const N = 10; // Número de filas y columnas
 
+class Asiento {
+    constructor(id, estado) {
+        this.id = id;
+        this.estado = estado;
+      }
+}
+
 // Función para inicializar la matriz de butacas
 function setup() {
     let idContador = 1; // Iniciar el contador de IDs en 1 (los humanos no empezamos a contar desde 0)
@@ -23,11 +30,6 @@ function setup() {
 
 // Inicializar la matriz
 let butacas = setup();
-
-var obj = {
-    id : 0,
-    estado:false,
-}
 
 // Funcion que devuelve los asientos vacíos en forma de obj
 function suggest(num_butacas){
@@ -58,7 +60,7 @@ function suggest(num_butacas){
                         pivot = pivot - 1
                         fila = i
                         // Asigno al id el numero del asiento que sea
-                        asientos.add(butacas[i][j].id)
+                        asientos.add(new Asiento(butacas[i][j].id,true))
                 }else{
                     pivot = num_butacas
                     asientos.clear()
@@ -71,30 +73,30 @@ function suggest(num_butacas){
         return asientos
 
     }
-
 }
+
 window.onload = function () {
     var list = document.querySelectorAll(".col.border.border-secondary.m-1");
     list.forEach( (element,index) => {
-        element.setAttribute("id","asiento-"+index);
+        element.setAttribute("id",index + 1);
     })
 }
 const selectElement = document.querySelector(".reserva_input");
 
-var libres_ant = null
+let libres_ant = null
 selectElement.addEventListener("change", (event) => {
 //   console.log(selectElement.value)
   let libres = suggest(selectElement.value)
   
   if(libres_ant != null){
-    libres_ant.forEach((num_element) => {
-        let element = document.getElementById("asiento-"+(num_element-1))
+    libres_ant.forEach((libre) => {
+        let element = document.getElementById(libre.id)
         element.classList.remove("active")
     })
   }
 
-  libres.forEach((num_element) => {
-    let element = document.getElementById("asiento-"+(num_element-1))
+  libres.forEach((libre) => {
+    let element = document.getElementById(libre.id)
     element.classList.add("active")
   })
   libres_ant = libres
