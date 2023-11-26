@@ -4,10 +4,6 @@ const ImageHandler = require('./ImageHandler.js')
 let path = 'input/tucan.jpg';
 let handler = new ImageHandler(path);
 
-const RED_CHANNEL = 0;
-const GREEN_CHANNEL = 1;
-const BLUE_CHANNEL = 2;
-
 
 /**
  * Ejemplo de construccion de una imagen
@@ -47,13 +43,6 @@ function redConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
-  for (let row = 0; row < pixels.length; row++) {
-    for (let col = 0; col < pixels[row].length; col++) {
-      let pixel = pixels[row][col];
-      pixel[GREEN_CHANNEL] = 0;
-      pixel[BLUE_CHANNEL] = 0;
-    }
-  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -68,13 +57,6 @@ function greenConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
-  for (let row = 0; row < pixels.length; row++) {
-    for (let col = 0; col < pixels[row].length; col++) {
-      let pixel = pixels[row][col];
-      pixel[RED_CHANNEL] = 0;
-      pixel[BLUE_CHANNEL] = 0;
-    }
-  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -89,13 +71,6 @@ function blueConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
-  for (let row = 0; row < pixels.length; row++) {
-    for (let col = 0; col < pixels[row].length; col++) {
-      let pixel = pixels[row][col];
-      pixel[RED_CHANNEL] = 0;
-      pixel[GREEN_CHANNEL] = 0;
-    }
-  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -114,17 +89,6 @@ function greyConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
-  const channels = 3;
-  for (let row = 0; row < pixels.length; row++) {
-    for (let col = 0; col < pixels[row].length; col++) {
-      let pixel = pixels[row][col];
-      const redValue = pixel[RED_CHANNEL];
-      const blueValue = pixel[BLUE_CHANNEL];
-      const greenValue = pixel[GREEN_CHANNEL];
-      const average = (redValue + blueValue + greenValue) / channels;
-      pixels[row][col] = [average, average, average];
-    }
-  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -141,21 +105,7 @@ function blackAndWhiteConverter() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
-  const channels = 3;
-  for (let row = 0; row < pixels.length; row++) {
-    for (let col = 0; col < pixels[row].length; col++) {
-      let pixel = pixels[row][col];
-      const redValue = pixel[RED_CHANNEL];
-      const blueValue = pixel[BLUE_CHANNEL];
-      const greenValue = pixel[GREEN_CHANNEL];
-      const average = (redValue + blueValue + greenValue) / channels;
-      if (average < 128) {
-        pixels[row][col] = [0, 0, 0]; // Black
-      } else {
-        pixels[row][col] = [255, 255, 255]; // White
-      }
-    }
-  }
+
   handler.savePixels(pixels, outputPath);
 }
 
@@ -170,20 +120,6 @@ function scaleDown() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
-  let reducedImagePixels = [];
-  for (let row = 0; row < pixels.length; row++) {
-    let reducedColPixels = [];
-    for (let col = 0; col < pixels[row].length; col++) {
-      if (col % 2 !== 0) {
-        const pixel = pixels[row][col];
-        reducedColPixels.push(pixel);
-      }  
-    }
-    if (row % 2 !== 0) {
-      reducedImagePixels.push(reducedColPixels);
-    }
-  }
-  pixels = reducedImagePixels;
 
   handler.savePixels(pixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
 }
@@ -198,15 +134,6 @@ function dimBrightness(dimFactor) {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
-  for (let row = 0; row < pixels.length; row++) {
-    for (let col = 0; col < pixels[row].length; col++) {
-      let pixel = pixels[row][col];
-      const redBrightness = pixel[RED_CHANNEL] / dimFactor;
-      const greenBrightness = pixel[GREEN_CHANNEL] / dimFactor;
-      const blueBrightness = pixel[BLUE_CHANNEL] / dimFactor;
-      pixels[row][col] = [redBrightness, greenBrightness, blueBrightness];
-    }
-  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -223,15 +150,6 @@ function invertColors() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
-  for (let row = 0; row < pixels.length; row++) {
-    for (let col = 0; col < pixels[row].length; col++) {
-      let pixel = pixels[row][col];
-      const invertedRed = 255 - pixel[RED_CHANNEL];
-      const invertedGreen = 255 - pixel[GREEN_CHANNEL];
-      const invertedBlue = 255 - pixel[BLUE_CHANNEL];
-      pixels[row][col] = [invertedRed, invertedGreen, invertedBlue];
-    }
-  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -253,33 +171,6 @@ function merge(alphaFirst, alphaSecond) {
   let pixels = [];
 
   //Aqui tu codigo
-  // Cat Handling
-  for (let row = 0; row < catPixels.length; row++) {
-    let processedRow = [];
-    for (let col = 0; col < catPixels[row].length; col++) {
-      let pixel = catPixels[row][col];
-      const redChannel = alphaSecond * pixel[RED_CHANNEL];
-      const greenChannel = alphaSecond * pixel[GREEN_CHANNEL];
-      const blueChannel = alphaSecond * pixel[BLUE_CHANNEL];
-      processedRow.push([redChannel, greenChannel, blueChannel]);
-    }
-    pixels.push(processedRow);
-  }
-
-  for (let row = 0; row < dogPixels.length; row++) {
-    for (let col = 0; col < dogPixels[row].length; col++) {
-      let dogPixel = dogPixels[row][col];
-      let pixel = pixels[row][col];
-      const redChannel = alphaFirst * dogPixel[RED_CHANNEL];
-      const greenChannel = alphaFirst * dogPixel[GREEN_CHANNEL];
-      const blueChannel = alphaFirst * dogPixel[BLUE_CHANNEL];
-      pixels[row][col] = [
-        redChannel + pixel[RED_CHANNEL], 
-        greenChannel + pixel[GREEN_CHANNEL], 
-        blueChannel + pixel[BLUE_CHANNEL]
-      ];
-    }
-  }
 
   dogHandler.savePixels(pixels, outputPath);
 }
@@ -303,7 +194,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 1;
+let optionN = 0;
 
 switch (optionN) {
   case 1: redConverter(); break;
