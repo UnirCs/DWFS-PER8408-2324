@@ -1,0 +1,52 @@
+*{
+    font-family: "Britannic Bold";
+}
+
+body{
+    background-color: #0f1c2e;
+    margin: 20px;
+}
+
+h1{
+    color: silver;
+    text-align: center;
+}
+
+p{
+    font-size: 25px;
+    margin: 10px;
+    text-align: center;
+    font-style: oblique;
+}
+
+button{
+    background-color: darkgrey;
+    border-color: #6c757d;
+    min-height: 30px;
+    width: 20%;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+.fact-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    background-color: #0b76a6;
+    border-style: solid;
+    border-color: #0a101a;
+}
+
+.act-container{
+    height: 50%;
+    width: 50%;
+    background-color: #6c757d;
+    border-style: solid;
+    border-color: silver;
+    margin: 20px;
+}
+
+
