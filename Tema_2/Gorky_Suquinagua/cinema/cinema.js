@@ -59,11 +59,8 @@ function suggest(numeroAsientos, butacas) {
         console.error('El parámetro butaca debe ser una lista');
         return [];
    }
-   let butacasSugeridas = [];
-   for(let n_fila = butacas.length - 1; n_fila >= 0; n_fila--) {
-    if (butacasSugeridas.length > 0) {
-        butacasSugeridas = []; // Nueva fila - se debe vaciar las sugerencias
-    }
+   let butacasSugeridas = new Set();
+   for(let n_fila = butacas.length - 1; n_fila >= 0 && butacasSugeridas.size < numeroAsientos; n_fila--) {
     const fila = butacas[n_fila];
     if (!Array.isArray(fila)) {
         console.error('La fila debe ser una lista');
@@ -73,7 +70,7 @@ function suggest(numeroAsientos, butacas) {
         console.error('El número de asientos a reservar debe ser menor al número de asientos por fila');
         return [];
     }
-    for(let n_columna = fila.length - 1; n_columna >= 0; n_columna--) {
+    for(let n_columna = fila.length - 1; n_columna >= 0 && butacasSugeridas.size < numeroAsientos; n_columna--) {
         const butaca = butacas[n_fila][n_columna];
         if (!typeof butaca === "object") {
             console.error('La butaca debe ser un objeto');
@@ -84,21 +81,22 @@ function suggest(numeroAsientos, butacas) {
          * false => se encuentra disponible 
          */
         const butacaOcupada = butaca.estado;
-        if (!butacaOcupada && butacasSugeridas.length <= numeroAsientos) {
-            butacasSugeridas.push(butaca.id);
-        } else if (butacaOcupada && butacasSugeridas.length > 0) {
+        if (!butacaOcupada) {
+            butacasSugeridas.add(butaca.id);
+        } else {
             // Vaciar sugerencia ya que no ha llegado
             // al número de asientos contiguos en la fila (Asientos contiguos ocupados)
-            butacasSugeridas = [];
-        }
-        
-        if (butacasSugeridas.length === numeroAsientos) {
-           return butacasSugeridas; // Detener bucle y devolver sugerencias
+            butacasSugeridas.clear();
         }
     }
+    if (butacasSugeridas.size < numeroAsientos) {
+        butacasSugeridas.clear(); // Nueva fila - se debe vaciar las sugerencias
+    }
    }
-   console.info('Asientos no disponibles');
-   return [];
+   if (butacasSugeridas.size === 0) {
+    console.info('Asientos no disponibles');
+   }
+   return butacasSugeridas;
 }
 
 /**
@@ -165,5 +163,5 @@ let butacas = crearButacasSalaCine(dimensionSala);
 // butacas = definirEstadoButaca(1,3, butacas, true);
 // butacas = definirEstadoButaca(1,4, butacas, true);
 
-const sugerencias = suggest(5, butacas);
+const sugerencias = suggest(2, butacas);
 console.log('Butacas sugeridas: ', sugerencias);
