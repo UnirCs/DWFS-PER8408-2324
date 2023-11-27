@@ -28,7 +28,7 @@ npm install ndarray
 
 Si tenéis cualquier duda o problema comentadlo en el foro.
 
-### 2.2 Instalación
+### 2.2 Operativa básica
 
 Simplemente se crea un objeto ImageHandler con el path a la imagen y, usando la función `getPixels()`, se consigue
 la información de la imagen en formato RGB.
@@ -40,7 +40,7 @@ la original.
 Al final del codigo hay una sentencia de ejecucion que guarda en `output` la imagen resultante de los cambios que hayáis programado, para la opción elegida.
 
 
-### 2.3 Instalación
+### 2.3 Teoría de píxeles
 
 La función `getPixels()` devuelve una matriz de pixeles RGB.
 
