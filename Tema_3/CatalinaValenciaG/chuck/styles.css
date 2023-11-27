@@ -1,0 +1,8 @@
+.title{
+    text-align: center;
+    margin-top: 50px; /* arriba derecha abajo izquierda */
+}
+
+div{
+    padding: 10px 10px 10px 10px;
+}

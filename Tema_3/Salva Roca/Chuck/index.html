@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuck Norris Jokes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button onclick="getJoke()">Make me laugh!</button>
+    <p id="joke-content"></p>
+<script>
+    function getJoke() {
+        const url = "https://api.chucknorris.io/jokes/random";
+
+        fetch(url)
+            .then(response => response.json())
+            .then(json => document.getElementById("joke-content").innerHTML = json.value);
+    }
+</script>
+</body>
+</html>

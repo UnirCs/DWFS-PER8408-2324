@@ -1,0 +1,24 @@
+/* Etiquetas*/
+h1{
+    font-size: 20px;
+    color: darkcyan; 
+}
+h4{
+    color: rgb(36, 4, 177); 
+}
+
+/* IDs*/
+#cabecera{
+    text-align: center;
+}
+
+/* clases */
+.bloque {
+    border-style: groove;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+.text-justify {
+    text-align: justify;
+}

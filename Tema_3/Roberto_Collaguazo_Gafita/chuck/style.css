@@ -1,0 +1,26 @@
+body{
+    background-color: #2C3E50;
+}
+
+.Contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.Contenido_BotonGenerar{
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #FFD966;
+    color: #333;
+}
+
+.Contenido_TextoChiste{
+    font-family: "Times New Roman", sans-serif;
+    color: #FFD966;
+}

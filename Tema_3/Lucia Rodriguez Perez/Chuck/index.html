@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="botonChiste" onclick="getChiste()">¡Dame un chiste!</button>
+    <p id="parrafoChiste"></p>
+</body>
+<script>
+    const botonChiste = document.getElementById("botonChiste");
+    const parrafoChiste = document.getElementById("parrafoChiste");
+
+    // Utilizando eventos
+    // botonChiste.addEventListener("click", () => {
+    //     fetch("https://api.chucknorris.io/jokes/random")
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             parrafoChiste.innerHTML = data.value;
+    //         })
+    // });
+
+    // Utilizando funciones
+    function getChiste() {
+        fetch("https://api.chucknorris.io/jokes/random")
+            .then(response => response.json())
+            .then(data => {
+                parrafoChiste.innerHTML = data.value;
+            })
+    }
+</script>
+</html>
