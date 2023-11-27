@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Joke Generator - Chuck Norris</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="btn_joke_generator" onclick="verification()">Genera un chiste!</button>
+    <br>
+    <p id="joke">Presiona el boton Jejeje</p>
+
+
+    <script>
+        async function verification(){
+            // Pasamos la URL de la API para recibir la Promise
+            const res = await fetch("https://api.chucknorris.io/jokes/random");
+
+            // Convertimos la Promise de la respuesta a JSON
+            const  data = await res.json();
+
+            // Pasamos el valor de VALUE al tag P en el html
+            document.getElementById("joke").innerHTML = data.value;
+        }
+    </script>
+</body>
+</html>
