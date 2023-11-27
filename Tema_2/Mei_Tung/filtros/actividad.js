@@ -42,7 +42,11 @@ function redConverter() {
   let outputPath = 'output/tucan_red.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  pixels.forEach((row, row_index) => {
+    row.forEach((pixel, col_index) => {
+      pixels[row_index][col_index] = [pixel[0], 0, 0];
+    });
+  });
 
   handler.savePixels(pixels, outputPath);
 }
@@ -56,7 +60,11 @@ function greenConverter() {
   let outputPath = 'output/tucan_green.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  pixels.forEach((row, row_index) => {
+    row.forEach((pixel, col_index) => {
+      pixels[row_index][col_index] = [0, pixel[1], 0];
+    });
+  });
 
   handler.savePixels(pixels, outputPath);
 }
@@ -70,7 +78,11 @@ function blueConverter() {
   let outputPath = 'output/tucan_blue.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  pixels.forEach((row, row_index) => {
+    row.forEach((pixel, col_index) => {
+      pixels[row_index][col_index] = [0, 0, pixel[2]];
+    });
+  });
 
   handler.savePixels(pixels, outputPath);
 }
@@ -88,7 +100,12 @@ function greyConverter() {
   let outputPath = 'output/tucan_grey.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  pixels.forEach((row, row_index) => {
+    row.forEach((pixel, col_index) => {
+      let media = pixel.reduce((a, b) => a + b, 0) / 3;
+      pixels[row_index][col_index] = [media, media, media];
+    });
+  });
 
   handler.savePixels(pixels, outputPath);
 }
@@ -104,7 +121,12 @@ function blackAndWhiteConverter() {
   let outputPath = 'output/tucan_black_and_white.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  pixels.forEach((row, row_index) => {
+    row.forEach((pixel, col_index) => {
+      let media = pixel.reduce((a, b) => a + b, 0) / 3;
+      pixels[row_index][col_index] = media < 128 ? [0, 0, 0] : [255, 255, 255];
+    });
+  });
 
   handler.savePixels(pixels, outputPath);
 }
@@ -119,7 +141,10 @@ function scaleDown() {
   let outputPath = 'output/tucan_scale_down.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  pixels = pixels.filter((row, index) => index % 2 !== 0);
+  pixels.forEach((row, row_index) => {
+    pixels[row_index] = row.filter((pixel, col_index) => col_index % 2 !== 0);
+  });
 
   handler.savePixels(pixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
 }
@@ -133,7 +158,11 @@ function dimBrightness(dimFactor) {
   let outputPath = 'output/tucan_dimed.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  pixels.forEach((row, row_index) => {
+    row.forEach((pixel, col_index) => {
+      pixels[row_index][col_index] = pixel.map(color => color / dimFactor);
+    });
+  });
 
   handler.savePixels(pixels, outputPath);
 }
@@ -149,7 +178,11 @@ function invertColors() {
   let outputPath = 'output/tucan_inverse.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  pixels.forEach((row, row_index) => {
+    row.forEach((pixel, col_index) => {
+      pixels[row_index][col_index] = pixel.map(color => 255 - color);
+    });
+  });
 
   handler.savePixels(pixels, outputPath);
 }
@@ -170,7 +203,14 @@ function merge(alphaFirst, alphaSecond) {
 
   let pixels = [];
 
-  //Aqui tu codigo
+  for (let row = 0; row < Math.min(catPixels.length, dogPixels.length); row++) {
+    let nuevaFila = [];
+    for (let col = 0; col < Math.min(catPixels[row].length, dogPixels[row].length); col++) {
+      let pixel = catPixels[row][col].map((color, index) => color * alphaFirst + dogPixels[row][col][index] * alphaSecond);
+      nuevaFila.push(pixel);
+    }
+    pixels.push(nuevaFila);
+  }
 
   dogHandler.savePixels(pixels, outputPath);
 }
@@ -194,7 +234,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 0;
+let optionN = 9;
 
 switch (optionN) {
   case 1: redConverter(); break;
@@ -205,6 +245,6 @@ switch (optionN) {
   case 6: scaleDown(); break;
   case 7: dimBrightness(2); break;
   case 8: invertColors(); break;
-  case 9: merge(0.3, 0.7); break;
+  case 9: merge(0.7, 0.3); break;
   default: ejemplo();
 }
