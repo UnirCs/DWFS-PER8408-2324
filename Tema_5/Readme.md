@@ -9,4 +9,4 @@ Realizaremos un ejercicio de programación orientada a componentes con React. Cr
 
 ## Entrega
 
-Crea una carpeta con tu nombre y apellidos dentro de ``Tema_5``. Deberás incluir todo el código del proyecto React desarrollado, a excepción de la subcarpeta ``node_modules``.
+Crea una carpeta con tu nombre y apellidos dentro de ``Tema_5``. Deberás incluir todo el código del proyecto React desarrollado, a excepción de la subcarpeta ``node_modules``. Incluirás también un archivo de texto, ``urlVercel.txt`` con la URL del proyecto desplegado en Vercel.
