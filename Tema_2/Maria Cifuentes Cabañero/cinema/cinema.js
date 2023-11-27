@@ -30,19 +30,17 @@ function suggest(numAsientos){
     let asientosSeguidos = 0;
     let asientosEncontrados = false;
     if(numAsientos <= butacas.length) { //Compruebo que el número de asientos es menor al de la fila
-        for (let fila = butacas.length - 1; fila >= 0; fila--) {
-            for (let columna = 0; columna < butacas[fila].length; columna++) {
-                if(asientosEncontrados === false) {
-                    if (butacas[fila][columna].estado === false && asientosSeguidos < numAsientos) {
-                        asientosSeguidos++;
-                        asientosElegidos.add(butacas[fila][columna].id);
-                        if(asientosSeguidos === numAsientos){
-                            asientosEncontrados = true;
-                        }
-                    } else {
-                        asientosSeguidos = 0;
-                        asientosElegidos.clear();
+        for (let fila = butacas.length - 1; fila >= 0 && asientosEncontrados === false; fila--) {
+            for (let columna = 0; columna < butacas[fila].length && asientosEncontrados === false; columna++) {
+                if (butacas[fila][columna].estado === false && asientosSeguidos < numAsientos) {
+                    asientosSeguidos++;
+                    asientosElegidos.add(butacas[fila][columna].id);
+                    if (asientosSeguidos === numAsientos) {
+                        asientosEncontrados = true;
                     }
+                } else {
+                    asientosSeguidos = 0;
+                    asientosElegidos.clear();
                 }
             }
         }
