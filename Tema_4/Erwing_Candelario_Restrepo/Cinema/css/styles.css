@@ -1,0 +1,43 @@
+html,
+body {
+	min-height: 100%;
+}
+
+.marco {
+	background-color: #f5f5ed;
+	border: 2px solid #3586d6;
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+	font-family: Georgia, Times, serif;
+}
+
+.altura {
+	height: 150px;
+}
+
+.altura_2 {
+	height: 200px;
+}
+
+.cuadrado {
+	display: inline-block;
+	width: 5rem;
+	height: 5rem;
+	margin: 0.25rem;
+	background-color: #f5f5f5;
+}
+
+.nameFila {
+	display: inline-block;
+	width: 5rem;
+	height: 5rem;
+	margin: 0.25rem;
+}
+.thumbnail:hover {
+	background-color: red;
+	opacity: 0.5;
+}
+.default {
+	background-color: dimgrey;
+	border: 2px solid dimgrey;
+}

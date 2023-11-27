@@ -1,7 +1,7 @@
 // Definir el tamaño de la matriz de sillas
 const N = 8; // Número de filas y columnas
 // Defino los IDs de las sillas ya reservadas para ejecutar los diferentes casos
-const reservados = [1,12,20,25,26,27,28,36,43,51,61,62,63,64] 
+const reservados = [] 
 
 // Función para inicializar la matriz de sillas
 function setup() {
@@ -23,9 +23,8 @@ function setup() {
     }
     return asientos;
 }
-
-// Inicializar la matriz
-let asientosCinema = setup();
+    // Inicializar la matriz
+    let asientosCinema = setup();
 
 function suggest (cantidadAsientos){
     //Si el número de asientos solicitados excede el tamaño máximo de la fila, la función debe devolver un set vacío.
@@ -47,32 +46,15 @@ function suggest (cantidadAsientos){
 
 function search(cantidadAsientos){
     let asientosFaltantes = cantidadAsientos;
-    let idUltimoAsientoReservado = 0;
     const asientosReservados = new Set();
+    let fila = asientosCinema.length-1;
+    let columna = asientosCinema[fila].length-1;
 
-    //se elegiría siempre la más lejana a la pantalla
-    for (let i = asientosCinema.length-1; i >= 0 && asientosFaltantes >0; i--) {
-        for (let j = asientosCinema[i].length-1; j >= 0 && asientosFaltantes >0;j--) {
-            //Se valida que el asiento esté disponible para reservar
-            if (asientosCinema[i][j].estado == false){
-                asientosFaltantes = asientosFaltantes -1;
-                asientosReservados.add(asientosCinema[i][j].id);
-                idUltimoAsientoReservado = asientosCinema[i][j].id;
-            }
-            //Se valida que el asiento que se está reservando sea un asiento junto al anterior
-            if (idUltimoAsientoReservado+1 != asientosCinema[i][j].id+1){
-                asientosFaltantes = cantidadAsientos;
-                asientosReservados.clear();
-            }
-        }
-        //Si en ninguna fila hay suficientes asientos disponibles juntos, la función debe devolver un set vacío.
-        /*Si en la fila donde se buscaron los asientos no se encontraron los asientos disponibles juntos suficientes
-        entonces se reinicia la búsqueda para una siguiente final*/
-        if (asientosFaltantes > 0)
-        {
-            asientosFaltantes = cantidadAsientos;
-            asientosReservados.clear();
-        }
+    //Siempre deberían aparecer en el Set resultado las butacas de la última fila, o vacío.
+    while (asientosFaltantes >0 && columna >= 0){
+        asientosFaltantes = asientosFaltantes -1;
+        asientosReservados.add(asientosCinema[fila][columna].id);
+        columna --;
     }
 
     return  asientosReservados;
@@ -92,4 +74,4 @@ T = ocupado; F = disponible
 //suggest(5); //Se reservan los valores 56,55,54,54,52 porque están contiguos y son los últimos. La última fila ya no tenía disponibles para 5
 //suggest(6); //Se reservan los valores 8,7,6,5,4,3 porque las filas anteriores no los tenían seguidos en la misma fila.
 //suggest(8); //set vacío porque no hay asientos disponibles contiguos en la misma fila
-suggest(6);
+//suggest(9); // Debe retornar vacío porque se salta de fila
