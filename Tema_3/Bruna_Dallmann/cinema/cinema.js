@@ -3,7 +3,7 @@ const N = 10; // Número de filas y columnas
 
 // Función para inicializar la matriz de butacas
 function setup() {
-    let idContador = 1; // Iniciar el contador de IDs en 1
+    let idContador = 1;
     let butacas = [];
 
     for (let i = 0; i < N; i++) {
