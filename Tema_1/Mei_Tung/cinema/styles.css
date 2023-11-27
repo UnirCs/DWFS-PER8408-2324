@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+button {
+    min-width: calc(3vw + 5px);
+    min-height: calc(3vw + 5px);
+}
+
+.bg-cinema {
+     background-image: url(assets/cine.jpg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: auto 100%;
+ }
+
+.logo {
+    height: 50px;
+    filter: drop-shadow(3px 3px 0 #dc3545) drop-shadow(0px 0px 0 #000);
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">Inicio de sesión</h3>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" id="blackMode" type="checkbox" role="switch">
+                    <label class="form-check-label" for="blackMode"><i class="bi bi-brightness-high-fill" id="darkIcon"></i></label>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nameAndSurname">Nombre y apellidos</label>
+                            <input type="text" class="form-control" id="nameAndSurname" placeholder="Ingresa tu nombre y apellidos"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Nombre del usuario</label>
+                            <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario"/>
+                        </div>
+                        <div class="form-group" id="firstpass">
+                            <label for="password">Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña"/>
+                        </div>
+                        <div class="form-group" id="confirmpass">
+                            <label for="password">Confirmar Contraseña</label>
+                            <input type="password" class="form-control" id="passwordConfirm" placeholder="Ingresa tu contraseña"/>
+                        </div>
+                        <div class="form-group" id="emailContainer">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" placeholder="Ingresa tu email"/>
+                        </div>
+                        <div class="form-group" id="buttonContainer">
+                            <button type="submit" id="submitButton" class="btn btn-primary ">Iniciar sesión</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
