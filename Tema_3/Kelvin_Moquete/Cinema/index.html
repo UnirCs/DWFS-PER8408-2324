@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="cinema.js"></script>
+    <title>Cinema UNIR</title>
+</head>
+
+<body>
+<div class="encabezado">
+    <h1 class="encabezado__titulo">UNIR-CINEMA</h1>
+</div>
+
+<br/>
+
+<div class="pantalla">
+    <div class="pantalla__titulo">Pantalla</div>
+</div>
+
+<br>
+
+<table class="butacas">
+    <tr class="butacas__fila1">
+        <td class="fila__titulo">Fila 1</td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento--inactivo"></td>
+        <td class="asiento--inactivo"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+    </tr>
+
+    <tr class="butacas__fila2">
+        <td class="fila__titulo">Fila 2</td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento--inactivo"></td>
+        <td class="asiento--inactivo"></td>
+    </tr>
+
+    <tr class="butacas__fila3">
+        <td class="fila__titulo">Fila 3</td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento--inactivo"></td>
+        <td class="asiento--inactivo"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento--inactivo"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+    </tr>
+
+    <tr class="butacas__fila4">
+        <td class="fila__titulo">Fila 4</td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+    </tr>
+
+    <tr class="butacas__fila5">
+        <td class="fila__titulo">Fila 5</td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento--inactivo"></td>
+        <td class="asiento--inactivo"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento--inactivo"></td>
+        <td class="asiento--inactivo"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+        <td class="asiento"></td>
+    </tr>
+</table>
+<br>
+<form action="">
+    <label for="numero_de_reservas">Ingrese la cantidad de butacas a reservar:</label>
+    <br>
+    <input type="number" name="" id="numero_de_reservas" max="10" min="1" oninput="suggest(this.value, butacas)"/>
+    <br>
+    <button type="submit">Confirmar reservar</button>
+</form>
+
+<footer class="piePagina">
+    <p>Cine UNIR-CINEMA</p>
+    <p>Direccion: Calle Avenida de la Paz, 137. Logroño</p>
+    <p>Telefono: 941209743</p>
+    <p>Email: cineweb@unircinema.com</p>
+</footer>
+</body>
+</html>

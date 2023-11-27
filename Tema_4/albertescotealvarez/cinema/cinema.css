@@ -1,0 +1,41 @@
+.main {
+    background-color: #D9E4EC;
+}
+.screen {
+    background-color: #343A40;
+}
+.chair-selector {
+    background-color: #D4F1F4;
+}
+.chair-matrix{
+    width: 75%;
+    margin: auto;
+    display: block;
+}
+.header {
+    background-color: #189AB4;
+}
+.chair{
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    border-radius: 0.25rem;
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+}
+.chair-available{
+    background-color: grey;
+    transition: background-color 0.2s;
+}
+.chair-available:hover{
+    background-color: greenyellow;
+}
+.chairs-input {
+    width: 20%;
+}
+.chair-unavailable {
+    background-color: red;
+}
+.chair-selected{
+    background-color: forestgreen;
+}
