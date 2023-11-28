@@ -24,7 +24,7 @@ function validarNumeroEntero(numero, nombreParam) {
  * 
  * @param dimension 
  */
-function crearButacasSalaCine(dimension) {
+function setup(dimension) {
     const validacion = validarNumeroEntero(dimension);
     if (validacion.tieneError) {
         console.error(validacion.mensaje);
@@ -49,7 +49,7 @@ function crearButacasSalaCine(dimension) {
     return butacas;
 }
 
-function suggest(numeroAsientos, butacas) {
+function suggest(numeroAsientos) {
    const validacion = validarNumeroEntero(numeroAsientos);
    if (validacion.tieneError) {
         console.error(validacion.mensaje);
@@ -60,33 +60,33 @@ function suggest(numeroAsientos, butacas) {
         return [];
    }
    let butacasSugeridas = new Set();
-   for(let n_fila = butacas.length - 1; n_fila >= 0 && butacasSugeridas.size < numeroAsientos; n_fila--) {
+   for(
+       let n_fila = butacas.length - 1;
+       n_fila >= 0 && butacasSugeridas.size < numeroAsientos;
+       n_fila--
+   ) {
     const fila = butacas[n_fila];
-    if (!Array.isArray(fila)) {
-        console.error('La fila debe ser una lista');
-        return [];
-    }
-    if (fila.length < numeroAsientos) {
-        console.error('El número de asientos a reservar debe ser menor al número de asientos por fila');
-        return [];
-    }
-    for(let n_columna = fila.length - 1; n_columna >= 0 && butacasSugeridas.size < numeroAsientos; n_columna--) {
-        const butaca = butacas[n_fila][n_columna];
-        if (!typeof butaca === "object") {
-            console.error('La butaca debe ser un objeto');
-            return [];
-        }
-        /**
-         * true => se encuentra ocupada
-         * false => se encuentra disponible 
-         */
-        const butacaOcupada = butaca.estado;
-        if (!butacaOcupada) {
-            butacasSugeridas.add(butaca.id);
-        } else {
-            // Vaciar sugerencia ya que no ha llegado
-            // al número de asientos contiguos en la fila (Asientos contiguos ocupados)
-            butacasSugeridas.clear();
+    if (Array.isArray(fila) && fila.length >= numeroAsientos) {
+        for(
+            let n_columna = fila.length - 1;
+            n_columna >= 0 && butacasSugeridas.size < numeroAsientos;
+            n_columna--
+        ) {
+            const butaca = butacas[n_fila][n_columna];
+            if (typeof butaca === "object") {
+                /**
+                 * true => se encuentra ocupada
+                 * false => se encuentra disponible
+                 */
+                const butacaOcupada = butaca.estado;
+                if (!butacaOcupada) {
+                    butacasSugeridas.add(butaca.id);
+                } else {
+                    // Vaciar sugerencia ya que no ha llegado
+                    // al número de asientos contiguos en la fila (Asientos contiguos ocupados)
+                    butacasSugeridas.clear();
+                }
+            }
         }
     }
     if (butacasSugeridas.size < numeroAsientos) {
@@ -106,10 +106,10 @@ function suggest(numeroAsientos, butacas) {
  * 
  * @param fila 
  * @param columna 
- * @param butacas 
+ * @param estado
  * @returns 
  */
-function definirEstadoButaca(fila, columna, butacas, estado) {
+function definirEstadoButaca(fila, columna, estado) {
     butacas[fila - 1][columna - 1].estado = estado;
     return butacas;
 }
@@ -118,11 +118,10 @@ function definirEstadoButaca(fila, columna, butacas, estado) {
  * 
  * Funcion para pruebas
  * Llenar la sala de cine
- * 
- * @param butacas 
+ *
  * @returns 
  */
-function llenarSala(butacas) {
+function llenarSala() {
     for (let n_fila = 0; n_fila < butacas.length; n_fila++) {
         for (let n_col = 0; n_col < butacas[n_fila].length; n_col++) {
             butacas[n_fila][n_col].estado = true;
@@ -133,35 +132,35 @@ function llenarSala(butacas) {
 }
 
 /* Numero de asientos en la sala tanto en filas como columnas */
-const dimensionSala = 5;
-let butacas = crearButacasSalaCine(dimensionSala);
+const N = 5;
+const butacas = setup(N);
 
 // Pruebas haciendo asignaciones individuales
-// butacas = definirEstadoButaca(5,5, butacas, true);
-// butacas = definirEstadoButaca(5,4, butacas, true);
-// butacas = definirEstadoButaca(5,3, butacas, true);
-// butacas = definirEstadoButaca(4,4, butacas, true);
-// butacas = definirEstadoButaca(4,2, butacas, true);
+// definirEstadoButaca(5,5, true);
+// definirEstadoButaca(5,4, true);
+// definirEstadoButaca(5,3, true);
+// definirEstadoButaca(4,4, true);
+// definirEstadoButaca(4,2, true);
 
 // Pruebas verificando asientos no disponibles
-// butacas = llenarSala(butacas);
+// llenarSala();
 
 // Pruebas dejando solo libre los extremos en una sala de 5 x 5
-// butacas = definirEstadoButaca(5,2, butacas, true);
-// butacas = definirEstadoButaca(5,3, butacas, true);
-// butacas = definirEstadoButaca(5,4, butacas, true);
-// butacas = definirEstadoButaca(4,2, butacas, true);
-// butacas = definirEstadoButaca(4,3, butacas, true);
-// butacas = definirEstadoButaca(4,4, butacas, true);
-// butacas = definirEstadoButaca(3,2, butacas, true);
-// butacas = definirEstadoButaca(3,3, butacas, true);
-// butacas = definirEstadoButaca(3,4, butacas, true);
-// butacas = definirEstadoButaca(2,2, butacas, true);
-// butacas = definirEstadoButaca(2,3, butacas, true);
-// butacas = definirEstadoButaca(2,4, butacas, true);
-// butacas = definirEstadoButaca(1,2, butacas, true);
-// butacas = definirEstadoButaca(1,3, butacas, true);
-// butacas = definirEstadoButaca(1,4, butacas, true);
+// definirEstadoButaca(5,2, true);
+// definirEstadoButaca(5,3, true);
+// definirEstadoButaca(5,4, true);
+// definirEstadoButaca(4,2, true);
+// definirEstadoButaca(4,3, true);
+// definirEstadoButaca(4,4, true);
+// definirEstadoButaca(3,2, true);
+// definirEstadoButaca(3,3, true);
+// definirEstadoButaca(3,4, true);
+// definirEstadoButaca(2,2, true);
+// definirEstadoButaca(2,3, true);
+// definirEstadoButaca(2,4, true);
+// definirEstadoButaca(1,2, true);
+// definirEstadoButaca(1,3, true);
+// definirEstadoButaca(1,4, true);
 
-const sugerencias = suggest(2, butacas);
-console.log('Butacas sugeridas: ', sugerencias);
+const ids = suggest(2);
+console.log('Butacas sugeridas: ', ids);
