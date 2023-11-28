@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Fondo oscuro */
+    color: #f1f1f1; /* Texto claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+}
+
+h3 {
+    color: #ffd700; /* Título en amarillo */
+    text-align: center;
+}
+
+form {
+    background-color: #444; /* Fondo ligeramente más claro para el formulario */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-field label {
+    color: #f1f1f1; /* Etiqueta de texto claro */
+}
+
+.input-field input[type=text],
+.input-field input[type=password],
+.input-field input[type=email] {
+    color: #f1f1f1; /* Color de texto de entrada */
+    border-bottom: 1px solid #ffd700; /* Borde amarillo para los inputs */
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=password]:focus,
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #ffd700; /* Borde amarillo en foco */
+    box-shadow: 0 1px 0 0 #ffd700; /* Sombra amarilla en foco */
+}
+
+.btn {
+    background-color: #ffd700; /* Botón en amarillo */
+    color: #333; /* Texto del botón en oscuro */
+}
+
+.btn:hover {
+    background-color: #ccac00; /* Color del botón al pasar el mouse */
+}
+
+/* Mensajes de error */
+p {
+    color: #ff4444; /* Rojo para errores */
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.error {
+    color: red;
+}

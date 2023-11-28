@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto Tema 3 Chuck Norris</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div>
+    <button onclick="getJoke()" class="boton-personalizado-4">Dame un chiste!</button>
+    <p id="parrafo-chiste"></p>
+</div>
+<script>
+    function getJoke() {
+        const url = "https://api.chucknorris.io/jokes/random";
+        fetch(url)
+            .then(response => response.json())
+            .then(json => document.getElementById("parrafo-chiste").innerHTML = json.value);
+    }
+</script>
+</body>
+</html>
