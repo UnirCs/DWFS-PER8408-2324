@@ -1,0 +1,77 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-container {
+  background-color: #FFFF8D;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+#buy-sect {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+#seats-num {
+  text-align: center;
+}
+
+.movies-sect {
+  background-color: #FFFF8D;
+}
+
+.select-container {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.seat-btn {
+  min-height: 3rem;
+  min-width: 3rem;
+  margin-bottom: 5px;
+}
+
+.header-div {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  background-color: #C29000;
+  text-align: center;
+}
+
+.seat-candidate {
+  background-color: #00c203;
+}
+
+.mov_car {
+  text-align: center;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.footer-sect {
+  background-color: #383838;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.opt-but {
+  margin-right: 5px;
+}
+
+#menu-butns {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  background-color: #AD8100;
+}
+
+#pantalla {
+  width: 40%;
+  margin-bottom: 30px;
+}
