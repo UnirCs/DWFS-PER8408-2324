@@ -1,0 +1,12 @@
+.container {
+    background-color: rgb(8, 8, 72);
+    padding-block: 5px;
+}
+
+.button {
+    margin-left: 5px;
+}
+
+.text-chiste {
+    color: yellow;
+}

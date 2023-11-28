@@ -1,0 +1,20 @@
+
+body {
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    border-radius: 5px;
+    background-color: #46e0fc;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: rgb(36, 92, 155); /* Cambia el color de fondo al pasar el cursor por encima */
+    color: #ffffff; /* Cambia el color del texto al pasar el cursor por encima */
+}
+
+p {
+    color: #ffffff;
+}

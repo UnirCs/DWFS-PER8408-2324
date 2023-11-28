@@ -1,0 +1,40 @@
+.cv-header {
+    font-style: italic;
+}
+
+h1,h2{
+    color: darkmagenta;
+    text-align: center;
+}
+
+.title3{
+    color: darkmagenta;
+    text-align: center;
+}
+
+h3{
+    color: blueviolet;
+    text-align: left;
+}
+
+img {
+    display: block;
+    padding: 10px;
+    width: 40%;
+    margin: auto;
+}
+
+body {
+    margin: auto;
+    width: 840px;
+    padding: 50px;
+    color: #33475b;
+    font-family: 'Avenir', sans-serif;
+}
+
+.container {
+    background-color: lightpink;
+    height: 390px;
+    position: relative;
+    border: 3px solid #dbe4ed;
+}
