@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    background-color: black;
+    font-family: Calibri;
+}
+
+h1 {
+    text-align: center;
+    color: darkred;
+}
+
+.cinema {
+    border: 1px solid dimgray;
+    height: 320px;
+    width: 400px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.tela {
+    background: gray;
+    width: 60%;
+    height: 50px;
+    position: relative;
+    top: 30px;
+    left: 20%;
+}
+
+.asientos {
+    width: 60%;
+    position: relative;
+    top: 50px;
+    left: 20%;
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.numero-fila {
+    color: darkred;
+}
+
+.asiento {
+    width: 12px;
+    height: 12px;
+    margin: 2px;
+    border: 1px solid darkred;
+}
+
+.asiento-vacio {
+    background: black;
+}
+
+.asiento-ocupado {
+    background: darkred;
+}
+
+.asiento-reservado {
+    background: indianred;
+}
+
+.contenedor-input {
+    text-align: center;
+    position: relative;
+    top: 40px;
+    left: 0;
+}
+
+.campo-texto {
+    color: white;
+}
+
+.campo {
+    width: 80px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: darkred;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: dimgrey;
+    width: 100%;
+    line-height: 5px;
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+
+
