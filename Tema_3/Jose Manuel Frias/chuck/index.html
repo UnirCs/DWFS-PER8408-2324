@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuck Norris Joke</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div>
+    <button onclick="pedirChiste()">Dame un chiste!</button>
+    <label id="chiste"></label>
+</div>
+
+</body>
+
+<script>
+    async function pedirChiste() {
+        let url = "https://api.chucknorris.io/jokes/random";
+        let fetchResponse = await fetch(url);
+        let json = await fetchResponse.json();
+        document.getElementById("chiste").textContent=(json.value);
+
+        //Codigo para hacerlo sin el async y el await
+        /*fetch(url)
+            .then(response => response.json())
+            .then(json => document.getElementById("chiste").textContent=(json.value));*/
+    }
+</script>
+</html>
