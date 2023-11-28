@@ -95,7 +95,8 @@ document.getElementById('userForm').addEventListener('submit', (event) => {
     let errorMessages = document.querySelectorAll('form p');
     if (errorMessages.length === 0) {
         // No hay errores, se puede procesar el formulario
-        alert('Formulario enviado con éxito!');
+        //alert('Formulario enviado con éxito!');
+        window.location.href = "Cinema.html";
     } else {
         // Hay errores, se informa al usuario
         alert('Por favor, corrija los errores antes de enviar el formulario.');
