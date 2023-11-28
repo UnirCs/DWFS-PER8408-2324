@@ -4,13 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
        element.id = idCount.toString();
        idCount++;
    })
-
-    document.querySelectorAll(".available-box").forEach(element =>{
-        element.addEventListener("click",() => clickBox(parseInt(element.id)));
-    })
-
     document.getElementById("input").addEventListener("input",refreshScreen)
-
 });
 
 const refreshScreen = () => {
@@ -29,41 +23,6 @@ const refreshScreen = () => {
             selectedBox.classList.remove("available-box");
             selectedBox.classList.add("selected-box");
         }
-    })
-}
-
-const clickBox = (id) => {
-  let box = document.getElementById(id);
-  if(box.classList.contains("selected-box")){
-      discardSeat(id);
-      box.classList.remove("selected-box");
-      box.classList.add("available-box");
-  }else{
-      chooseSeat(id);
-      box.classList.remove("available-box");
-      box.classList.add("selected-box");
-  }
-}
-
-const chooseSeat = (id) => {
-    seats.forEach(row => {
-        row.forEach(e => {
-            if(e.id === id){
-                e.available = false;
-                e.selected = true;
-            }
-        })
-    })
-}
-
-const discardSeat = (id) => {
-    seats.forEach(row => {
-        row.forEach(e => {
-            if(e.id === id){
-                e.available = true;
-                e.selected = false;
-            }
-        })
     })
 }
 
