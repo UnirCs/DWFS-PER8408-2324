@@ -1,0 +1,97 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Definir el tamaño de la matriz de butacas
+    const N = 7; // Número de filas y columnas
+
+// Función para inicializar la matriz de butacas
+    function setup() {
+        let idContador = 1; // Iniciar el contador de IDs en 1 (los humanos no empezamos a contar desde 0)
+        let butacas = [];
+
+        for (let i = 0; i < N; i++) {
+            // Nueva fila
+            let fila = [];
+            for (let j = 0; j < N; j++) {
+                // Nuevo asiento
+                fila.push({
+                    id: idContador++,
+                    estado: false // Estado inicial libre
+                });
+            }
+            butacas.push(fila);
+        }
+        return butacas;
+    }
+
+// Inicializar la matriz
+    let butacas = setup();
+
+//Solución
+    function suggest(numAsientos){
+        const asientosElegidos = new Set();
+        let asientosSeguidos = 0;
+        let asientosEncontrados = false;
+        if(numAsientos <= butacas.length) { //Compruebo que el número de asientos es menor al de la fila
+            for (let fila = butacas.length - 1; fila >= 0 && asientosEncontrados === false; fila--) {
+                for (let columna = 0; columna < butacas[fila].length && asientosEncontrados === false; columna++) {
+                    if (butacas[fila][columna].estado === false && asientosSeguidos < numAsientos) {
+                        asientosSeguidos++;
+                        asientosElegidos.add(butacas[fila][columna].id);
+                        if (asientosSeguidos === numAsientos) {
+                            asientosEncontrados = true;
+                        }
+                    } else {
+                        asientosSeguidos = 0;
+                        asientosElegidos.clear();
+                    }
+                }
+            }
+            if(asientosEncontrados === false){
+                asientosElegidos.clear();
+            }
+        }
+        console.log(asientosElegidos);
+        return asientosElegidos;
+    }
+
+    butacas[6][6].estado = true;
+
+// Imprimir la matriz
+    let fila = "";
+    let estado;
+    for(let i = 0; i < butacas.length ; i ++){
+        for(let j = 0; j < butacas[i].length ; j ++) {
+            if (butacas[i][j].estado === false){
+                estado = "libre";
+            }else{
+                estado = "ocupado";
+            }
+            fila += butacas[i][j].id + ":" + estado + " ";
+        }
+        fila += "\n";
+    }
+    console.log(fila);
+
+    //Añado id a cada butaca
+    let contador = 1;
+    document.querySelectorAll("td").forEach( asiento => {
+       if(asiento.className !== "fila") {
+           asiento.id = contador;
+           contador++;
+       }
+    });
+
+    seleccionAsientos = document.getElementById("numAsientos");
+
+    seleccionAsientos.addEventListener("change", () => {
+        document.querySelectorAll("td.asiento_ocupado").forEach( asiento => {
+            asiento.className = "asiento";
+        });
+        let ids = suggest(Number(seleccionAsientos.value));
+        ids.forEach(id => {
+            document.getElementById(id).className = "asiento_ocupado";
+        });
+    })
+});
+
+
+
