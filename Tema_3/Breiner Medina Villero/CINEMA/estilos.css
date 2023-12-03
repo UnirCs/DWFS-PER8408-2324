@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    box-sizing:border-box;
+    color: white;
+    font-family: calibri;
+}
+body{
+    width: 100%;
+    background-color:rgb(49, 49, 49);
+}
+.conte1{
+    background-color: black;
+    margin-top: 10px;
+    width:1000px;
+    height: 820px;
+    position: relative;
+    left: 380px;
+}
+.conte2{
+    width:979px;
+    height: 800px;
+    position: relative;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    background-color: black;
+    border: 1px #FFD700 solid; 
+}
+.titulo{
+    background-color: rgb(86, 101, 115);
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    height: 100px;
+    margin: 10px;
+    padding: 25px;
+
+}
+.pantalla{
+    background-color: rgb(98, 101, 103 );
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    height: 240px;
+    margin: 10px;
+    padding: 25px;
+}
+.butacas{
+    background-color: black;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    height: 200px;
+    margin: 10px;
+    padding: 25px;
+}
+table{
+    position: relative;
+    left: 170px;
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+}
+.columna1{
+    color: #FFD700;
+    width: 33px;
+}
+.columnas{
+    border: 2px#FFD700 solid;
+    width: 30px;height: 25px;
+}
+.ocupadas{
+    background-color: #FFD700;
+}
+.entrada_datos{
+    background-color: black;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    height: 100px;.
+    margin-top: 10px;
+    padding: 25px;
+}
+.pregunta{
+    color: #FFD700;
+    font-size: larger;
+}
+#n_asientos{
+    border-radius: 5px
+    ;
+    color: black;
+    width: 70px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    top: 3px;
+}
+.columnas:hover{
+    background-color: red;
+}
+.boton{
+    background-color: #FFD700;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+    position: relative;
+    top: 5px;
+    bottom: 10px;
+}
+footer{
+    background-color: rgb(86, 101, 115);
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    height: 100px;
+    margin: 10px;
+    padding: 10px 25px;
+}

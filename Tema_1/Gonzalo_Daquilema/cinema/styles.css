@@ -1,0 +1,32 @@
+body {
+    background-color: rgba(0, 0, 0, 0.147);
+    color: aliceblue;
+}
+body h1 {
+    background-color: black;
+    color: whitesmoke;
+    font-style: italic;
+    font-size: 24pt;
+    text-align: center;
+    
+}
+
+#selection_part_1{
+    display: inline-block;
+    margin: 10%;
+}
+
+#selection_part_2{
+    display: inline-block;
+}
+
+.row_seat{
+    display: block;
+}
+.seat{
+    display: inline-block;
+    margin: 10px;
+    background-color: aquamarine;
+    padding: 10px;
+    color: black;
+}

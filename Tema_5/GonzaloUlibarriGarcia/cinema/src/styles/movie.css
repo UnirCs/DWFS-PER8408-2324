@@ -1,0 +1,27 @@
+.card-img-top{
+    width: 60%;
+    position: relative;
+    margin: auto;
+}
+
+.btn{
+    width: 70%;
+    position: relative;
+    margin: auto;
+}
+
+.container{
+    padding: 20px;
+}
+
+.card-title{
+    position: relative;
+    text-align: center;
+}
+
+.card{
+    background-color: lightgreen;
+    border-color: #0b76a6;
+    border-radius: 45px;
+    border-width: 15px;
+}
