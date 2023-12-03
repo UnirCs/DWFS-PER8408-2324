@@ -1,7 +1,7 @@
 const ImageHandler = require('./ImageHandler.js')
 
 
-let path = 'input/dog.jpg';
+let path = 'input/tucan.jpg';
 let handler = new ImageHandler(path);
 
 
@@ -39,7 +39,7 @@ function ejemplo() {
  * Una forma de conseguirlo es simplemente poner los canales G y B a 0 para cada pixel.
  */
 function redConverter() {
-    let outputPath = 'output/dog_red.jpg';
+    let outputPath = 'output/tucan_red.jpg';
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
@@ -58,7 +58,7 @@ function redConverter() {
  * Una forma de conseguirlo es simplemente poner los canales R y B a 0 para cada pixel.
  */
 function greenConverter() {
-    let outputPath = 'output/dog_green.jpg';
+    let outputPath = 'output/tucan_green.jpg';
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
@@ -77,7 +77,7 @@ function greenConverter() {
  * Una forma de conseguirlo es simplemente poner los canales R y G a 0 para cada pixel.
  */
 function blueConverter() {
-    let outputPath = 'output/dog_blue.jpg';
+    let outputPath = 'output/tucan_blue.jpg';
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
@@ -100,7 +100,7 @@ function blueConverter() {
  * lo debemos transformar en el pixel [140, 140, 140].
  */
 function greyConverter() {
-    let outputPath = 'output/dog_grey.jpg';
+    let outputPath = 'output/tucan_grey.jpg';
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
@@ -122,7 +122,7 @@ function greyConverter() {
  * transformar el pixel en blanco [255, 255, 255].
  */
 function blackAndWhiteConverter() {
-    let outputPath = 'output/dog_black_and_white.jpg';
+    let outputPath = 'output/tucan_black_and_white.jpg';
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
@@ -144,7 +144,7 @@ function blackAndWhiteConverter() {
  * Otra forma es crear la imagen de nuevo unicamente con los valores de las filas y columnas pares.
  */
 function scaleDown() {
-    let outputPath = 'output/dog_scale_down.jpg';
+    let outputPath = 'output/tucan_scale_down.jpg';
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
@@ -166,7 +166,7 @@ const isOdd = (value) => value % 2 !== 0;
  * Una forma de conseguirlo es dividir el valor de cada pixel por el parámetro dimFactor.
  */
 function dimBrightness(dimFactor) {
-    let outputPath = 'output/dog_dimed.jpg';
+    let outputPath = 'output/tucan_dimed.jpg';
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
@@ -187,7 +187,7 @@ function dimBrightness(dimFactor) {
  * Por ejemplo, si un pixel tiene valor [10, 20, 50] su nuevo valor sera [255 - 10, 255 - 20, 255 - 50] => [245, 235, 205]
  */
 function invertColors() {
-    let outputPath = 'output/dog_inverse.jpg';
+    let outputPath = 'output/tucan_inverse.jpg';
     let pixels = handler.getPixels();
 
     //Aqui tu codigo
@@ -207,8 +207,8 @@ function invertColors() {
  * @param alphaSecond - Factor de fusion para la segunda imagen
  */
 function merge(alphaFirst, alphaSecond) {
-    let catHandler = new ImageHandler('input/tucan.jpg');
-    let dogHandler = new ImageHandler('input/cat.jpg');
+    let catHandler = new ImageHandler('input/cat.jpg');
+    let dogHandler = new ImageHandler('input/dog.jpg');
     let outputPath = 'output/merged.jpg';
 
     let catPixels = catHandler.getPixels();
@@ -218,10 +218,17 @@ function merge(alphaFirst, alphaSecond) {
 
     //Aqui tu codigo
     catPixels.forEach( (row, columnIndex) => {
+        let mergedColumn = [];
         row.forEach( (pixel, rowIndex) => {
-            transformPixel(pixel, {red: pixel[0] * alphaFirst, green: pixel[0] * alphaFirst, blue: pixel[0] * alphaFirst})
-            transformPixel(getPixel(dogPixels, columnIndex, rowIndex), {})
+            let mergedPixel = [];
+            let catPixel = getPixel(catPixels, columnIndex, rowIndex);
+            let dogPixel = getPixel(dogPixels, columnIndex, rowIndex);
+            mergedPixel[0] = catPixel[0] * alphaFirst + dogPixel[0] * alphaSecond;
+            mergedPixel[1] = catPixel[1] * alphaFirst + dogPixel[1] * alphaSecond;
+            mergedPixel[2] = catPixel[2] * alphaFirst + dogPixel[2] * alphaSecond;
+            mergedColumn.push(mergedPixel);
         })
+        pixels.push(mergedColumn);
     })
 
     dogHandler.savePixels(pixels, outputPath);
@@ -255,7 +262,7 @@ const transformPixel = (pixel, {red, green, blue}) => {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 8;
+let optionN = 9;
 
 switch (optionN) {
     case 1: redConverter(); break;
