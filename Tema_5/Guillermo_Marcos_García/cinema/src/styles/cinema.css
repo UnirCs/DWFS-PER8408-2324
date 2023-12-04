@@ -1,0 +1,13 @@
+html, body {
+  background-color: #14274d;
+}
+
+.movies-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
