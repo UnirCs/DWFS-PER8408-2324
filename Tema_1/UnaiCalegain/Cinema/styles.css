@@ -1,0 +1,83 @@
+.fondo {
+    background-color: #041021;
+    border: #919cbe 1px solid;
+}
+
+.bloque-superior {
+    margin: 18px;
+    padding: 10px;
+    background-color: #919cbe;
+}
+
+.titulo-superior {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+}
+
+.bloque-central {
+    margin: 18px;
+    padding: 100px;
+    background-color: #687cb4;
+}
+
+.asientos {
+    margin: 30px;
+    padding: 100px;
+}
+
+.fila {
+    margin: 18px;
+    padding: 10px;
+    background-color: #919cbe;
+    font-size: 21px;
+    font-weight: bold;
+    color: #ffffff;
+
+    /* Alinear contenidos en una linea */
+    display: flex;
+}
+
+.tituo-fila {
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.asiento {
+    width: 10%;
+}
+
+.inputText {
+    margin: 0 auto;
+    display: block;
+    width: 10%;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+}
+
+.boton {
+    margin: 0 auto;
+    display: block;
+    width: 10%;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+}
+
+.bloque-inferior {
+    margin: 18px;
+    padding: 10px;
+    background-color: #919cbe;
+}
+
+.texto-inferior {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Restaurant = ({ name, cuisine, rating, image }) => {
+export const Restaurant = ({ name, cuisine, rating }) => {
     return (
         <div className="card">
             <h3>{name}</h3>
