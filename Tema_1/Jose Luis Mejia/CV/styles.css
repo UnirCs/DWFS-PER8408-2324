@@ -1,0 +1,16 @@
+
+
+
+
+table {
+    width: 50%;
+}
+
+table, th, td {
+border: 1px solid black;
+    text-align: center;
+}
+
+h2  { color: orange}
+h1  {color: blue; text-align: center}
+

@@ -1,0 +1,252 @@
+
+
+#main-header {
+	background: #333;
+	color: white;
+	height: 80px;
+}	
+	#main-header a {
+		color: white;
+	}
+
+    #logo-header {
+        float: left;
+        padding: 15px 0 0 20px;
+        text-decoration: none;
+    }
+        #logo-header:hover {
+            color: #0b76a6;
+        }
+        
+        #logo-header .site-name {
+            display: block;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+        
+        #logo-header .site-desc {
+            display: block;
+            font-weight: 300;
+            font-size: 0.8em;
+            color: #999;
+        }
+        
+    
+    /*
+     * Navegación
+     */
+    nav {
+        float: right;
+    }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            padding-right: 20px;
+        }
+        
+            nav ul li {
+                display: inline-block;
+                line-height: 80px;
+            }
+                
+                nav ul li a {
+                    display: block;
+                    padding: 0 10px;
+                    text-decoration: none;
+                }
+                
+                    nav ul li a:hover {
+                        background: #0b76a6;
+                    }
+
+                    #main-content {
+                        background: white;
+                        width: 90%;
+                        max-width: 800px;
+                        margin: 20px auto;
+                        box-shadow: 0 0 10px rgba(0,0,0,.1);
+                    }
+                    
+                        #main-content header,
+                        #main-content .content {
+                            padding: 40px;
+                        }
+
+                        #main-header {
+                            background: #333;
+                            color: white;
+                            height: 80px;
+                            
+                            width: 100%; 
+                            left: 0; 
+                            top: 0; 
+                            position: fixed; 
+                        }
+
+  .container {
+
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    background-color: black;
+    color:aqua;
+    padding: 10px;
+    font-size: 25px;
+    width: 100%;
+    justify-content:center;
+    margin:auto;
+    
+   /* display: flex; /* Se va a usar flexbox */
+   /* justify-content: space-between; /* Los elementos se van a distribuir de manera uniforme en el contenedor */
+   /* align-items: center; /* Los elementos se van a alinear verticalmente en el centro */
+    /*width: 400px;
+    height: 200px;
+    border: 2px solid #333;
+    padding: 10px;*/
+ 
+   }
+
+   .container *{
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6px;
+    padding: 5px;
+    margin: 5px;
+    align-content: center;
+    width: 4%;
+    white-space: space;
+    border-style: outset;
+    text-align: center;
+
+    /*flex: 1; /* El elemento va a ocupar todo el espacio disponible */
+    /*background-color: #3498db;
+    color: #fff;*/
+   /* text-align: center; /* El texto se va a centrar horizontalmente */
+    /*padding: 10px;*/
+    
+
+
+   }
+
+   
+.containerPantalla{
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    padding: 40px;
+    margin: 5px;
+    align-content: center;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aqua;
+    width: 100%; 
+
+    
+    
+ }
+
+ .btn-success{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btn-success:hover{
+    background-color: #45a049;
+  }
+
+  .btn-success:hover{
+    background-color: #3e8e41;
+  }
+
+
+
+ #main-footer {
+	background: #333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
+    height: 100px;
+    width: 100%;
+    left: 0;
+	position: fixed; 
+}
+	#main-footer p {
+		margin: 0;
+	}
+	
+	#main-footer a {
+		color: white;
+	}
+
+    h3 {
+        color: white;
+    
+    }
+
+    .item:hover{
+        background-color: orange;
+        color: #0b76a6;
+    }
+  
+    .item_seleccionado{
+        cursor: not-allowed;
+        background-color: white;
+        background: orange;
+
+
+        }
+
+        .containerFormulario {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            color: darkorange;
+            font-size: 20px;
+            align-items: center;
+            margin-right: 6px;
+            padding: 5px;
+            align-content: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 5px;
+            width: 100%;  
+       
+        }
+
+
+        .controtexto{
+            width: 50%;
+            padding: 10;
+            font-size: 20px;
+            align-items: center;
+            margin-right: 6px;
+            padding: 5px;
+            align-content: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 35px;
+        }
+        
+
+        .btn-success{
+            width: 50.33%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            }
+        
+
+
+
+
