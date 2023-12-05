@@ -1,9 +1,29 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
     <link rel="stylesheet" href="styles.css">    
-<header>
-<p>Hola Mundo</p>
-</header>
+    <head>
+        <title>Chistes</title>
+    </head>
+        <header>
+            <div class="formatochiste">
+                <button><a>Dame un Chiste!</a></button>
+                <p id="chiste" value=""></p>
+            </div>
+        </header>
 </html>
+
+<script>
+    let url = "https://api.chucknorris.io/jokes/random";
+    var chiste = '';
+    let parrafo = document.getElementById('chiste');
+    buscarchiste = () => {
+    //console.log("Hello there from Tatooine!")
+    chiste = fetch(url);
+        //.then(response => response.json());
+        //.then((data) => (parrafo.innerHTML = data.value));
+        //.then((json) => (json.value));
+    }
+buscarchiste();
+console.log(chiste);
+</script>
