@@ -1,0 +1,36 @@
+.cabecera {
+    border: 5px soild;
+    margin: auto;
+    padding: 10px;
+
+    background-color: #c8f4ff;
+}
+
+.imagen-unai {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.nombre-unai {
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    color: #0037eb;
+}
+
+.datos-unai {
+    font-size: 15px;
+
+    border: 2px solid #55d3f3;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.datos-titulo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0037eb;
+}
