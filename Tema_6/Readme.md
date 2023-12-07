@@ -5,9 +5,9 @@ El objetivo de estos ejercicios es practicar el diseño de APIs REST siguiendo l
 
 ## Ejercicio 1 (Fácil): [**API de Calculadora**](https://github.com/UnirCs/DWFS-PER8408-2324/tree/master/Tema_6/00_Resources/Calculadora)
 
-## Ejercicio 1 (Intermedio): [**API del sistema de reserva de butacas de cine**](https://github.com/UnirCs/DWFS-PER8408-2324/tree/master/Tema_6/00_Resources/Cinema)
+## Ejercicio 2 (Intermedio): [**API del sistema de reserva de butacas de cine**](https://github.com/UnirCs/DWFS-PER8408-2324/tree/master/Tema_6/00_Resources/Cinema)
 
-## Ejercicio 1 (Difícil): [**API del juego hunde la flota**](https://github.com/UnirCs/DWFS-PER8408-2324/tree/master/Tema_6/00_Resources/Hunde%20la%20flota)
+## Ejercicio 3 (Difícil): [**API del juego hunde la flota**](https://github.com/UnirCs/DWFS-PER8408-2324/tree/master/Tema_6/00_Resources/Hunde%20la%20flota)
 
 ## Entrega
 
