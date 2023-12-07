@@ -1,4 +1,4 @@
-# API de una calculadora online
+# API de un sistema de reserva de butacas de cine
 
 En este ejercicio vamos a diseñar la API REST para el cine en el que venimos trabajando en los ejercicios de los anteriores temas.
 
