@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Chistes" content="width=device-width, initial-scale=1">
+    <title>Chistes Chuck Norris</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="title">
+        <p class="fw-bolder">BIENVENIDO</p>
+    </div>
+    <div class="container text-center">
+        <div>
+            <button type="button" class="btn btn-primary btn-lg" onclick="fetchSincrono()">Dame un chiste!</button>
+        </div>
+        <div>
+            <p id="txtChiste" class="text-center">...</p>
+        </div>
+    </div>
+</body>
+<script>
+
+async function fetchSincrono() {
+    let url = "https://api.chucknorris.io/jokes/random";
+    let fetchResponse = await fetch(url);
+    let json = await fetchResponse.json();
+    let chiste = json.value;
+    console.log("Chiste sincrono: " + chiste);
+    document.getElementById("txtChiste").innerHTML = chiste;
+return chiste;
+}
+</script>
+</html>

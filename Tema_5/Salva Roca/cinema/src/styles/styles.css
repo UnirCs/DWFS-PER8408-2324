@@ -1,0 +1,65 @@
+/* Estilo general en modo oscuro */
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    color: whitesmoke;
+}
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.movie-container > * {
+    flex: 1 1 40%;
+    max-width: 40%;
+}
+
+.movie-info {
+    display: flex;
+    align-items: flex-start;
+}
+
+.movie-image {
+    border: 1px solid #fff;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.movie-details {
+    flex: 1;
+    flex-direction: column;
+}
+
+.header-footer {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+.header-footer-text {
+    color: whitesmoke;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.select-button {
+    background: darkblue;
+    color: whitesmoke;
+    border: dodgerblue;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 10px;
+}

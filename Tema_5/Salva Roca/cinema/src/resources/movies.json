@@ -1,0 +1,50 @@
+[
+  {
+    "title": "El Padrino",
+    "image": "https://pics.filmaffinity.com/the_godfather-488102675-large.jpg",
+    "synopsis": "América, años 40. Don Vito Corleone (Marlon Brando) es el respetado y temido jefe de una de las cinco familias de la mafia de Nueva York. Tiene cuatro hijos: Connie (Talia Shire), el impulsivo Sonny (James Caan), el pusilánime Fredo (John Cazale) y Michael (Al Pacino), que no quiere saber nada de los negocios de su padre. Cuando Corleone, en contra de los consejos de 'Il consigliere' Tom Hagen (Robert Duvall), se niega a participar en el negocio de las drogas, el jefe de otra banda ordena su asesinato. Empieza entonces una violenta y cruenta guerra entre las familias mafiosas.",
+    "length": 175,
+    "genre": "Drama, Mafia",
+    "rating": 9.0
+  },
+  {
+    "title": "Doce Hombres sin Piedad",
+    "image": "https://pics.filmaffinity.com/12_angry_men-122099105-large.jpg",
+    "synopsis": "Los doce miembros de un jurado deben juzgar a un adolescente acusado de haber matado a su padre. Todos menos uno están convencidos de la culpabilidad del acusado. El que disiente intenta con sus razonamientos introducir en el debate una duda razonable que haga recapacitar a sus compañeros para que cambien el sentido de su voto.",
+    "length": 95,
+    "genre": "Drama judicial",
+    "rating": 8.7
+  },
+  {
+    "title": "La Lista de Schindler",
+    "image": "https://pics.filmaffinity.com/schindler_s_list-473662617-large.jpg",
+    "synopsis": "Oskar Schindler (Liam Neeson), un empresario alemán de gran talento para las relaciones públicas, busca ganarse la simpatía de los nazis de cara a su beneficio personal. Después de la invasión de Polonia por los alemanes en 1939, Schindler consigue, gracias a sus relaciones con los altos jerarcas nazis, la propiedad de una fábrica de Cracovia. Allí emplea a cientos de operarios judíos, cuya explotación le hace prosperar rápidamente, gracias sobre todo a su gerente Itzhak Stern (Ben Kingsley), también judío. Pero conforme la guerra avanza, Schindler y Stern comienzan ser conscientes de que a los judíos que contratan, los salvan de una muerte casi segura en el temible campo de concentración de Plaszow, que lidera el Comandante nazi Amon Goeth (Ralph Fiennes), un hombre cruel que disfruta ejecutando judíos.",
+    "length": 195,
+    "genre": "Drama, Holocausto",
+    "rating": 8.6
+  },
+  {
+    "title": "Cadena Perpetua",
+    "image": "https://pics.filmaffinity.com/the_shawshank_redemption-576140557-large.jpg",
+    "synopsis": "Acusado del asesinato de su mujer, Andrew Dufresne (Tim Robbins), tras ser condenado a cadena perpetua, es enviado a la cárcel de Shawshank. Con el paso de los años conseguirá ganarse la confianza del director del centro y el respeto de sus compañeros de prisión, especialmente de Red (Morgan Freeman), el jefe de la mafia de los sobornos.",
+    "length": 142,
+    "genre": "Drama carcelario",
+    "rating": 8.6
+  },
+  {
+    "title": "El Gran Dictador",
+    "image": "https://pics.filmaffinity.com/the_great_dictator-416205081-large.jpg",
+    "synopsis": "Un humilde barbero judío que combatió con el ejército de Tomania en la Primera Guerra Mundial vuelve a su casa años después del fin del conflicto. Amnésico a causa de un accidente de avión, no recuerda prácticamente nada de su vida pasada, y no conoce la situación política actual del país: Adenoid Hynkel, un dictador fascista y racista, ha llegado al poder y ha iniciado la persecución del pueblo judío, a quien considera responsable de la situación de crisis que vive el país. Paralelamente, Hynkel y sus colaboradores han empezado a preparar una ofensiva militar destinada a la conquista de todo el mundo.",
+    "length": 128,
+    "genre": "Comedia, Sátira, Holocausto",
+    "rating": 8.6
+  },
+  {
+    "title": "Pulp Fiction",
+    "image": "https://pics.filmaffinity.com/pulp_fiction-210382116-large.jpg",
+    "synopsis": "Jules y Vincent, dos asesinos a sueldo con no demasiadas luces, trabajan para el gángster Marsellus Wallace. Vincent le confiesa a Jules que Marsellus le ha pedido que cuide de Mia, su atractiva mujer. Jules le recomienda prudencia porque es muy peligroso sobrepasarse con la novia del jefe. Cuando llega la hora de trabajar, ambos deben ponerse \"manos a la obra\". Su misión: recuperar un misterioso maletín.",
+    "length": 153,
+    "genre": "Thriller, Crimen",
+    "rating": 8.6
+  }
+]
