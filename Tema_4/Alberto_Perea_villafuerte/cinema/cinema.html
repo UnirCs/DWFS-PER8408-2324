@@ -12,47 +12,47 @@
         </div>
         <br>
         <div>
-            <table border="0">
+            <table border="0" id="rwd-table">
                 <thead>
                     <tr>
                         <th>Fila 1</th>
-                        <td estilo="ocupado"> </td>
-                        <td estilo="ocupado"> </td>
-                        <td estilo="ocupado"> </td>
-                        <td estilo="ocupado"> </td>
-                        <td estilo="ocupado"> </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
                     </tr>
                     <tr>
                         <th>Fila 2</th>
-                        <td estilo="ocupado"> </td>
-                        <td estilo="desocupado"> </td>
-                        <td estilo="desocupado"> </td>
-                        <td estilo="desocupado"> </td>
-                        <td estilo="desocupado"> </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
                     </tr>
                     <tr>
                         <th>Fila 3</th>
-                        <td estilo="ocupado"> </td>
-                        <td estilo="ocupado"> </td>
-                        <td estilo="ocupado"> </td>
-                        <td estilo="desocupado"> </td>
-                        <td estilo="desocupado"> </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
                     </tr>
                     <tr>
                         <th>Fila 4</th>
-                        <td estilo="ocupado"> </td>
-                        <td estilo="desocupado"> </td>
-                        <td estilo="desocupado"> </td>
-                        <td estilo="desocupado"> </td>
-                        <td estilo="desocupado"> </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
                     </tr>
                     <tr>
                         <th>Fila 5</th>
-                        <td estilo="desocupado"> </td>
-                        <td estilo="desocupado"> </td>
-                        <td estilo="desocupado"> </td>
-                        <td estilo="ocupado"> </td>
-                        <td estilo="desocupado"> </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
+                        <td > </td>
                     </tr>
                 </thead>
             </table>
@@ -61,7 +61,7 @@
         <form class="centerform">
             <div>
                 <p>Indica cuantos asientos desea reservar</p>
-                <input type="number" value="0" oninput="suggest(5)"/></div><br>
+                <input id="numerodeasientos" type="number" value="0" oninput="suggest(this.value)"/></div><br>
                 <button name="confirmarreserva" type="button">Confirmar Reserva</button>
             </div>
         </form>
