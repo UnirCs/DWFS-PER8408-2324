@@ -1,0 +1,88 @@
+body {
+    font-family: "Arial", sans-serif;
+}
+
+.sala-cine {
+    text-align: center;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+.sala-cine .seats{
+    width: 100%;
+}
+
+
+.sala-cine .seats tr td label {
+    display: inline-block;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    color: #3498db;
+    border-radius: 25px;
+    transition: .2s all ease;
+    padding: 8px 12px;
+}
+
+.sala-cine .seats tr td label:hover{
+    border: 1px solid #006400;
+}
+
+.sala-cine .seats tr td input[type="checkbox"]:checked + label{
+    border: 1px solid #006400;
+    background: darkolivegreen;
+    color: white;
+}
+
+.sala-cine .seats tr td input[type="checkbox"]{
+    opacity: 0;
+}
+
+.screen {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+td {
+    width: 40px;
+    height: 50px;
+    text-align: center;
+    position: relative;
+}
+
+
+.controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+input[type="number"]:valid ~ .checkbox:checked + td::before {
+    background-color: #006400;
+}

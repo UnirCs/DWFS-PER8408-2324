@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuck Jokes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section id="joke__section">
+    <button id="joke_button" onclick="getJoke()">Give me a fantastic joke!</button>
+    <div id="joke__div">
+        <p id="joke__p">This space is for a Chuck Norris joke!!</p>
+    </div>
+</section>
+<script>
+    const jokesServiceUrl = "https://api.chucknorris.io/jokes/random";
+
+    const getJoke = () => {
+        return _doRequest()
+            .then(response => response.json())
+            .then(joke => document.getElementById("joke__p").innerHTML = joke.value)
+            .catch(error => document.getElementById("joke__p").innerHTML = `I will show you a joke soon... Now have a ${error.message} for you...`)
+    }
+
+    /**
+     * Utility function to consume a service
+     * @returns {Promise<Response>}
+     * @private
+     */
+    const _doRequest = () => {
+        return fetch(jokesServiceUrl)
+            .then(_handleResponse);
+    }
+
+    /**
+     * Utility function to handle Response object from consume
+     * @param response
+     * @returns {{ok}|*}
+     * @private
+     */
+    const _handleResponse = (response) => {
+        if (!response.ok) throw Error(response.status);
+        return response;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+body{
+    background: #dbdbdb;
+}
+header{
+    background: #0dcaf0;
+    color: white;
+    text-align: center;
+    padding: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.blockcentral{
+    text-align: center;
+}
+
+.blockcentral__screen {
+    background: #1e1f22;
+    color: #dbdbdb;
+    text-align: center;
+    padding: 0.5%;
+}
+
+.blockcentral__asientos{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seats__label{
+    text-align: left;
+}
+
+.asientos__seats{
+    width: 50%;
+}
+
+.seats__seat{
+    width: 40px;
+    height: 40px;
+}
+
+.seat--selected{
+    background: rgba(0, 0, 255, 0.89);
+}
+
+.seats__seat:not(.seat--occupied):hover {
+    background: #3498db;
+}
+
+
+.blockcentral__seleccion{
+    margin: 3%;
+}
+
+
+
+footer {
+    text-align: center;
+    border-top: #1e1f22;
+}
+
