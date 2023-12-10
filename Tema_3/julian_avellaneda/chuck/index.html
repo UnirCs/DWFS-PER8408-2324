@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chuck chistes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="getAJoke()">
+<main>
+    <div class="content">
+        <div class="content__joke">
+            <h3>Chiste:</h3>
+            <p id="joke"></p>
+        </div>
+        <div class="content__button">
+            <button onclick="getAJoke()">Dame un chiste</button>
+        </div>
+    </div>
+</main>
+<script>
+    let jokeText = document.getElementById("joke");
+    const API_URL = "https://api.chucknorris.io/jokes/random";
+
+    async function getAJoke() {
+        jokeText.innerText = await fetchJoke();
+    }
+
+    async function fetchJoke() {
+        try {
+            const response = await fetch(API_URL);
+            const joke_json = await response.json();
+            return joke_json.value;
+        } catch (error) {
+            console.log(error)
+        }
+    }
+</script>
+</body>
+</html>
