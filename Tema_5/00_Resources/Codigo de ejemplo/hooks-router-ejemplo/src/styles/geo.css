@@ -1,0 +1,57 @@
+.trapecio {
+    width: 250px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid #428bca;
+    margin-bottom: 20px;
+    margin-top: 20px;}
+
+.rombo {
+    width: 100px; 
+    height: 100px; 
+    border: 3px solid #555; 
+    background: #428bca;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+.cuadrado {
+    width: 100px; 
+    height: 100px; 
+    border: 3px solid #555;
+    background: #428bca;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.triangulo-equilatero {
+    width: 0;
+    height: 0;
+    border-right: 100px solid transparent;
+    border-top: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-bottom: 100px solid #f0ad4e;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.raro {
+    width:0;
+    height:0;
+    border-right: 50px solid #d9534f;
+    border-top: 50px solid #428bca;
+    border-left: 50px solid #f0ad4e;
+    border-bottom: 50px solid #5cb85c;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
