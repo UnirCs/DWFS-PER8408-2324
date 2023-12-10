@@ -25,6 +25,9 @@ function setup() {
 function suggest (nasientos) {
     let butacasReservadas = []; 
     butacas = setup();
+    //asignar una butaca seleccioda para pruebas
+    butacas[4][4].estado=true;
+
     let foundButacas = false;
     nasientos = nasientos * 1;
 
@@ -59,15 +62,13 @@ function suggest (nasientos) {
             butacasReservadas = [];
         }
     }
-    reservarvisualmenteasientos(butacasReservadas);
+        reservarvisualmenteasientos(butacasReservadas);
     console.log('Asientos sugeridos: '+ butacasReservadas);
     return butacasReservadas;
 }
 
 function asignarid(butacas) {
     const resume_table = document.getElementById("rwd-table");
-    //asignar una butaca seleccioda para pruebas
-    butacas[4][4].estado=true;
 
     for (var i = 0, row; row = resume_table.rows[i]; i++) {
         for (var j = 0, col; col = row.cells[j]; j++) {
@@ -90,6 +91,9 @@ function reservarvisualmenteasientos(asientos) {
 let butacas = setup();
 console.log('Butacas incializadas');
 
+//asignar una butaca seleccioda para pruebas
+butacas[4][4].estado=true;
+
 // atributo del imput para max y min
 let inputn = document.getElementById("numerodeasientos");
 inputn.setAttribute("max", 5);
@@ -97,3 +101,8 @@ inputn.setAttribute("min", 0);
 
 //- Modificar el archivo JS asociado a la página HTML de reserva de butacas. Deberás asignar un ``id`` a cada uno de los asientos. **Esto debe realizarse de forma dinámica (mediante el DOM)**.
 asignarid(butacas);
+
+// eliminar referencia a JS
+document.getElementById("numerodeasientos").addEventListener('input', () => {
+    suggest(document.getElementById("numerodeasientos").value);
+});
