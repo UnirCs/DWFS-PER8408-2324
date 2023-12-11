@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    border-width: 1px;
+    border-color: yellow;
+    border-style: solid;
+    text-align: center;
+    color: white;
+}
+div {
+    margin: 20px;
+}
+
+div.cabecera, div.pie-de-pagina{
+    color: white;
+    background-color: #313c4e;
+}
+
+div[class=cabecera] > p {
+    font-size: 30px;
+    height: 40px;
+    padding: 10px;
+}
+
+div.pantalla {
+    background-color: #5a5a5a;
+    height: 250px;
+}
+
+td.asiento , td.asiento_ocupado {
+    border-width: 1px;
+    border-color: yellow;
+    border-style: solid;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+td.asiento_ocupado {
+    background-color: yellow;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px 20px;
+    margin: auto;
+}
+
+div[class=pie-de-pagina] > p {
+    margin: 15px;
+}
+
+form > input {
+    margin: 10px;
+    height: 25px;
+}
+
+form > input[type=submit] {
+    background-color: yellow;
+}
+
+
+
