@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chuck en UNIR</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+</head>
+    <body>
+    <div class="joke__block">
+      <button onclick="changeJoke()">Dame un chiste!</button>
+      <p id="chiste"></p>
+    </div>
+    <script>
+       async function getJoke() {
+           let url = "https://api.chucknorris.io/jokes/random";
+           let fetchResponse = await fetch(url);
+           let json = await fetchResponse.json();
+           return json.value;
+       }
+        async function changeJoke() {
+           let joke = await getJoke();
+           let elem = document.getElementById("chiste")
+           elem.innerText = joke;
+       }
+    </script>
+    </body>
+</html>
