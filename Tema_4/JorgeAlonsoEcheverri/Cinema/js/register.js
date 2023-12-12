@@ -43,7 +43,7 @@ const validateUsername = () => {
     let username = document.getElementById('username').value;
     let usernameRegex = /^[a-z0-9]{10}$/;
     if (!usernameRegex.test(username)) {
-        createErrorMessage('username', 'El nombre de usuario debe tener 10 caracteres como máximo.');
+        createErrorMessage('username', 'El nombre de usuario debe tener 10 caracteres.');
     } else {
         removeErrorMessage('username');
     }
