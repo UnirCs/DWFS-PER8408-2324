@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="css/register.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <title>Register</title>
+    </head>
+    <body>
+        <h3>REGISTRO DE USUARIO</h3>
+        <div class="container">
+            <form id="form">
+                <div class="form-item">
+                    <label for="fullName">Nombre y apellidos</label>
+                    <input type="text" id="fullName" name="fullName">
+                </div>
+                <div class="form-item">
+                    <label for="userName">Nombre de usuario</label>
+                    <input type="text" id="userName" name="userName">
+                </div>
+                <div class="form-item">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div class="form-item">
+                    <label for="confirmPassword">Confirmar contraseña</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword">
+                </div>
+                <div class="form-item">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <button type="submit" class="btn waves-effect waves-light">
+                    Registrar
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
