@@ -1,0 +1,52 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.div__section--header{
+    text-align: center;
+    background-image: url("robot.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 50%;
+    height: 100%;
+    font-weight: bold;
+}
+#picture{
+    width: 150px;
+    border-radius: 50%;
+}
+#position-cv{
+    color: white;
+}
+.container {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    font-size: 18px;
+
+    margin: 10px;
+
+}
+.cv__section-title{
+    color:#7ACDD5;
+}
+
+.container__half {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left {
+    flex:1;
+    background-color: white; 
+}
+
+.right {
+    flex:3;
+    background-color: #EFEFEF; 
+}
+.cv-text {
+    margin: 3px;
+}

@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="styles.css">    
+    <head>
+        <title>Chistes</title>
+    </head>
+        <header>
+            <div class="bloque centerform">
+                <button class="text-justify centerform" onclick="buscarchiste()">Dame un Chiste!</button>
+                <p id="chiste" class="text-justify centerform"></p>
+            </div>
+        </header>
+</html>
+
+<script>
+    let url = "https://api.chucknorris.io/jokes/random";    
+    const chiste = document.getElementById('chiste');    
+    buscarchiste = () => {    
+        fetch(url)
+            .then(response => response.json())
+            .then((data) => (chiste.innerHTML = data.value));        
+    }
+</script>

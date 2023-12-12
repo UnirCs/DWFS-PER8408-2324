@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>UNIR Cinema - Registro</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <h3>Registro de Usuario</h3>
+            <form id="userForm">
+                <div class="input-field">
+                    <input id="fullName" type="text" name="fullName" class="validate" required>
+                    <label for="fullName">Nombre y apellidos</label>
+                </div>
+
+                <div class="input-field">
+                    <input id="username" type="text" name="username" class="validate" required>
+                    <label for="username">Nombre de usuario</label>
+                </div>
+
+                <div class="input-field">
+                    <input id="password" type="password" name="password" class="validate" required>
+                    <label for="password">Contraseña</label>
+                </div>
+
+                <div class="input-field">
+                    <input id="confirmPassword" type="password" name="confirmPassword" class="validate" required>
+                    <label for="confirmPassword">Confirmar contraseña</label>
+                </div>
+
+                <div class="input-field">
+                    <input id="email" type="email" name="email" class="validate" required>
+                    <label for="email">Email</label>
+                </div>
+
+                <button type="submit" class="btn waves-effect waves-light">
+                    Registrar
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
