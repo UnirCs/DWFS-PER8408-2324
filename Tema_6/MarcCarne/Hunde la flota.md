@@ -13,6 +13,7 @@
 - Como las partidas pueden ser anónimas no se puede usar el ID del jugador como requisito de creación. Se usará el nombre del jugador como dato en la partida y el ID del jugador será referido a la partida y no al usuario.
 - En el registro del disparo, al haber dos jugadores en la partida se registra el disparo en el jugador que lo hace y afectará al otro jugador.
 - En los recursos que involucran al jugador (player) el identificador corresponde a "1" o "2", según sea player1 o player2.
+- Observación: dado que el recurso "game" contiene la información de la partida completa, haciendo una petición de la partida se podrían recuperar los barcos, pero he decidido hacer un endpoint específico. Del mismo modo, haciendo un uso de la modificación de la partida, se podrían añadir los barcos, registrar los disparos... pero he decidido hacer endpoints específicos para que la API sea más intuitiva.
 
 
 | Método HTTP  | URI                | Query Params | Request Body | Response Body    | Códigos HTTP de respuesta |
