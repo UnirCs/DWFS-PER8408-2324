@@ -1,4 +1,4 @@
-# API de una calculadora online
+# API de Cinema
 
 **Recursos identificados**
 - Rooms (salas): identifica a la sala del cine.
