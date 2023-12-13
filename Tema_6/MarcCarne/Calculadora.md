@@ -1,7 +1,7 @@
 # API de una calculadora online
 
 **Recursos identificados:**
-- Calculations: recurso que permite realizar las operaciones y almacenar su resultado. Dado que se debe almacenar la respuesta, la petición de cálculo
+- Calculations (cálculos): recurso que permite realizar las operaciones y almacenar su resultado. Dado que se debe almacenar la respuesta, la petición de cálculo
   será mediante método POST. El recurso requiere de un parámetro "operation" en el cuerpo de la petición que indique la operación y "operandos" que indica
   los valores involucrados en la operación. Será el backend el que se encargue de limitar las funcionalidades que presenta el enunciado, como comprobar en
   la división que solo hay dos operandos (devolviendo código 400 en ese caso).
