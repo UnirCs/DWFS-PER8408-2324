@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: orange;
+}
+.joke__block {
+    display: flex;
+    padding: 20px;
+}
+.button {
+    display: inline-block;
+}

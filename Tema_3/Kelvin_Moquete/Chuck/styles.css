@@ -1,0 +1,21 @@
+* {
+    background-color: #0E3663;
+}
+
+#btn_joke_generator {
+    background-color: #cbdcdf;
+    color: #0E3663;
+    border-radius: 5px;
+    font-weight: bold;
+    height: auto;
+    font-size: large;
+}
+#btn_joke_generator:hover {
+    background-color: #028ab7;
+    color: #cbdcdf;
+}
+
+#joke{
+    color: #cbdcdf;
+    font-size: large;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>Cinema</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-5 mb-2 text-center">Multicines</h1>
+  </div>
+  <div class="seat-container">
+    <div id="screen">
+      <p>Pantalla</p>
+    </div>
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center seat-row">
+        <div class="col-md-10">
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="mx-2 d-flex align-items-center text-white">
+              <div class="seat"></div>
+              Available
+            </div>
+            <div class="mx-2 d-flex align-items-center text-white">
+                <div class="seat seat--vip"></div>
+                VIP
+            </div>
+            <div class="mx-2 d-flex align-items-center text-white">
+                <div class="seat seat--occupied"></div>
+                Occupied
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <span class="seat-row-indicator row-label">A</span>
+            <div class="seat seat--occupied"><span class="seat-label">1</span></div>
+            <div class="seat"><span class="seat-label">2</span></div>
+            <div class="seat"><span class="seat-label">3</span></div>
+            <div class="seat"><span class="seat-label">4</span></div>
+            <div class="seat"><span class="seat-label">5</span></div>
+            <div class="seat"><span class="seat-label">6</span></div>
+            <div class="seat"><span class="seat-label">7</span></div>
+            <div class="seat seat--occupied"><span class="seat-label">8</span></div>
+            <div class="seat seat--occupied"><span class="seat-label">9</span></div>
+            <div class="seat"><span class="seat-label">10</span></div>
+            <span class="seat-row-indicator row-label">A</span>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <span class="seat-row-indicator row-label">B</span>
+            <div class="seat seat--occupied"><span class="seat-label">1</span></div>
+            <div class="seat seat--occupied"><span class="seat-label">2</span></div>
+            <div class="seat seat--occupied"><span class="seat-label">3</span></div>
+            <div class="seat"><span class="seat-label">4</span></div>
+            <div class="seat"><span class="seat-label">5</span></div>
+            <div class="seat"><span class="seat-label">6</span></div>
+            <div class="seat"><span class="seat-label">7</span></div>
+            <div class="seat"><span class="seat-label">8</span></div>
+            <div class="seat seat--occupied"><span class="seat-label">9</span></div>
+            <div class="seat seat--occupied"><span class="seat-label">10</span></div>
+            <span class="seat-row-indicator row-label">B</span>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+              <span class="seat-row-indicator row-label">C</span>
+              <div class="seat"><span class="seat-label">1</span></div>
+              <div class="seat"><span class="seat-label">2</span></div>
+              <div class="seat"><span class="seat-label">3</span></div>
+              <div class="seat"><span class="seat-label">4</span></div>
+              <div class="seat"><span class="seat-label">5</span></div>
+              <div class="seat"><span class="seat-label">6</span></div>
+              <div class="seat"><span class="seat-label">7</span></div>
+              <div class="seat seat--occupied"><span class="seat-label">8</span></div>
+              <div class="seat seat--occupied"><span class="seat-label">9</span></div>
+              <div class="seat seat--occupied"><span class="seat-label">10</span></div>
+              <span class="seat-row-indicator row-label">C</span>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+              <span class="seat-row-indicator row-label">D</span>
+              <div class="seat"><span class="seat-label">1</span></div>
+              <div class="seat"><span class="seat-label">2</span></div>
+              <div class="seat"><span class="seat-label">3</span></div>
+              <div class="seat seat--occupied"><span class="seat-label">4</span></div>
+              <div class="seat seat--occupied"><span class="seat-label">5</span></div>
+              <div class="seat seat--occupied"><span class="seat-label">6</span></div>
+              <div class="seat seat--occupied"><span class="seat-label">7</span></div>
+              <div class="seat"><span class="seat-label">8</span></div>
+              <div class="seat"><span class="seat-label">9</span></div>
+              <div class="seat"><span class="seat-label">10</span></div>
+              <span class="seat-row-indicator row-label">D</span>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+              <span class="seat-row-indicator row-label">E</span>
+              <div class="seat"><span class="seat-label">1</span></div>
+              <div class="seat"><span class="seat-label">2</span></div>
+              <div class="seat"><span class="seat-label">3</span></div>
+              <div class="seat seat--occupied"><span class="seat-label">4</span></div>
+              <div class="seat seat--occupied"><span class="seat-label">5</span></div>
+              <div class="seat"><span class="seat-label">6</span></div>
+              <div class="seat seat--occupied"><span class="seat-label">7</span></div>
+              <div class="seat seat--occupied"><span class="seat-label">8</span></div>
+              <div class="seat"><span class="seat-label">9</span></div>
+              <div class="seat"><span class="seat-label">10</span></div>
+              <span class="seat-row-indicator row-label">E</span>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+              <span class="seat-row-indicator row-label">F</span>
+              <div class="seat"><span class="seat-label">1</span></div>
+              <div class="seat"><span class="seat-label">2</span></div>
+              <div class="seat"><span class="seat-label">3</span></div>
+              <div class="seat"><span class="seat-label">4</span></div>
+              <div class="seat"><span class="seat-label">5</span></div>
+              <div class="seat"><span class="seat-label">6</span></div>
+              <div class="seat"><span class="seat-label">7</span></div>
+              <div class="seat"><span class="seat-label">8</span></div>
+              <div class="seat"><span class="seat-label">9</span></div>
+              <div class="seat"><span class="seat-label">10</span></div>
+              <span class="seat-row-indicator row-label">F</span>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+              <span class="seat-row-indicator row-label">G</span>
+              <div class="seat"><span class="seat-label">1</span></div>
+              <div class="seat"><span class="seat-label">2</span></div>
+              <div class="seat"><span class="seat-label">3</span></div>
+              <div class="seat"><span class="seat-label">4</span></div>
+              <div class="seat"><span class="seat-label">5</span></div>
+              <div class="seat"><span class="seat-label">6</span></div>
+              <div class="seat"><span class="seat-label">7</span></div>
+              <div class="seat"><span class="seat-label">8</span></div>
+              <div class="seat"><span class="seat-label">9</span></div>
+              <div class="seat"><span class="seat-label">10</span></div>
+              <span class="seat-row-indicator row-label">G</span>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <span class="seat-row-indicator row-label">VIP</span>
+            <div class="seat seat--vip"><span class="seat-label-special">VIP</span><span class="seat-label">1</span></div>            
+            <div class="seat seat--vip"><span class="seat-label-special">VIP</span><span class="seat-label">2</span></div>
+            <div class="seat seat--vip"><span class="seat-label-special">VIP</span><span class="seat-label">3</span></div>
+            <div class="seat seat--vip"><span class="seat-label-special">VIP</span><span class="seat-label">4</span></div>
+            <div class="seat seat--vip"><span class="seat-label-special">VIP</span><span class="seat-label">5</span></div>
+            <div class="seat seat--vip"><span class="seat-label-special">VIP</span><span class="seat-label">6</span></div>
+            <div class="seat seat--vip"><span class="seat-label-special">VIP</span><span class="seat-label">7</span></div>
+            <div class="seat seat--vip"><span class="seat-label-special">VIP</span><span class="seat-label">8</span></div>
+            <div class="seat seat--vip"><span class="seat-label-special">VIP</span><span class="seat-label">9</span></div>
+            <div class="seat seat--vip"><span class="seat-label-special">VIP</span><span class="seat-label">10</span></div>
+          <span class="seat-row-indicator row-label">VIP</span>
+          </div>
+        </div>
+      </div>
+      <form id="reservation-form" class="text-white">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <label for="num-seats" class="form-label">Seleccione el número de asientos:</label>
+            </div>
+            <div class="col-auto">
+                <input type="number" id="num-seats" name="num-seats" min="1" class="form-control col-auto" required>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <button type="button" class="btn btn-primary">Confirmar Reserva</button>
+        </div>
+    </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>UNIR-CINEMA</p>
+    <p>Dirección: Calle 28</p>
+    <p>Teléfono: 012 345 6789</p>
+    <p>Email: hola@unircinema.com</p>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
