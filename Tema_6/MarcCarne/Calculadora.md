@@ -8,6 +8,6 @@
 
 | Método HTTP  | URI            | Query Params | Request Body | Response Body    | Códigos HTTP de respuesta |
 |--------------|----------------|--------------|--------------|------------------|-------------------------|
-| POST         | /calculations  | -            | `{"operation": "+", operands: [2,2,2]}` | `{"calculationId": 1, "operation": "+", "operands": [2,2,2], "result": 6}` | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error |
-| GET         | /calculations  | -            | -                 | `{"calculations": [{"calculationId": 1, "operation": "+", "operands": [2,2,2], "result": 6}]}` | 200 OK<br/>404 Bad Request<br/>500 Internal Server Error |
-| GET         | /calculations/{calculationId}  | -            | -                 | `{"calculationId": 1, "operation": "+", "operands": [2,2,2], "result": 6}` | 200 OK<br/>404 Bad Request<br/>500 Internal Server Error |
+| POST         | /calculations  | -            | `{"operation": "+", "operands": [2,2,2]}` | `{"calculationId": 1, "operation": "+", "operands": [2,2,2], "result": 6}` | 201 Created<br/>400 Bad Request<br/>404 Not Found<br/>500 Internal Server Error |
+| GET         | /calculations  | -            | -                 | `{"calculations": [{"calculationId": 1, "operation": "+", "operands": [2,2,2], "result": 6}]}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
+| GET         | /calculations/{calculationId}  | -            | -                 | `{"calculationId": 1, "operation": "+", "operands": [2,2,2], "result": 6}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
