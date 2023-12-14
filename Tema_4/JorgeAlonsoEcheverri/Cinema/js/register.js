@@ -41,8 +41,9 @@ const validateFullName = () => {
 // Validar el campo de nombre de usuario
 const validateUsername = () => {
     let username = document.getElementById('username').value;
-    if (username.trim() === '') {
-        createErrorMessage('username', 'El nombre de usuario es obligatorio.');
+    let usernameRegex = /^[a-z0-9]{10}$/;
+    if (!usernameRegex.test(username)) {
+        createErrorMessage('username', 'El nombre de usuario debe tener 10 caracteres.');
     } else {
         removeErrorMessage('username');
     }
@@ -57,6 +58,7 @@ const validatePassword = () => {
     } else {
         removeErrorMessage('password');
     }
+    validateConfirmPassword()
 };
 
 // Validar el campo de confirmación de contraseña
@@ -94,8 +96,9 @@ document.getElementById('userForm').addEventListener('submit', (event) => {
     // Comprobar si hay mensajes de error
     let errorMessages = document.querySelectorAll('form p');
     if (errorMessages.length === 0) {
-        // No hay errores, se puede procesar el formulario
-        window.location.href = "./seats.html";
+        // No hay errores, se puede procesar el formulario, se elimina el alert
+        // Se utiliza replace para evitar que el usuario acceda de nuevo al formulario de registro
+        window.location.replace("./cinema.html")
     } else {
         // Hay errores, se informa al usuario
         alert('Por favor, corrija los errores antes de enviar el formulario.');
