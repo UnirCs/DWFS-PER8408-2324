@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: "Alef", serif;
+    background-color: #212529;
+    color: white;
+}
+
+.input-field input[type=text],
+.input-field input[type=password],
+.input-field input[type=email] {
+    color: #f1f1f1; /* Color de texto de entrada */
+    border-bottom: 1px solid #0d6efd; /* Borde azul para los inputs */
+}
+
+.input-field input[type=text]:focus .invalid,
+.input-field input[type=password]:focus .invalid,
+.input-field input[type=email]:focus .invalid {
+    color: red;
+    border-bottom: 1px solid red; /* Borde rojo en foco */
+
+}
+
+.input-field input[type=text]:focus .valid,
+.input-field input[type=password]:focus .valid,
+.input-field input[type=email]:focus .valid {
+    color: white!important;
+    border-bottom: 1px solid #0d6efd!important; /* Borde azul en foco */
+    box-shadow: 0 1px 0 0 #ffd700 /* Sombra amarilla en foco */
+}
+
+.btn {
+    background-color: #0d6efd;
+}
+
+.valid {
+    border-bottom: 1px solid #0d6efd!important;
+    box-shadow: 0 1px 0 0 #0d6efd!important;
+}
+
+input:focus.validate.valid ~ label {
+    color: white!important;
+}
+
+.error {
+    color: orange;
+}
