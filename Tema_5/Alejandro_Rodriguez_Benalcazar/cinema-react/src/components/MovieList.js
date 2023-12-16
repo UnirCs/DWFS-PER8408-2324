@@ -4,13 +4,14 @@ import {Movie} from "./Movie";
 
 
 export const MovieList = () => {
+
     return (
         <>
         {movies.map((movie, index) => (
                 <Movie
                     key={index}
                     titulo={movie.titulo}
-                    img={movie.img}
+                    image={movie.image}
                     sinopsis={movie.sinopsis}
                     duracion={movie.duracion}
                     genero={movie.genero}

@@ -1,10 +1,12 @@
 import React from "react";
+import ImageM from "../assets/napoleon.jpg"
+import { images } from "../constants";
 
-export const Movie = ({titulo, img, sinopsis, duracion, genero, puntuacion }) => {
+export const Movie = ({titulo, image, sinopsis, duracion, genero, puntuacion }) => {
     return (
         <div className="card">
             <h3>{titulo}</h3>
-            <img src={img}/>
+            <img className="image" src={images[image]}/>
             <p>Sinopsis: {sinopsis}</p>
             <p>Duración: {duracion}</p>
             <p>Género: {genero}</p>
