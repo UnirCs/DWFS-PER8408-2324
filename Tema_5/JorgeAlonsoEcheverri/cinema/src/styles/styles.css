@@ -1,3 +1,8 @@
+.dark-mode {
+    background-color: #343a40;
+    color: white;
+}
+
 .multiline {
     padding: 0 12.5rem;
     display: flex;
@@ -20,6 +25,10 @@
 
 .movie-details:hover {
     box-shadow: 0 0 18px rgba(0, 0, 0, .25);
+}
+
+.movie-details.dark-mode:hover {
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
 }
 
 .movie:hover img {
@@ -71,4 +80,12 @@
 
 .rating {
     margin-right: 5px;
+}
+
+.dark-mode-section {
+    padding: 0 12.5rem;
+}
+
+.movie-info-card.dark-mode {
+    background-color: #595959;
 }
