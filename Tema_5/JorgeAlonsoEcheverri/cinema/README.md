@@ -1,3 +1,6 @@
+### Visit the page
+Open the [link](https://cinema-mauve.vercel.app/) to view the app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
