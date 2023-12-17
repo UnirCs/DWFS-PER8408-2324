@@ -9,6 +9,7 @@ import harryPotterOrdenDelFenixImg from '../img/harryPotterOrdenDelFenix.jpg'
 import jokerImg from '../img/joker.jpg'
 import johnWickImg from '../img/johnWick.jpg'
 import infinityWarImg from '../img/infinityWar.jpg'
+import {DarkMode} from "../components/DarkMode";
 
 export const Home = () => {
     const movies = [
@@ -89,6 +90,7 @@ export const Home = () => {
     return (
         <div>
             <Header/>
+            <DarkMode/>
             <section className="multiline">
                 {movies.map((movie) => (
                     <Movie
