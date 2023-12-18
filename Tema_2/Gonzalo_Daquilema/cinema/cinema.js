@@ -77,10 +77,10 @@ function suggest(numberSeat) {
     console.log(room);
     let availableSeats = [];
 
-    for (let y = 0; y < room.length; y++) {
+    for (let y = room.length - 1; y >= 0; y--) { // Bucle desde la parte inferior hacia arriba
         availableSeats = [];
 
-        for (let x = 0; x < room.length; x++) {
+        for (let x = 0; x < room[y].length; x++) {
             if (room[y][x].state === false) {
                 availableSeats.push(room[y][x].id);
             }
