@@ -37,12 +37,21 @@ function suggest(n) {
             }
         }
     }
+    console.log("Asientos sugeridos:" + Array.from(d));
     return d;
 }
 
 // Inicializar la matriz
 let butacas = setup();
 
+const numSillas = document.getElementById("numero");
+const resultado = document.getElementById("selecion");
+
+numSillas.oninput = function() {
+    if(!isNaN(numSillas.value)){
+        resultado.innerHTML = Array.from(suggest(numSillas.value)).join(', ');
+    }else resultado.innerHTML = "<br/>";
+}
+
 // Imprimir la matriz
 console.log(butacas);
-console.log(suggest(5));
