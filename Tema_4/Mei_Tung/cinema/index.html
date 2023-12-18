@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNIR Cinema - Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-body-tertiary">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-xl-4">
+                <h2 class="text-center text-danger mb-5">Registro de Usuario</h2>
+                <form id="userForm"  class="d-grid gap-3 needs-validation" novalidate>
+                    <div class="form-floating">
+                        <input id="fullName" type="text" name="fullName" class="form-control shadow" required>
+                        <label for="fullName">Nombre y apellidos</label>
+                    </div>
+                    <div class="form-floating">
+                        <input id="username" type="text" name="username" class="form-control shadow" required>
+                        <label for="username">Nombre de usuario</label>
+                    </div>
+                    <div class="form-floating">
+                        <input id="password" type="password" name="password" class="form-control shadow" required>
+                        <label for="password">Contraseña</label>
+                    </div>
+                    <div class="form-floating">
+                        <input id="confirmPassword" type="password" name="confirmPassword" class="form-control shadow" required>
+                        <label for="confirmPassword">Confirmar contraseña</label>
+                    </div>
+                    <div class="form-floating">
+                        <input id="email" type="email" name="email" class="form-control shadow" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <button type="submit" class="btn btn-danger">
+                        Registrar
+                        <i class="fa-solid fa-user-plus ps-1"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
