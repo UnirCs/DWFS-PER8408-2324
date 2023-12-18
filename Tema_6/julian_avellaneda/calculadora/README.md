@@ -16,9 +16,13 @@ Nuestra calculadora tendrá memoria y siempre se podrán consultar los datos de 
 ## Propuesta
 
 **Recursos identificados:**
+- Operacion (operators): Representa las operaciones disponibles
+- Resultados (results): Representa los resultados
 
 
-| Método HTTP                            | URI            | Query Params  | Cuerpo de la Petición                                           | Cuerpo de la Respuesta | Códigos de Respuesta                                    |
-|----------------------------------------|----------------|---------------|-----------------------------------------------------------------|-----------------------|---------------------------------------------------------|
-|                                     |                |  |                                                                 |                       |    |
+| Método HTTP | URI             | Query Params | Cuerpo de la Petición         | Cuerpo de la Respuesta             | Códigos de Respuesta |
+|-------------|-----------------|--------------|-------------------------------|------------------------------------|----------------------|
+| POST        | /operators/add  | N/A          | `{"numbers": [1, 2, 3, ...]}` | `{"result_id": 123, "result": 6 }` | 200 OK               |
+| POST        | /operators/subs | N/A          | `{"numbers": [1, 2, 3, ...]}` | `{"result_id": 123, "result": 0 }` | 200 OK               |
+| POST
 
