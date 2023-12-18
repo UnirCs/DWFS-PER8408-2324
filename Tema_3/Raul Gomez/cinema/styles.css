@@ -1,0 +1,23 @@
+.pantalla {
+    height: 250px;
+}
+
+span {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: 6px;
+    vertical-align: middle;
+}
+
+.asiento {
+    background-color: #f9f9f9;
+}
+
+.reservado {
+    background-color: rgb(var(--bs-dark-rgb));
+}
+
+.mx-auto {
+    width: 300px;
+}

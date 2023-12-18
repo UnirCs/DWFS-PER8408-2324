@@ -1,0 +1,139 @@
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.content__border {
+    margin: 20px;
+    border: white 1px solid;
+}
+
+.header__content {
+    height: 200px;
+    border-radius: 10px;
+    font-size: 46px;
+    font-weight: bold;
+    display: flex;
+    background-color: firebrick;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+
+.cinema__screen {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    height: 300px;
+    background-color: #333333;
+}
+
+.cinema__seats {
+    line-height: 3;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.numbers__left_column,
+.numbers__right_column {
+    font-size: 20px;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.seats__inside_space {
+    display: flex;
+    width: auto;
+}
+
+tr {
+    display: table-row;
+    align-items: center;
+}
+
+.cinema__row_banners {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row_banners__left,
+.row_banners__right {
+    line-height: 3;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 20px;
+}
+
+.seats__seat,
+.seats__space_between_seats{
+    width: 30px;
+    height: 30px;
+}
+
+.seats__seat--occupied{
+    width: 30px;
+    height: 30px;
+    background-color: #5a5a5a;
+}
+
+.seats__seat--selected{
+    width: 30px;
+    height: 30px;
+    background-color: firebrick;
+}
+
+.cinema__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.seats__form {
+    display: block;
+    text-align: center;
+}
+
+.form__label {
+    display: block;
+    color: firebrick;
+    font-size: 20px;
+}
+
+.form__input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100px;
+    height: 30px;
+}
+
+.form__button {
+    background-color: firebrick;
+    height: 30px;
+    width: auto;
+    border-color: firebrick;
+    border-radius: 4px;
+}
+
+.footer__content {
+    height: 200px;
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    background-color: #5a5a5a;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 40px;
+    line-height: 2.5;
+}
+
+
+

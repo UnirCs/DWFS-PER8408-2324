@@ -1,0 +1,88 @@
+/* Estilos personalizados */
+body{
+    margin: 5%;
+    font-family: "Bodoni MT";
+    font-size: 28px;
+    background-image: url("./resources/fondo.jpg");
+}
+
+.darkBody {
+    margin: 5%;
+    background-image: url("./resources/darkfondo.jpg");
+
+}
+.darkCard {
+    margin-top: 30px;
+    border: none;
+    background-color: rgba(30,30,20,80);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.darkFont{
+    color: white;
+}
+
+.card {
+    margin-top: 30px;
+    border: none;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+
+}
+
+#buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.error{
+    text-align: center;
+    font-size: 17px;
+    color: red;
+}
+
+.successBorder{
+    border-color: green;
+    border-width: 3px;
+}
+
+.errorBorder{
+    border-color: red;
+    border-width: 3px;
+}
+
+
+.form-group, label, #submitButton {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+
+}
+
+.form-switch{
+    margin: auto;
+}
+
+.form-check-label{
+    font-size: 17px;
+
+}
