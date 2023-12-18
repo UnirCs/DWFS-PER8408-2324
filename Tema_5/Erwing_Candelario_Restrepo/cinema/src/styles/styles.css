@@ -1,0 +1,19 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #e1dbdb;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	word-wrap: break-word;
+}
+.center-text {
+	text-align: center;
+}
