@@ -1,0 +1,63 @@
+/*id*/
+#pantalla{
+    border-style: double;
+    padding: 40px;
+    width: 50%;
+    background-color: rgb(130, 192, 211);
+    margin: auto;
+}
+
+/* Etiquetas*/
+h1{
+    font-size: 20px;
+    color: rgb(212, 247, 247); 
+    text-align: center;
+}
+
+/* clases*/
+.coloremcabezadopie{
+    border-style: groove;
+    padding: 10px;
+    margin: 10px;
+    width: 95%;
+    background-color: rgb(48, 147, 177);
+}
+
+.marco{
+	border: 2px solid #3586d6;
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+}
+
+.center{
+    text-align: center;
+    color: rgb(209, 211, 211); 
+    font-size: 18px;
+}
+
+.centerform{
+    margin: auto;
+    text-align: center;
+}
+/*estilo*/
+td{
+    background-color: rgb(159, 161, 161);
+    width: 40px;
+    height: 40px;
+}
+
+td[estilo="ocupado"] {
+    background-color: rgb(223, 81, 135);
+}
+
+td[estilo="desocupado"]:hover {
+    background-color:  rgb(223, 81, 135);
+}
+
+td:hover {
+    background-color: rgb(223, 81, 135);
+}
+
+table{
+    margin: auto;
+}
