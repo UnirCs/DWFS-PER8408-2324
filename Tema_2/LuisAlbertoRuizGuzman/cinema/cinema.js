@@ -54,7 +54,7 @@ function suggest(n=2) {
             j--;
         }
         i--;
-        j = butacas.length - 1;;
+        j = butacas.length - 1;
     }
 
     if(butacasReservadas.length < n){//Esta condicion se agrego por si en el array anterior estando en la primera fila no llega a resetear las butacas por que ya no hay mas filas que recorrer
