@@ -1,29 +1,37 @@
-/* Estilo general en modo oscuro */
+
 body {
-    background-color: #1a1a1a;
+    background-color: #ffffff;
     color: #fff;
     font-family: 'Arial', sans-serif;
 }
 
-.card {
-    background-color: #333;
-    border: 1px solid #444;
+.billboard {
+    background-color: #4099ff;
+    border: 1px solid #0034ff;
     border-radius: 8px;
     padding: 20px;
     margin: 20px;
-    color: #f0e68c;
+    color: #fdfdfd;
 }
 
-.restaurant-container {
+.billboard > img{
+    width: 155px;
+    height: 240px;
+    border-color: #ffe700;
+    border-radius: 15px;
+
+}
+
+.cine-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.restaurant-container > * {
-    flex: 1 1 40%; /* Esto hará que los elementos ocupen aproximadamente el 40% del ancho del contenedor, pero se ajustarán para evitar el desbordamiento */
+.cine-container > * {
+    flex: 1 1 25%; /* Esto hará que los elementos ocupen aproximadamente el 40% del ancho del contenedor, pero se ajustarán para evitar el desbordamiento */
     max-width: 40%; /* Esto limitará el ancho de los elementos al 40% del contenedor */
-    margin: 10px; /* Esto agregará un poco de espacio alrededor de los elementos */
+    margin: 20px; /* Esto agregará un poco de espacio alrededor de los elementos */
 }
 
 .header-footer {
@@ -33,9 +41,30 @@ body {
 }
 
 .header-footer-text {
-    color: #f0e68c;
+    color: #ffe700;
 }
 
 .center-text {
     text-align: center;
+    color: darkblue;
+    font-family: "MS Gothic";
 }
+
+.billboard > button{
+    width: 120px;
+    height: 30px;
+    border-color: #000000;
+    border-radius: 15px;
+    background-color: #ffe700;
+    font-family: "Arial Black";
+
+}
+
+.billboard > button:hover{
+    width: 120px;
+    height: 30px;
+    border-color: #ffffff;
+    border-radius: 15px;
+    background-color: #f51c1c;
+    font-family: "Arial Black";
+    }
