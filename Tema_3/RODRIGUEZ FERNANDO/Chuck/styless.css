@@ -1,0 +1,17 @@
+body {
+  background-color: #1f2b3e;
+  color: white;
+  font-family: Helvetica;
+}
+button {
+  background-color: #ff4081;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
