@@ -24,5 +24,6 @@ Nuestra calculadora tendrá memoria y siempre se podrán consultar los datos de 
 |-------------|-----------------|--------------|-------------------------------|------------------------------------|----------------------|
 | POST        | /operators/add  | N/A          | `{"numbers": [1, 2, 3, ...]}` | `{"result_id": 123, "result": 6 }` | 200 OK               |
 | POST        | /operators/subs | N/A          | `{"numbers": [1, 2, 3, ...]}` | `{"result_id": 123, "result": 0 }` | 200 OK               |
-| POST
+| POST        | /operators/mult | N/A          | `{"firstNumber": 2, "secondNumber": 2}`| `{"result_id": 123, "result": 4}` | 200 OK |
+
 
