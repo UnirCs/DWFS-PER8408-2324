@@ -1,0 +1,61 @@
+.body{
+    background-color: #f2d100;
+    margin: 10px;
+}
+#banner{
+    background-color: #5e5e5e;
+    border-radius: 10px;
+    padding: 10px;
+    color: #F5F6F7;
+}
+#cine{
+    background-color: #0a101a;
+    border-radius: 10px;
+    padding: 80px;
+}
+#filas{
+    border: 3px solid #0a101a;
+    border-radius: 10px;
+    color: #F5F6F7;
+}
+.contenedor-sillas{
+    width: 100%; /* Establece el ancho deseado del contenedor */
+    white-space: nowrap; /* Evita saltos de línea en el contenido */
+}
+.silla-disponible{
+    height: 40px;
+    width: 40px;
+    transition: opacity 0.3s;
+}
+.silla-ocupada{
+    height: 40px;
+    width: 40px;
+    transition: opacity 0.3s;
+}
+#solicitar{
+    background-color: #5e5e5e;
+    border-radius: 10px;
+    padding: 10px;
+    color: #F5F6F7;
+}
+.silla-disponible:hover{
+    content: url('img/SillaLibre-Abierta.jpg');
+}
+#footer{
+    background-color: #5e5e5e;
+    border-radius: 10px;
+    padding: 10px;
+    color: #F5F6F7;
+}
+.item {
+    color: #F5F6F7;
+    font-weight: 600;
+}
+.item > span {
+    color: #000000;
+    font-weight: 400;
+}
+#matriz-sillas{
+    width: 100%;
+    background-color: #5e5e5e;
+}
