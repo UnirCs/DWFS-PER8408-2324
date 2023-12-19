@@ -1,0 +1,39 @@
+body {
+    background-color: #312f2f;
+}
+
+.Formulario {
+    width: 80%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    background-color: #1c61cab9;
+}
+
+.textoChiste{
+    background-color: #faf2f2b9;
+    color: #000000;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+
+
+#chisteBtn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+#chisteBtn:hover {
+    background-color: #949292;
+    color: #ffffff;
+}
+
+
+
