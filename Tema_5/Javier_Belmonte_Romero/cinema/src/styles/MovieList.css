@@ -1,0 +1,10 @@
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}

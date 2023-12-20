@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styless.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuck Norris</title>
+  </head>
+  <body>
+    <!-- onclick="callJoke() si no se usa el evneto del button -->
+    <button id="jokeButton">Nuevo Chiste</button>
+    <p id="jokeText"></p>
+  </body>
+
+  <script>
+    const jokeButton = document.getElementById("jokeButton");
+    const jokeText = document.getElementById("jokeText");
+
+    function callJoke() {
+      fetch("https://api.chucknorris.io/jokes/random")
+        .then((response) => response.json())
+        .then((data) => {
+          jokeText.innerHTML = data.value;
+        });
+    }
+    jokeButton.addEventListener("click", callJoke);
+  </script>
+</html>
