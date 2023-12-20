@@ -1,5 +1,4 @@
 import React from "react";
-import ImageM from "../assets/napoleon.jpg"
 import { images } from "../constants";
 
 export const Movie = ({titulo, image, sinopsis, duracion, genero, puntuacion }) => {
