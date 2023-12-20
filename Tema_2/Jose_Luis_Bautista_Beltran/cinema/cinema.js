@@ -18,6 +18,7 @@ function setup() {
         }
         butacas.push(fila);
     }
+    console.log("Butacas inicializadas");
     return butacas;
 }
 
@@ -36,15 +37,12 @@ function llenar(butacas){
     butacas[1][6].estado = true;
     butacas[0][6].estado = true;
 }
-function suggest(asientosSugeridos){
-
-    let asientos = [];
+function suggest( asientosSugeridos){
 
     if (asientosSugeridos <= N) {
-
+        let encontrado = false;
         let fila_existe = 0;
         let start = 0;
-        let encontrado = false;
         for (let n_filas = N - 1; n_filas >= 0; n_filas--) {
             if (encontrado === false) {
                 let fila = butacas[n_filas];
@@ -71,15 +69,18 @@ function suggest(asientosSugeridos){
         }
 
         if (encontrado === true) {
-
+            let asientos = [];
             for (let i = start + 1; i <= start + asientosSugeridos; i++)
                 asientos.push(fila_existe * 10 + i);
 
+            return asientos;
         }
+        else
+            return {};
 
     }
-
-    return asientos;
+    else
+        return {};
 }
 // Imprimir la matriz
 //console.log(butacas);
