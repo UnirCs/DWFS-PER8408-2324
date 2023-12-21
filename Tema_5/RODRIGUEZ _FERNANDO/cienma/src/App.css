@@ -1,0 +1,20 @@
+header {
+  width: 100%;
+  background: #d15e81;
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  color: white;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  height: min-content;
+  bottom: 0px;
+  text-align: center;
+  background: #d15e81;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
