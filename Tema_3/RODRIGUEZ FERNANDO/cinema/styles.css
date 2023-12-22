@@ -1,0 +1,129 @@
+body {
+  background-color: #ebebeb;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1f2b3e;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 45px;
+  font-weight: 800;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1f2b3e;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+
+footer p {
+  color: white;
+}
+
+.theater-screen {
+  width: 100%;
+  height: 10rem;
+  background-color: #374357;
+}
+
+.theater-seat {
+  margin: 4rem;
+  border: 0.4rem solid #cee8ff;
+  height: 31rem;
+  background-color: #0f1c2e;
+  display: flex;
+  flex-direction: column;
+}
+
+.theater-row {
+  height: 5rem;
+  width: 100%;
+  margin: 0.5rem 0 1rem 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.row-name {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.row-seat-selected {
+  background-color: #ff4081;
+  height: 3rem;
+  width: 3rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-seat-no-selected {
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid #ff79b0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-seat-no-selected:hover {
+  height: 3rem;
+  width: 3rem;
+  /* border: 1px solid #ff79b0; */
+  background-color: #ff4081;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theater-selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.theater-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.form-div {
+  padding-left: 20px;
+}
+
+.form-label-selection {
+  font-size: 18px;
+  color: #0f1c2e;
+  white-space: wrap;
+}
+
+.form-button {
+  background-color: #0f1c2e;
+  color: white;
+  border-radius: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: bold;
+}
