@@ -41,10 +41,14 @@ function suggest(asientos){
                     if(idInicio == 0) {idInicio = butacas[fila][columna].id  }
                     reserva.push(idInicio++);
                 }
+                if(idInicio >= 0 && reserva.length < asientos && butacas[fila][columna].estado ){
+                    idInicio = 0;
+                    reserva = [];
+                }
             }
-            console.log(reserva);
             //Si hay asientos disponible actualizamos
-            if(reserva.length == asientos ){
+            if(reserva.length == asientos && asientos > 0 ){
+                console.log("Asientos Sugeridos: " + reserva.toString());
                 for(columna = 0;columna < M; columna++ ){
                     if( !butacas[fila][columna].estado && reserva.find( x => x == butacas[fila][columna].id ) ){
                         butacas[fila][columna].estado = true;
@@ -54,38 +58,18 @@ function suggest(asientos){
             } 
         }
     } 
-} 
-
-// Inicializar la matriz
-let butacas = setup();
-
-/*
-reserva = suggest(3);
-console.log(butacas);
-
-reserva = suggest(2);
-console.log(butacas);
-
-reserva = suggest(4);
-console.log(butacas);
-
-reserva = suggest(5);
-console.log(butacas);
-*/
+}
 
 let butacasHtml = document.getElementsByTagName('td');
 
 for(let i = 0 ; i < butacasHtml.length ; i ++ ){
-    butacasHtml[i].id = i+1; 
+    butacasHtml[i].id = i+1;
 }
 
 
 function actualizaTabla(){
-
     let asientos = document.getElementById("asientos").value;
     let reserva = suggest(asientos);
-
-    if( asientos == 0) return ; 
 
     for (let i = 0; i < N; i++) {
         for (let j = 0; j < M; j++) {
@@ -94,14 +78,37 @@ function actualizaTabla(){
                 let butaca =  butacasHtml[ butacas[i][j].id - 1 ] ;
                 if(butaca){
                     butaca.className = "seleccionado";
-                }    
-            } 
+                }
+            }
         }
-    }    
+    }
 }
 
+// Inicializar la matriz
+let butacas = setup();
+
+butacas[4][0].estado = true;
+butacas[4][1].estado = true;
+butacas[4][2].estado = true;
+butacas[4][3].estado = true;
+butacas[4][4].estado = true;
+butacas[4][5].estado = true;
+
+butacas[2][5].estado = true;
+butacas[2][6].estado = true;
+butacas[2][2].estado = true;
+butacas[2][7].estado = true;
+
+butacas[1][8].estado = true;
+butacas[1][9].estado = true;
+butacas[1][7].estado = true;
 
 
-// butacasHtml.forEach(element => {
-    
-// });
+console.log(butacas);
+actualizaTabla();
+console.log("Butacas Inicializadas")
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    unit_page = false;
+});

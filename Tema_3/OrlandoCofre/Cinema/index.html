@@ -103,7 +103,7 @@
         </table>
         <br>
         <label class="titulo" >Indicar cuandos asientos quiere reservar</label><br><br>
-        <input type="number" id="asientos" oninput="actualizaTabla();" value="0" ></input><br>
+        <input type="number" id="asientos" oninput="if(this.value)actualizaTabla();" value="0" ></input><br>
         <button>Confirmar Reswerva</button>
 
     </section>
