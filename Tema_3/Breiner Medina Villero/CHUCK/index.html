@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chistes de Chuck Norris</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+        <body>
+            <div class="CUADRO1">
+                <p id="TEXTO"></p>
+                <button type="button" onclick="CHISTE_CHUCK_SIN()">Dame un Chiste</button>
+                <!-- <p>Hola</p> -->
+            </div>
+            <!-- ---------------------------------------- -->
+                <script>
+                    async function CHISTE_CHUCK_SIN()
+                    {
+                        let url = "https://api.chucknorris.io/jokes/random";
+                        let fetchRPTA = await fetch(url);
+                        let json = await fetchRPTA.json();
+                        let fact = json.value;
+                        let PARRAFO = document.getElementById("TEXTO");
+                        PARRAFO.innerHTML=fact;
+                        return fact;
+                    }
+                </script>
+            <!-- ---------------------------------------- -->
+        </body>
+</html>

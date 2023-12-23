@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <header>Cinema Banquito</header>
+
+    <div class="theater-screen"></div>
+
+    <div class="theater-seat">
+      <div class="theater-row">
+        <div class="row-name">Fila A</div>
+        <div class="row-seat-selected">1</div>
+        <div class="row-seat-selected">2</div>
+        <div class="row-seat-selected">3</div>
+        <div class="row-seat-no-selected">4</div>
+        <div class="row-seat-selected">5</div>
+        <div class="row-seat-no-selected">6</div>
+        <div class="row-seat-selected">7</div>
+        <div class="row-seat-no-selected">8</div>
+        <div class="row-seat-selected">9</div>
+        <div class="row-seat-no-selected">10</div>
+      </div>
+      <div class="theater-row">
+        <div class="row-name">Fila B</div>
+        <div class="row-seat-no-selected">1</div>
+        <div class="row-seat-no-selected">2</div>
+        <div class="row-seat-no-selected">3</div>
+        <div class="row-seat-no-selected">4</div>
+        <div class="row-seat-no-selected">5</div>
+        <div class="row-seat-no-selected">6</div>
+        <div class="row-seat-no-selected">7</div>
+        <div class="row-seat-no-selected">8</div>
+        <div class="row-seat-no-selected">9</div>
+        <div class="row-seat-no-selected">10</div>
+      </div>
+
+      <div class="theater-row">
+        <div class="row-name">Fila C</div>
+        <div class="row-seat-selected">1</div>
+        <div class="row-seat-selected">2</div>
+        <div class="row-seat-no-selected">3</div>
+        <div class="row-seat-no-selected">4</div>
+        <div class="row-seat-no-selected">5</div>
+        <div class="row-seat-no-selected">6</div>
+        <div class="row-seat-selected">7</div>
+        <div class="row-seat-selected">8</div>
+        <div class="row-seat-selected">9</div>
+        <div class="row-seat-selected">10</div>
+      </div>
+
+      <div class="theater-row">
+        <div class="row-name">Fila D</div>
+        <div class="row-seat-selected">1</div>
+        <div class="row-seat-selected">2</div>
+        <div class="row-seat-selected">3</div>
+        <div class="row-seat-selected">4</div>
+        <div class="row-seat-selected">5</div>
+        <div class="row-seat-selected">6</div>
+        <div class="row-seat-no-selected">7</div>
+        <div class="row-seat-no-selected">8</div>
+        <div class="row-seat-no-selected">9</div>
+        <div class="row-seat-no-selected">10</div>
+      </div>
+
+      <div class="theater-row">
+        <div class="row-name">Fila E</div>
+        <div class="row-seat-selected">1</div>
+        <div class="row-seat-selected">2</div>
+        <div class="row-seat-no-selected">3</div>
+        <div class="row-seat-no-selected">4</div>
+        <div class="row-seat-no-selected">5</div>
+        <div class="row-seat-no-selected">6</div>
+        <div class="row-seat-selected">7</div>
+        <div class="row-seat-selected">8</div>
+        <div class="row-seat-selected">9</div>
+        <div class="row-seat-selected">10</div>
+      </div>
+    </div>
+
+    <div class="theater-selection">
+      <form class="theater-form">
+        <label for="seatsSelected" class="form-label-selection"
+          >Selecciona el # de asientos a reservar</label
+        >
+        <input
+          type="text"
+          name="seatsSelected"
+          class="col-md-6"
+          id="seatsSelected"
+        />
+        <div class="form-div">
+          <button
+            type="submit"
+            class="form-button"
+            value="selected"
+            id="buttonSelected"
+          >
+            Seleccionar
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <p>Cines Banquito - Quito Ecuador</p>
+    </footer>
+    <script src="cinema.js"></script>
+  </body>
+</html>

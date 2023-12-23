@@ -1,0 +1,9 @@
+h1 {
+    color: white;
+    font-size: calc(2.375rem + 1.5vw);
+}
+
+.header{
+    text-align: center!important;
+    box-sizing: border-box;
+}
