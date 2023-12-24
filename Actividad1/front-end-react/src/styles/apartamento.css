@@ -1,0 +1,15 @@
+.apartamento__contenedor{
+    text-align: center;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+}
+
+.apartamento__header{
+    text-align: center;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: thin;
+    border-radius: 10px;
+}

@@ -1,0 +1,7 @@
+.listado__header{
+    text-align: center;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: thin;
+    border-radius: 10px;
+}

@@ -1,0 +1,26 @@
+.boton--detalle {
+    padding: 3px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boton--detalle:hover {
+    background-color: #3e8e41;
+}
+.boton--detalle:active {
+    background-color: white;
+    color: #45a049;
+}
+
+.boton--pago {
+    padding: 3px 15px;
+    background-color: #ef1a1a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
