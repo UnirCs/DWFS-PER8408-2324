@@ -1,0 +1,97 @@
+body {
+  font-family: sans-serif;
+  background-color: #5f5635 !important;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+main {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.pantalla {
+  width: 100%;
+  height: 500px; 
+  background-color: #000;
+  margin-top: 5rem;
+  
+}
+
+.filas {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fila {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+div.fila > div {
+  text-align: center;
+  color: orange;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.silla {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #198754;
+  cursor: pointer;
+  color: #198754 !important;
+}
+
+.silla:hover{
+  background-color: rgb(71, 133, 228);
+}
+
+.silla_ocupada {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid red;
+  color: red;
+  cursor: not-allowed;
+
+}
+
+
+
+.formulario {
+  margin-top: 20px;
+  justify-content: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+}
+.formulario_button_submit{
+  margin-top: 2rem; 
+  
+
+}
+footer{
+  text-align: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
