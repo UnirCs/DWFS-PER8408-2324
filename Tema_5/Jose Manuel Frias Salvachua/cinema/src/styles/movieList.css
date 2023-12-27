@@ -1,0 +1,16 @@
+
+.movieList-text {
+    text-align: center;
+    color: #f0e68c;
+}
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movies-container > * {
+    flex: 1 1 10%; /* Esto hará que los elementos ocupen aproximadamente el 40% del ancho del contenedor, pero se ajustarán para evitar el desbordamiento */
+    max-width: 40%; /* Esto limitará el ancho de los elementos al 40% del contenedor */
+    margin: 10px; /* Esto agregará un poco de espacio alrededor de los elementos */
+}
