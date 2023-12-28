@@ -25,49 +25,46 @@ function setup() {
 let butacas = setup();
 
 
-function suggest(nAsientos){
+function suggest(nAsientos) {
 
     let filas = butacas.length;
 
-    if(nAsientos>butacas.length){
+    if (nAsientos > butacas.length) {
         return [];
     }
+    let result = [];
+    let isThereArmchairs = false;
+    for (let i = filas - 1; i >= 0; i--) {
 
-    for (let i = filas-1; i >= 0; i--) {
+        for (let j = butacas[i].length - 1; j >= 0 && !isThereArmchairs; j--) {
+            if ((j + 1 - nAsientos) >= 0 && !isThereArmchairs) {
 
-        for (let j = butacas[i].length-1; j >= 0; j--) {
-            if((j+1-nAsientos)<0){
-                break;
-            }
-            let aux = 0;
-            let aux2 = j;
-            let thereIsButacas = true;
-            while(aux<=nAsientos){
-                aux++;
-                if(!butacas[i][aux2].estado && aux == nAsientos){
-                    thereIsButacas = true;
-                    break;
-                } else if(butacas[i][aux2].estado){
-                    thereIsButacas=false;
-                    break;
+                let aux = 1;
+                let aux2 = j;
+                while (aux <= nAsientos) {
+                    if (!butacas[i][aux2].estado && aux == nAsientos) { // Is the seat unoccupied?
+                        isThereArmchairs = true;
+                    } else if (butacas[i][aux2].estado) { // Is the seat occupied??
+                        isThereArmchairs = false;
+                        aux = nAsientos + 1;
+                    }
+                    aux++;
+                    aux2--;
                 }
-                aux2--;
-            }
 
-            if(thereIsButacas){
-                let result = [];
-                let x = j;
-                for (let z = 1; z <= nAsientos; z++) {
-                    butacas[i][x].estado=true;
-                    result.push(butacas[i][x].id)
-                    x--;
+                if (isThereArmchairs) {
+                    let x = j;
+                    for (let z = 1; z <= nAsientos; z++) {
+                        butacas[i][x].estado = true;
+                        result.push(butacas[i][x].id)
+                        x--;
+                    }
                 }
-                return result;
             }
 
         }
     }
-    return [];
+    return result;
 
 }
 

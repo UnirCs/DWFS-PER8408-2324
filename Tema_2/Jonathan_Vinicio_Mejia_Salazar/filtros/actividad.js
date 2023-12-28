@@ -165,20 +165,18 @@ function scaleDown() {
     let x = 0;
     let y = 0;
     for (let i = 0; i < pixels.length; i++) {
-        if (i % 2 == 0) {
-            continue;
-        }
-        newPixels.push([]);
-        for (let j = 0; j < pixels[i].length; j++) {
+        if (i % 2 != 0) {
+            newPixels.push([]);
+            for (let j = 0; j < pixels[i].length; j++) {
 
-            if (j % 2 == 0) {
-                continue;
+                if (j % 2 != 0) {
+                    newPixels[x].push(pixels[i][j])
+                    y++;
+                }
+
             }
-            newPixels[x].push(pixels[i][j])
-            y++;
-
+            x++;
         }
-        x++;
     }
 
     handler.savePixels(newPixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
