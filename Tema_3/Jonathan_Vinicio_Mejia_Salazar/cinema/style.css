@@ -1,0 +1,18 @@
+.butaca{
+    height: 10px;
+    width: 10px;
+    border: 1px solid;
+}
+
+.ocupada{
+    background-color: green;
+}
+
+table,
+.form{
+    margin: auto;
+}
+h1,
+.form{
+    text-align: center;
+}
