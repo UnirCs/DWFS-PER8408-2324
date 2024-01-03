@@ -1,0 +1,69 @@
+/* Estilo general en modo oscuro */
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.header, footer {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+div > h2 {
+    text-align: center;
+}
+
+.card {
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    text-align: justify;
+}
+
+.card > h3 {
+    color: yellowgreen;
+}
+
+.restaurant-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cartelera-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cartelera-container > * {
+    flex: 1 1 40%; /* Esto hará que los elementos ocupen aproximadamente el 40% del ancho del contenedor, pero se ajustarán para evitar el desbordamiento */
+    max-width: 40%; /* Esto limitará el ancho de los elementos al 40% del contenedor */
+    margin: 10px; /* Esto agregará un poco de espacio alrededor de los elementos */
+}
+
+
+.center-text {
+    text-align: center;
+}
+
+.carteles {
+    display: block; /* Esto le indicará al navegador que trate la imagen como si fuera un elemento de bloque, no un elemento en línea, lo que te permitirá usar la propiedad de margen CSS */
+    width: 60%; /* Cantidad fija para que no abarque toda la ventana */
+    margin: auto; /* Establece los márgenes izquierdo y derecho en «automático» para que sean iguales */
+    margin-bottom: 40px;
+}
+
+input {
+    display: block;
+    margin-left: 450px;
+}
+
+header > h1 {
+    color: yellowgreen;
+}

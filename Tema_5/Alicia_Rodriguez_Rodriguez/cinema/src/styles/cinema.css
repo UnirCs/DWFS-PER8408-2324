@@ -1,0 +1,29 @@
+.cinema-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+* {
+    font-family: "Candara", serif;
+    font-size: calc(0.5rem + 0.5vw);
+}
+
+
+
+body{
+    background-color: darksalmon;
+}
+
+.button{
+    float: right;
+    background: darksalmon;
+    min-height: 50px;
+    font-size: calc(0.8rem + 0.5vw);
+}
+
+.button:hover{
+    background: lightsalmon;
+}

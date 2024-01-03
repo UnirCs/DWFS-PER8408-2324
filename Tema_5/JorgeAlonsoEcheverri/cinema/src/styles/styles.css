@@ -1,0 +1,91 @@
+.dark-mode {
+    background-color: #343a40;
+    color: white;
+}
+
+.multiline {
+    padding: 0 12.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    display: block;
+    flex: none;
+    width: 25%;
+    padding: 1.5rem;
+}
+
+.movie-details {
+    padding: 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+    transition: all .3s ease-in-out;
+}
+
+.movie-details:hover {
+    box-shadow: 0 0 18px rgba(0, 0, 0, .25);
+}
+
+.movie-details.dark-mode:hover {
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
+}
+
+.movie:hover img {
+    transform: scale(1.01);
+}
+
+.movie-img, .movie-info {
+    margin-bottom: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+.movie-img img {
+    border-radius: 2%;
+    width: 100%;
+    max-width: 100%;
+    transition: all .3s ease;
+}
+
+.premiere {
+    position: absolute;
+    background-color: #f0ad4e;
+    font-weight: 500;
+    font-size: 1rem;
+    z-index: 1;
+    line-height: 1;
+    text-transform: uppercase;
+    width: 40%;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1.5rem;
+    border-bottom-left-radius: 5px;
+}
+
+.movie-info h2 {
+    font-size: 1.25rem;
+    margin: 0 0 .5rem;
+}
+
+.movie-info-card {
+    background-color: #cdcdcd;
+    border-radius: 8px;
+    padding: .32rem .40rem;
+    height: auto;
+    font-weight: 500;
+}
+
+.rating {
+    margin-right: 5px;
+}
+
+.dark-mode-section {
+    padding: 0 12.5rem;
+}
+
+.movie-info-card.dark-mode {
+    background-color: #595959;
+}

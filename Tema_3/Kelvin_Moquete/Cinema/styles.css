@@ -1,0 +1,81 @@
+/*ETIQUETAS*/
+body{
+    padding: 2%;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+}
+button[type="submit"]{
+    height: 40px;
+    width: 150px;
+    background-color: darkslategray;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+button[type="submit"]:hover{
+    background-color: green;
+    color: white;
+}
+
+input[type="number"]{
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+}
+
+/*Clases*/
+.encabezado{
+    height: 100px;
+    background-color: darkslategrey;
+}
+
+.encabezado__titulo {
+    padding-top: 2%;
+}
+
+.pantalla{
+    background-color: darkgray;
+    width: 100%;
+    min-height: 300px;
+}
+
+.pantalla__titulo{
+    text-align: center;
+    padding: 10%;
+    font-size:xx-large;
+}
+
+.butacas{
+   text-align: center;
+    margin: auto;
+}
+
+.asiento{
+    background-color: darkslategray;
+    height: 50px;
+    width: 50px;
+    border: 5px solid black;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.asiento:hover{
+    background-color: green;
+}
+
+.asiento--inactivo{
+    background-color: darkred;
+    border: 5px solid black;
+}
+
+.piePagina{
+    background-color: darkslategrey;
+}
+
+.piePagina p{
+    padding-top: 5px;
+}
