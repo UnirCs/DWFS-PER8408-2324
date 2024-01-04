@@ -1,4 +1,4 @@
-Tema 6: Introducción al Back-End
+Tema 8: Java y Spring Framework
 =============================================
 
 El objetivo de estos ejercicios es practicar la implementación de microservicios con Java y Spring.
