@@ -1,0 +1,97 @@
+*{
+    font-family: "Candara", serif;
+}
+
+.jumbotron{
+    background-color: #ffad92;
+}
+
+h1{
+    padding: 1em;
+    color:white;
+    font-size: calc(2.375rem + 1.5vw);
+}
+
+a{
+    text-decoration: none;
+    color: saddlebrown;
+}
+
+a:hover {
+    color: #634129;
+}
+
+.pantalla {
+    border-width: 20px;
+    min-height:100px;
+    min-width:350px;
+    border-style: solid;
+    align-items: center;
+}
+
+.silla:not(.silla--active):hover {
+    fill:#bd7c66;
+}
+
+.silla{
+    max-height:30px;
+    max-width:30px;
+    border-style: solid;
+    border-color: #0dcaf0;
+    fill: gainsboro;
+    margin: 3px;
+}
+
+.silla--active{
+    fill:#ffad92;
+}
+
+.silla--suggested{
+    fill: #b48c7c;
+}
+
+.pantalla__fila{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    height:70%;
+    width: 100%;
+    align-items: center;
+}
+
+.fila__num {
+    float: left;
+    font-size: 18px;
+    margin-right: 18px;
+}
+
+.container, .container__sillas, .pantalla{
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+
+.disabled-option{
+    display: none;
+}
+
+.btn-info{
+    background-color: gainsboro;
+}
+
+
+@media screen and (max-width: 600px) {
+    .silla{
+        max-height:25px;
+        max-width:25px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .silla{
+        max-height:20px;
+        max-width:20px;
+    }
+
+}
