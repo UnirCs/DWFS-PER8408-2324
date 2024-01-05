@@ -27,12 +27,13 @@ Tiempo estimado: 1h. Requisitos:
 - Primera sesión de clase del tema.
 - Haber realizado el ejercicio 1.
 
-## 💙 Ejercicio 4: [**Persistencia con H2**]()
+## 💙 Ejercicio 4: [**Precarga de datos con H2**]()
 
 Tiempo estimado: 1h. Requisitos:
 
 - Primera sesión de clase del tema.
 - Haber realizado el ejercicio 1.
+- Conceptos básicos de SQL.
 
 ## 💙💙💙 Ejercicio 5: [**Traducción de peticiones en Cloud Gateway**](https://github.com/UnirCs/DWFS-PER8408-2324/blob/master/Tema_8/00_Resources/Traduccion%20CW/Readme.md)
 
