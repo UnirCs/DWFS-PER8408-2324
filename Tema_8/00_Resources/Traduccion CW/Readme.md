@@ -1,4 +1,4 @@
-# Traducción de peticiones en Cloud Gateway.
+# Traducción de peticiones con Spring Cloud Gateway.
 
 Cuando se trabaja con APIs y servicios web, la elección del método HTTP adecuado para enviar peticiones a un servidor es crucial para garantizar la eficiencia, seguridad y claridad en la comunicación.
 
@@ -18,6 +18,12 @@ El ACL puede modificar las peticiones POST para:
 
 Spring Cloud Gateway ofrece una forma elegante y eficiente de implementar esta funcionalidad, aprovechando sus capacidades de enrutamiento y filtrado.
 
+<div align="center">
+  
+![TraduccionCW](https://github.com/UnirCs/DWFS-PER8408-2324/assets/115072043/2b4259f9-77b4-49a3-bf66-f5191ec424d9)
+
+</div>
+
 ## Ejercicio
 
 Revisa el [código de apoyo](https://github.com/UnirCs/back-end-cloud-gateway-filters) que contiene la implementación de un Gateway que traduce peticiones POST a POST y GET. Revisa la sesión de clase en la que se habla de este componente y a continuación:
@@ -25,6 +31,16 @@ Revisa el [código de apoyo](https://github.com/UnirCs/back-end-cloud-gateway-fi
 - Implementa un ``ServerHttpRequestDecorator`` para traducir una ``GatewayRequest`` de POST a PUT.
 - Implementa un ``ServerHttpRequestDecorator`` para traducir una ``GatewayRequest`` de POST a DELETE.
 
+## Información adicional
+
+Si deseas información adicional puedes revisar estos recursos:
+- [Documentación de Spring Cloud Gateway para creación de filtros](https://spring.io/blog/2022/08/26/creating-a-custom-spring-cloud-gateway-filter/)
+- [Tutorial de Baeldung para crear filtros de Spring Cloud Gateway](https://www.baeldung.com/spring-cloud-custom-gateway-filters)
+- [Artículo en Medium sobre convertir peticiones POST en GET](https://medium.com/swlh/spring-cloud-gateway-custom-filter-to-convert-post-request-to-get-request-b9a08e5fe8cb)
+
+
 ## Entrega
 
 La entrega consiste en el código de la implementación del cloud gateway (únicamente la carpeta src y archivo pom.xml).
+
+Ten en cuenta que, para probar que todo funciona correctamente, deberás tener en ejecución Eureka y al menos un microservicio destino.
