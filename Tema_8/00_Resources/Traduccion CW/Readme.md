@@ -42,3 +42,5 @@ Si deseas información adicional puedes revisar estos recursos:
 ## Entrega
 
 La entrega consiste en el código de la implementación del cloud gateway (únicamente la carpeta src y archivo pom.xml).
+
+Ten en cuenta que, para probar que todo funciona correctamente, deberás tener en ejecución Eureka y al menos un microservicio destino.
