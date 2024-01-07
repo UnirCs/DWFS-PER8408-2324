@@ -28,7 +28,7 @@ Tiempo estimado: 1h. Requisitos:
 - Primera sesión de clase del tema.
 - Haber realizado el ejercicio 1.
 - Conceptos básicos de SQL.
-- 
+
 ## 💙💙 Ejercicio 4: [**Modelo Editor/Suscriptor con ActiveMQ. Topics y colas**](https://github.com/UnirCs/DWFS-PER8408-2324/blob/master/Tema_8/00_Resources/EditorSuscriptor/Readme.md)
 
 Tiempo estimado: 2h. Requisitos:
