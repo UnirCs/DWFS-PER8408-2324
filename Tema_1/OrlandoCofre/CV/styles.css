@@ -1,0 +1,56 @@
+img{
+    border-radius: 50px;
+    margin-right: 14px;
+    display: block;
+    float: left;
+    box-shadow: 3px 3px 1px #ccc;
+    -webkit-box-shadow: 3px 3px 1px #ccc;
+    -moz-box-shadow: 3px 3px 1px #ccc;
+
+}
+
+h1{
+    display: block;
+    text-shadow: 2px 2px;
+    margin-bottom: 0px;
+}
+
+header{
+    padding: 1em;
+    background-color: darkgray;
+    border-radius: 20px;
+    text-align: center;
+    color: darkmagenta;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+#information {
+    text-align: center;
+}
+
+#information li{
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+}
+
+
+section{
+    border-radius: 20px;
+    border-style: groove;
+}
+
+
+section, header {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background: -webkit-gradient(linear, left top, left bottom, 
+    color-stop(0%,rgba(236, 227, 227, 0)), 
+    color-stop(100%,rgba(139, 107, 107, 0.65)));
+}
+
+h2{
+    color: blue;
+    font-weight: bolder;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Chuck</title>
+</head>
+<body>
+    <button  onclick="logMovies()">Dame un Chiste</button>
+    <p id="chiste"></p>
+
+    <script type="text/javascript">
+        let boton = document.getElementsByTagName('button');
+
+        let url = "https://api.chucknorris.io/jokes/random";
+
+        async function logMovies() {
+            const response = await fetch(url);
+            const chiste = await response.json();
+
+            document.getElementById("chiste").innerText = chiste.value;
+            
+        }
+
+
+    </script>
+</body>
+</html>

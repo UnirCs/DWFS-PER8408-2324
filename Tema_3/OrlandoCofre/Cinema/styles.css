@@ -1,0 +1,66 @@
+body{
+    background-color:black;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+header{
+    border-radius: 10px;
+    height: 80px;
+    width: 98%;
+    background-color: #444444;
+    text-align: center;
+    vertical-align: center;
+    display: table;
+    margin: 10px;
+}
+
+footer{
+    border-radius: 10px;
+    height: 80px;
+    width: 98%;
+    background-color: #444444;
+    text-align: center;
+    vertical-align: center;
+    display: table;
+    margin: 10px;
+}
+
+#content-sup{
+    height: 80px;
+    border-radius: 10px;
+    background-color: #5a5a5a;
+    margin: 10px;
+}
+
+#content-main{
+    display: block;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td{
+    width: 40px;
+    height: 40px;
+    border: 1px solid yellow;
+}
+
+.seleccionado {
+    background-color: yellow;
+}
+
+th, .titulo {
+    color: yellow;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+button{
+    background-color: yellow;
+    color:black;
+    margin: 1rem;
+}
