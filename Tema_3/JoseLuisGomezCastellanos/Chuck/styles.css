@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(30, 30, 30);
+}
+
+#box {
+    margin-top: 10%;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h1 {
+    font-size: 75px;
+    color: orange;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#press {
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: black;
+    width: 15em;
+    height: 2em;
+    color: white;
+    font-size: larger;
+}
+
+#joke {
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
