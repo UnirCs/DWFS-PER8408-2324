@@ -10,7 +10,7 @@ Niveles de dificultad:
 
 ## 💙💙 Ejercicio 1: [**Implementación de Calculadora**](https://github.com/UnirCs/DWFS-PER8408-2324/blob/master/Tema_8/00_Resources/Calculadora/Readme.md)
 
-Tiempo estimado: 2h. Requisitos:
+Tiempo estimado: 3h. Requisitos:
 
 - Primera sesión de clase del tema.
 
@@ -31,13 +31,13 @@ Tiempo estimado: 1h. Requisitos:
 
 ## 💙💙 Ejercicio 4: [**Modelo Editor/Suscriptor con ActiveMQ. Topics y colas**](https://github.com/UnirCs/DWFS-PER8408-2324/blob/master/Tema_8/00_Resources/EditorSuscriptor/Readme.md)
 
-Tiempo estimado: 2h. Requisitos:
+Tiempo estimado: 3h. Requisitos:
 
 - Primera sesión de clase del tema.
 
 ## 💙💙💙 Ejercicio 5: [**Traducción de peticiones en Cloud Gateway**](https://github.com/UnirCs/DWFS-PER8408-2324/blob/master/Tema_8/00_Resources/Traduccion%20CW/Readme.md)
 
-Tiempo estimado: 2h. Requisitos:
+Tiempo estimado: 3h. Requisitos:
 
 - Segunda sesión de clase del tema.
 - Haber realizado el ejercicio 1.
