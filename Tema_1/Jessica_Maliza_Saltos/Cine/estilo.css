@@ -1,0 +1,64 @@
+/* Agrega este código en un archivo styles.css */
+
+/*ancho: 50 píxeles;
+     altura: 50 píxeles;
+     color de fondo: #ccc;
+     margen: 5px;
+*/
+
+.butaca {
+    width: 40px;/*ancho*/
+    height: 40px;/*altura*/
+    background-color: #5fa0e6;/*color de fondo*/
+    margin: 5px;/*margen*/
+    padding: 0;
+    display: inline-block;/*para que esten en la misma linea*/
+    box-sizing: border-box;
+}
+
+.butaca:hover {
+    background-color: #4f0b0b;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: auto; /* Permite desplazamiento vertical y horizontal si es necesario */
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ecc1c1;
+    padding: 0;
+}
+.container.mt-5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.head{
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+}
+footer {
+    background-color: #1489d7;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+h2 {
+    color: #0b1821;
+}
+
+.free{
+    background-color:#3498db;
+}
