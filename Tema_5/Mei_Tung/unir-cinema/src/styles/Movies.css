@@ -1,0 +1,15 @@
+.multi-line-text-truncate {
+    overflow: hidden;
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-align: justify;
+}
+@media screen and (min-width: 35.5em) {
+    .card img {
+        max-height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
