@@ -26,7 +26,7 @@ Las operaciones que la API soporta son las siguientes:
   - Si no se indica correctamente el Query Param `calculationId`, la API devuelve 400 Bad Request.
   - Si se indica un `calculationId` que no existe en memoria, la API devuelve 404 Not Found.
 
-| Método HTTP | URI           | Query Params  | Cuerpo de la Petición                           | Cuerpo de la Respuesta                            | Códigos de Respuesta                                                        |
-|-------------|---------------|---------------|-------------------------------------------------|---------------------------------------------------|-----------------------------------------------------------------------------|
-| POST        | /calculations | N/A           | `{"operation": "addition", "operands": [2, 2]}` | `{"result": 4, "calculationId": 1}`               | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error               |
-| GET         | /calculations | calculationId | N/A                                             | `{"type": "add", "operands": [2, 2], "result": 4` | 200 OK<br/>400 Bad Request<br/>404 Not Found<br/>500 Internal Server Error  |
+| Método HTTP | URI           | Query Params  | Cuerpo de la Petición                           | Cuerpo de la Respuesta                                 | Códigos de Respuesta                                                        |
+|-------------|---------------|---------------|-------------------------------------------------|--------------------------------------------------------|-----------------------------------------------------------------------------|
+| POST        | /calculations | N/A           | `{"operation": "addition", "operands": [2, 2]}` | `{"result": 4, "calculationId": 1}`                    | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error               |
+| GET         | /calculations | calculationId | N/A                                             | `{"operation": "add", "operands": [2, 2], "result": 4` | 200 OK<br/>400 Bad Request<br/>404 Not Found<br/>500 Internal Server Error  |
