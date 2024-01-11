@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala la página para que se adapte a dispositivos móviles -->
+        <title>Cinema</title>
+        <!-- Incluye Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link href="styles1.css" rel="stylesheet">        
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1 class="text-center">UNIR - CINEMA</h1>
+            </div>          
+            
+            <div class="container-screen">
+                <h1>SCREEN</h1>
+            </div>
+            <br>
+
+            <div class="container-seat">
+                <div class="row">
+                    <div>Row A</div>
+                    <div class="seat reserved">1</div>
+                    <div class="seat reserved">2</div>
+                    <div class="seat">3</div>
+                    <div class="seat">4</div>
+                    <div class="seat reserved">5</div>
+                    <div class="seat">6</div>
+                    <div class="seat reserved">7</div>
+                    <div class="seat">8</div>
+                    <div class="seat">9</div>
+                    <div class="seat reserved">10</div>
+                </div>
+            
+                <div class="row">
+                    <div>Row B</div>
+                    <div class="seat reserved">1</div>
+                    <div class="seat reserved">2</div>
+                    <div class="seat reserved">3</div>
+                    <div class="seat reserved">4</div>
+                    <div class="seat">5</div>
+                    <div class="seat">6</div>
+                    <div class="seat">7</div>
+                    <div class="seat reserved">8</div>
+                    <div class="seat reserved">9</div>
+                    <div class="seat reserved">10</div>
+                </div>
+
+                <div class="row">
+                    <div>Row C</div>
+                    <div class="seat reserved">1</div>
+                    <div class="seat reserved">2</div>
+                    <div class="seat">3</div>
+                    <div class="seat">4</div>
+                    <div class="seat">5</div>
+                    <div class="seat reserved">6</div>
+                    <div class="seat reserved">7</div>
+                    <div class="seat">8</div>
+                    <div class="seat">9</div>
+                    <div class="seat reserved">10</div>
+                </div>
+            
+                <div class="row">
+                    <div>Row D</div>
+                    <div class="seat">1</div>
+                    <div class="seat">2</div>
+                    <div class="seat reserved">3</div>
+                    <div class="seat reserved">4</div>
+                    <div class="seat">5</div>
+                    <div class="seat">6</div>
+                    <div class="seat reserved">7</div>
+                    <div class="seat">8</div>
+                    <div class="seat reserved">9</div>
+                    <div class="seat">10</div>
+                </div>
+
+                <div class="row">
+                    <div>Row E</div>
+                    <div class="seat ">1</div>
+                    <div class="seat reserved">2</div>
+                    <div class="seat">3</div>
+                    <div class="seat reserved">4</div>
+                    <div class="seat">5</div>
+                    <div class="seat reserved">6</div>
+                    <div class="seat">7</div>
+                    <div class="seat reserved">8</div>
+                    <div class="seat">9</div>
+                    <div class="seat reserved">10</div>
+                </div>
+
+                <div class="row">
+                    <div>Row F</div>
+                    <div class="seat reserved">1</div>
+                    <div class="seat">2</div>
+                    <div class="seat reserved">3</div>
+                    <div class="seat">4</div>
+                    <div class="seat reserved">5</div>
+                    <div class="seat">6</div>
+                    <div class="seat reserved">7</div>
+                    <div class="seat">8</div>
+                    <div class="seat reserved">9</div>
+                    <div class="seat">10</div>
+                </div>
+
+                <div class="row">
+                    <div>Row G</div>
+                    <div class="seat reserved">1</div>
+                    <div class="seat reserved">2</div>
+                    <div class="seat">3</div>
+                    <div class="seat">4</div>
+                    <div class="seat reserved">5</div>
+                    <div class="seat reserved">6</div>
+                    <div class="seat">7</div>
+                    <div class="seat">8</div>
+                    <div class="seat reserved">9</div>
+                    <div class="seat reserved">10</div>
+                </div>
+                <br>
+            </div>
+            
+            <div class="container-other">
+                <div class="row">
+                  <div class="col align-self-start">
+                    <div class="text-legend">Available</div> 
+                    <div class="seat"></div>
+                </div>
+                
+                  <div class="col align-self-end">
+                    <div class="text-legend">Reserved</div>
+                    <div class="seat reserved"></div>      
+                </div>
+                </div>
+            </div>
+
+                <div class="form">
+                    <label for="name">Reservation name</label>
+                    <input type="text" name="name" id="name">
+                    <br>
+                    <br>
+                    <label for="reserve">Seats to reserve</label>
+                    <input type="text" name="reserve" id="reserve">
+                    <br>       
+                    <br>      
+                    <br>
+                    <button class="btn-primary">Send</button>     
+                   
+                </div>
+            
+                <div class="footer">
+                <p>UNIR - CINEMA</p>
+                <p>Address: Avenida con Calle XXX. Logroño</p>
+                <p>Phone: 941111111</p>
+                <p>Email: cinema@unircinema.com</p>
+                <p>Carolina Figueroa Cubillos</p>
+            </div>        
+
+        </div>
+    </body>
+</html>
