@@ -27,7 +27,7 @@ POST|/barcos|N/A|{|OK|200 ok 
 			Posiciones:3,|	500 Internal Server error 
 			Estado:””|	400 not found 
 			}|	
-GET|/barcos|{id}|N/A|{|200 OK 
+GET|/barcos/{id}|N/A|N/A|{|200 OK 
 				Posiciones:3,|400 Not Found 
 				Estado=”tocado”|
 				}|
@@ -35,7 +35,7 @@ POST|/usuarios|N/A|{|OK|200 OK 
 			Nombre:”nombre”|	403 Forbidden 
 			Password:”pass”|	500 INternal Server Error 
 			}|	
-GET|/usuarios/{nombre_usuario}|id|N/A|{|200 OK 
+GET|/usuarios/{nombre_usuario}|N/A|N/A|{|200 OK 
 				Nombre:”nombre”|400 Not Found 
 				Password:”pass”|500 INternal server error 
 				}|

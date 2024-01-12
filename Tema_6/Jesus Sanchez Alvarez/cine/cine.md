@@ -6,13 +6,13 @@ POST|/peliculas|N/A|{|{[|200 OK 
 			resumen: “resum”|}|
 			}|	
 			}|	
-DELETE|/peliculas|N/A|{|{true}|200 OK 
-			Elementos:[10,8]|	
-			,resultado: 2|	
+DELETE|/peliculas/{id}|N/A|N/A|{true}|200 OK 
+PUT|/peliculas|N/A|{|{true}|200 OK 
+			Data:{|	
+			titulo:”Peli”-Modificada,|	
+			resumen: “resum modificado”|	
 			}|	
-PUT|/peliculas|N/A|{|	
-			elementos:[2,3],|	
-			resultado:6|	
+					
 			}|	
 POST|/usuarios|N/A|{|{|200 OK 
 			Usuario:{|Usuario:{|500 Internal Server Error 
@@ -21,7 +21,7 @@ POST|/usuarios|N/A|{|{|200 OK 
 			Mail:”mail@gmail.com”|Mail:”mail@gmail.com”|
 			}|}|
 			}|}|
-DELETE|/usuarios/{ id }|id_usuario |N/A|OK|200 OK 
+DELETE|/usuarios/{ id }|N/A|N/A|OK|200 OK 
 					400 Not Found 
 					500 Internal Server Error 
 PATCH|/usuarios/{id }|N/A|{|{|200 ok 
@@ -36,7 +36,7 @@ POST|/salas|N/A|{|{|200 OK 
 			asientos:15|asientos:15|
 			}|}|
 			}|}|
-DELETE|/salas/{ id }|id_usuario |N/A|OK|200 OK 
+DELETE|/salas/{ id }|N/A|N/A|OK|200 OK 
 					400 Not Found 
 					500 Internal Server Error 
 PATCH|/salas/{id }|N/A|{|{|200 ok 
@@ -49,5 +49,5 @@ POST|/reservas|N/A|{|{|200 OK 
 			}|}|
 DETELE|/reservas/{id}|id|n/a|OK|200 OK 
 					500 Internal Server Error 
-POST|/pagos/{id_Reserva}|id|N/A|OK|200 OK 
+POST|/pagos|n/a|{id_Reserva:”1”}|OK|200 OK 
 					500 INternal Server Error 
