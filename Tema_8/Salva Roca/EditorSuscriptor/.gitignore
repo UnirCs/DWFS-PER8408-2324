@@ -1,0 +1,86 @@
+# General
+logs
+*.NavData
+
+# Java class files.
+*.class
+
+# Mobile Tools for Java (J2ME).
+.mtj.tmp/
+
+# Package files.
+*.jar
+*.war
+*.ear
+
+# Virtual machine crash logs.
+hs_err_pid*
+
+# Eclipse IDE.
+.settings
+.metadata
+.project
+.classpath
+.buildpath
+Servers
+bin
+
+# Netbeans IDE.
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Intellij IDEA IDE.
+*.iml
+*.iws
+*.ipr
+.idea/
+
+# Maven build tools.
+target
+
+# Sprint Tools 
+*.sts4-cache
+*.sts3-cache
+.attach_pid*
+/.DS_Store
+**/.DS_Store
+
+### Local Redis config ###
+redisson.yaml
+
+# React
+# dependencies
+/node_modules
+**/node_modules
+/node_modules/
+**/node_modules/
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+HELP.md
+mvnw
+mvnw.cmd
+/.mvn
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/.factorypath
