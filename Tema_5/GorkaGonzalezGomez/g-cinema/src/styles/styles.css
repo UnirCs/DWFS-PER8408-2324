@@ -1,0 +1,74 @@
+/* Estilo general en modo oscuro */
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    color: firebrick;
+}
+
+.movie {
+    display: flex;
+}
+
+.movie > .movie__info {
+    display: inline-block;
+    max-width: 60%;
+}
+
+.movie > .movie__img {
+    display: inline-block;
+    max-height: 100%;
+    max-width: 40%;
+}
+
+.card__button {
+    display: flex;
+}
+
+.card__button > .MuiButton-contained {
+    background-color: firebrick;
+}
+
+.card__button > .MuiButton-contained:hover {
+    background-color: #444;
+}
+
+img {
+    border-radius: 4px;
+    max-height: 100%;
+    max-width: 100%
+}
+
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movies-container > * {
+    flex: 1 1 40%; /* Esto hará que los elementos ocupen aproximadamente el 40% del ancho del contenedor, pero se ajustarán para evitar el desbordamiento */
+    max-width: 40%; /* Esto limitará el ancho de los elementos al 40% del contenedor */
+    margin: 10px; /* Esto agregará un poco de espacio alrededor de los elementos */
+}
+
+.header-footer {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+.header-footer-text {
+    color: firebrick;
+}
+
+.center-text {
+    text-align: center;
+}

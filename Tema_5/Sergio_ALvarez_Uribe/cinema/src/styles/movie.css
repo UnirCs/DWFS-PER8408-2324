@@ -1,0 +1,25 @@
+.app-movie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+    color: black;
+    padding-bottom: 3%;
+}
+
+.app-movie button{
+    background-color: rgb(175, 175, 175);
+    border-radius: 5px;
+    margin-top: 3%;
+}
+
+.app-movie img{
+    width: 20%;
+}
+
+.app-movie h3{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    max-width: 50%;
+}

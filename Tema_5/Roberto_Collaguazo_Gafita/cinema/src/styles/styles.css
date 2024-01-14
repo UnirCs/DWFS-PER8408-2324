@@ -1,0 +1,50 @@
+body{
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.header-footer{
+    color: #808080;
+    text-align: center;
+}
+
+.header-footer-references{
+    font-family: 'Times New Roman', serif;
+}
+
+.portada{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.card .row {
+    align-items: center;
+}
+
+.card img {
+    object-fit: cover;
+    max-width: 70%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.movie-title {
+    text-align: center;
+}
+
+.movie-description {
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+.movie-list-title {
+    text-align: center;
+}
+
+.movie-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

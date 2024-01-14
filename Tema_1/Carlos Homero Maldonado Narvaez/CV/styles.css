@@ -1,0 +1,91 @@
+section {
+    padding: 20px 20px 20px 20px;
+}
+
+body {background-color: coral;}
+
+#personal-information {
+    background: #f67d92;
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    line-height: 30px;
+    padding-bottom: 30px;
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+
+    .photo {
+        flex-basis: 25%;        
+		border-right: 2px solid #ffffff;
+        margin-left: 10px;
+        & img {
+            width: 140px;
+            height: 180px;
+
+        }
+
+    .contact {
+        flex-basis: 75%;
+		border-right: 2px solid #ffffff;			
+    }
+
+    }
+	
+    .contact__linkedin {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        & a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+    }
+
+    .contact__name {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+		margin-left: 20px;	
+    }
+	
+    .contact__details {
+		text-transform: none;
+		font-weight: normal;
+        font-size: 14px;
+    }
+
+    }
+}
+
+.section-title {
+    text-transform: uppercase;
+	text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.section-content {
+	background: #de4c8a;
+    color: #ffffff;
+}
+
+
+.experience {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+}
+.experience__timeline {
+    flex-basis: 20%;
+    margin-left: 10px;
+}
+.experience__description {
+    flex-basis: 80%;
+    @media (max-width: 600px) {
+        margin-left: 10px;
+    }
+}

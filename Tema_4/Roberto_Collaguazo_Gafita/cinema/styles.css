@@ -1,0 +1,135 @@
+body {
+    margin: 10px;
+    border: 2px solid yellow;
+    font-family: "Cinzel", sans-serif;
+    background-color: black;
+}
+
+.jumbotron-centro {
+    text-align: center;
+    background-color: #335577;
+    margin: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+.imagen-slide{
+    height: 300px;
+    object-fit: cover;
+    transform: translateY(-200px);
+}
+
+table{
+    background: #333;
+}
+
+.asiento {
+    width: 25px;
+    height: 25px;
+    border: 2px solid yellow;
+    margin: auto;
+}
+
+.asiento-reservado {
+    background-color: yellow;
+    width: 25px;
+    height: 25px;
+    border: 2px solid yellow;
+    margin: auto;
+}
+
+.asiento-pendiente{
+    background-color: #9ACD32;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #9ACD32;
+    margin: auto;
+}
+
+.asiento:hover {
+    transform: scale(1.1);
+    border-color: yellow;
+    box-shadow: 4px 4px 8px yellow;
+}
+
+.pantalla-cine{
+    height: 300px;
+    background-color: #333;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.titulo-seccion{
+    text-align: center;
+    color: yellow;
+}
+
+.reservacion{
+    margin: 10px;
+    background-color: black;
+    color: yellow;
+}
+
+.contactos{
+    margin: 10px;
+    background-color: #335577;
+    color: white;
+}
+
+.custom-control-label{
+    color: white;
+}
+
+/**** MODO CLARO ***/
+
+body.white-mode {
+    background-color: #f0f0f0;
+    color: black;
+    border-color: #333;
+}
+
+body.white-mode .jumbotron-centro {
+    background-color: #a3c2c2;
+    color: black;
+}
+
+body.white-mode .asiento {
+    border-color: #333;
+}
+
+body.white-mode .asiento-reservado {
+    background-color: #333;
+    border-color: #333;
+}
+
+body.white-mode .asiento-pendiente {
+    background-color: #350;
+    border-color: #350;
+}
+
+body.white-mode .asiento:hover {
+    border-color: #333;
+    box-shadow: 4px 4px 8px #333;
+}
+
+body.white-mode .pantalla-cine {
+    background-color: #ddd;
+}
+
+body.white-mode .titulo-seccion {
+    color: #333;
+}
+
+body.white-mode .reservacion {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body.white-mode .contactos {
+    background-color: #a3c2c2;
+    color: black;
+}
+
+body.white-mode .custom-control-label {
+    color: black;
+}
