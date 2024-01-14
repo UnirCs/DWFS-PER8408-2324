@@ -1,0 +1,50 @@
+[
+  {
+    "titulo": "Muchachos",
+    "image": "muchachos",
+    "sinopsis": "Película sobre la fiesta más numerosa de la historia argentina, las celebraciones por el título de la Selección Argentina en el Mundial de Fútbol Qatar 2022.",
+    "duracion": "1 h 40 min",
+    "genero": "Documental",
+    "puntuacion": 8.7
+  },
+  {
+    "titulo": "Napoleón",
+    "image": "napoleon",
+    "sinopsis": "Una mirada personal a los orígenes del líder militar francés y su rápido y despiadado ascenso a emperador. La historia se ve a través de la lente de la relación adictiva y volátil de Napoleón Bonaparte con su esposa y único amor verdadero, Josefina.",
+    "duracion": "2 h 38 min",
+    "genero": "Drama",
+    "puntuacion": 7.8
+  },
+  {
+    "titulo": "Venganza Silenciosa",
+    "image": "venganza",
+    "sinopsis": "Protagonizada por Joel Kinnaman bajo la dirección del icónico John Woo, Venganza Silenciosa es una película de acción que no contiene ningún diálogo que sigue la historia de un padre en una misión para vengar a su hijo pequeño que murió en el fuego cruzado.",
+    "duracion": "1 h 44 min",
+    "genero": "Acción",
+    "puntuacion": 8
+  },
+  {
+    "titulo": "Papá o Mamá",
+    "image": "papaomama",
+    "sinopsis": "Durante su divorcio, Florencia y Vicente deben decidir quién se queda con los niños, pero han sido ascendidos en el trabajo con el que siempre han soñado, por lo que harán cualquier cosa para no obtener la custodia de sus hijos.",
+    "duracion": "1 h 40 min",
+    "genero": "Comedia",
+    "puntuacion": 9
+  },
+  {
+    "titulo": "No Lo Abras",
+    "image": "noabrir",
+    "sinopsis": "Sam, una adolescente indo-estadounidense, vive en un suburbio idílico con su madre conservadora y su padre asimilado. Las inseguridades culturales de Sam crecen debido a su amiga, Tamira.",
+    "duracion": "1 h 45 min",
+    "genero": "Terror",
+    "puntuacion": 9
+  },
+  {
+    "titulo": "Wonka",
+    "image": "wonka",
+    "sinopsis": "Película sobre el joven Willy Wonka y cómo conoció a los Oompa-Loompas.",
+    "duracion": "1 h 40 min",
+    "genero": "Familia",
+    "puntuacion": 9.1
+  }
+]
