@@ -1,0 +1,121 @@
+body {
+    background-color: rgb(64, 64, 206);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 3px;
+    color:  white;
+    margin: 2rex;
+}
+
+.container {
+    border: 2px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.header{
+    margin-top: 10px;
+    background-color: black;
+    width: 1000px;
+    height: 100px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container-screen{
+    margin-top: 30px;
+    background-color: black;
+    width: 900px;
+    height: 200px;
+    border-style: ridge;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container-seat {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.row {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+
+.seat.reserved {
+    background-color: black;
+    cursor: not-allowed;
+}
+
+.container-other{
+    margin-top: 10px;
+    width: 1000px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.text-legend{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif
+}
+
+.form {
+    color: #fff;
+    border: #aaa;
+    cursor: pointer;
+    margin-top: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+.btn-primary {
+    background-color: rgb(11, 58, 11);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: rgb(11, 58, 11);
+}
+
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 2px;    
+ }
