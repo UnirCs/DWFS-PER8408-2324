@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Asientos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .screen {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .seating {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 5px;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .seat {
+            width: 30px;
+            height: 30px;
+            background-color: #ccc;
+            border: 1px solid #666;
+            cursor: pointer;
+        }
+
+        .seat.selected {
+            background-color: #f00;
+        }
+
+        .seat.reserved {
+            background-color: #999;
+            pointer-events: none;
+        }
+
+        #selected-seats {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seleccione su asiento</h1>
+    <div class="screen">
+        <h2>Pantalla</h2>
+    </div>
+    <div class="seating" id="seating-container">
+        <!-- Asientos generados dinámicamente se agregarán aquí -->
+    </div>
+    <div id="selected-seats">
+        <p>Asientos seleccionados: </p>
+    </div>
+    <script>
+        const seatingContainer = document.getElementById('seating-container');
+        const numberOfSeats = 100; // Puedes ajustar la cantidad de asientos según tus necesidades
+
+        // Generar dinámicamente los asientos
+        for (let i = 1; i <= numberOfSeats; i++) {
+            const seat = document.createElement('div');
+            seat.classList.add('seat');
+            seat.textContent = i;
+            seat.addEventListener('click', () => {
+                if (!seat.classList.contains('reserved')) {
+                    seat.classList.toggle('selected');
+                    updateSelectedSeats();
+                }
+            });
+            seatingContainer.appendChild(seat);
+        }
+
+        function updateSelectedSeats() {
+            const selectedSeats = document.querySelectorAll('.seat.selected');
+            const selectedSeatsText = Array.from(selectedSeats).map(seat => seat.textContent).join(', ');
+            document.getElementById('selected-seats').textContent = `Asientos seleccionados: ${selectedSeatsText}`;
+        }
+    </script>
+</body>
+</html>

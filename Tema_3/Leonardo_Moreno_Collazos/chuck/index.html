@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head class="header">
+        <meta charset="UTF-8">
+        <title>Chistes Chuck Norris</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body class="body">
+    <div class="section">
+        <h1> Chistes aleatorios de Chuck Norris</h1>
+                
+        <div><button class="button" onclick="ApiChuck()">Dame un chiste!</button></div>
+        <div><button class="button" onclick="toggleDarkMode()">Cambiar Modo</button></div>
+        <div>
+            <p id="chiste"></p>
+        </div>
+    </div>
+    <script>
+        // Función que será llamada al hacer clic en el botón
+        function ApiChuck() {
+           // URL de la API de chistes
+        const apiUrl = 'https://api.chucknorris.io/jokes/random';
+
+
+// Realizar la petición Fetch
+fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        // Mostrar el chiste en el contenedor
+        const chisteContainer = document.getElementById('chiste');
+        chisteContainer.innerHTML = `<p>${data.value}</p>`;
+    })
+    .catch(error => console.error('Error al obtener el chiste:', error));
+        }
+
+        // Función para cambiar entre modo oscuro y claro
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('.section').classList.toggle('dark-mode');
+    }
+            
+        //document.getElementById("Boton").addEventListener("click", ApiChuck);
+    </script>
+    
+    </body>
+</html>
