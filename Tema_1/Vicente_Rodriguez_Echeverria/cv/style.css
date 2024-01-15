@@ -1,0 +1,41 @@
+.color_foto{
+	text-align: center;
+	background: #040C59;
+	
+}
+
+.celda1{
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+
+}
+.celda1_encabezado {
+	text-align: left;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 16px;
+	color: #DA1013;
+}
+.celda1_normal {
+	text-align: left;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+}
+.tabla1 {
+	border: dashed;
+}
+
+.celda_encabezado2{
+	font-weight: bold;
+	font-style: normal;
+	
+}
+
+.foto_perfil{
+	width:200px;
+    height:200px;
+    border-radius:150px;
+    border:1px solid #666;
+}

@@ -1,0 +1,50 @@
+.movie-card {
+    background-color: #e88516;
+    border: 1px solid #ef8936;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    color: #f0e68c;
+}
+
+.div-movie {
+    text-align: center;
+}
+
+.header {
+    background-color: #C29000;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #2c2b2b;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.movies-container > * {
+    flex: 1 1 40%; /* Esto hará que los elementos ocupen aproximadamente el 40% del ancho del contenedor, pero se ajustarán para evitar el desbordamiento */
+    max-width: 40%; /* Esto limitará el ancho de los elementos al 40% del contenedor */
+    margin: 10px; /* Esto agregará un poco de espacio alrededor de los elementos */
+}
+
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.main-container {
+    background-color: #FFFF8D;
+    padding: 10px;
+}
+
+.movie-img {
+    max-width: 40%;
+}

@@ -1,0 +1,20 @@
+/* Estilo general en modo oscuro */
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.header-footer {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+.header-footer-text {
+    color: #f0e68c;
+}
+
+.center-text {
+    text-align: center;
+}

@@ -12,6 +12,8 @@
  */
 
 async function fetchSincrono() {
+
+    let url = "https://catfact.ninja/factfghjk";
     let fetchResponse = await fetch(url);
     let json = await fetchResponse.json();
     let fact = json.fact;
@@ -23,5 +25,5 @@ console.log("Ejecutando funcion fetchSincrono");
 
 (async () => {
     let factSincrono = await fetchSincrono();
-    console.log(factSincrono)
+    console.log(factSincrono);
 })();

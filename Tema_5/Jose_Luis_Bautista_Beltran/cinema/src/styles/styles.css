@@ -1,0 +1,183 @@
+body {
+    background: #FFFFFF;
+	font-family: Arial, sans-serif;
+}
+
+.box--free {
+    width: 50px;
+    height: 50px;
+    background-color: lightblue;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s; 
+	border: 1px;
+	text-align: center;
+}
+
+.box--occupied {
+    width: 50px;
+    height: 50px;
+    background-color: #000080;
+    margin: 10px;
+	border: 1px;
+	color: white;
+	text-align: center;
+}
+
+.box--free:hover {
+    background-color: lightcoral; 
+}
+
+.fila {
+    border: 0px solid #000; 
+    border-radius: 10px; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+	/*border: 1px solid darkgray;*/
+	background-color: white;
+	margin: 20px;
+	padding: 1px;	
+	text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	color: #000000;
+}
+.title__border {
+    flex: 1; 
+    min-width: 100px;
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 1px;
+    margin: 5px;
+}
+.title__center{
+    flex: 2; 
+    min-width: 600px;
+	min-height: 75px;
+    background-color: #FFFFFF;
+	color: darkblue;
+    text-align: center;
+    padding: 1px;
+    margin: 5px;
+	font-size: 75px;
+}
+
+.screen{
+	/*border: 1px solid darkgray;*/
+	background-color: white;
+	margin: 20px;
+	padding: 1px;	
+	text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	color: #FFFFFF;
+}
+.screen__border {
+    flex: 1; 
+    min-width: 100px;
+    background-color: #FFFFFF;
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+    margin: 5px;
+}
+.screen__center {
+    flex: 2; 
+	border: 1px solid darkgray;
+    min-width: 600px;
+	min-height: 75px;
+    background-color: darkgray;
+	color: #FFFFFF;
+    text-align: center;
+    padding: 1px;
+    margin: 5px;
+	font-size: 50px;
+}
+
+.boton-personalizado-4 {
+text-decoration:none;
+font-weight: 600;
+font-size: 20px;
+color:#333333;
+padding-top:15px;
+padding-bottom:15px;
+padding-left:40px;
+padding-right:40px;
+background-color:#FFD27D;
+border-color: #d8d8d8;
+border-width: 3px;
+border-style: solid;
+border-radius:35px;
+}
+
+.footer{
+	background-color: white;
+	margin: 1px;
+	padding: 1px;	
+	text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	color: #000000;
+}
+.footer__border {
+    flex: 1; 
+    min-width: 100px;
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 1px;
+    margin: 1px;
+}
+.footer__center{
+    flex: 2; 
+    min-width: 600px;
+    background-color: #FFFFFF;
+	color: darkgreen;
+    text-align: center;
+    padding: 1px;
+    margin: 1px;
+	font-size: 12px;
+}
+.card {
+    background-color: lightblue;
+    border: 1px solid #000080;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    color: #000080;
+}
+
+.billboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.billboard-container > * {
+    flex: 1 1 35%; /* Esto hará que los elementos ocupen aproximadamente el 40% del ancho del contenedor, pero se ajustarán para evitar el desbordamiento */
+    max-width: 35%; /* Esto limitará el ancho de los elementos al 40% del contenedor */
+    margin: 10px; /* Esto agregará un poco de espacio alrededor de los elementos */
+}
+.imagen {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.center-text {
+    text-align: center;
+}
+.header-footer {
+    
+    padding: 10px;
+    text-align: center;
+}
