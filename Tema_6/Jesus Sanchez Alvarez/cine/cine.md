@@ -1,18 +1,18 @@
 Metodo HTTP|URI|Query params|Cuerpo de la petición|Cuerpo de la respuesta|Codigos de respuesta 
 POST|/peliculas|N/A|{|{[|200 OK 
-			Data:{|P1:{..},|
+			Data:{|P1:{..},| 
 			titulo:”Peli”,|P2:{…}|
 			duración: 1h,|]|
 			resumen: “resum”|}|
 			}|	
 			}|	
 DELETE|/peliculas/{id}|N/A|N/A|{true}|200 OK 
-PUT|/peliculas|N/A|{|{true}|200 OK 
+PUT|/peliculas/{id}|N/A|{|{true}|200 OK 
 			Data:{|	
 			titulo:”Peli”-Modificada,|	
 			resumen: “resum modificado”|	
 			}|	
-					
+			|	
 			}|	
 POST|/usuarios|N/A|{|{|200 OK 
 			Usuario:{|Usuario:{|500 Internal Server Error 
@@ -41,7 +41,7 @@ DELETE|/salas/{ id }|N/A|N/A|OK|200 OK 
 					500 Internal Server Error 
 PATCH|/salas/{id }|N/A|{|{|200 ok 
 			Id:3,|Id:3,|400 not found 
-			Asientos:12|Asientos:12|
+			Asientos:12|Asientos:12| 
 			}|}|
 POST|/reservas|N/A|{|{|200 OK 
 			Usuario:”nombre”,|Usuario:”nombre”,|500 Internal Server Error 
