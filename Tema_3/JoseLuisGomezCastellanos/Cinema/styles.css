@@ -1,0 +1,101 @@
+body {
+    background-color: rgb(30, 30, 30);
+}
+
+#border {
+    border: 1px solid red;
+    margin: 5px;
+    text-align: center;
+}
+
+#screen {
+    background-color: rgb(200, 200, 200);
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    width: 40%;
+    border-radius: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+span {
+    font-size: 1em;
+    color: white;
+    line-height: 30px;
+    display: contents;
+}
+
+#test {
+    width: fit-content;
+    margin-left: 37%;
+    margin-bottom: 10px;
+}
+
+#seats {
+    margin-left: 37.5%;
+    width: fit-content;
+}
+
+.letter{
+    padding: 0%;
+    border: 2px;
+    margin: 3px;
+    color: white;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+div[class*='col'] {
+    border-radius: 5px;
+    height: 1.5em;
+    width: 1.5em;
+    padding: 0%;
+    margin: 3px;
+    border: 2px solid black;
+}
+
+.col--active {
+    background-color: red;
+}
+
+.col--selected {
+    background-color: yellow;
+}
+
+#sillas {
+    margin: 15px;
+}
+
+label {
+    color:white;
+}
+
+select {
+    width: 50px;
+}
+
+.btn.btn-success {
+    margin-bottom: 20px;
+}
+
+div[class='col']:hover {
+    background-color: yellow;
+}
+
+footer {
+    padding: 5px;
+    background-color: yellow;
+}
+
+h1 {
+    color: rgb(30, 30, 30);
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1em;
+    color: white;
+    line-height: 30px;
+}
