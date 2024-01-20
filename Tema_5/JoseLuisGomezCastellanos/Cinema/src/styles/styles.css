@@ -1,0 +1,78 @@
+/* Estilo general en modo oscuro */
+body {
+    background-color: rgb(30, 30, 30);
+    color: #fff;
+}
+
+.card {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    color:gold;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+img {
+    width: auto;
+    height: 250px;
+    margin-right: 20px
+}
+
+.extraInf {
+    display: flex;
+}
+
+.genre {
+    margin-left: 20px;
+}
+
+button {
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 12px;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movie-container > * {
+    flex: 1 1 40%; /* Esto hará que los elementos ocupen aproximadamente el 40% del ancho del contenedor, pero se ajustarán para evitar el desbordamiento */
+    max-width: 45%; /* Esto limitará el ancho de los elementos al 40% del contenedor */
+    margin: 10px; /* Esto agregará un poco de espacio alrededor de los elementos */
+}
+
+.header {
+    background-color:black;
+    padding: 10px;
+    text-align: center;
+}
+
+.header-text {
+    color: blue;
+    font-size: 2.5em;
+}
+
+.footer {
+    padding: 5px;
+    background-color:gold;
+    text-align: center;
+}
+
+.footer-text {
+    color: rgb(30, 30, 30);
+    font-size: 1.5em;
+}
+
+.center-text {
+    text-align: center;
+    font-size: 2em
+}
