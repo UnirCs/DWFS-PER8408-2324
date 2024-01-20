@@ -1,0 +1,55 @@
+
+* {
+    background-position: center top;
+    text-align: center;
+    margin: auto;
+}
+
+.text-sala {
+    font-weight: bold;
+}
+
+.text-selection {
+    font-size: small;
+}
+
+.text-row {
+    font-weight: bold;
+}
+
+.cinema-seats {
+    display: inline-flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    padding: 10px;
+}
+
+.seat {
+    flex: auto;
+    min-width: 28px;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.seat[type="available"] {
+    background-color: black;
+}
+
+.seat[type="recommended"] {
+    background-color: grey;
+}
+
+.seat[type="reserved"] {
+    background-color: rgb(183, 31, 31);
+}
+
+.dark-mode {
+    background-color: #343a40;
+    color: white;
+}
+

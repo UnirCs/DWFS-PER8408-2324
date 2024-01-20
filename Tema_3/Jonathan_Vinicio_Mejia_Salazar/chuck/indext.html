@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="getChiste()">Dame un chiste!</button>
+    <p id="chiste"></p>
+    <script>
+
+        var p = document.getElementById("chiste");
+        function getChiste() {
+
+            fetch("https://api.chucknorris.io/jokes/random")
+                .then(response => response.json())
+                .then(json => p.innerHTML = json.value);
+        }
+
+    </script>
+</body>
+
+</html>
