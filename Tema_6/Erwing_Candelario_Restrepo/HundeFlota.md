@@ -8,9 +8,9 @@
 - Disparos: permite determinar los disparos realizados por un jugador en una partida.
   | Método HTTP | URI | Query Params | Request Body | Response Body | Códigos HTTP de respuesta |
   |-------------|----------------|--------------|--------------|------------------|-------------------------|
-  | GET | /usuario/{Idusuario} | Idusuario | N/A | `{ "nombre": "Erwing"}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
-  | POST | /usuario | N/A | `{ "nombre": "Erwing"}` |`{"Idusuario": 1, "nombre: Erwing"}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
-  | DELETE | /usuario/{Idusuario} | Idusuario | N/A | N/A | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
+  | GET | /usuarios/{Idusuario} | Idusuario | N/A | `{ "nombre": "Erwing"}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
+  | POST | /usuarios | N/A | `{ "nombre": "Erwing"}` |`{"Idusuario": 1, "nombre: Erwing"}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
+  | DELETE | /usuarios/{Idusuario} | Idusuario | N/A | N/A | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
   | POST | /juegos | N/A | `{"Jugadores":[{"IUdsuario":1,"nombre":"Erwing"},{"IUdsuario":1,"nombre":"Heider"}]}` |`{"IdJuego":1,"Fase":1,"Completado":false,"Ganador":false,"Jugadores":[{"IUdsuario":1,"nombre":"Erwing","barcos":[],"disparos":[]},{"IUdsuario":2,"name":"Heider","barcos":[],"disparos":[]}]}` | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error |
   | DELETE | /juegos/{IdJuego} | IdJuego | N/A | N/A | 200 OK<br/>400 Bad Request<br/>500 Internal Server Error |
   | PATCH | /juegos/{IdJuego} | IdJuego | `{"IdUsario":2,,"Fase":1,"Completado":true }` |`{"IdJuego":1,"Fase":1,"Completado":true,"Ganador":true,"Jugador":{"IUdsuario":2,"nombre":"Heider","barcos":[{"nombre":"Barco 1","posicion":["A1","A2","A3","A4"]},{"nombre":"Barco 2","posicion":["C2","D2","E2"]}],"disparos":["C5","D5"]}}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
