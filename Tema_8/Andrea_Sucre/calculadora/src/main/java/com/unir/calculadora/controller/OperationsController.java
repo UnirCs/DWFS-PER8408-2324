@@ -639,7 +639,7 @@ public class OperationsController {
     ) {
         try {
             BaseResponse<OperationSummary, Error> response = service.getOperation(id);
-            return ResponseEntity.status(HttpStatus.CREATED).body(response);
+            return ResponseEntity.status(HttpStatus.OK).body(response);
         } catch (Exception e) {
             Error error = new Error("INTERNAL_SERVER_ERROR", "Internal Server Error");
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new BaseResponse<>(null, error));
