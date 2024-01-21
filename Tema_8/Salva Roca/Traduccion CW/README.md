@@ -12,10 +12,8 @@ The application consists of several components:
 
 - `RequestDecoratorFactory`: Creates decorators for the `GatewayRequest` object.
 
-- `PostRequestDecorator` and `GetRequestDecorator`: Decorators for the `GatewayRequest` object for POST and GET requests respectively.
+- `PostRequestDecorator`, `GetRequestDecorator`, `PutRequestDecorator`, `PatchRequestDecorator`and `DeleteRequestDecorator`: Decorators for the `GatewayRequest` object for POST, GET, PUT, PATCH and DELETE requests.
 
 - `GatewayRequest`: Represents a request that is being processed by the gateway.
 
 For more detailed information about these components, please refer to the source code documentation.
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/CWxqH0?referralCode=jesus-unir)
