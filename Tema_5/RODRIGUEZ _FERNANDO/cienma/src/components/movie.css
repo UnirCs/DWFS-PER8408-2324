@@ -1,0 +1,71 @@
+.movies {
+  height: fitContent;
+  width: fitContent;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #a36884;
+  color: white;
+  margin: 2.5 rem;
+}
+
+.movie-title {
+  color: white;
+  font-size: 24;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.3rem;
+}
+
+.movie-description {
+  width: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.movie-detail-title {
+  font-size: 15px;
+  font-weight: bold;
+  align-self: center;
+  align-items: center;
+}
+
+.movie-button {
+  align-self: center;
+}
+
+.movie-image-div {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+
+.movie-image {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(4.25rem, auto));
+  margin: 1.5rem;
+}
+
+button {
+  margin: 10px;
+  top: 0;
+  bottom: 10px;
+  width: 100%;
+  background-color: #d15e81;
+  font-size: 15px;
+  border-radius: 20px #d15e81;
+  color: white;
+}
+
+img {
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  align-self: center;
+}
