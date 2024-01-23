@@ -1,0 +1,68 @@
+.unir-text {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente */
+    text-align: center;
+}
+
+.unir-header {
+    font-style: italic; /* Cursiva */
+    text-align: center;
+}
+
+table {
+    width: 90%;
+}
+
+th[estilo="pantalla"] {
+    background-color: black;
+    border: 2px solid yellow;
+    text-align: center;
+}
+
+td[estilo="fila"]{
+    text-align: center;
+}
+
+td[estilo="libre"] {
+    background-color: seagreen;
+    border: 2px solid black;
+    text-align: center;
+}
+
+td[estilo="libre"]:hover {
+    background-color: seagreen;
+    border: 2px solid black;
+    text-align: center;
+}
+
+td[estilo="ocupado"]:hover {
+    background-color: red;
+    border: 2px solid black;
+    text-align: center;
+}
+
+td[estilo="ocupado"] {
+    background-color: red;
+    border: 2px solid black;
+    text-align: center;
+}
+
+/*table, th, td {  Aplicamos estilos a la tabla, a las celdas de cabecera y a las celdas de datos
+    border: 2px solid black;
+    text-align: center;
+}*/
+
+form { /* Aplicamos estilos a las imagenes que esten dentro de una celda */
+    text-align: center;
+}
+
+td[estilo="impresionista"] > img { /* Aplicamos estilos a las imagenes que esten dentro de una celda que tenga el atributo estilo con valor impresionista */
+    border: 5px solid darkblue;
+}
+
+td[estilo="cubista"] > img {
+    border: 5px solid darkmagenta;
+}
+
+td[estilo="abstracto"] > img {
+    border: 5px solid darkorange;
+}

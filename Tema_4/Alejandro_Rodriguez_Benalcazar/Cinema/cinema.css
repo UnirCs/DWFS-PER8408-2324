@@ -41,7 +41,7 @@ body {
 .filas__butacas {
     width: 40px;
     height: 40px;
-    border: 3px solid yellow;
+    border: 3px solid #ffd700;
     margin-right: 10px;
     transition: background-color 0.3s;
 }
@@ -52,8 +52,8 @@ body {
 }
 
 .pre__selection {
-    background-color: yellow;
-    border: 3px solid yellow;
+    background-color: #ffd700;
+    border: 3px solid #ffd700;
 }
 
 

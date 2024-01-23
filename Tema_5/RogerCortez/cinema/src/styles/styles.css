@@ -1,0 +1,70 @@
+
+body {
+    background-color: #ffffff;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.billboard {
+    background-color: #4099ff;
+    border: 1px solid #0034ff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    color: #fdfdfd;
+}
+
+.billboard > img{
+    width: 155px;
+    height: 240px;
+    border-color: #ffe700;
+    border-radius: 15px;
+
+}
+
+.cine-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cine-container > * {
+    flex: 1 1 25%; /* Esto hará que los elementos ocupen aproximadamente el 40% del ancho del contenedor, pero se ajustarán para evitar el desbordamiento */
+    max-width: 40%; /* Esto limitará el ancho de los elementos al 40% del contenedor */
+    margin: 20px; /* Esto agregará un poco de espacio alrededor de los elementos */
+}
+
+.header-footer {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+.header-footer-text {
+    color: #ffe700;
+}
+
+.center-text {
+    text-align: center;
+    color: darkblue;
+    font-family: "MS Gothic";
+}
+
+.billboard > button{
+    width: 120px;
+    height: 30px;
+    border-color: #000000;
+    border-radius: 15px;
+    background-color: #ffe700;
+    font-family: "Arial Black";
+
+}
+
+.billboard > button:hover{
+    width: 120px;
+    height: 30px;
+    border-color: #ffffff;
+    border-radius: 15px;
+    background-color: #f51c1c;
+    font-family: "Arial Black";
+    }

@@ -1,0 +1,12 @@
+.app-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0098CD;
+    color: black;
+    
+}
+
+.app-footer h4{
+    margin: 0.5%;
+}
