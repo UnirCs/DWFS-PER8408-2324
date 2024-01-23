@@ -16,14 +16,12 @@ Nuestra calculadora tendrá memoria y siempre se podrán consultar los datos de 
 ## Propuesta
 
 **Recursos identificados:**
-- Operacion (operators): Representa las operaciones disponibles
-- Resultados (results): Representa los resultados
+- Operacion (operation): Representa las operaciones en el sistema, tanto nuevas como historicas
 
 
-| Método HTTP | URI             | Query Params | Cuerpo de la Petición         | Cuerpo de la Respuesta             | Códigos de Respuesta |
-|-------------|-----------------|--------------|-------------------------------|------------------------------------|----------------------|
-| POST        | /operators/add  | N/A          | `{"numbers": [1, 2, 3, ...]}` | `{"result_id": 123, "result": 6 }` | 200 OK               |
-| POST        | /operators/subs | N/A          | `{"numbers": [1, 2, 3, ...]}` | `{"result_id": 123, "result": 0 }` | 200 OK               |
-| POST        | /operators/mult | N/A          | `{"firstNumber": 2, "secondNumber": 2}`| `{"result_id": 123, "result": 4}` | 200 OK |
+| Método HTTP | URI             | Query Params | Cuerpo de la Petición                            | Cuerpo de la Respuesta                                    | Códigos de Respuesta                                          |
+|-------------|-----------------|--------------|--------------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------------|
+| POST        | /operation      | N/A          | `{"operation": "ADD","numbers": [1, 2, 3, ...]}` | `{"operation_id": 123, "result": 6 }`                     | 201 Created<br/>400 Bad request<br/>500 Internal server error |
+| GET         | /operation/{id} | N/A          | N/A                                              | `{"operation_id": 123, "operation": "ADD", "result": 6 }` | 200 OK<br/>404 Not found<br/>500 Internal server error        |
 
 
