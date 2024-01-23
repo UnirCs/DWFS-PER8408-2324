@@ -49,20 +49,21 @@ class Seat {
  * @returns {boolean}
  */
 function validateConsecutiveSeat(availableSeats) {
-//One seat must be consecutive
+    // If the number of seats is less than 2, the seat is valid
     if (availableSeats.length < 2) {
         return true;
     }
 
-    const sortedSeats = availableSeats.slice().sort((a, b) => a - b);
+    let i = 1;
+    let consecutive = true;
 
-    for (let i = 1; i < sortedSeats.length; i++) {
-        if (sortedSeats[i] !== sortedSeats[i - 1] + 1) {
-            return false;
-        }
+    // verify if the number of consecutive seats are consecutive
+    while (i < availableSeats.length && consecutive) {
+        consecutive = availableSeats[i] === availableSeats[i - 1] + 1;
+        i++;
     }
 
-    return true;
+    return consecutive;
 }
 
 
@@ -76,8 +77,9 @@ function suggest(numberSeat) {
     let room = generateRoom(10);
     console.log(room);
     let availableSeats = [];
+    let y = room.length - 1;
 
-    for (let y = room.length - 1; y >= 0; y--) { // Bucle desde la parte inferior hacia arriba
+    while (y >= 0) {
         availableSeats = [];
 
         for (let x = 0; x < room[y].length; x++) {
@@ -87,13 +89,14 @@ function suggest(numberSeat) {
 
             if (availableSeats.length >= numberSeat) {
                 if (validateConsecutiveSeat(availableSeats)) {
-                    console.log(availableSeats)
                     return availableSeats;
                 }
             }
         }
+
+        y--;
     }
-    console.log([])
+
     return [];
 }
 
