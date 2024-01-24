@@ -6,15 +6,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CalculateAdditionRequest {
+public class CalculateMultiplicationRequest {
 
-    @NotNull(message = "Addends cannot be null")
-    private List<Double> addends;
+    @NotNull(message = "Multiplicand cannot be null")
+    private Double multiplicand;
+
+    @NotNull(message = "Multiplier cannot be null")
+    private Double multiplier;
 
 }

@@ -16,8 +16,8 @@ import java.util.List;
 public class CalculateSubtractionRequest {
 
     @NotNull(message = "Minuend cannot be null")
-    private Integer minuend;
-    
+    private Double minuend;
+
     @NotEmpty(message = "Subtrahends cannot be empty")
-    private List<Integer> subtrahends;
+    private List<Double> subtrahends;
 }

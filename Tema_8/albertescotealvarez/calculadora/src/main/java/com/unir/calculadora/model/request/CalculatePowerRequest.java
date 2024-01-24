@@ -6,15 +6,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CalculateAdditionRequest {
+public class CalculatePowerRequest {
 
-    @NotNull(message = "Addends cannot be null")
-    private List<Double> addends;
+    @NotNull(message = "Base cannot be null")
+    private Double base;
+
+    @NotNull(message = "Power cannot be null")
+    private Double power;
 
 }

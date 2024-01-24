@@ -11,7 +11,9 @@ import java.util.UUID;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CalculateSubtractionResponse {
+public class CalculatePowerResponse {
+
     private UUID id;
     private Double result;
+
 }

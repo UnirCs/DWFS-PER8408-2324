@@ -6,15 +6,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CalculateAdditionRequest {
+public class CalculateRootRequest {
 
-    @NotNull(message = "Addends cannot be null")
-    private List<Double> addends;
+    @NotNull(message = "Radicand cannot be null")
+    private Double radicand;
+
+    @NotNull(message = "Index cannot be null")
+    private Double index;
 
 }

@@ -11,7 +11,10 @@ import java.util.UUID;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CalculateSubtractionResponse {
+public class CalculateDivisionResponse {
+
     private UUID id;
-    private Double result;
+    private Double quotient;
+    private Double remainder;
+
 }

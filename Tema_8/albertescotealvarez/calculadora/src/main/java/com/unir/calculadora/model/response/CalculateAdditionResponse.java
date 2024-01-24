@@ -5,13 +5,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.UUID;
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class CalculateAdditionResponse {
 
-    private Long id;
-    private Integer result;
+    private UUID id;
+    private Double result;
 
 }

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Table(name = "subtractions")
@@ -13,28 +14,33 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @ToString
-public class Subtraction {
+public class Subtraction implements Operation {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     @Column(name = "minuend")
-    private Integer minuend;
+    private Double minuend;
 
     @ElementCollection
     @Column(name = "subtrahends")
-    private List<Integer> subtrahends;
+    private List<Double> subtrahends;
 
     @Column(name = "result")
-    private Integer result;
+    private Double result;
 
-    public static Subtraction calculateSubtraction(Integer minuend, List<Integer> subtrahends) {
-        Integer result = minuend;
-        for (Integer subtrahend : subtrahends) {
+    public static Subtraction calculateSubtraction(Double minuend, List<Double> subtrahends) {
+        Double result = minuend;
+        for (Double subtrahend : subtrahends) {
             result -= subtrahend;
         }
         return Subtraction.builder().minuend(minuend).subtrahends(subtrahends).result(result).build();
+    }
+
+    @Override
+    public Operations obtainType() {
+        return Operations.SUBTRACTION;
     }
 
 }
