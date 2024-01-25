@@ -182,23 +182,7 @@ curl --location --request GET 'https://z7m3926u42:bcvaqe4gvk@unir-search-3659402
 - 8) Obtener empleados cuya dirección sea o contenga ``Street``. [Revisa la documentación sobre queries sobre campos search-as-you-type](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/search-as-you-type.html)
 
 Si queremos que salga ``Street`` de forma completa
-```
-curl --location --request GET 'https://z7m3926u42:bcvaqe4gvk@unir-search-3659402253.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "query": {
-        "multi_match": {
-            "query": "Street",
-            "type": "bool_prefix",
-            "fields": [
-                "Address"
-            ]
-        }
-    }
-}'
-```
 
-Si queremos que salga ``Street`` de forma parcial
 ```
 curl --location --request GET 'https://z7m3926u42:bcvaqe4gvk@unir-search-3659402253.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 --header 'Content-Type: application/json' \
@@ -374,4 +358,81 @@ curl --location --request GET 'https://z7m3926u42:bcvaqe4gvk@unir-search-3659402
 ```
 
 - 2) Realiza alguna de las consultas anteriores. ¿Qué observas?
+
+Realizo la consulta #7.
+Al realizar la consulta al álias del índice (que hace referencia a dos índices) recibo dos documentos. En realidad es el mismo documento pero para cada uno de los índices, ya que un índice es la copia del otro.
+El resultado obtenido es:
+```
+{
+    "took": 3,
+    "timed_out": false,
+    "_shards": {
+        "total": 2,
+        "successful": 2,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 2,
+            "relation": "eq"
+        },
+        "max_score": 8.805075,
+        "hits": [
+            {
+                "_index": "employees-v2",
+                "_type": "_doc",
+                "_id": "RHT5PI0BE1rI7thzakXD",
+                "_score": 8.805075,
+                "_source": {
+                    "FirstName": "NATALIE",
+                    "LastName": "SERVIS",
+                    "Designation": "Senior Software Engineer",
+                    "Salary": "61000",
+                    "DateOfJoining": "2003-09-19",
+                    "Address": "34 Kingston St. El Dorado, AR 71730",
+                    "Gender": "Female",
+                    "Age": 35,
+                    "MaritalStatus": "Unmarried",
+                    "Interests": "Guitar,Learning A Foreign Language,Blacksmithing,Embroidery,Collecting,Becoming A Child Advocate,Taxidermy"
+                }
+            },
+            {
+                "_index": "employees",
+                "_type": "_doc",
+                "_id": "8j3_PI0Bc11jWJklB4e3",
+                "_score": 8.804775,
+                "_source": {
+                    "FirstName": "NATALIE",
+                    "LastName": "SERVIS",
+                    "Designation": "Senior Software Engineer",
+                    "Salary": "61000",
+                    "DateOfJoining": "2003-09-19",
+                    "Address": "34 Kingston St. El Dorado, AR 71730",
+                    "Gender": "Female",
+                    "Age": 35,
+                    "MaritalStatus": "Unmarried",
+                    "Interests": "Guitar,Learning A Foreign Language,Blacksmithing,Embroidery,Collecting,Becoming A Child Advocate,Taxidermy"
+                }
+            }
+        ]
+    }
+}
+```
+
 - 3) Elimina ``employees`` del conjunto de índices a los que hace referencia el alias.
+
+```
+curl --location 'https://z7m3926u42:bcvaqe4gvk@unir-search-3659402253.us-east-1.bonsaisearch.net:443/_aliases' \
+--header 'Content-Type: application/json' \
+--data '{
+    "actions": [
+        {
+            "remove": {
+                "index": "employees",
+                "alias": "employees-alias"
+            }
+        }
+    ]
+}'
+```
