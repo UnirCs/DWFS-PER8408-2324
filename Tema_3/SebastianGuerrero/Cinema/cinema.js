@@ -58,7 +58,7 @@ butacas[0][1].estado = false;
 butacas[0][0].estado = false;
 
 
-function suggest1(asientos){
+function suggest(asientos){
     let resultadoAsientos = new Set();
     let disponibilidad = true;
     let asignacionCompleta = false;
@@ -86,7 +86,8 @@ function suggest1(asientos){
             }
         }
     }
+    console.log("El resultado es: "+ [...resultadoAsientos]);
     return resultadoAsientos;
 }
-let resultado = [...suggest1(2)];
+let resultado = [...suggest(2)];
 console.log(resultado.length === 0 ? "No hay disponibilidad de sillas": "Los numeros de las sillas asignadas son: " + resultado);
