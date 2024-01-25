@@ -1,0 +1,16 @@
+body{
+    background-color: #bababd;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #4970b0;
+    text-align: center;
+}
+
+.title {
+    border: 2px solid
+}
+
+.submit-button{
+    border-radius: 15%;
+    background-color: #b7aeae;
+}
+
