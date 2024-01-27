@@ -1,0 +1,32 @@
+.título {
+    font-family: Arial, Helvetica, sans-serif; text-align: center;
+}
+
+.subtítulo {
+    font-style: italic;
+}
+
+table {
+    width: 90%;
+}
+
+table, th, td { /* Aplicamos estilos a la tabla, a las celdas de cabecera y a las celdas de datos */
+    border: 1px solid black;
+    text-align: center;
+}
+
+td[estilo="compañía"]  { /* Aplicamos estilos a las imagenes que esten dentro de una celda que tenga el atributo estilo con valor impresionista */
+    color: darkred;
+}
+
+td[estilo="institución"]  { /* Aplicamos estilos a las imagenes que esten dentro de una celda que tenga el atributo estilo con valor impresionista */
+    color: darkblue;
+}
+
+th {
+    background-color: silver;
+}
+
+li {
+    text-align: left;
+}
