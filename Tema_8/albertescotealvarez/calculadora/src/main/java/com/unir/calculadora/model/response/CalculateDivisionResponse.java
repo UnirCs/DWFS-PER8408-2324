@@ -14,7 +14,6 @@ import java.util.UUID;
 public class CalculateDivisionResponse {
 
     private UUID id;
-    private Double quotient;
-    private Double remainder;
+    private Double result;
 
 }

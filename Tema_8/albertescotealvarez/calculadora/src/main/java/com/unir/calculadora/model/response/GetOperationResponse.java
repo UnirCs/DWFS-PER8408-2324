@@ -2,6 +2,7 @@ package com.unir.calculadora.model.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.unir.calculadora.model.pojo.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,6 +15,7 @@ import lombok.Setter;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class GetOperationResponse {
 
+    @NotNull
     private Operations operation;
     private Addition addition;
     private Subtraction subtraction;

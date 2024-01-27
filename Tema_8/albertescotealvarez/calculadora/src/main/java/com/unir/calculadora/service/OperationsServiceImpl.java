@@ -39,7 +39,7 @@ public class OperationsServiceImpl implements OperationsService {
     public CalculateDivisionResponse calculateDivision(CalculateDivisionRequest request) {
         Division division = Division.calculateDivision(request.getDividend(), request.getDivisor());
         division = repository.saveDivision(division);
-        return new CalculateDivisionResponse(division.getId(), division.getQuotient(), division.getRemainder());
+        return new CalculateDivisionResponse(division.getId(), division.getResult());
     }
 
     @Override

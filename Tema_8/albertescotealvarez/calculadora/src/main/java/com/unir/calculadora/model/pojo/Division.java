@@ -25,14 +25,11 @@ public class Division implements Operation {
     @Column(name = "divisor")
     private Double divisor;
 
-    @Column(name = "quotient")
-    private Double quotient;
-
-    @Column(name = "remainder")
-    private Double remainder;
+    @Column(name = "result")
+    private Double result;
 
     public static Division calculateDivision(Double dividend, Double divisor) {
-        return Division.builder().dividend(dividend).divisor(divisor).quotient(dividend / divisor).remainder(dividend % divisor).build();
+        return Division.builder().dividend(dividend).divisor(divisor).result(dividend / divisor).build();
     }
 
     @Override

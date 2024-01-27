@@ -19,8 +19,8 @@ VALUES (4.0, @subtraction_uuid);
 INSERT INTO multiplications (id, multiplicand, multiplier, result)
 VALUES (UUID(), 2.0, 3.0, 6.0);
 
-INSERT INTO divisions (id, dividend, divisor, quotient, remainder)
-VALUES (UUID(), 3.0, 3.0, 1.0, 0.0);
+INSERT INTO divisions (id, dividend, divisor, result)
+VALUES (UUID(), 3.0, 3.0, 1.0);
 
 INSERT INTO roots (id, radicand, index, result)
 VALUES (UUID(), 4.0, 2.0, 2.0);
