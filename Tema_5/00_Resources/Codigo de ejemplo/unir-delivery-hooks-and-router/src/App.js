@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import GlobalRouter from "./routes/GlobalRouter";
-
+import {RestaurantContext} from "./context/RestaurantContext";
 import {Footer} from "./components/Footer";
 import {useRestaurants} from "./hooks/useRestaurants";
 
