@@ -47,7 +47,7 @@ Las operaciones que la API debe soportar son las siguientes:
 |             |                  |              |                                 |                                 | 404                       |
 |             |                  |              |                                 |                                 | 500                       |
 |-------------|------------------|--------------|---------------------------------|---------------------------------|---------------------------|
-| PUT         | /partidas/{id}   | -            | {"nombre":"Partida1",           |   {"id": 1,                     | 200                       |
+| PATCH       | /partidas/{id}   | -            | {"nombre":"Partida1",           |   {"id": 1,                     | 200                       |
 |             |                  |              |  "jugadores":["user3","user4"]} |    "accion": "Modificada"       | 400                       |
 |             |                  |              |                                 |    "nombre": "Partida1"}        | 404                       |
 |             |                  |              |                                 |                                 | 500                       |
