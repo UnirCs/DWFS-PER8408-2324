@@ -29,7 +29,6 @@ public class PatchRequestDecorator extends ServerHttpRequestDecorator {
 
     private final ObjectMapper objectMapper;
 
-
     public PatchRequestDecorator(GatewayRequest gatewayRequest, ObjectMapper objectMapper) {
         super(gatewayRequest.getExchange().getRequest());
         this.gatewayRequest = gatewayRequest;
