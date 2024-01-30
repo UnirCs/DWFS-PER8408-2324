@@ -78,26 +78,27 @@ function suggest(numberSeat) {
     console.log(room);
     let availableSeats = [];
     let y = room.length - 1;
+    let result = [];
 
-    while (y >= 0) {
+    while (y >= 0 && result.length === 0) {
         availableSeats = [];
 
         for (let x = 0; x < room[y].length; x++) {
             if (room[y][x].state === false) {
                 availableSeats.push(room[y][x].id);
+            } else {
+                availableSeats = []; // Reset availableSeats if a seat is not available
             }
 
-            if (availableSeats.length >= numberSeat) {
-                if (validateConsecutiveSeat(availableSeats)) {
-                    return availableSeats;
-                }
+            if (availableSeats.length >= numberSeat && validateConsecutiveSeat(availableSeats)) {
+                result = availableSeats.slice(); // Store a copy of the availableSeats
             }
         }
 
         y--;
     }
 
-    return [];
+    return result;
 }
 
 
