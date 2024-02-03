@@ -1,5 +1,5 @@
 # Ejercicio 1 : API de Calculadora
-### Fecha: 19/01/2024
+### Fecha: 02/02/2024
 ### Autor : José Luis Bautista Beltrán
 ------------
 
@@ -31,16 +31,16 @@ El otro modelo planteado es hacer los servicios clásicos de dos operadores y un
 
 | Método HTTP | URI | Query Params | Request Body | Response Body | Códigos HTTP de respuesta |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| GET | /api/calculator/{id}/ | {id=1} | ``-`` | ``{"id": 1,"expression" : "2+2+2"}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
-| POST | /api/calculator/addition/ | - | ``{"operator1" : 1 ,"operator2" : 1}`` | ``{"id": 1, "result":2}`` | 201 Created 400 Bad Request 404 Not Found 500 Internal Error |
-| GET | /api/calculator/addition/{id}/ | {id=1} | ``-`` | ``{"id": 1, "result":2}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
-| POST | /api/calculator/subtraction/ | - | ``{"operator1" : 1 ,"operator2" : 1}`` | ``{"id": 2, "result":0}`` | 201 Created 400 Bad Request 404 Not Found 500 Internal Error |
-| GET | /api/calculator/subtraction/{id}/ | {id=2} | ``-`` | ``{"id": 2, "result":0}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
-| POST | /api/calculator/multiplication/ | - | ``{"operator1" : 8 ,"operator2" : 5}`` | ``{"id": 3, "result":40}`` | 201 Created 400 Bad Request 404 Not Found 500 Internal Error |
-| GET | /api/calculator/multiplication/{id}/ | {id=3} | ``-`` | ``{"id": 3, "result":40}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
-| POST | /api/calculator/division/ | - | ``{"operator1" : 14 ,"operator2" : 2}`` | ``{"id": 4, "result":7}`` | 201 Created 400 Bad Request 404 Not Found 500 Internal Error |
-| GET | /api/calculator/division/{id}/ | {id=4} | ``-`` | ``{"id": 4, "result":7}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
-| POST | /api/calculator/sqrt/ |  | ``{"operator1" : 4 ,"operator2" : 2}`` | ``{"id": 5, "result":2}`` | 201 Created 400 Bad Request 404 Not Found 500 Internal Error |
-| GET | /api/calculator/sqrt/{id}/ | {id=5} | ```` | ``{"id": 5, "result":2}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
-| POST | /api/calculator/pow/ | - | ``{"operator1" : 5 ,"operator2" : 2}`` | ``{"id": 6, "result":25}`` | 201 Created 400 Bad Request 404 Not Found 500 Internal Error |
-| GET | /api/calculator/pow/{id}/ | {id=6} | ``-`` | ``{"id": 6, "result":25}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
+| GET | /api/{id}/ | {id=1} | ``-`` | ``{"id": 1,"expression" : "2+2+2"}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
+| POST | /api/additions/ | - | ``{"operator1" : 1 ,"operator2" : 1}`` | ``{"id": 1, "result":2}`` | 201 Created 400 Bad Request 404 Not Found 500 Internal Error |
+| GET | /api/additions/{id}/ | {id=1} | ``-`` | ``{"id": 1, "result":2}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
+| POST | /api/subtractions/ | - | ``{"operator1" : 1 ,"operator2" : 1}`` | ``{"id": 2, "result":0}`` | 201 Created 400 Bad Request 404 Not Found 500 Internal Error |
+| GET | /api/subtractions/{id}/ | {id=2} | ``-`` | ``{"id": 2, "result":0}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
+| POST | /api/multiplications/ | - | ``{"operator1" : 8 ,"operator2" : 5}`` | ``{"id": 3, "result":40}`` | 201 Created 400 Bad Request 404 Not Found 500 Internal Error |
+| GET | /api/multiplications/{id}/ | {id=3} | ``-`` | ``{"id": 3, "result":40}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
+| POST | /api/divisions/ | - | ``{"operator1" : 14 ,"operator2" : 2}`` | ``{"id": 4, "result":7}`` | 201 Created 400 Bad Request 404 Not Found 500 Internal Error |
+| GET | /api/divisions/{id}/ | {id=4} | ``-`` | ``{"id": 4, "result":7}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
+| POST | /api/sqrt/ |  | ``{"operator1" : 4 ,"operator2" : 2}`` | ``{"id": 5, "result":2}`` | 201 Created 400 Bad Request 404 Not Found 500 Internal Error |
+| GET | /api/sqrt/{id}/ | {id=5} | ```` | ``{"id": 5, "result":2}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
+| POST | /api/pow/ | - | ``{"operator1" : 5 ,"operator2" : 2}`` | ``{"id": 6, "result":25}`` | 201 Created 400 Bad Request 404 Not Found 500 Internal Error |
+| GET | /api/pow/{id}/ | {id=6} | ``-`` | ``{"id": 6, "result":25}`` | 200 OK 400 Bad request 404 Not Found 500 Internal Error |
