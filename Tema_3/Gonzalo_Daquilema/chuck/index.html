@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHISTE GONZALO DAQUILEMA</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="joke_block">
+    <p id="joke_p"></p>
+</div>
+<br><br>
+<div class="joke_block_button">
+    <button onclick="changeJoke()">Dame un chiste!</button>
+</div>
+<script>
+    let url = "https://api.chucknorris.io/jokes/random";
+    async function changeJoke() {
+        fetch(url).then(response => response.json()).then(json => {
+                let elem = document.getElementById("joke_p")
+                elem.innerText = json.value;
+            }
+        )
+    }
+</script>
+</body>
+</html>
