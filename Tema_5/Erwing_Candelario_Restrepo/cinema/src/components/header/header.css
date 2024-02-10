@@ -1,0 +1,11 @@
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #9e9b9b;
+}
+.header_logo {
+	font-size: 25px;
+	font-weight: bold;
+	width: calc(10px + 100px);
+}

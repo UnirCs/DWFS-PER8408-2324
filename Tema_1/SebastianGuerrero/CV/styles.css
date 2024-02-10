@@ -1,0 +1,33 @@
+.footer{
+    text-align: center;
+    background-color: #e5e6e8;
+}
+
+p{
+    text-align: justify;
+}
+
+section, footer{
+    border-style: groove;
+}
+
+section:hover{
+    background-color: #e5e6e8;
+}
+
+section, footer, div{
+    margin: 20px 50px 20px 50px;
+}
+
+#imagen{
+    border-radius: 30%;
+    border: 1px solid #4970b0;
+}
+
+ul{
+    list-style-type: square;
+}
+
+*{
+    font-family: Georgia;
+}

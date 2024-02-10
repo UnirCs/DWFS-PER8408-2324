@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.altura{
+  height: 300px;
+}
+
+.altura_2{
+  height: 30%;
+}
+
+.active{
+  background-color: black;
+}
+
+.reserved{
+  background-color: red;
+}
+
+.container {
+  max-width: '100%'!important
+}
+.div-header{
+  border-radius: 3px;
+  filter:brightness(0.4);
+}
+/* .triangulo-2 {
+  width: 0; 
+  height: 0; 
+  border-left: 100px solid #f0ad4e;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent; 
+} */
+.image {
+  background-color: rgba(0,0,0,0.3);
+  background-image:url("./img/cine.jpg");
+
+  filter:brightness(0.4);
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
