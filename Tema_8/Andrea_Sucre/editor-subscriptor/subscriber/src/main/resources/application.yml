@@ -1,0 +1,11 @@
+server:
+  port: ${PORT:8081}
+
+spring:
+  active-mq:
+    broker-url: tcp://localhost:61616
+    user: amquser
+    password: amqpwd
+
+forum:
+  userId: ${USER:AnonymousUser}
