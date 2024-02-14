@@ -15,6 +15,4 @@ Nuestra calculadora tendrá memoria y siempre se podrán consultar los datos de 
 
 | Método HTTP                            | URI                   | Query Params  | Cuerpo de la Petición                                              | Cuerpo de la Respuesta                                                                | Códigos de Respuesta                                    |
 |----------------------------------------|-----------------------|---------------|--------------------------------------------------------------------|---------------------------------------------------------------------------------------|---------------------------------------------------------|
-| POST                                   | /sumas                 | N/A           | `[{"valor":2},
-{"valor":4},{"valor":3}]`          | `{"sumaId": 1, "valores":[{"valor":2},{"valor":4},
-{"valor":3}],"resultado": 9}`      | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error |
+| POST                                   | /sumas                 | N/A           | `[{"valor": 2}, {"valor": 4}, {"valor": 3}]`                     | `{"sumaId": 1, "valores": [{"valor": 2}, {"valor": 4}, {"valor": 3}], "resultado": 9`             | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error |
