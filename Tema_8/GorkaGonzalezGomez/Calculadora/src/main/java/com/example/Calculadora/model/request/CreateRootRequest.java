@@ -1,6 +1,6 @@
 package com.example.Calculadora.model.request;
 
-import com.example.Calculadora.model.pojo.sums.SumOperandsDTO;
+import com.example.Calculadora.model.pojo.roots.RootOperandsDTO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,6 +10,6 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateSumRequest {
-    private SumOperandsDTO operands;
+public class CreateRootRequest {
+    private RootOperandsDTO operands;
 }
