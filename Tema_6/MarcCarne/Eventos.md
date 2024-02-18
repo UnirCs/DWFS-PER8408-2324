@@ -6,9 +6,11 @@
 - Events (eventos) -> para gestionar los eventos
 - Clients (clientes) -> los clientes que pueden hacer las reservas
 
+- Búsqueda de espacios disponibles: los usuarios podrán hacer búsqueda de los espacios por localicación, fecha y tipo de espacio. Podrán especificar si buscan que esté ocupado o libre. Si no se especifica el parámetro se buscarán solo los libres para esas fechas.
+
 | Método HTTP  | URI            | Query Params | Request Body | Response Body    | Códigos HTTP de respuesta |
 |--------------|----------------|--------------|--------------|------------------|-------------------------|
-| GET         | /spaces  | occupied, locationId, date, spaceType            | - | `[{"spaceId": 1, "location": "1", "name": "sala101", "capacity": 6},{"spaceId": 2, "location": "1", "name": "sala102", "capacity": 8}]` | 200 OK<br/>400 Bad Request<br/>500 Internal Server Error |
+| GET         | /spaces  | occupied, locationId, date, spaceType            | - | `[{"spaceId": 1, "location": "1", "name": "sala101", "capacity": 6, "occupied": false},{"spaceId": 2, "location": "1", "name": "sala102", "capacity": 8, "occupied": false}]` | 200 OK<br/>400 Bad Request<br/>500 Internal Server Error |
 | POST         | /bookings  | -            | `{"spaceId": 1, "clientId": "2", "startDate": "2024-02-10 10:00", "endDate": "2024-02-10 11:00"}`| `{"bookingId": 100, "spaceId": 1, "clientId": "2", "startDate": "2024-02-10 10:00", "endDate": "2024-02-10 11:00"}` | 201 Created<br/>400 Bad request<br/>500 Internal Server Error |
 | DELETE         | /bookings/{bookingId}  | -            | - | `{"bookingId": 100, "spaceId": 1, "clientId": "2", "startDate": "2024-02-10 10:00", "endDate": "2024-02-10 11:00"}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
 | PATCH         | /bookings/{bookingId}  | -            | `{"endDate": "2024-02-10 12:00"}`| `{"bookingId": 100, "spaceId": 1, "clientId": "2", "startDate": "2024-02-10 10:00", "endDate": "2024-02-10 12:00"}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
