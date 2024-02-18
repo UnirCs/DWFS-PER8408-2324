@@ -7,6 +7,8 @@
 - Clients (clientes) -> los clientes que pueden hacer las reservas
 
 - Búsqueda de espacios disponibles: los usuarios podrán hacer búsqueda de los espacios por localicación, fecha y tipo de espacio. Podrán especificar si buscan que esté ocupado o libre. Si no se especifica el parámetro se buscarán solo los libres para esas fechas.
+- El controlador de eventos deberá comprobar para hacer la inserción que el espacio solicitado corresponde a un Auditorio, de lo contrario devolverá un código 400 con el texto "El espacio no corresponde a un auditorio"
+
 
 | Método HTTP  | URI            | Query Params | Request Body | Response Body    | Códigos HTTP de respuesta |
 |--------------|----------------|--------------|--------------|------------------|-------------------------|
