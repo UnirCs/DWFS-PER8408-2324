@@ -181,6 +181,7 @@ curl --location --request GET 'https://z7m3926u42:bcvaqe4gvk@unir-search-3659402
 
 - 8) Obtener empleados cuya dirección sea o contenga ``Street``. [Revisa la documentación sobre queries sobre campos search-as-you-type](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/search-as-you-type.html)
 
+
 ```
 curl --location --request GET 'https://z7m3926u42:bcvaqe4gvk@unir-search-3659402253.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 --header 'Content-Type: application/json' \
