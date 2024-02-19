@@ -16,12 +16,13 @@ Nuestra calculadora tendrá memoria y siempre se podrán consultar los datos de 
 ## Propuesta
 
 **Recursos identificados:**
-- Operacion (operation): Representa las operaciones en el sistema, tanto nuevas como historicas
+- Operacion (operations): Representa las operaciones en el sistema, tanto nuevas como historicas
 
 
-| Método HTTP | URI             | Query Params | Cuerpo de la Petición                            | Cuerpo de la Respuesta                                    | Códigos de Respuesta                                          |
-|-------------|-----------------|--------------|--------------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------------|
-| POST        | /operation      | N/A          | `{"operation": "ADD","numbers": [1, 2, 3, ...]}` | `{"operation_id": 123, "result": 6 }`                     | 201 Created<br/>400 Bad request<br/>500 Internal server error |
-| GET         | /operation/{id} | N/A          | N/A                                              | `{"operation_id": 123, "operation": "ADD", "result": 6 }` | 200 OK<br/>404 Not found<br/>500 Internal server error        |
+| Método HTTP | URI              | Query Params | Cuerpo de la Petición                            | Cuerpo de la Respuesta                                      | Códigos de Respuesta                                          |
+|-------------|------------------|--------------|--------------------------------------------------|-------------------------------------------------------------|---------------------------------------------------------------|
+| POST        | /operations      | N/A          | `{"operation": "ADD","numbers": [1, 2, 3, ...]}` | `{"operation_id": 123, "result": 6 }`                       | 201 Created<br/>400 Bad request<br/>500 Internal server error |
+| GET         | /operations      | N/A          | N/A                                              | `[{"operation_id": 123, "operation": "ADD", "result": 6 }]` | 200 Created<br/>400 Bad request<br/>500 Internal server error |
+| GET         | /operations/{id} | N/A          | N/A                                              | `{"operation_id": 123, "operation": "ADD", "result": 6 }`   | 200 OK<br/>404 Not found<br/>500 Internal server error        |
 
 
