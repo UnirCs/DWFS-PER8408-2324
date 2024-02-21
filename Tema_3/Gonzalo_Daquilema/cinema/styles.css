@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+    color: whitesmoke;
+}
+body h1 {
+    background-color: yellowgreen;
+    color: whitesmoke;
+    font-style: italic;
+    font-size: 24pt;
+    text-align: center;
+}
+
+#selection_part_1{
+    display: inline-block;
+    margin: 10%;
+}
+
+#selection_part_2{
+    display: inline-block;
+}
+
+.row_seat{
+    display: block;
+}
+.seat{
+    display: inline-block;
+    margin: 10px;
+    background-color: yellow;
+    padding: 10px;
+    color: black;
+}
+.numbers_seats{
+    margin: 10px;
+    background-color: yellow;
+    padding: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
