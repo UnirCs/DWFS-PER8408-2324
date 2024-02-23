@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color: greenyellow;
+    text-align: center;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#verChsite{
+    color: yellow;
+    font-size: 20;
+}
+
+.obtenerChiste{
+    font-size: 25px;
+    font-weight: bold;
+
+}

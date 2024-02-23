@@ -6,6 +6,10 @@ img {
     transform: scale(0.8);
 }
 
+button {
+    height: 5px;
+}
+
 * {
     font-family:Calibri;
 }

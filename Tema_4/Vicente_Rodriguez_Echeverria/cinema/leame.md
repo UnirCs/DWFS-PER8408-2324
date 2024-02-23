@@ -1,0 +1,2 @@
+En este programa se genera aleatoriamente los asientos que están ocupado de color amarillo y de
+color verde los asientos que estan desocupado. Cuando se selecciona el número de asiento a reservar se marca de color rojo la reserva. Faltaria hacer la opción anular reserva.
