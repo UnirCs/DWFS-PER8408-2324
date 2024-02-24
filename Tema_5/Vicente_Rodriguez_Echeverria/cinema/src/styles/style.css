@@ -1,0 +1,126 @@
+/* style.css */
+
+/* Banner */
+
+.banner {
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Enlaces */
+
+.banner a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.banner a:hover {
+  color: #dfe4a0;
+}
+
+/* Encabezado */
+
+header {
+  background-color: black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+h1 {
+  margin: 0;
+  padding: 5px 0;
+  text-align: center;
+}
+
+/* Navegación */
+
+nav {
+  background-color: black;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items:flex-end ;
+  padding: 20;
+}
+
+li {
+  margin: 0 10px;
+}
+
+/* Enlaces de navegación */
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color:green;
+}
+
+/* Imágenes */
+
+.imagenes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+}
+
+@media (max-width: 1024px) {
+  .imagenes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .imagenes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .imagenes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* style.css */
+
+/* Pie de página */
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer h5 {
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin-bottom: 5px;
+}
+
+.footer .container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.footer .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .col-sm-4 {
+  width: 33.33%;
+}

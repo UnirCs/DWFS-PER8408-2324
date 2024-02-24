@@ -1,0 +1,11 @@
+server:
+  port: 8088
+
+spring:
+  active-mq:
+    broker-url: tcp://localhost:61616
+    user: amquser
+    password: amqpwd
+
+forum:
+  userId: profesor

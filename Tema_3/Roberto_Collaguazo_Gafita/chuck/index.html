@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Chuck</title>
+</head>
+<body>
+
+<div class="Contenido">
+    <button class="Contenido_BotonGenerar" onclick="generarChiste()">Dame un chiste!</button>
+    <p class="Contenido_TextoChiste" id="ChisteGenerado"></p>
+</div>
+
+<script>
+    const generarChiste = () => {
+        let url = "https://api.chucknorris.io/jokes/random";
+        let textItem = document.getElementById("ChisteGenerado");
+        fetch(url)
+            .then(response => response.json())
+            .then(json => textItem.innerHTML = json.value);
+    }
+</script>
+
+</body>
+</html>

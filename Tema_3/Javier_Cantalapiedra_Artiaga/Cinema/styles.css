@@ -1,0 +1,48 @@
+.cinema{
+    background-color: bisque;
+    padding:2rem;
+    border-radius: 1%;
+    margin:2rem;
+}
+.header{
+    text-align: center;
+    margin: 2rem;
+}
+.pantalla{
+    height:10rem;
+    background-color: grey;
+    margin-bottom: 4rem;
+}
+
+.asiento{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 1rem 0.5rem;
+    border-color: yellow;
+    background-color: black;
+}
+
+.asiento-libre{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 1rem 0.5rem;
+    border-color: black;
+    background-color: yellow;
+}
+
+.formulario{
+    margin:2rem auto;
+    margin-top: 2rem;
+    background-color: beige;
+    border-radius: 5%;
+    width: 30%;
+    padding: 2%;
+}
+.columna-formulario{
+    height:5rem;
+}
+
+.columna-boton{
+    height:3rem;
+}
+

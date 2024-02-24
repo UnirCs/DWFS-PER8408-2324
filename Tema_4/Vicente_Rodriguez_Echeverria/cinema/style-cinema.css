@@ -1,0 +1,36 @@
+
+table {border: 1px;  border-spacing: 10px 10px;width: 100%}
+table td{text-align: center;padding: 20px;  border: }
+
+/*td {padding: 20px; border: 1px solid #000000;}*/
+table th {
+    text-align: center;
+    font-style: normal;
+    color: #E7E508;
+}
+/*table tr td {border:1px solid #000000;}*/
+.encabezado1{padding: 20px; background-color: black; color: white}
+.encabezado2{padding: 40px; background-color: #D7CFCF}
+.butacas{padding: 10px; background-color:#494747}
+.butaca1 {border:1px solid #000000; background-color:chartreuse}
+.butaca2 {border:1px solid #000000; background-color:cornsilk}
+.butaca3 {border:1px solid #000000; background-color:red}
+.formulario{
+	background-color:#494747;
+}
+.piespagina {padding: 1px; background-color: black; color: white;}
+.txt{
+	padding: 10px 5px;
+}
+.btn{
+	 /*height:  15px;
+     display : block;
+     width : 20px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-weight: 200;*/
+     background-color:gold;
+	color: black;
+     border-radius: 2px;
+     padding: 15px 30px;
+     margin: 15px 13px;
+}
