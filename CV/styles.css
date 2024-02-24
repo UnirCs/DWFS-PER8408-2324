@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*  outline: 3px solid crimson; */
+}
+
+body {
+    background: #105A82;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h3,
+h4 {
+    color: #7BD40A;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hero {
+    width: 90%;
+
+    margin: auto;
+}
+
+hr {
+    background: white;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 90%;
+    height: 5px;
+}
+
+.parrafo {
+    text-align: justify;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.encabezado {
+    margin: 0 auto;
+    margin-top: 50px;
+    font-size: 1rem;
+    text-align: center;
+
+}
+
+.main-header {
+    width: 90%;
+
+    padding: 10px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+
+
+
+
+}
+
+.perfil {
+    /* margin: 0 10px; */
+    padding: 10px;
+    height: 40vh;
+
+}
+
+.hobbies {
+
+    padding: 10px;
+}
+
+.experiencia {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.experiencia_parrafo {
+    font-size: 1rem;
+    margin: 15px 18px;
+}
+
+.educacion {
+
+    padding: 10px;
+}
+
+.educacion_parrafo {
+    font-size: 1rem;
+
+    margin: 0 20px;
+}
+
+.habilidad {
+    margin-top: -400px;
+
+}
+
+
+.skills-area {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.skill {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.skill-title {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    height: 15px;
+    z-index: -1;
+    border-radius: 100px;
+    position: absolute;
+}
+
+.skill-fill {
+    background: #0AD4B8;
+    height: 15px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    overflow: hidden;
+}
+
+.skill-percent {
+    font-size: 10px;
+}
+
+.html {
+    animation: html 2s;
+    width: 80%;
+}
+
+.css {
+    animation: css 2s;
+    width: 80%;
+}
+
+.js {
+    animation: js 2s;
+    width: 70%;
+}
+
+.node {
+    animation: node 2s;
+    width: 80%;
+}
+
+.angular {
+    animation: angular 2s;
+    width: 70%;
+}
+
+@keyframes html {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes css {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes js {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes angular {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes node {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+.contacto {
+    font-size: 1.2rem;
+    margin-top: -460px;
+    height: 35vh;
+}
+
+.contacto_items {
+    list-style: none;
+
+    margin-left: -30px;
+    padding: 10px 0;
+
+
+}
+
+.habilidad_items {
+    list-style: none;
+    margin: 10px 5px;
+    margin-left: -28px;
+    padding: 10px;
+}
+
+.box {
+    position: relative;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 120%;
+    background: #7BD40A;
+    left: 5px;
+
+
+
+}
+
+span {
+    color: white;
+
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #7BD40A;
+    border-radius: 50%;
+    left: 1px;
+    top: 5px;
+
+
+}

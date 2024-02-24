@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIR-CINEMA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="screen">
+            <h2>Pantalla de cine</h2>
+            <!-- Representación visual de la pantalla de cine aquí -->
+        </div>
+        <div class="seating-plan">
+            <h2>Selecciona tus asientos</h2>
+            <!-- Selección de butacas con números de fila y asientos ocupados/disponibles -->
+            <div class="row">
+                <h3>Fila 1</h3>
+                <div class="seats">
+                   <!--  <label for="seat1">1</label> -->
+                    <input type="checkbox" id="seat1_1" name="seat1">
+                 <!--    <label for="seat2">2</label> -->
+                    <input type="checkbox" id="seat1_2" name="seat1">
+                    <input type="checkbox" id="seat1_3" name="seat1">
+                    <input type="checkbox" id="seat1_4" name="seat1">
+                    <input type="checkbox" id="seat1_5" name="seat1">
+                    <input type="checkbox" id="seat1_6" name="seat1">
+                    <input type="checkbox" id="seat1_7" name="seat1">
+                    <input type="checkbox" id="seat1_8" name="seat1">
+                    <input type="checkbox" id="seat1_9" name="seat1">
+                    <input type="checkbox" id="seat1_10" name="seat1">
+                    <input type="checkbox" id="seat1_11" name="seat1">
+                    <input type="checkbox" id="seat1_12" name="seat1">
+                    <input type="checkbox" id="seat1_13" name="seat1">
+             
+                    <!-- Agrega más asientos aquí -->
+                </div>
+            </div>
+            <!-- Agrega más filas aquí -->
+             <div class="row">
+                <h3>Fila 2</h3>
+                <div class="seats">
+                   <!--  <label for="seat1">1</label> -->
+                    <input type="checkbox" id="seat2_1" name="seat1">
+                 <!--    <label for="seat2">2</label> -->
+                    <input type="checkbox" id="seat2_2" name="seat1">
+                    <input type="checkbox" id="seat2_3" name="seat1">
+                    <input type="checkbox" id="seat2_4" name="seat1">
+                    <input type="checkbox" id="seat2_5" name="seat1">
+                    <input type="checkbox" id="seat2_6" name="seat1">
+                    <input type="checkbox" id="seat2_7" name="seat1">
+                    <input type="checkbox" id="seat2_8" name="seat1">
+                    <input type="checkbox" id="seat2_9" name="seat1">
+                    <input type="checkbox" id="seat2_10" name="seat1">
+                    <input type="checkbox" id="seat2_11" name="seat1">
+                    <input type="checkbox" id="seat2_12" name="seat1">
+                    <input type="checkbox" id="seat2_13" name="seat1">
+                  
+                    <!-- Agrega más asientos aquí -->
+                </div>
+            </div>
+             <div class="row">
+                <h3>Fila 3</h3>
+                <div class="seats">
+                    <input type="checkbox" id="seat3_1" name="seat1">
+                 <!--    <label for="seat2">2</label> -->
+                    <input type="checkbox" id="seat3_2" name="seat1">
+                    <input type="checkbox" id="seat3_3" name="seat1">
+                    <input type="checkbox" id="seat3_4" name="seat1">
+                    <input type="checkbox" id="seat3_5" name="seat1">
+                    <input type="checkbox" id="seat3_6" name="seat1">
+                    <input type="checkbox" id="seat3_7" name="seat1">
+                    <input type="checkbox" id="seat3_8" name="seat1">
+                    <input type="checkbox" id="seat3_9" name="seat1">
+                    <input type="checkbox" id="seat3_10" name="seat1">
+                    <input type="checkbox" id="seat3_11" name="seat1">
+                    <input type="checkbox" id="seat3_12" name="seat1">
+                    <input type="checkbox" id="seat3_13" name="seat1">
+                    <!-- Agrega más asientos aquí -->
+                </div>
+            </div>
+             <div class="row">
+                <h3>Fila 4</h3>
+                <div class="seats">
+                   <!--  <label for="seat1">1</label> -->
+                    <input type="checkbox" id="seat4_1" name="seat1">
+                 <!--    <label for="seat2">2</label> -->
+                    <input type="checkbox" id="seat4_2" name="seat1">
+                    <input type="checkbox" id="seat4_3" name="seat1">
+                    <input type="checkbox" id="seat4_4" name="seat1">
+                    <input type="checkbox" id="seat4_5" name="seat1">
+                    <input type="checkbox" id="seat4_6" name="seat1">
+                    <input type="checkbox" id="seat4_7" name="seat1">
+                    <input type="checkbox" id="seat4_8" name="seat1">
+                    <input type="checkbox" id="seat4_9" name="seat1">
+                    <input type="checkbox" id="seat4_10" name="seat1">
+                    <input type="checkbox" id="seat4_11" name="seat1">
+                    <input type="checkbox" id="seat4_12" name="seat1">
+                    <input type="checkbox" id="seat4_13" name="seat1">
+               
+                    <!-- Agrega más asientos aquí -->
+                </div>
+            </div>
+        </div>
+        <div class="reservation-form">
+            <h2>Formulario de reserva</h2>
+            <!-- Formulario para seleccionar el número de asientos deseados -->
+            <form id="reservation-form">
+                <label for="num-asientos">Número de asientos:</label>
+                <input type="number" id="num-asientos" name="num-asientos" min="1" max="10">
+                <button type="submit">Confirmar reserva</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>UNIR-CINEMA</p>
+            <p>Dirección: Calle de ejemplo, Ciudad, País</p>
+            <p>Teléfono: +123456789</p>
+            <p>Email: info@unircinema.com</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+
+</html>

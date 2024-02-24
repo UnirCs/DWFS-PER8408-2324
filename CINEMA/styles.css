@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.screen,
+.seating-plan,
+.reservation-form {
+  margin-bottom: 20px;
+}
+
+.seating-plan .rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.seating-plan .row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.seating-plan .seat {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Estilos para los checkboxes */
+input[type="checkbox"] {
+  width: 30px;
+ 
+  height: 30px;
+ 
+  font-size: 20px;
+
+  margin-right: 10px;
+  
+}
