@@ -47,20 +47,18 @@ Las operaciones que la API debe soportar son las siguientes:
 |             |                  |              |                                 |                                 | 404                       |
 |             |                  |              |                                 |                                 | 500                       |
 |-------------|------------------|--------------|---------------------------------|---------------------------------|---------------------------|
-| PATCH       | /partidas/{id}   | -            | {"nombre":"Partida1",           |   {"id": 1,                     | 200                       |
-|             |                  |              |  "jugadores":["user3","user4"]} |    "accion": "Modificada"       | 400                       |
-|             |                  |              |                                 |    "nombre": "Partida1"}        | 404                       |
+| PATCH       | /partidas/{id}   | -            | #Modificar Generico             |   {"id": 1,                     | 200                       |
+|             |                  |              |  {"nombre":"Partida1",          |    "accion": "Modificada",      | 400                       |
+|             |                  |              |  "jugadores":["user3","user4"]} |    "nombre": "Partida1"}        | 404                       |
 |             |                  |              |                                 |                                 | 500                       |
-|-------------|------------------|--------------|---------------------------------|---------------------------------|---------------------------|
-| POST        | /partidas/{id}/  | -            | {"jugadorIniciador": "user1"}   |   {"mensaje": "ha comenzado",   | 201                       |
-|             | iniciar          |              |                                 |    "estado": "en_curso"}        | 400                       |
-|             |                  |              |                                 |                                 | 404                       |
-|             |                  |              |                                 |                                 | 500                       |
-|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| POST        | /partidas/{id}/  | -            | {"jugadorFinalizador": "user1"} |   {"mensaje": "ha finalizado",  | 201                       |
-|             | finalizar        |              |                                 |    "ganador": "user1",          | 400                       |
-|             |                  |              |                                 |    "estado": "finalizada"}      | 404                       |
-|             |                  |              |                                 |                                 | 500                       |
+|             |                  |              | #Iniciar Partida                |                                 |                           |
+|             |                  |              |  {"jugadorIniciador": "user1",  |   {"mensaje": "ha comenzado"}   |                           |
+|             |                  |              |    "estado": "01" }             |                                 |                           |
+|             |                  |              |                                 |                                 |                           |
+|             |                  |              | #Finalizar Partida              |                                 |                           |
+|             |                  |              |  {"jugadorFinalizador": "user1",|   {"mensaje": "ha finalizado",  |                           |
+|             |                  |              |    "estado": "01" }             |   "ganador": "user1"}           |                           |
+|             |                  |              |                                 |                                 |                           |
 |-----------------------------------------------------------------------------------------------------------------------------------------------|
 | GET         | /partidas/{id}   | -            | -                               |   {"id": 1,                     | 200                       |
 |             |                  |              |                                 |    "nombre":"Partida1",         | 400                       |
