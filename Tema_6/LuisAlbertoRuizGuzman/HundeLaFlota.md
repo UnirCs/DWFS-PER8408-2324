@@ -57,7 +57,7 @@ Las operaciones que la API debe soportar son las siguientes:
 |             |                  |              |                                 |                                 |                           |
 |             |                  |              | #Finalizar Partida              |                                 |                           |
 |             |                  |              |  {"jugadorFinalizador": "user1",|   {"mensaje": "ha finalizado",  |                           |
-|             |                  |              |    "estado": "01" }             |   "ganador": "user1"}           |                           |
+|             |                  |              |    "estado": "02" }             |   "ganador": "user1"}           |                           |
 |             |                  |              |                                 |                                 |                           |
 |-----------------------------------------------------------------------------------------------------------------------------------------------|
 | GET         | /partidas/{id}   | -            | -                               |   {"id": 1,                     | 200                       |
