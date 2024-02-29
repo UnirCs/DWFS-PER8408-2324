@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Tema 3</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header class="title">
+            <h1>Ejercicio tema 3</h1>
+        </header>
+        <br>
+        <div>
+            <button class="submit-button" onclick="getChuckJoke()">Dame un chiste</button>
+        </div>
+        <br>
+        <div class="container-footer">
+            <p id="contenido"></p>
+        </div>
+
+        <script>
+            class Joke{
+                constructor() {
+                    this.value = '';
+                }
+            }
+            const result = new Joke();
+            async function getChuckJoke(){
+                let url = "https://api.chucknorris.io/jokes/random";
+                await fetch(url)
+                    .then(response => response.json())
+                    .then(json => {
+                        result.value = json.value;
+                        console.log("Resultado interno: " + result.value);
+                    });
+                console.log("Resultado: " + result.value);
+                document.getElementById("contenido").innerHTML = result.value;
+            }
+        </script>
+    </body>
+</html>
