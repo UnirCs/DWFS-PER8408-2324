@@ -1,0 +1,35 @@
+body{
+    background-color: #000000;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #b0a249;
+}
+
+.container{
+    border: 2px solid #b0a249;
+    text-align: center;
+    margin: 5%;
+    width: 90%;
+}
+
+.container-footer{
+    background-color: #343a40;
+    border-style: groove;
+    margin: 5%;
+    text-align: center;
+}
+
+.btn{
+    color: #0a101a;
+    background-color: #b0a249;
+}
+
+.card-image {
+    height: 200px;
+}
+
+.card {
+    background-color: #0a101a;
+    color: #bababd;
+    margin: 5%;
+    width: 80%;
+}

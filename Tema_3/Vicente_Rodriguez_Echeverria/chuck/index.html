@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" >
+    <title>Chiste desde la pagina Chuck Norri</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <p class="title">Chiste extraido desde la página web https://api.chucknorris.io</p>
+    <p id="verChsite"></p>
+    <button class="obtenerChiste" onclick="logChuck()">Obtener Chiste</button>
+
+    <script>
+        async function logChuck() {
+            let chuckJson = "";
+            const response = await fetch("https://api.chucknorris.io/jokes/random");
+            if (!response.ok) {
+                chuckJson = "Error en adquirir chiste";
+            }
+            else {
+                chuckJson = await response.json();
+                let obtenerId=document.getElementById("verChsite");
+                obtenerId.innerHTML=chuckJson.value;
+            }
+        }
+    </script>
+</body>
+
+</html>
