@@ -5,7 +5,7 @@
 	   consultas siempre sobre este alias y no sobre el índice original.
 
 ```
-curl --location 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/_aliases' \
+curl --location 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/_aliases' \
 	--header 'Content-Type: application/json' \
 	--data '{
 		 "actions": [
@@ -26,7 +26,7 @@ curl --location 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bo
 	   de documento que has obtenido tras la creación del elemento.
 
 ```
-curl --location 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_doc' \
+curl --location 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_doc' \
 	--header 'Content-Type: application/json' \
 	--data '{
 		"FirstName":"RICARDO",
@@ -49,7 +49,7 @@ curl --location 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bo
 	   escribiste.
 
 ```
-curl --location 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_doc/pXFtWY0BJHVwbqnQ63X7'
+curl --location 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_doc/pXFtWY0BJHVwbqnQ63X7'
 ```
 
 ### Parte IV) Eliminación de elementos
@@ -58,7 +58,7 @@ curl --location 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bo
 	1) Elimina el elemento que has creado anteriormente.
 
 ```
-curl --location --request DELETE 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_doc/pXFtWY0BJHVwbqnQ63X7'
+curl --location --request DELETE 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_doc/pXFtWY0BJHVwbqnQ63X7'
 ```
 
 ### Parte V) Consultas
@@ -67,7 +67,7 @@ curl --location --request DELETE 'https://frujc18af3:xq6vh05rw9@employees-117155
 	1) Obtener empleados cuyo puesto sea ``Software Engineer``. [Revisa la documentación sobre term queries](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/query-dsl-term-query.html)
 
 ```
-curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location --request GET 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 	--header 'Content-Type: application/json' \
 	--data '{
 		"query": {
@@ -84,7 +84,7 @@ curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-117155211
 	2) Obtener empleados cuyo puesto NO sea ``Software Engineer``. [Revisa la documentación sobre bool queries](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/query-dsl-bool-query.html)
 
 ```
-curl --location 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 	--header 'Content-Type: application/json' \
 	--data '{
 		"query": {
@@ -106,7 +106,7 @@ curl --location 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bo
 	   página de 35 elementos. [Revisa la documentación sobre paginación](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/paginate-search-results.html)
 
 ```
-curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location --request GET 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 	--header 'Content-Type: application/json' \
 	--data '{
 		"from": 0,
@@ -126,7 +126,7 @@ curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-117155211
 	   página de 35 elementos.
 
 ```
-curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location --request GET 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 	--header 'Content-Type: application/json' \
 	--data '{
 		"from": 70,
@@ -145,7 +145,7 @@ curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-117155211
 	5) Obtener los primeros 13 empleados cuyo salario sea mayor a 67.000 dólares. [Revisa la documentación sobre range queries](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/query-dsl-range-query.html)
 
 ```
-curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location --request GET 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 	--header 'Content-Type: application/json' \
 	--data '{
 		"from": 0,
@@ -165,7 +165,7 @@ curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-117155211
 	   consulta específica, solo saber el número total de hits.
 
 ```
-curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location --request GET 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 --header 'Content-Type: application/json' \
 --data '{
     "from": 0,
@@ -185,7 +185,7 @@ curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-117155211
 	7) Obtener empleados cuyo nombre sea ``NATALIE``. [Revisa la documentación sobre match queries](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/query-dsl-match-query.html)
 
 ```
-curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location --request GET 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 --header 'Content-Type: application/json' \
 --data '{
     "query": {
@@ -200,7 +200,7 @@ curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-117155211
 	8) Obtener empleados cuya dirección sea o contenga ``Street``. [Revisa la documentación sobre queries sobre campos search-as-you-type](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/search-as-you-type.html)
 
 ```
-curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location --request GET 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 --header 'Content-Type: application/json' \
 --data '{
     "query": {
@@ -221,7 +221,7 @@ curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-117155211
 	9) Obtener empleados cuya dirección sea o contenga ``wood``.
 
 ```
-curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location --request GET 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 --header 'Content-Type: application/json' \
 --data '{
     "query": {
@@ -242,7 +242,7 @@ curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-117155211
 	10) Obtener empleados interesados en ``Wrestling``.
 
 ```
-curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location --request GET 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 --header 'Content-Type: application/json' \
 --data '{
     "query": {
@@ -258,7 +258,7 @@ curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-117155211
 		en ``Wrestling``.[Revisa la documentación sobre term aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/search-aggregations-bucket-terms-aggregation.html)
 
 ```
-curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location --request GET 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 --header 'Content-Type: application/json' \
 --data '{
     "size":0,
@@ -283,7 +283,7 @@ curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-117155211
 		y [sobre la agregación avg](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/search-aggregations-metrics-avg-aggregation.html)
 
 ```
-curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location --request GET 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 --header 'Content-Type: application/json' \
 --data '{
     "size":0,
@@ -315,7 +315,7 @@ curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-117155211
 		dólares (``tramo 3``). [Revisa la documentación sobre range aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/7.10/search-aggregations-bucket-range-aggregation.html)
 
 ```
-curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location --request GET 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 --header 'Content-Type: application/json' \
 --data '{
     "size": 0,
@@ -338,7 +338,7 @@ curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-117155211
 	14) En base a la consulta anterior, para cada tramo, hallar el número de empleados que están casados y no casados.
 
 ```
-curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+curl --location --request GET 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
 --header 'Content-Type: application/json' \
 --data '{
     "size": 0,
@@ -375,7 +375,7 @@ curl --location --request GET 'https://frujc18af3:xq6vh05rw9@employees-117155211
 
 Petición:
 ```
-curl --location 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/_aliases' \
+curl --location 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/_aliases' \
 --header 'Content-Type: application/json' \
 --data '{
     "actions": [
@@ -481,7 +481,7 @@ index e ID, por ejemplo:
 
 Petición:
 ```
-curl --location 'https://frujc18af3:xq6vh05rw9@employees-1171552117.us-east-1.bonsaisearch.net:443/_aliases' \
+curl --location 'https://{USER}:{PASSWORD}@employees-1171552117.us-east-1.bonsaisearch.net:443/_aliases' \
 --header 'Content-Type: application/json' \
 --data '{
     "actions": [
