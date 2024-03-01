@@ -1,0 +1,14 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.full-height {
+    min-height: 100%;
+}
+.paddinFilas {
+    min-height: 3rem;
+    min-width: 3rem;
+    margin-bottom: 5px;
+}
