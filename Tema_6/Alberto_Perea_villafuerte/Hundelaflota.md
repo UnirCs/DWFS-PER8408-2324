@@ -37,21 +37,18 @@ Ten en cuenta que podría no ser necesario definir un endpoint por cada una de l
 
 - **Partidas (partidas):** 
 - **Barcos (barcos):** 
-- **Jugadores (jugadores):** 
+- **Jugadores (jugadores):** //usuarios
 - **Disparos (disparo):** 
 ### Relaciones ###
 - **jugadores con partidas:** 
 ### Atributos ###
 
-| Método HTTP | URI                 | Query Params | Request Body                                                                        | Response Body                                                                                               | Códigos HTTP de respuesta                                     |
-|-------------|---------------------|--------------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| POST        | /jugadores             | N/A          | ``{"usuario": "prueba1", "correo": "a@d.com","nombre":"Alberto"}``   | ``{"jugadorid": "1", "usuario": "prueba1", "correo": "a@d.com","nombre":"Alberto"}``             | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error |
-| DELETE      | /jugadores/{jugadorId}   | N/A          | N/A                                                                                 | `{"message": "Usuario removed"}`                                                                              | 200 OK<br/>404 Not Found<br/>500 Internal Server Error       |
-| GET         | /jugadores/{jugadorId}   | N/A          | N/A  | ``{"jugadorid": "1", "usuario": "prueba1", "correo": "a@d.com","nombre":"Alberto"}``                           | 200 OK<br/>404 Not Found<br/>500 Internal Server Error  |
-| POST        | /partidas            | N/A          | ``{"jugadorId1": 1, "jugadorId2": 2}``                                        | ``{"partidaId":1,"jugadorId1": 1, "jugadorId2": 2,"fechahorainicio":null,"matriz1":[],"matriz2":[], "fechahorafin": null,"ganadorid":null}``  | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error |
-| DELETE      | /partidas/{partidaId} | N/A          | N/A                                                                                 | `{"message": "Partida removed"}`                                                                             | 200 OK<br/>404 Not Found<br/>500 Internal Server Error       |
-| PATCH       | /partidas/{partidaId} | N/A          | ``{"jugadorId2": 3,"fechahorainicio":'27-02-2024'}``                                                                | ``{"partidaId": 1, "jugadorId2": 3,"fechahorainicio":'27-02-2024'}``                                                                         | 200 OK<br/>404 Not Found<br/>500 Internal Server Error  |
-| POST        | /barcos              | N/A   | ``{"partidaId": 1, "jugadorId": 1,"matriz1":[A1,B2]}`` | ``{"barcoId":1,"partidaId": 1, "jugadorId": 1,"matriz1":[A1,B2]}``             | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error |
-| DELETE      | /barcos/{barcoId} | N/A          | N/A                                                                                 | `{"message": "Barco removed"}`                                                                             | 200 OK<br/>404 Not Found<br/>500 Internal Server Error       |
-| GET         | /barcos   | N/A          | ``{"partidaid": "1","jugadorId":1}`` | ``{"partidaid": "1", "matriz1":[....] }``                           | 200 OK<br/>404 Not Found<br/>500 Internal Server Error  |
-| POST        | /disparo   | N/A          | ``{"partidaId":1,"jugadorId":1,"cuadriculaenemiga": 'A1'}`` | ``{"disparoid": "1","partidaId":1,"jugadorId":1,"cuadriculaenemiga": 'A1',"estado": false}``                           | 200 OK<br/>404 Not Found<br/>500 Internal Server Error  |
+| Método HTTP | URI | Query Params | Request Body | Response Body | Códigos HTTP de respuesta |
+  |-------------|----------------|--------------|--------------|------------------|-------------------------|
+  | GET | /jugadores/{jugadorId} | jugadorId | N/A | `{ "nombre": "Jugador 1"}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
+  | POST | /jugadores | N/A | `{ "nombre": "jugador 1"}` |`{"jugadorId": 1, "nombre: jugador 1"}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
+  | DELETE | /jugadores/{jugadorId} | N/A | N/A | `{"message": "Jugador removed"}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
+  | POST | /partidas | N/A | `{"jugadores":[{"jugadorId":1},{"jugadorId":2}]}` |`{"partidaId":1,"Fase":1,"Completado":false,"Ganador":false,"Jugadores":[{"jugadorId":1,"barcos":[],"disparos":[]},{"JugadorId":2 ,"barcos":[],"disparos":[]}]}` | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error |
+  | DELETE | /partidas/{partidaId} | N/A | N/A |  `{"message": "Partida removed"}`  | 200 OK<br/>400 Bad Request<br/>500 Internal Server Error |
+  | PATCH | /partidas/{partidaId} | partidaId | `{"JugadorId":2,"Fase":1,"Completado":true "Ganador":true,"Jugadores":{"jugadorId":2, "barcos":[{"nombre":"Barco 1","posicion":["A1","A2","A3","A4"]},{"nombre":"Barco 2","posicion":["C2","D2","E2"]}],"disparos":["C5","D5"]}}` |`{"partidaId":1,"Fase":1,"Completado":true,"Ganador":true,"Jugadores":{"jugadorId":2, "barcos":[{"nombre":"Barco 1","posicion":["A1","A2","A3","A4"]},{"nombre":"Barco 2","posicion":["C2","D2","E2"]}],"disparos":["C5","D5"]}}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error |
+  | GET | /partidas/{partidaId} | N/A | N/A | `{"partidas":{"partidaId":1,"Fase":1,"Completado":true,"jugadores":[{"jugadorId":2,"nombre":"Jugador 1","Ganador":true,"barcos":[{"nombre":"Barco 1","posicion":["A1","A2","A3","A4"]},{"nombre":"Barco 2","posicion":["C2","D2","E2"]}],"disparos":["C5","D5"]},{"jugadorId":2,"nombre":"Jugador 2","Ganador":false,"barcos":[{"nombre":"Barco 1","posicion":["B1","B2","B3","B4"]},{"nombre":"Barco 2","posicion":["A2","B2","E2"]}],"disparos":["E5","B5"]}]}}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error | 
