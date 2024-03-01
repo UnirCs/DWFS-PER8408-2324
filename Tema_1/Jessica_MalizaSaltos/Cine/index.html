@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <title>CINEMARK UNIR</title>
+
+</head>
+
+<body>
+      <div class="container mt-5">
+        <h1 class="text-center mb-4">CINEMARK UNIR</h1>
+        <h1 class="text-center mb-4">Selecciona tus asientos</h1>
+        <img src="images.jpeg" alt="cine" style="max-width: 50%; max-height: 50%;">
+
+        <!-- Estructura para la selección de butacas -->
+        <div>
+            <label for="numeroInput">Ingrese un número:</label>
+            <input type="number" id="numeroInput" name="numeroInput" min="1" max="100">
+            <button onclick="seleccionarNumero()">Seleccionar</button>
+        </div>
+        <script>
+            function seleccionarNumero() {
+                var numeroIngresado = document.getElementById("numeroInput").value;
+                alert("Número de asientos: " + numeroIngresado);
+            }
+        </script>
+        <!-- Fila 1 -->
+        <div class="row mb-3">
+            <h3>Fila 1</h3>
+            <div class="butaca">A1</div>
+            <div class="butaca">A2</div>
+            <div class="butaca">A3</div>
+            <div class="butaca">A4</div>
+            <div class="butaca">A5</div>
+            <div class="butaca">A6</div>
+            <div class="butaca">A7</div>
+            <div class="butaca">A8</div>
+            <!-- Agrega más butacas según sea necesario -->
+        </div>
+
+        <!-- Fila 2 -->
+        <!-- row se utiliza para agrupar las columnas en una fila, La clase mb-3 se refiere al margen inferio -->
+        <div class="row mb-3">
+            <h3>Fila 2</h3>
+            <div class="butaca">B1</div>
+            <div class="butaca">B2</div>
+            <div class="butaca">B3</div>
+            <div class="butaca">B4</div>
+            <div class="butaca">B5</div>
+            <div class="butaca">B6</div>
+            <div class="butaca">B7</div>
+            <div class="butaca">B8</div>
+        </div>
+        <!-- Fila 3 -->
+        <div class="row mb-3">
+            <h3>Fila 3</h3>
+            <div class="butaca">C1</div>
+            <div class="butaca">C2</div>
+            <div class="butaca">C3</div>
+            <div class="butaca">C4</div>
+            <div class="butaca">C5</div>
+            <div class="butaca">C6</div>
+            <div class="butaca">C7</div>
+            <div class="butaca">C8</div>
+        </div>
+        <!-- Fila 4 -->
+        <div class="row mb-3">
+            <h3>Fila 4</h3>
+            <div class="butaca">D1</div>
+            <div class="butaca">D2</div>
+            <div class="butaca">D3</div>
+            <div class="butaca">D4</div>
+            <div class="butaca">D5</div>
+            <div class="butaca">D6</div>
+            <div class="butaca">D7</div>
+            <div class="butaca">D8</div>
+        </div>
+       
+
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    <footer>
+        <h2>Cinemark UNIR-CINEMA</h2>
+        <p>Email:cinefullstack@unirscinema.com | Teléfono:0968930833</p>
+        <P>Dirección: Loja, Calle 18 de noviembre y Gonzanamá</P>
+    </footer>
+
+</body>
+
+</html>
